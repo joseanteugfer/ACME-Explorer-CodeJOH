@@ -7,7 +7,7 @@ const portAPI = process.env.PORT || 3000;
 const bodyParser = require('body-parser');
 const mongoDBHostname = process.env.mongoDBHostname || 'localhost';
 const mongoDBPort = process.env.mongoDBPort || 27017;
-const mongoDBName = process.env.mongoDBName || 'ACME-Market';
+const mongoDBName = process.env.mongoDBName || 'ACME-Explorer';
 const mongoDBUri = "mongodb://"+mongoDBHostname+":"+mongoDBPort+"/"+mongoDBName;
 
 mongoose.connect(mongoDBUri, {
