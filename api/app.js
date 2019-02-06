@@ -15,7 +15,7 @@ mongoose.connect(mongoDBUri, {
     reconnectInterval: 500,
     poolSize: 10,
     connectTimeoutMS: 10000,
-    socketTimeout: 10000,
+    socketTimeoutMS: 10000,
     family: 4,
     useNewUrlParser: true
 });
