@@ -2,7 +2,7 @@
 
 const express = require('express')
 const mongoose = require('mongoose');
-const Actor = require('./models/ActorModel')
+const Actor = require('./api/models/ActorModel')
 const portAPI = process.env.PORT || 3000;
 const bodyParser = require('body-parser');
 const mongoDBHostname = process.env.mongoDBHostname || 'localhost';
@@ -25,7 +25,7 @@ const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-const routesActor = require('./routes/actorRoutes');
+const routesActor = require('./api/routes/actorRoutes');
 
 routesActor(app);
 
