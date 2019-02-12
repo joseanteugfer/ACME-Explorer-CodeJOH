@@ -20,7 +20,8 @@ const OrderedTripSchema = new Schema({
     },
     actor_id: {
         type: Schema.Types.ObjectId,
-        ref: 'Actor'
+        ref: 'Actor',
+        required: 'Enter actor_id'
     }
 }, {strict: false})
 
