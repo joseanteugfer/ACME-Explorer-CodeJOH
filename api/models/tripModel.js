@@ -1,6 +1,8 @@
 'use strict'
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema;
+const moment = require('moment');
+const generate = require('nanoid/generate');
 
 const StageSchema = new Schema({
     title: {
@@ -42,8 +44,7 @@ const SponsorSchema = new Schema( {
 
 const TripSchema = new Schema({
     ticker: {
-        type: String,
-        required: 'Enter ticker'
+        type: String
     },
     title: {
         type: String,
@@ -77,5 +78,15 @@ const TripSchema = new Schema({
     stages: [StageSchema],
     sponsors: [SponsorSchema]
 }, {strict: false});
+
+TripSchema.pre('save', function(next){
+    let trip = this;
+    const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+    let randomletters = generate(alphabet,4);
+    let now = moment().format("YYMMDD");
+    trip.ticker = `${now}-${randomletters}`;
+    next();
+});
 
 module.exports = mongoose.model('Trip', TripSchema);

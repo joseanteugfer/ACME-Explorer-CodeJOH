@@ -16,7 +16,9 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
-    "mongoose": "^5.4.9"
+    "moment": "^2.24.0",
+    "mongoose": "^5.4.9",
+    "nanoid": "^2.0.1"
   },
   "bugs": {
     "url": "https://github.com/hector23rp/ACME-Explorer-CodeJOH/issues"
