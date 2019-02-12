@@ -1,15 +1,14 @@
 'use strict'
-module.exports = function(app) {
-    var actors = require('../controllers/ActorController')
 
-    app.route('/actors')
-        .get(actors.list_all_actors)
-        .post(actors.create_an_actor);
+const express = require('express');
+const router = express.Router();
+var actors = require('../controllers/ActorController')
 
-    app.route('/actors/:actorId')
-        .get(actors.read_an_actor)
-        .delete(actors.delete_an_actor)
-        .put(actors.update_an_actor);
+router.get('/actors', actors.list_all_actors);
+router.post('/actors', actors.create_an_actor);
 
-}
+router.get('/actors/:actorId', actors.read_an_actor);
+router.delete('/actors/:actorId', actors.delete_an_actor);
+router.put('/actors/:actorId', actors.update_an_actor);
 
+module.exports = router;

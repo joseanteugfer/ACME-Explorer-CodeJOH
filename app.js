@@ -25,9 +25,11 @@ const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-const routesActor = require('./api/routes/actorRoutes');
+const routers = require('./api/routes');
 
-routesActor(app);
+routers.forEach((router) => {
+    app.use('/v1',router);
+});
 
 mongoose.connection.on("open", function(err, conn) {
     app.listen(portAPI, function(){
