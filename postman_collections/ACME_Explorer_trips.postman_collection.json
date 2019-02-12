@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "f4deb241-fdf3-423c-921a-426426dc1662",
+		"name": "ACME_Explorer_trips",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET all trips",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/v1/trips/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"trips",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST create trip",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ticker\": \"abc\",\n    \"title\": \"Paris trip\",\n    \"description\": \"Paris Valentine\",\n    \"price\": 240,\n    \"requirements\": [\"Hi\", \"special price for couples!\"],\n    \"date_start\": \"2019-02-13\",\n    \"date_end\": \"2019-02-15\",\n    \"stages\": [{\n    \t\"title\": \"Day 1\",\n    \"description\": \"Eiffel tower\",\n    \"price\": 140\n    },\n    {\n    \t\"title\": \"Day 2\",\n    \"description\": \"Louvre museum\",\n    \"price\": 100\n    }]\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/v1/trips/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"trips",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET trip by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/v1/trips/5c62dc645d16fa7fe3d66944",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"trips",
+						"5c62dc645d16fa7fe3d66944"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT update trip",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ticker\": \"abc\",\n    \"title\": \"Paris trip for couples\",\n    \"description\": \"Paris Valentine\",\n    \"price\": 240,\n    \"requirements\": [\"Hi\", \"special price for couples!\"],\n    \"date_start\": \"2019-02-13\",\n    \"date_end\": \"2019-02-15\",\n    \"stages\": [{\n    \t\"title\": \"Day 1\",\n    \"description\": \"Eiffel tower\",\n    \"price\": 140\n    },\n    {\n    \t\"title\": \"Day 2\",\n    \"description\": \"Louvre museum\",\n    \"price\": 100\n    }]\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/v1/trips/5c62dc645d16fa7fe3d66944",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"trips",
+						"5c62dc645d16fa7fe3d66944"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE trip by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/v1/trips/5c62dc645d16fa7fe3d66944",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"trips",
+						"5c62dc645d16fa7fe3d66944"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
