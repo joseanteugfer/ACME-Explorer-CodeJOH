@@ -2,7 +2,8 @@
 
 const express = require('express')
 const mongoose = require('mongoose');
-const Actor = require('./api/models/ActorModel')
+const Actor = require('./api/models/ActorModel');
+const Trip = require('./api/models/tripModel');
 const portAPI = process.env.PORT || 3000;
 const bodyParser = require('body-parser');
 const mongoDBHostname = process.env.mongoDBHostname || 'localhost';
