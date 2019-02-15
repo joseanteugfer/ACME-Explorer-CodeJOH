@@ -10,7 +10,7 @@
 		{
 			"name": "GET all orderedTrips",
 			"request": {
-				"url": "localhost:3000/v1/orderedTrip",
+				"url": "localhost:3000/v1/orderedTrips",
 				"method": "GET",
 				"header": [],
 				"body": {},
@@ -21,7 +21,7 @@
 		{
 			"name": "POST create orderedTrip",
 			"request": {
-				"url": "localhost:3000/v1/orderedTrip",
+				"url": "localhost:3000/v1/orderedTrips",
 				"method": "POST",
 				"header": [
 					{
@@ -32,7 +32,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"ticker\": \"abc\",\n\t\"status\": \"PENDING\",\n    \"actor_id\": \"5c5ac431ea187e38a8089393\",\n    \"comments\": \"Viaje con senderismo\"\n}"
+					"raw": "{\n\t\"ticker\": \"190212-KZGL\",\n\t\"status\": \"ACCEPTED\",\n    \"actor_id\": \"5c5ac431ea187e38a8089393\",\n    \"comments\": \"Viaje con senderismo\"\n}"
 				},
 				"description": ""
 			},
@@ -41,7 +41,7 @@
 		{
 			"name": "GET orderedTrip by id",
 			"request": {
-				"url": "localhost:3000/v1/orderedTrip/5c62edbba80cf34974e1c123",
+				"url": "localhost:3000/v1/orderedTrips/5c62edbba80cf34974e1c123",
 				"method": "GET",
 				"header": [],
 				"body": {},
@@ -52,7 +52,7 @@
 		{
 			"name": "PUT update orderedTrip",
 			"request": {
-				"url": "localhost:3000/v1/orderedTrip/5c62edbba80cf34974e1c123",
+				"url": "localhost:3000/v1/orderedTrips/5c62edbba80cf34974e1c123",
 				"method": "PUT",
 				"header": [
 					{
@@ -72,8 +72,81 @@
 		{
 			"name": "DELETE orderedTrip by id",
 			"request": {
-				"url": "localhost:3000/v1/orderedTrip/5c62edbba80cf34974e1c123",
+				"url": "localhost:3000/v1/orderedTrips/5c653984896d6022dc25f342",
 				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Change orderedTrip status",
+			"request": {
+				"url": {
+					"raw": "localhost:3000/v1/orderedTrips/5c653984896d6022dc25f342/status?status=Hola",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"orderedTrips",
+						"5c653984896d6022dc25f342",
+						"status"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "Hola",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET ordered trips groupBy status",
+			"request": {
+				"url": {
+					"raw": "localhost:3000/v1/orderedTrips/5c5ac431ea187e38a8089393/search?groupBy=status",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"orderedTrips",
+						"5c5ac431ea187e38a8089393",
+						"search"
+					],
+					"query": [
+						{
+							"key": "groupBy",
+							"value": "status",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
 				"header": [],
 				"body": {},
 				"description": ""
