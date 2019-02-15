@@ -21,7 +21,7 @@ function create_an_actor(req, res){
 
 function read_an_actor(req, res){
     
-    Actor.find({_id: req.params.actorId}, function(err, actors){
+    Actor.find({id_: req.params.actorId}, function(err, actors){
         if (err) res.send(err);
         else res.json(actors)
     });
@@ -29,7 +29,7 @@ function read_an_actor(req, res){
 
 function delete_an_actor(req, res){
     
-    Actor.find({_id: req.params.actorId}, function(err, actors){
+    Actor.find({id_: req.params.actorId}, function(err, actors){
         if (err) res.send(err);
         else res.json(actors)
     });
@@ -37,7 +37,7 @@ function delete_an_actor(req, res){
 
 function update_an_actor(req, res){
     
-    Actor.find({_id: req.params.actorId}, function(err, actors){
+    Actor.find({id_: req.params.actorId}, function(err, actors){
         if (err) res.send(err);
         else res.json(actors)
     });
