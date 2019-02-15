@@ -12,6 +12,8 @@ var dashboard = require('../controllers/dashboardController');
    * @type get 
    * @url /v1/dashboard
   */
- router.put('/dashboard/', dashboard.get_dasboard)
+ router.put('/dashboard', dashboard.get_dasboard)
+
+ module.exports = router;
 
 

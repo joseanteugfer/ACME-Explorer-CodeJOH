@@ -5,12 +5,23 @@ const Schema = mongoose.Schema;
 const OrderedTripSchema = new Schema({
     ticker: {
         type: String,
-        required: 'Enter ticker'
+        required: 'Enter ticker',
+        validate: {
+            validator: function(v) {
+                const keyRegExp = /^[0-9]{6}\-[A-Z]{4}$/;
+                return keyRegExp.test(v);
+            },
+        }
     },
     status: {
         type: String,
         enum: ['PENDING', 'REJECTED','DUE','ACCEPTED','CANCELLED'],
-        default: 'PENDING'
+        default: 'PENDING',
+        validate: {
+            validator: function(v) {
+                
+            }
+        }
     },
     date_apply: {
         type: Date, 
