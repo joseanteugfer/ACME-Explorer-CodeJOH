@@ -43,7 +43,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"ticker\": \"abc\",\n    \"title\": \"Paris trip\",\n    \"description\": \"Paris Valentine\",\n    \"price\": 240,\n    \"requirements\": [\"Hi\", \"special price for couples!\"],\n    \"date_start\": \"2019-02-13\",\n    \"date_end\": \"2019-02-15\",\n    \"stages\": [{\n    \t\"title\": \"Day 1\",\n    \"description\": \"Eiffel tower\",\n    \"price\": 140\n    },\n    {\n    \t\"title\": \"Day 2\",\n    \"description\": \"Louvre museum\",\n    \"price\": 100\n    }]\n}"
+					"raw": "{\n\t\"title\": \"Paris trip\",\n    \"description\": \"Paris Valentine\",\n    \"requirements\": [\"Hi\", \"special price for couples!\"],\n    \"date_start\": \"2019-02-20\",\n    \"date_end\": \"2019-02-23\",\n    \"stages\": [{\n    \t\"title\": \"Day 1\",\n    \"description\": \"Eiffel tower\",\n    \"price\": 44\n    },\n    {\n    \t\"title\": \"Day 2\",\n    \"description\": \"Louvre museum\",\n    \"price\": 110\n    }]\n}"
 				},
 				"url": {
 					"raw": "localhost:3000/v1/trips/",
@@ -70,7 +70,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "localhost:3000/v1/trips/5c62dc645d16fa7fe3d66944",
+					"raw": "localhost:3000/v1/trips/5c66af9272dde9e92c62b5d1",
 					"host": [
 						"localhost"
 					],
@@ -78,7 +78,7 @@
 					"path": [
 						"v1",
 						"trips",
-						"5c62dc645d16fa7fe3d66944"
+						"5c66af9272dde9e92c62b5d1"
 					]
 				}
 			},
@@ -98,10 +98,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"ticker\": \"abc\",\n    \"title\": \"Paris trip for couples\",\n    \"description\": \"Paris Valentine\",\n    \"price\": 240,\n    \"requirements\": [\"Hi\", \"special price for couples!\"],\n    \"date_start\": \"2019-02-13\",\n    \"date_end\": \"2019-02-15\",\n    \"stages\": [{\n    \t\"title\": \"Day 1\",\n    \"description\": \"Eiffel tower\",\n    \"price\": 140\n    },\n    {\n    \t\"title\": \"Day 2\",\n    \"description\": \"Louvre museum\",\n    \"price\": 100\n    }]\n}"
+					"raw": "{\n\t\"title\": \"Paris trip for couples\",\n    \"description\": \"Paris Valentine\",\n    \"requirements\": [\"Hi\", \"special price for couples!\"],\n    \"date_start\": \"2019-02-23\",\n    \"date_end\": \"2019-02-26\",\n    \"stages\": [{\n    \t\"title\": \"Day 1\",\n    \"description\": \"Eiffel tower\",\n    \"price\": 300\n    },\n    {\n    \t\"title\": \"Day 2\",\n    \"description\": \"Louvre museum\",\n    \"price\": 100\n    }]\n}"
 				},
 				"url": {
-					"raw": "localhost:3000/v1/trips/5c62dc645d16fa7fe3d66944",
+					"raw": "localhost:3000/v1/trips/5c66af9272dde9e92c62b5d1",
 					"host": [
 						"localhost"
 					],
@@ -109,7 +109,7 @@
 					"path": [
 						"v1",
 						"trips",
-						"5c62dc645d16fa7fe3d66944"
+						"5c66af9272dde9e92c62b5d1"
 					]
 				}
 			},
@@ -125,7 +125,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "localhost:3000/v1/trips/5c62dc645d16fa7fe3d66944",
+					"raw": "localhost:3000/v1/trips/5c66af9272dde9e92c62b5d1",
 					"host": [
 						"localhost"
 					],
@@ -133,7 +133,169 @@
 					"path": [
 						"v1",
 						"trips",
-						"5c62dc645d16fa7fe3d66944"
+						"5c66af9272dde9e92c62b5d1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT change trip status to Published",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/v1/trips/5c66af9272dde9e92c62b5d1/status?val=PUBLISHED",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"trips",
+						"5c66af9272dde9e92c62b5d1",
+						"status"
+					],
+					"query": [
+						{
+							"key": "val",
+							"value": "PUBLISHED"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET search trips keyword",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/v1/trips/search?keyword=Paris",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"trips",
+						"search"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "Paris"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET sponsorships",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/v1/trips/sponsorships",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"trips",
+						"sponsorships"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Added sponsorship",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/v1/trips/5c66af9272dde9e92c62b5d1/sponsorships",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"trips",
+						"5c66af9272dde9e92c62b5d1",
+						"sponsorships"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update sponsorship",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/v1/trips/5c66af9272dde9e92c62b5d1/sponsorships/12",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"trips",
+						"5c66af9272dde9e92c62b5d1",
+						"sponsorships",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE sponsorships",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/v1/trips/5c66af9272dde9e92c62b5d1/sponsorships/12",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"trips",
+						"5c66af9272dde9e92c62b5d1",
+						"sponsorships",
+						"12"
 					]
 				}
 			},
