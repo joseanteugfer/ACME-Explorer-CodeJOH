@@ -52,7 +52,7 @@ router.route('/orderedTrips/:orderedTripId')
    * @section orderedTrips
    * @type put
    */
-  router.route('/orderedTrips/:orderTripId/pay')
+  router.route('/orderedTrips/:orderedTripId/pay')
         .put(orderedTrip.pay);
 
 
