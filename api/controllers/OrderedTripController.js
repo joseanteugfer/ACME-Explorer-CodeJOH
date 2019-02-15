@@ -193,6 +193,6 @@ module.exports = {
     update_an_orderedTrip,
     delete_an_orderedTrip,
     change_status,
-    search_by_status,
+    search_by_status, 
     pay
 }

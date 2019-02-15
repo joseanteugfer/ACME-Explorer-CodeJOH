@@ -17,3 +17,4 @@ var dashboard = require('../controllers/dashboardController');
  module.exports = router;
 
 
+ module.exports = router;
