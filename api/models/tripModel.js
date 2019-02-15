@@ -28,17 +28,10 @@ const SponsorSchema = new Schema( {
         data: Buffer, 
         contentType: String
     },
-    name: {
-        type: String, 
-        required: 'Enter the sponsor name'
-    },
-    surname: {
-        type: String, 
-        required: 'Enter the sponsor surname'
-    },
-    email: {
-        type: String, 
-        required: 'Enter the sponsor email'
+    actorId: {
+        type: Schema.Types.ObjectId,
+        ref: 'Actor',
+        required: true
     }
 });
 
@@ -65,15 +58,20 @@ const TripSchema = new Schema({
       }],
     date_start: {
         type: Date,
-        default: Date.now
+        requiered: true
     },
     date_end: {
         type: Date,
-        default: Date.now
+        required: true
     },
     created: {
         type: Date,
         default: Date.now
+    },
+    status: {
+        type: String,
+        enum: ['CREATED', 'PUBLISHED', 'STARTED', 'ENDED', 'CANCELLED'],
+        default: 'CREATED'
     },
     stages: [StageSchema],
     sponsors: [SponsorSchema]

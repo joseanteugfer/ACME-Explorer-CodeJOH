@@ -51,10 +51,35 @@ function update_a_trip(req, res){
     });
 }
 
+function search_trips_keyword(res,req){
+
+}
+
+function change_status(req, res){
+
+}
+
+function get_sponsorhips(req, res) {
+
+}
+
+function update_sponsorhips(req, res) {
+
+}
+
+function delete_sponsorhip(req, res) {
+
+}
+
 module.exports = {
     list_all_trips,
     create_a_trip,
     read_a_trip,
     update_a_trip,
-    delete_a_trip
-}
+    delete_a_trip,
+    search_trips_keyword,
+    change_status,
+    get_sponsorhips,
+    update_sponsorhips,
+    delete_sponsorhip
+} 
