@@ -62,7 +62,7 @@ const TripSchema = new Schema({
       }],
     date_start: {
         type: Date,
-        requiered: true,
+        required: true,
         validate: [
             startDateValidator,
             'Start date must be greater than Today date'
