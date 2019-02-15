@@ -15,3 +15,4 @@ var dashboard = require('../controllers/dashboardController');
  router.put('/dashboard/', dashboard.get_dasboard)
 
 
+ module.exports = router;
