@@ -9,7 +9,8 @@ const OrderedTripSchema = new Schema({
     },
     status: {
         type: String,
-        enum: ['PENDING', 'REJECTED','DUE','ACCEPTED','CANCELLED']
+        enum: ['PENDING', 'REJECTED','DUE','ACCEPTED','CANCELLED'],
+        default: 'PENDING'
     },
     date_apply: {
         type: Date, 

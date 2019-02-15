@@ -51,10 +51,27 @@ function update_an_orderedTrip(req, res){
     });
 }
 
+function change_status(req,res){
+ // new-status = REJECTED and old_status= PENDING
+ //new_status = DUE and old_status=PENDING
+ //new_status = CANCELLED and old_status= PENDING or ACCEPTED
+}
+
+function search_by_status(req,res){
+    //devolver la lista de los trips 
+}
+
+function pay(req,res){
+
+}
+
 module.exports = {
     list_all_orderedTrip,
     create_an_orderedTrip,
     read_an_orderedTrip,
     update_an_orderedTrip,
-    delete_an_orderedTrip
+    delete_an_orderedTrip,
+    change_status,
+    search_by_status, 
+    pay
 }
