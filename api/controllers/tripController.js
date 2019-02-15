@@ -137,7 +137,6 @@ function pay_sponsorhips(req, res) {
     res.send('Payed sponsorship');
 }
 
-
 module.exports = {
     list_all_trips,
     create_a_trip,
