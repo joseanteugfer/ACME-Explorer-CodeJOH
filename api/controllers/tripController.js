@@ -46,6 +46,10 @@ function delete_a_trip(req, res) {
     //check auth user is ['MANAGER'], otherwise return 403
     //delete trip if it's not published
     Trip.findById({ _id: req.params.tripId }, function (err, trip) {
+        if (!trip) {
+            res.status(400).send({ message: `Trip with ID ${req.params.tripId} not found`});
+            return;
+        }
         if (trip.status != 'PUBLISHED') {
             Trip.deleteOne({ _id: req.params.tripId }, function (err, trip) {
                 if (err) {
@@ -65,6 +69,10 @@ function update_a_trip(req, res) {
     //check auth user is ['MANAGER'], otherwise return 403
     //update trip if it's not published
     Trip.findById({ _id: req.params.tripId }, function (err, trip) {
+        if (!trip) {
+            res.status(400).send({ message: `Trip with ID ${req.params.tripId} not found`});
+            return;
+        }
         if (trip.status != 'PUBLISHED') {
             var tripUpdated = req.body;
             //calculating the total price as sum of the stages prices
