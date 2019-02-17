@@ -28,17 +28,14 @@ const SponsorSchema = new Schema( {
         data: Buffer, 
         contentType: String
     },
-    name: {
-        type: String, 
-        required: 'Enter the sponsor name'
+    actorId: {
+        type: Schema.Types.ObjectId,
+        ref: 'Actor',
+        required: true
     },
-    surname: {
-        type: String, 
-        required: 'Enter the sponsor surname'
-    },
-    email: {
-        type: String, 
-        required: 'Enter the sponsor email'
+    payed: {
+        type: Boolean,
+        default: false
     }
 });
 
@@ -65,15 +62,27 @@ const TripSchema = new Schema({
       }],
     date_start: {
         type: Date,
-        default: Date.now
+        required: true,
+        validate: [
+            startDateValidator,
+            'Start date must be greater than Today date'
+        ]
     },
     date_end: {
         type: Date,
-        default: Date.now
+        required: true,
+        validate: [
+            endDateValidator,
+            'End date must be greater than Start date']
     },
     created: {
         type: Date,
         default: Date.now
+    },
+    status: {
+        type: String,
+        enum: ['CREATED', 'PUBLISHED', 'STARTED', 'ENDED', 'CANCELLED'],
+        default: 'CREATED'
     },
     stages: [StageSchema],
     sponsors: [SponsorSchema]
@@ -88,5 +97,17 @@ TripSchema.pre('save', function(next){
     trip.ticker = `${now}-${randomletters}`;
     next();
 });
+
+function endDateValidator(endDate){
+    var startDate = this.date_start;
+    if(!startDate) //making an update
+        startDate = new Date(this.getUpdate().date_start);
+    return startDate <= endDate;
+}
+
+function startDateValidator(startDate){
+    let now = moment();
+    return now <= startDate;
+}
 
 module.exports = mongoose.model('Trip', TripSchema);
