@@ -1,0 +1,57 @@
+{
+	"info": {
+		"_postman_id": "ec65bc82-fe61-45db-97dc-80f5c096ce42",
+		"name": "ACME_Explorer_dashboards",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET general information",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/v1/dashboards/general",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"dashboards",
+						"general"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET compute cube",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/v1/dashboards/compute-cube",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"dashboards",
+						"compute-cube"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
