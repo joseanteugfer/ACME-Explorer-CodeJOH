@@ -51,7 +51,7 @@ function delete_an_orderedTrip(req, res){
 function update_an_orderedTrip(req, res){
     
     console.log('PUT /orderedTrips/:orderedTrip');
-    OrderedTrip.findOneAndUpdate({_id: req.params.orderedTripId}, req.body, {new: true}, function(err, orderedTrip) {
+    OrderedTrip.findOneAndUpdate({_id: req.params.orderedTripId}, req.body, {new: true, runValidators: true}, function(err, orderedTrip) {
         if (err){
             if(err.name=='ValidationError') {
                 res.status(422).send(err);
