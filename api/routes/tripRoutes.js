@@ -108,7 +108,7 @@ router.put('/trips/:tripId/status', trips.change_status)
 router.post('/trips/:tripId/sponsorships', trips.add_sponsorhips)
 
 /**
- * Update a new sponsorship
+ * Update a sponsorship
  *  RequiredRoles: Sponsor
  * 
  * @section trips
@@ -116,6 +116,16 @@ router.post('/trips/:tripId/sponsorships', trips.add_sponsorhips)
  * @url /v1/trips/:tripId/sponsorships/:sponsorshipId
  */
 router.put('/trips/:tripId/sponsorships/:sponsorshipId', trips.update_sponsorhips)
+
+/**
+ * Get a sponsorship
+ *  RequiredRoles: Sponsor
+ * 
+ * @section trips
+ * @type get
+ * @url /v1/trips/:tripId/sponsorships/:sponsorshipId
+ */
+router.get('/trips/:tripId/sponsorships/:sponsorshipId', trips.get_a_sponsorhip)
 
 /**
  * Delete a sponsorship
