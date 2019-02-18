@@ -155,19 +155,26 @@ function add_sponsorhips(req, res) {
     let sponsorId = req.params.actorId;
     console.log(`POST /trips/${tripId}/${sponsorId}/sponsorships`);
 
-    let new_sponsor = {
-        link: 'www.marca.com',
-        banner: 'testbanner',
-        actorId: sponsorId
-    };
+    let new_sponsor = req.body;
+    new_sponsor.actorId = sponsorId;
 
     Trip.find({_id: tripId }, function(err, trip){
         if (err) return res.status(500).send(err);
         if (!trip[0]) return res.status(400).send({ message: `Trip with ID ${tripId} not found` });
 
         trip[0].sponsors.push(new_sponsor);
-        trip[0].save();
-        return res.send(trip[0]);
+        trip[0].save(function(err, trip) {
+            if (err) {
+                if (err.name == 'ValidationError') {
+                    return res.status(422).send(err);
+                }
+                else {
+                    return res.status(500).send(err);
+                }
+            }
+            return res.send(trip);
+        });
+        
     });
 }
 function update_sponsorhips(req, res) {
