@@ -214,8 +214,21 @@ function delete_sponsorhips(req, res) {
 }
 
 function pay_sponsorhips(req, res) {
-    console.log('Payed sponsorship for user');
-    res.send('Payed sponsorship');
+    let tripId = req.params.tripId;
+    let sponsorshipId = req.params.sponsorshipId;
+    console.log(`PUT /trips/${tripId}/sponsorships/${sponsorshipId}/pay`);
+    
+    Trip.findOneAndUpdate({ "_id": tripId, "sponsors._id": sponsorshipId },
+    { "$set": { "sponsors.$.payed": true} },
+    function(err,trip) {
+        if (err){
+            res.status(500).send(err);
+        } 
+        else{
+            res.send(trip);
+        } 
+        }
+    );
 }
 
 module.exports = {
