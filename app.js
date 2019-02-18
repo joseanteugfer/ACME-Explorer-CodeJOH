@@ -2,19 +2,17 @@
 
 const express = require('express')
 const mongoose = require('mongoose');
-const Actor = require('./api/models/ActorModel')
+const Actor = require('./api/models/ActorModel');
+const Trip = require('./api/models/tripModel');
+const OrderedTrip = require('./api/models/OrderedTripModel');
 const portAPI = process.env.PORT || 3000;
 const bodyParser = require('body-parser');
 const mongoDBHostname = process.env.mongoDBHostname || 'localhost';
 const mongoDBPort = process.env.mongoDBPort || 27017;
 const mongoDBName = process.env.mongoDBName || 'ACME-Explorer';
-const mongoDBUser = process.env.mongoDBUser || "acmeExplorerUser";
-const mongoDBPass = process.env.mongoDBPass || "explorer";
-const mongoDBCredentials = (mongoDBUser && mongoDBPass) ? mongoDBUser + ":" + mongoDBPass + "@" : "";
-const mongoDBURI = "mongodb://" + mongoDBCredentials + mongoDBHostname + ":" + mongoDBPort + "/" + mongoDBName;
+const mongoDBUri = "mongodb://"+mongoDBHostname+":"+mongoDBPort+"/"+mongoDBName;
 
-
-mongoose.connect(mongoDBURI, {
+mongoose.connect(mongoDBUri, {
     reconnectTries: 10,
     reconnectInterval: 500,
     poolSize: 10,
@@ -29,13 +27,15 @@ const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-const routesActor = require('./api/routes/actorRoutes');
+const routers = require('./api/routes');
 
-routesActor(app);
+routers.forEach((router) => {
+    app.use('/v1',router);
+});
 
 mongoose.connection.on("open", function(err, conn) {
     app.listen(portAPI, function(){
-        console.log("ACME-Explorer Restful API "+portAPI)
+        console.log("ACME-Explorer Restful API listen in "+portAPI)
     })
 });
 
