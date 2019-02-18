@@ -91,7 +91,7 @@ function update_an_actor(req, res) {
 function change_banned_status(req, res) {
     var banned_value = req.query.value;
     //check auth user is ['ADMINISTRATOR'], otherwise return 403
-    Actor.findOneAndUpdate({ _id: req.params.actorId }, { $set: { banned: banned_value } }, { new: true }, function (err, actor) {
+    Actor.findOneAndUpdate({ _id: req.params.actorId }, { $set: { banned: banned_value } }, { new: true, runValidators: true }, function (err, actor) {
         if (err) {
             if (err.name == 'ValidationError') {
                 res.status(422).send(err);
