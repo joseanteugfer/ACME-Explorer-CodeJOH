@@ -76,11 +76,13 @@ function update_a_trip(req, res) {
         if (trip.status != 'PUBLISHED') {
             var tripUpdated = req.body;
             //calculating the total price as sum of the stages prices
-            tripUpdated.price = tripUpdated.stages.map((stage) => {
-                return stage.price
-            }).reduce((sum, price) => {
-                return sum + price;
-            });
+            if (tripUpdated.stages) {
+                tripUpdated.price = tripUpdated.stages.map((stage) => {
+                    return stage.price
+                }).reduce((sum, price) => {
+                    return sum + price;
+                });
+            }
             Trip.findOneAndUpdate({ _id: req.params.tripId }, tripUpdated, { new: true, runValidators: true, context: 'query' }, function (err, trip) {
                 if (err) {
                     if (err.name == 'ValidationError') {
@@ -112,7 +114,7 @@ function change_status(req, res) {
     //check auth user is ['MANAGER'], otherwise return 403
     //change status to CANCEL if (PUBLISHED and not STARTED) and don't have any accepted application, otherwise return 405
     var new_status = req.query.val;
-    Trip.findOneAndUpdate({ _id: req.params.tripId }, { $set: { status: new_status } }, { new: true }, function (err, trip) {
+    Trip.findOneAndUpdate({ _id: req.params.tripId }, { $set: { status: new_status } }, { new: true, runValidators: true }, function (err, trip) {
         if (err) {
             res.send(err);
         }
