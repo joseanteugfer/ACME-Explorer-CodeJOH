@@ -46,9 +46,9 @@ router.get('/trips/search', trips.search_trips)
 * 
 * @section trips
 * @type get
-* @url /v1/trips/sponsorships
+* @url /v1/trips/sponsorships/:actorId
 */
-router.get('/trips/sponsorships', trips.get_sponsorhips)
+router.get('/trips/sponsorships/:actorId', trips.get_sponsorhips)
 
 
 /**

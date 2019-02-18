@@ -126,7 +126,15 @@ function change_status(req, res) {
 
 function get_sponsorhips(req, res) {
     console.log('Getting all sponsorships for user');
-    res.send('Sponsorships returned');
+    Trip.find({ 'sponsors.actorId': req.params.actorId }, function (err, trips) {
+        if (err){
+            res.status(500).send(err);
+        } 
+        else{
+            res.send(trips);
+        } 
+    });
+    
 }
 
 function add_sponsorhips(req, res) {
@@ -135,7 +143,19 @@ function add_sponsorhips(req, res) {
 }
 function update_sponsorhips(req, res) {
     console.log('Updated sponsorship for user');
-    res.send('Updated sponsorship');
+    
+    Trip.findOneAndUpdate({ "_id": req.params.tripId, "sponsors._id": req.params.sponsorshipId },
+    { "$set": { "sponsors.$": req.body} },
+    function(err,trip) {
+        if (err){
+            res.status(500).send(err);
+        } 
+        else{
+            console.log(trip);
+            res.send(trip);
+        } 
+        }
+    );
 }
 function delete_sponsorhips(req, res) {
     console.log('Deleted sponsorship for user');
