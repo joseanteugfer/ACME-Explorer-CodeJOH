@@ -143,9 +143,9 @@ router.delete('/trips/:tripId/sponsorships/:sponsorshipId', trips.delete_sponsor
  * 
  * @section trips
  * @type put
- * @url /v1/trips/:tripId/sponsorships/pay
+ * @url /v1/trips/:tripId/sponsorships/:sponsorshipId/pay
  */
-router.put('/trips/:tripId/sponsorships/pay', trips.pay_sponsorhips)
+router.put('/trips/:tripId/sponsorships/:sponsorshipId/pay', trips.pay_sponsorhips)
 
 
 module.exports = router;
