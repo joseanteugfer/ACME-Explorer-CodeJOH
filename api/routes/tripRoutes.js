@@ -103,9 +103,9 @@ router.put('/trips/:tripId/status', trips.change_status)
  * 
  * @section trips
  * @type post
- * @url /v1/trips/:tripId/sponsorships
+ * @url /v1/trips/:tripId/:actorId/sponsorships
  */
-router.post('/trips/:tripId/sponsorships', trips.add_sponsorhips)
+router.post('/trips/:tripId/:actorId/sponsorships', trips.add_sponsorhips)
 
 /**
  * Update a new sponsorship
