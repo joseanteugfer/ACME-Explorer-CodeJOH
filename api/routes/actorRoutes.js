@@ -1,19 +1,9 @@
 'use strict'
-module.exports = function(app) {
-    var actors = require('../controllers/ActorController')
 
-    app.route('/actors')
-        .get(actors.list_all_actors)
-        .post(actors.create_an_actor);
+const express = require('express');
+const router = express.Router();
+var actors = require('../controllers/ActorController')
 
-<<<<<<< HEAD
-    app.route('/actors/:actorId')
-        .get(actors.read_an_actor)
-        .delete(actors.delete_an_actor)
-        .put(actors.update_an_actor);
-
-}
-=======
   /**
    * Get all actors
    *    Required role: Administrator
@@ -54,5 +44,5 @@ router.put('/actors/:actorId', actors.update_an_actor);
    * @param {Boolean} value
   */  
  router.put('/actors/:actorId/banned', actors.change_banned_status)
->>>>>>> development
 
+module.exports = router;
