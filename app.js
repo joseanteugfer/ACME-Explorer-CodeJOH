@@ -10,9 +10,12 @@ const bodyParser = require('body-parser');
 const mongoDBHostname = process.env.mongoDBHostname || 'localhost';
 const mongoDBPort = process.env.mongoDBPort || 27017;
 const mongoDBName = process.env.mongoDBName || 'ACME-Explorer';
-const mongoDBUri = "mongodb://"+mongoDBHostname+":"+mongoDBPort+"/"+mongoDBName;
+var mongoDBUser = process.env.mongoDBUser || "acmeExplorerUser";
+var mongoDBPass = process.env.mongoDBPass || "explorer";
+var mongoDBCredentials = (mongoDBUser && mongoDBPass) ? mongoDBUser + ":" + mongoDBPass + "@" : "";
+var mongoDBURI = "mongodb://" + mongoDBCredentials + mongoDBHostname + ":" + mongoDBPort + "/" + mongoDBName;
 
-mongoose.connect(mongoDBUri, {
+mongoose.connect(mongoDBURI, {
     reconnectTries: 10,
     reconnectInterval: 500,
     poolSize: 10,
