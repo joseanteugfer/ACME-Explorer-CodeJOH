@@ -130,16 +130,48 @@ function get_sponsorhips(req, res) {
 }
 
 function add_sponsorhips(req, res) {
-    console.log('Add sponsorship for user');
-    res.send('Added sponsorship');
+    let tripId = req.params.tripId;
+    let sponsorId = req.params.actorId;
+    console.log(`POST /trips/${tripId}/${sponsorId}/sponsorships`);
+
+    let new_sponsor = {
+        link: 'www.marca.com',
+        banner: 'testbanner',
+        actorId: sponsorId
+    };
+
+    Trip.find({_id: tripId }, function(err, trip){
+        if (err) return res.status(500).send(err);
+        if (!trip[0]) return res.status(400).send({ message: `Trip with ID ${tripId} not found` });
+
+        trip[0].sponsors.push(new_sponsor);
+        trip[0].save();
+        return res.send(trip[0]);
+    });
 }
 function update_sponsorhips(req, res) {
     console.log('Updated sponsorship for user');
     res.send('Updated sponsorship');
 }
 function delete_sponsorhips(req, res) {
-    console.log('Deleted sponsorship for user');
-    res.send('Deleted sponsorship');
+    let tripId = req.params.tripId;
+    let sponsorshipId = req.params.sponsorshipId;
+    console.log(`DELETE /trips/${tripId}/sponsorships/${sponsorshipId}`);
+
+    Trip.find({_id: tripId }, function(err, trip){
+        if (err) return res.status(500).send(err);
+        if (!trip[0]) return res.status(400).send({ message: `Trip with ID ${tripId} not found` });
+    
+        if (trip[0].sponsors.length != 0) {
+            for(let i = 0; i < trip[0].sponsors.length; i++) {
+                if (trip[0].sponsors[i]._id == sponsorshipId) {
+                    trip[0].sponsors.splice(i, 1);
+                }
+            }
+        }
+        trip[0].save();
+        return res.send(trip[0]);
+    });
 }
 
 function pay_sponsorhips(req, res) {
