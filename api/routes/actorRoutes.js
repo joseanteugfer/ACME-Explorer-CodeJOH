@@ -14,8 +14,8 @@ var actors = require('../controllers/ActorController')
 	 * @type get post
 	 * @url /v1/actors
   */
-router.get('/actors', actors.list_all_actors); 
-router.post('/actors', actors.create_an_actor);
+router.get('/v1/actors', actors.list_all_actors); 
+router.post('/v1/actors', actors.create_an_actor);
 
 
 /**
@@ -28,9 +28,9 @@ router.post('/actors', actors.create_an_actor);
 	 * @type get put
 	 * @url /v1/actors/:actorId
   */  
-router.get('/actors/:actorId', actors.read_an_actor);
-router.put('/actors/:actorId', actors.update_an_actor);
-//router.delete('/actors/:actorId', actors.delete_an_actor);
+router.get('/v1/actors/:actorId', actors.read_an_actor);
+router.put('/v1/actors/:actorId', actors.update_an_actor);
+//router.delete('/v1/actors/:actorId', actors.delete_an_actor);
 
 
 
@@ -43,6 +43,6 @@ router.put('/actors/:actorId', actors.update_an_actor);
 	 * @url /v1/actors/:actorId
    * @param {Boolean} value
   */  
- router.put('/actors/:actorId/banned', actors.change_banned_status)
+ router.put('/v1/actors/:actorId/banned', actors.change_banned_status)
 
 module.exports = router;

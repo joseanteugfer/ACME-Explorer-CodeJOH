@@ -36,7 +36,7 @@ app.use(bodyParser.json());
 const routers = require('./api/routes');
 
 routers.forEach((router) => {
-    app.use('/v1',router);
+    app.use(router);
 });
 
 mongoose.connection.on("open", function(err, conn) {

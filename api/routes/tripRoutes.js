@@ -10,7 +10,7 @@ var trips = require('../controllers/tripController')
    * @type get 
    * @url /v1/trips
   */
-router.get('/trips', trips.list_all_trips);
+router.get('/v1/trips', trips.list_all_trips);
 
 /**
    * Create trip:
@@ -20,7 +20,7 @@ router.get('/trips', trips.list_all_trips);
    * @type post 
    * @url /v1/trips
   */
-router.post('/trips', trips.create_a_trip);
+router.post('/v1/trips', trips.create_a_trip);
 
 /**
    * Search trip using only keyword:
@@ -38,7 +38,7 @@ router.post('/trips', trips.create_a_trip);
    * @param {string} dateRangeEnd
   */
 
-router.get('/trips/search', trips.search_trips)
+router.get('/v1/trips/search', trips.search_trips)
 
 /**
 * Get all sponsorships
@@ -48,7 +48,7 @@ router.get('/trips/search', trips.search_trips)
 * @type get
 * @url /v1/trips/sponsorships/:actorId
 */
-router.get('/trips/sponsorships/:actorId', trips.get_sponsorhips)
+router.get('/v1/trips/sponsorships/:actorId', trips.get_sponsorhips)
 
 
 /**
@@ -60,7 +60,7 @@ router.get('/trips/sponsorships/:actorId', trips.get_sponsorhips)
    * @url /v1/trips/:tripId
   */
 
-router.get('/trips/:tripId', trips.read_a_trip);
+router.get('/v1/trips/:tripId', trips.read_a_trip);
 
 /**
    * Delete trip if it's not published:
@@ -71,7 +71,7 @@ router.get('/trips/:tripId', trips.read_a_trip);
    * @url /v1/trips/:tripId
   */
 
-router.delete('/trips/:tripId', trips.delete_a_trip);
+router.delete('/v1/trips/:tripId', trips.delete_a_trip);
 
 /**
    * Update trip if it's not published:
@@ -82,7 +82,7 @@ router.delete('/trips/:tripId', trips.delete_a_trip);
    * @url /v1/trips/:tripId
   */
 
-router.put('/trips/:tripId', trips.update_a_trip);
+router.put('/v1/trips/:tripId', trips.update_a_trip);
 
 
 /**
@@ -94,7 +94,7 @@ router.put('/trips/:tripId', trips.update_a_trip);
    * @url /v1/trips
    * @param {string} val // one of this values ['PUBLISHED', 'STARTED', 'ENDED', 'CANCELLED']
   */
-router.put('/trips/:tripId/status', trips.change_status)
+router.put('/v1/trips/:tripId/status', trips.change_status)
 
 
 /**
@@ -105,7 +105,7 @@ router.put('/trips/:tripId/status', trips.change_status)
  * @type post
  * @url /v1/trips/:tripId/:actorId/sponsorships
  */
-router.post('/trips/:tripId/:actorId/sponsorships', trips.add_sponsorhips)
+router.post('/v1/trips/:tripId/:actorId/sponsorships', trips.add_sponsorhips)
 
 /**
  * Update a sponsorship
@@ -115,7 +115,7 @@ router.post('/trips/:tripId/:actorId/sponsorships', trips.add_sponsorhips)
  * @type put
  * @url /v1/trips/:tripId/sponsorships/:sponsorshipId
  */
-router.put('/trips/:tripId/sponsorships/:sponsorshipId', trips.update_sponsorhips)
+router.put('/v1/trips/:tripId/sponsorships/:sponsorshipId', trips.update_sponsorhips)
 
 /**
  * Get a sponsorship
@@ -125,7 +125,7 @@ router.put('/trips/:tripId/sponsorships/:sponsorshipId', trips.update_sponsorhip
  * @type get
  * @url /v1/trips/:tripId/sponsorships/:sponsorshipId
  */
-router.get('/trips/:tripId/sponsorships/:sponsorshipId', trips.get_a_sponsorhip)
+router.get('/v1/trips/:tripId/sponsorships/:sponsorshipId', trips.get_a_sponsorhip)
 
 /**
  * Delete a sponsorship
@@ -135,7 +135,7 @@ router.get('/trips/:tripId/sponsorships/:sponsorshipId', trips.get_a_sponsorhip)
  * @type delete
  * @url /v1/trips/:tripId/sponsorships/:sponsorshipId
  */
-router.delete('/trips/:tripId/sponsorships/:sponsorshipId', trips.delete_sponsorhips)
+router.delete('/v1/trips/:tripId/sponsorships/:sponsorshipId', trips.delete_sponsorhips)
 
 /**
  * Pay a sponsorship
@@ -145,7 +145,7 @@ router.delete('/trips/:tripId/sponsorships/:sponsorshipId', trips.delete_sponsor
  * @type put
  * @url /v1/trips/:tripId/sponsorships/:sponsorshipId/pay
  */
-router.put('/trips/:tripId/sponsorships/:sponsorshipId/pay', trips.pay_sponsorhips)
+router.put('/v1/trips/:tripId/sponsorships/:sponsorshipId/pay', trips.pay_sponsorhips)
 
 
 module.exports = router;
