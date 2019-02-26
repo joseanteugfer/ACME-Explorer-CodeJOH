@@ -126,7 +126,7 @@ function change_status(req, res) {
 
 function get_sponsorhips(req, res) {
     console.log('Getting all sponsorships for user');
-    Trip.find({ 'sponsors.actorId': req.params.actorId }, function (err, trips) {
+    Trip.find({ 'sponsorships.actorId': req.params.actorId }, function (err, trips) {
         if (err){
             res.status(500).send(err);
         } 
@@ -138,7 +138,7 @@ function get_sponsorhips(req, res) {
 }
 function get_a_sponsorhip(req, res) {
     console.log('Getting a sponsorship');
-    Trip.findOne({ "_id": req.params.tripId, "sponsors._id": req.params.sponsorshipId }, function(err,trip) {
+    Trip.findOne({ "_id": req.params.tripId, "sponsorships._id": req.params.sponsorshipId }, function(err,trip) {
         if (err){
             res.status(500).send(err);
         } 
@@ -162,7 +162,7 @@ function add_sponsorhips(req, res) {
         if (err) return res.status(500).send(err);
         if (!trip[0]) return res.status(400).send({ message: `Trip with ID ${tripId} not found` });
 
-        trip[0].sponsors.push(new_sponsor);
+        trip[0].sponsorships.push(new_sponsor);
         trip[0].save(function(err, trip) {
             if (err) {
                 if (err.name == 'ValidationError') {
@@ -180,8 +180,8 @@ function add_sponsorhips(req, res) {
 function update_sponsorhips(req, res) {
     console.log('Updated sponsorship for user');
     
-    Trip.findOneAndUpdate({ "_id": req.params.tripId, "sponsors._id": req.params.sponsorshipId },
-    { "$set": { "sponsors.$": req.body} },
+    Trip.findOneAndUpdate({ "_id": req.params.tripId, "sponsorships._id": req.params.sponsorshipId },
+    { "$set": { "sponsorships.$": req.body} },
     function(err,trip) {
         if (err){
             res.status(500).send(err);
@@ -201,10 +201,10 @@ function delete_sponsorhips(req, res) {
         if (err) return res.status(500).send(err);
         if (!trip[0]) return res.status(400).send({ message: `Trip with ID ${tripId} not found` });
     
-        if (trip[0].sponsors.length != 0) {
-            for(let i = 0; i < trip[0].sponsors.length; i++) {
-                if (trip[0].sponsors[i]._id == sponsorshipId) {
-                    trip[0].sponsors.splice(i, 1);
+        if (trip[0].sponsorships.length != 0) {
+            for(let i = 0; i < trip[0].sponsorships.length; i++) {
+                if (trip[0].sponsorships[i]._id == sponsorshipId) {
+                    trip[0].sponsorships.splice(i, 1);
                 }
             }
         }

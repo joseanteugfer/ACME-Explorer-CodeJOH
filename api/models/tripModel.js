@@ -19,7 +19,7 @@ const StageSchema = new Schema({
     }
 });
 
-const SponsorSchema = new Schema( {
+const SponsorshipSchema = new Schema( {
     link: {
         type: String,
         required: 'Enter the sponsor page link'
@@ -85,7 +85,7 @@ const TripSchema = new Schema({
         default: 'CREATED'
     },
     stages: [StageSchema],
-    sponsors: [SponsorSchema]
+    sponsorships: [SponsorshipSchema]
 }, {strict: false});
 
 TripSchema.pre('save', function(next){
