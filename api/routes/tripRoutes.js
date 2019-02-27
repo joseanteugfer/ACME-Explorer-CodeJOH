@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-var trips = require('../controllers/tripController')
+var trips = require('../controllers/tripController');
 
 /**
    * Get all trips:
