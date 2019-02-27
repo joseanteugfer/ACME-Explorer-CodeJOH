@@ -15,12 +15,6 @@ function create_a_trip(req, res) {
     //status to CREATED(by default in schema definition)
     //check auth user is ['MANAGER'], otherwise return 403
     var new_trip = new Trip(req.body);
-    //calculating the total price as sum of the stages prices
-    new_trip.price = new_trip.stages.map((stage) => {
-        return stage.price
-    }).reduce((sum, price) => {
-        return sum + price;
-    });
     new_trip.save(function (err, trip) {
         if (err) {
             if (err.name == 'ValidationError') {
