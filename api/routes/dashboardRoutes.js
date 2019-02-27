@@ -12,7 +12,7 @@ var dashboard = require('../controllers/dashboardController');
    * @type get 
    * @url /v1/dashboards/general
   */
- router.get('/dashboards/general', dashboard.get_dasboard)
+ router.get('/v1/dashboards/general', dashboard.get_dasboard)
 
  /**
    * Compute cube:
@@ -23,9 +23,6 @@ var dashboard = require('../controllers/dashboardController');
    * @url /v1/dashboards/compute-cube
    * @param {string} period
   */
- router.get("/dashboards/compute-cube", dashboard.compute_cube);
-
- module.exports = router;
-
+ router.get("/v1/dashboards/compute-cube", dashboard.compute_cube);
 
  module.exports = router;

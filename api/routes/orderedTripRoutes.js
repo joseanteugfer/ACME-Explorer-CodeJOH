@@ -12,11 +12,11 @@ router.use(function timeLog(req, res, next) {
   next();
 });
 
-router.route('/orderedTrips')
+router.route('/v1/orderedTrips')
       .get(orderedTrip.list_all_orderedTrip)
       .post(orderedTrip.create_an_orderedTrip);
 
-router.route('/orderedTrips/:orderedTripId')
+router.route('/v1/orderedTrips/:orderedTripId')
       .get(orderedTrip.read_an_orderedTrip)
       .delete(orderedTrip.delete_an_orderedTrip)
       .put(orderedTrip.update_an_orderedTrip);
@@ -30,7 +30,7 @@ router.route('/orderedTrips/:orderedTripId')
    * @url /v1/orderedTrip
    * @param {string} status //
   */
- router.route('/orderedTrips/:orderedTripId/status')
+ router.route('/v1/orderedTrips/:orderedTripId/status')
        .put(orderedTrip.change_status);
 
  /**
@@ -42,7 +42,7 @@ router.route('/orderedTrips/:orderedTripId')
 	 * @url /v1/orderedTrips/search
    * @param {string} groupBy (status)
    */
-  router.route('/orderedTrips/:actorId/search')
+  router.route('/v1/orderedTrips/:actorId/search')
         .get(orderedTrip.search_by_status);
 
     /**
@@ -52,7 +52,7 @@ router.route('/orderedTrips/:orderedTripId')
    * @section orderedTrips
    * @type put
    */
-  router.route('/orderedTrips/:orderedTripId/pay')
+  router.route('/v1/orderedTrips/:orderedTripId/pay')
         .put(orderedTrip.pay);
 
 
