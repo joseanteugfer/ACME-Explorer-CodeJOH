@@ -14,7 +14,7 @@ function checkManager(req, res, next) {
         }
         else {
             if (actor.role[0] != 'MANAGER')
-                res.status(500).send("Actor it's not a manager");
+                res.status(500).send({ errors: "Actor it's not a manager"});
             else
                 next()
         }
