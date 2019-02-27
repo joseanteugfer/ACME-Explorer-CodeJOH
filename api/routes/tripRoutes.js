@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 var trips = require('../controllers/tripController')
+const middleware = require('../middlewares/middleware')
 
 /**
    * Get all trips:
@@ -18,9 +19,10 @@ router.get('/v1/trips', trips.list_all_trips);
    *
    * @section trips
    * @type post 
-   * @url /v1/trips
+   * @url /v1/trips/:actorId
   */
-router.post('/v1/trips', trips.create_a_trip);
+router.post('/trips/:actorId', middleware.checkManager, trips.create_a_trip);
+
 
 /**
    * Search trip using only keyword:
@@ -71,7 +73,7 @@ router.get('/v1/trips/:tripId', trips.read_a_trip);
    * @url /v1/trips/:tripId
   */
 
-router.delete('/v1/trips/:tripId', trips.delete_a_trip);
+router.delete('/trips/:actorId/:tripId', middleware.checkManager,trips.delete_a_trip);
 
 /**
    * Update trip if it's not published:
@@ -82,7 +84,7 @@ router.delete('/v1/trips/:tripId', trips.delete_a_trip);
    * @url /v1/trips/:tripId
   */
 
-router.put('/v1/trips/:tripId', trips.update_a_trip);
+router.put('/trips/:actorId/:tripId', middleware.checkManager, trips.update_a_trip);
 
 
 /**
@@ -94,8 +96,7 @@ router.put('/v1/trips/:tripId', trips.update_a_trip);
    * @url /v1/trips
    * @param {string} val // one of this values ['PUBLISHED', 'STARTED', 'ENDED', 'CANCELLED']
   */
-router.put('/v1/trips/:tripId/status', trips.change_status)
-
+router.put('/trips/:actorId/:tripId/status', middleware.checkManager, trips.change_status)
 
 /**
  * Create a new sponsorship
