@@ -32,4 +32,7 @@ const OrderedTripSchema = new Schema({
     }
 }, {strict: false})
 
+OrderedTripSchema.index({ ticker: 1, status: 1 }); //1 ascending,  -1 descending
+OrderedTripSchema.index({ ticker: 'text', status: 'text', comments: 'text' });
+
 module.exports = mongoose.model('OrderedTrip',OrderedTripSchema);

@@ -3,7 +3,7 @@
 const moment = require('moment');
 const express = require('express');
 const router = express.Router();
-var orderedTrip = require('../controllers/OrderedTripController')
+const orderedTrip = require('../controllers/OrderedTripController')
 
 // middleware that is specific to this router
 router.use(function timeLog(req, res, next) {
@@ -11,6 +11,25 @@ router.use(function timeLog(req, res, next) {
   console.log('Time: ', now);
   next();
 });
+
+/**
+   * get results from a search engine
+   *    RequiredRoles: None; Administrator can view "deleted" items
+   * 
+   * @section items
+	 * @type get
+	 * @url /v1/items/search
+   * @param {string} ticker 
+   * @param {string} actor (actorId)
+   * @param {string} deleted (true|false)
+   * @param {string} startFrom
+   * @param {string} pageSize
+   * @param {string} sortedBy (actor)
+   * @param {string} reverse (true|false) 
+   * @param {string} keyword //in sku, name, or description
+   */
+router.route('/v1/orderedTrips/search')
+      .get(orderedTrip.search_orderedTrip);
 
 router.route('/v1/orderedTrips')
       .get(orderedTrip.list_all_orderedTrip)

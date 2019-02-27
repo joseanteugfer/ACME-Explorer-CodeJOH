@@ -28,6 +28,58 @@ function create_an_orderedTrip(req, res){
     })
 }
 
+// /orderedTrips/search?actorId="id"&q="searchString"&sortedBy="status|actorId|ticker|date_apply"&reverse="false|true"&startFrom="valor"&pageSize="tam&deleted=true|false"
+function search_orderedTrip(req, res) {
+ //In further version of the code we will:
+  //1.- control the authorization in order to include deleted items in the results if the requester is an Administrator.
+  var query = {};
+    
+  if(req.query.actorId){
+    query.actor_id=req.query.actorId;
+  }
+  if (req.query.q) {
+    query.$text = {$search: req.query.q};
+  }
+  if(req.query.deleted){
+    query.deleted = req.query.deleted;
+  }
+
+  var skip=0;
+  if(req.query.startFrom){
+    skip = parseInt(req.query.startFrom);
+  }
+  var limit=0;
+  if(req.query.pageSize){
+    limit=parseInt(req.query.pageSize);
+  }
+
+  var sort="";
+  if(req.query.reverse=="true"){
+    sort="-";
+  }
+  if(req.query.sortedBy){
+    sort+=req.query.sortedBy;
+  }
+
+  console.log("Query: "+query+" Skip:" + skip+" Limit:" + limit+" Sort:" + sort);
+
+  OrderedTrip.find(query)
+      .sort(sort)
+      .skip(skip)
+      .limit(limit)
+      .lean()
+      .exec(function(err, orderedTrip){
+    console.log('Start searching orderedTrip');
+    if (err){
+      res.send(err);
+    }
+    else{
+      res.json(orderedTrip);
+    }
+    console.log('End searching orderedTrips');
+  });
+}
+
 function read_an_orderedTrip(req, res){
     
     OrderedTrip.find({_id: req.params.orderedTripId}, function(err, orderedTrips){
@@ -189,6 +241,7 @@ function pay(req,res){
 module.exports = {
     list_all_orderedTrip,
     create_an_orderedTrip,
+    search_orderedTrip,
     read_an_orderedTrip,
     update_an_orderedTrip,
     delete_an_orderedTrip,
