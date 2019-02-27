@@ -21,7 +21,7 @@ router.get('/v1/trips', trips.list_all_trips);
    * @type post 
    * @url /v1/trips/:actorId
   */
-router.post('/trips/:actorId', middleware.checkManager, trips.create_a_trip);
+router.post('/v1/trips/:actorId', middleware.checkManager, trips.create_a_trip);
 
 
 /**
@@ -73,7 +73,7 @@ router.get('/v1/trips/:tripId', trips.read_a_trip);
    * @url /v1/trips/:tripId
   */
 
-router.delete('/trips/:actorId/:tripId', middleware.checkManager,trips.delete_a_trip);
+router.delete('/v1/trips/:actorId/:tripId', middleware.checkManager,trips.delete_a_trip);
 
 /**
    * Update trip if it's not published:
@@ -84,7 +84,7 @@ router.delete('/trips/:actorId/:tripId', middleware.checkManager,trips.delete_a_
    * @url /v1/trips/:tripId
   */
 
-router.put('/trips/:actorId/:tripId', middleware.checkManager, trips.update_a_trip);
+router.put('/v1/trips/:actorId/:tripId', middleware.checkManager, trips.update_a_trip);
 
 
 /**
@@ -96,7 +96,7 @@ router.put('/trips/:actorId/:tripId', middleware.checkManager, trips.update_a_tr
    * @url /v1/trips
    * @param {string} val // one of this values ['PUBLISHED', 'STARTED', 'ENDED', 'CANCELLED']
   */
-router.put('/trips/:actorId/:tripId/status', middleware.checkManager, trips.change_status)
+router.put('/v1/trips/:actorId/:tripId/status', middleware.checkManager, trips.change_status)
 
 /**
  * Create a new sponsorship
