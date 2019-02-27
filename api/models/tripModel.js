@@ -43,6 +43,11 @@ const TripSchema = new Schema({
     ticker: {
         type: String
     },
+    manager: {
+        type: Schema.Types.ObjectId,
+        ref: 'Actor',
+        required: true
+    },
     title: {
         type: String,
         required: 'Enter trip title'
@@ -95,6 +100,17 @@ TripSchema.pre('save', function(next){
     let randomletters = generate(alphabet,4);
     let now = moment().format("YYMMDD");
     trip.ticker = `${now}-${randomletters}`;
+
+    //calculating the total price as sum of the stages prices
+    trip.price = trip.stages.map((stage) => {
+        return stage.price
+    }).reduce((sum, price) => {
+        return sum + price;
+    });
+
+    //checking actor is a manager
+    
+    console.log("inside presave");
     next();
 });
 
