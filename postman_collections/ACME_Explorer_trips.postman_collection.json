@@ -1,30 +1,37 @@
 {
-	"variables": [],
 	"info": {
+		"_postman_id": "f4deb241-fdf3-423c-921a-426426dc1662",
 		"name": "ACME_Explorer_trips",
-		"_postman_id": "887159d2-8f23-c9ac-1c3c-f2e6f8dbe978",
-		"description": "",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
 			"name": "GET all trips",
 			"request": {
-				"url": "localhost:3000/v1/trips/",
 				"method": "GET",
 				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
 				},
-				"description": ""
+				"url": {
+					"raw": "localhost:3000/v1/trips/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"trips",
+						""
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "POST create trip",
 			"request": {
-				"url": "localhost:3000/v1/trips/",
 				"method": "POST",
 				"header": [
 					{
@@ -36,30 +43,50 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"title\": \"Paris trip\",\n    \"description\": \"Paris Valentine\",\n    \"requirements\": [\"Hi\", \"special price for couples!\"],\n    \"date_start\": \"2019-02-20\",\n    \"date_end\": \"2019-02-23\",\n    \"stages\": [{\n    \t\"title\": \"Day 1\",\n    \"description\": \"Eiffel tower\",\n    \"price\": 44\n    },\n    {\n    \t\"title\": \"Day 2\",\n    \"description\": \"Louvre museum\",\n    \"price\": 110\n    }]\n}"
+					"raw": "{\n\t\"title\": \"Sponsor2 trip\",\n    \"description\": \"Sponsor2 Valentine\",\n    \"requirements\": [\"Hi\", \"special price for couples!\"],\n    \"date_start\": \"2019-02-28\",\n    \"date_end\": \"2019-03-10\",\n    \"stages\": [{\n    \t\"title\": \"Day 1\",\n    \"description\": \"Eiffel tower\",\n    \"price\": 44\n    },\n    {\n    \t\"title\": \"Day 2\",\n    \"description\": \"Louvre museum\",\n    \"price\": 110\n    }],\n    \"sponsorships\": [{\n    \t\"link\": \"123\",\n    \t\"actorId\": \"5c66af9272dde9e92c62b5d1\"\n    }]\n}"
 				},
-				"description": ""
+				"url": {
+					"raw": "localhost:3000/v1/trips/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"trips",
+						""
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "GET trip by id",
 			"request": {
-				"url": "localhost:3000/v1/trips/5c66af9272dde9e92c62b5d1",
 				"method": "GET",
 				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
 				},
-				"description": ""
+				"url": {
+					"raw": "localhost:3000/v1/trips/5c752e89acbfce8c3b80b773",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"trips",
+						"5c752e89acbfce8c3b80b773"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "PUT update trip",
 			"request": {
-				"url": "localhost:3000/v1/trips/5c66af9272dde9e92c62b5d1",
 				"method": "PUT",
 				"header": [
 					{
@@ -73,27 +100,54 @@
 					"mode": "raw",
 					"raw": "{\n\t\"title\": \"Paris trip for couples\",\n    \"description\": \"Paris Valentine\",\n    \"requirements\": [\"Hi\", \"special price for couples!\"],\n    \"date_start\": \"2019-02-23\",\n    \"date_end\": \"2019-02-26\",\n    \"stages\": [{\n    \t\"title\": \"Day 1\",\n    \"description\": \"Eiffel tower\",\n    \"price\": 300\n    },\n    {\n    \t\"title\": \"Day 2\",\n    \"description\": \"Louvre museum\",\n    \"price\": 100\n    }]\n}"
 				},
-				"description": ""
+				"url": {
+					"raw": "localhost:3000/v1/trips/5c66af9272dde9e92c62b5d1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"trips",
+						"5c66af9272dde9e92c62b5d1"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "DELETE trip by id",
 			"request": {
-				"url": "localhost:3000/v1/trips/5c66af9272dde9e92c62b5d1",
 				"method": "DELETE",
 				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
 				},
-				"description": ""
+				"url": {
+					"raw": "localhost:3000/v1/trips/5c66af9272dde9e92c62b5d1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"trips",
+						"5c66af9272dde9e92c62b5d1"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "PUT change trip status to Published",
 			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "localhost:3000/v1/trips/5c66af9272dde9e92c62b5d1/status?val=PUBLISHED",
 					"host": [
@@ -111,22 +165,20 @@
 							"key": "val",
 							"value": "PUBLISHED"
 						}
-					],
-					"variable": []
-				},
-				"method": "PUT",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"description": ""
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "GET search trips keyword",
 			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "localhost:3000/v1/trips/search?keyword=Paris",
 					"host": [
@@ -143,78 +195,125 @@
 							"key": "keyword",
 							"value": "Paris"
 						}
-					],
-					"variable": []
-				},
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"description": ""
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "GET sponsorships",
 			"request": {
-				"url": "localhost:3000/v1/trips/5c69cfbd394c553984b0a777/sponsorships/5c6aaa6668582c5f086ebefb",
 				"method": "GET",
 				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
 				},
-				"description": ""
+				"url": {
+					"raw": "localhost:3000/v1/trips/sponsorships/5c752e89acbfce8c3b80b773",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"trips",
+						"sponsorships",
+						"5c752e89acbfce8c3b80b773"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "Added sponsorship",
 			"request": {
-				"url": "localhost:3000/v1/trips/5c69cfbd394c553984b0a777/5c6a9f4429a28c49d4ba0138/sponsorships",
 				"method": "POST",
 				"header": [
 					{
 						"key": "Content-Type",
+						"name": "Content-Type",
 						"value": "application/json",
-						"description": ""
+						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"link\": \"www.zara.es\"\n}"
+					"raw": "{\n    \t\"link\": \"12dadada3\",\n    \t\"actorId\": \"5c66af9272dde9e92c62b5d1\"\n    }"
 				},
-				"description": ""
+				"url": {
+					"raw": "localhost:3000/v1/trips/5c752e89acbfce8c3b80b773/5c66af9272dde9e92c62b5d1/sponsorships",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"trips",
+						"5c752e89acbfce8c3b80b773",
+						"5c66af9272dde9e92c62b5d1",
+						"sponsorships"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "Update sponsorship",
 			"request": {
-				"url": "localhost:3000/v1/trips/5c66af9272dde9e92c62b5d1/sponsorships/12",
 				"method": "PUT",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": ""
+					"raw": "{\n\t \"payed\": true,\n      \"link\": \"http://example3.com\",\n      \"actorId\": \"5c6c4df2d46c965ccade6137\"\n}"
 				},
-				"description": ""
+				"url": {
+					"raw": "localhost:3000/v1/trips/5c752e89acbfce8c3b80b773/sponsorships/5c75363bacbfce8c3b80b778",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"trips",
+						"5c752e89acbfce8c3b80b773",
+						"sponsorships",
+						"5c75363bacbfce8c3b80b778"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "DELETE sponsorships",
 			"request": {
-				"url": "localhost:3000/v1/trips/5c69cfbd394c553984b0a777/sponsorships/5c6aa3b220cba51d08b7f82a",
 				"method": "DELETE",
 				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
 				},
-				"description": ""
+				"url": {
+					"raw": "localhost:3000/v1/trips/5c752e89acbfce8c3b80b773/sponsorships/5c75363bacbfce8c3b80b778",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"trips",
+						"5c752e89acbfce8c3b80b773",
+						"sponsorships",
+						"5c75363bacbfce8c3b80b778"
+					]
+				}
 			},
 			"response": []
 		}

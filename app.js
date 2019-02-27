@@ -5,8 +5,16 @@ const mongoose = require('mongoose');
 const Actor = require('./api/models/ActorModel');
 const Trip = require('./api/models/tripModel');
 const OrderedTrip = require('./api/models/OrderedTripModel');
+const Dashboard = require('./api/models/dashboardModel');
+const DashboardTools = require('./api/controllers/dashboardController')
 const portAPI = process.env.PORT || 3000;
 const bodyParser = require('body-parser');
+
+// MongoDB URI building
+var mongoDBUser = process.env.mongoDBUser || 'acmeExplorerUser';
+var mongoDBPass = process.env.mongoDBPass || 'explorer';
+var mongoDBCredentials = (mongoDBUser && mongoDBPass) ? mongoDBUser + ":" + mongoDBPass + "@" : "";
+
 const mongoDBHostname = process.env.mongoDBHostname || 'localhost';
 const mongoDBPort = process.env.mongoDBPort || 27017;
 const mongoDBName = process.env.mongoDBName || 'ACME-Explorer';
@@ -48,3 +56,5 @@ mongoose.connection.on("open", function(err, conn) {
 mongoose.connection.on("error", function(err){
     console.log(err);
 });
+
+DashboardTools.createDashboardJob();
