@@ -2,7 +2,8 @@
 
 const express = require('express');
 const router = express.Router();
-var actors = require('../controllers/ActorController')
+const actors = require('../controllers/ActorController');
+const middleware = require('../middlewares/middleware');
 
   /**
    * Get all actors
@@ -14,8 +15,8 @@ var actors = require('../controllers/ActorController')
 	 * @type get post
 	 * @url /v1/actors
   */
-router.get('/v1/actors', actors.list_all_actors); 
-router.post('/v1/actors', actors.create_an_actor);
+router.get('/v1/actors', middleware.checkAdmin, actors.list_all_actors); 
+router.post('/v1/actors', middleware.checkAdmin, actors.create_an_actor);
 
 
 /**
@@ -43,6 +44,6 @@ router.put('/v1/actors/:actorId', actors.update_an_actor);
 	 * @url /v1/actors/:actorId
    * @param {Boolean} value
   */  
- router.put('/v1/actors/:actorId/banned', actors.change_banned_status)
+ router.put('/v1/actors/:actorId/banned', middleware.checkAdmin, actors.change_banned_status)
 
 module.exports = router;

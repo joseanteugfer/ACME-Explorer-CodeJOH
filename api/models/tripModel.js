@@ -41,7 +41,8 @@ const SponsorshipSchema = new Schema( {
 
 const TripSchema = new Schema({
     ticker: {
-        type: String
+        type: String,
+        unique: true
     },
     manager: {
         type: Schema.Types.ObjectId,
@@ -107,10 +108,7 @@ TripSchema.pre('save', function(next){
     }).reduce((sum, price) => {
         return sum + price;
     });
-
-    //checking actor is a manager
     
-    console.log("inside presave");
     next();
 });
 
