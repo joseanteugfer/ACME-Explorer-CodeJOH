@@ -76,15 +76,15 @@ function update_an_actor(req, res) {
     Actor.findOneAndUpdate({ _id: req.params.actorId }, req.body, { runValidators: true, new: true }, function (err, actor) {
         if (err) {
             if (err.name == 'ValidationError') {
-                res.status(422).send(err);
+                return res.status(422).send(err);
             }
             else {
-                res.status(500).send(err);
+                return res.status(500).send(err);
             }
         }
-        else {
-            res.json(actor);
-        }
+        if (!actor) return res.status(404).send({message: `Actor with ID ${req.params.actorId} not found` });
+        
+        res.json(actor);
     });
 }
 
@@ -94,15 +94,15 @@ function change_banned_status(req, res) {
     Actor.findOneAndUpdate({ _id: req.params.actorId }, { $set: { banned: banned_value } }, { new: true, runValidators: true }, function (err, actor) {
         if (err) {
             if (err.name == 'ValidationError') {
-                res.status(422).send(err);
+                return res.status(422).send(err);
             }
             else {
-                res.status(500).send(err);
+                return res.status(500).send(err);
             }
         }
-        else {
-            res.json(actor);
-        }
+        if (!actor) return res.status(404).send({ message: `Actor with ID ${req.params.actorId} not found` });
+
+        res.json(actor);
     });
 }
 

@@ -111,7 +111,6 @@ TripSchema.pre('save', function(next){
     }).reduce((sum, price) => {
         return sum + price;
     });
-
     next();
 });
 
