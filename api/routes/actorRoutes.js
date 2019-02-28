@@ -40,10 +40,16 @@ router.put('/v1/actors/:actorId', actors.update_an_actor);
    *    RequiredRoles: to be Administrator
 	 *
 	 * @section actors
-	 * @type get put
+	 * @type put
 	 * @url /v1/actors/:actorId
    * @param {Boolean} value
   */  
- router.put('/v1/actors/:actorId/banned', middleware.checkAdmin, actors.change_banned_status)
+ router.put('/v1/actors/:actorId/banned', middleware.checkAdmin, actors.change_banned_status);
+
+ router.get('/v1/actors/:actorId/finder', actors.show_actor_finder);
+
+ router.put('/v1/actors/:actorId/finder', actors.update_actor_finder);
+
+ router.delete('/v1/actors/:actorId/finder', actors.delete_actor_finder);
 
 module.exports = router;
