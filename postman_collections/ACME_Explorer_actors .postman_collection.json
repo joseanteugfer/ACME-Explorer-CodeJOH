@@ -1,43 +1,41 @@
 {
+	"variables": [],
 	"info": {
-		"_postman_id": "87087aa7-9b59-46c6-8a0b-ada276db3462",
 		"name": "ACME_Explorer_actors ",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"_postman_id": "79b8218b-c2b5-3786-983a-d0dcf6f90ef6",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
 		{
 			"name": "POST create an actor",
 			"request": {
+				"url": "localhost:3000/v1/actors",
 				"method": "POST",
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
 						"value": "application/json",
-						"type": "text"
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "5c7801c8efdace420008d0fb",
+						"description": ""
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"name\":\"jonh\",\n\t\"surname\":\"snow\",\n\t\"email\":\"hola@gmail.com\",\n\t\"password\":\"password\",\n\t\"phone\":\"986678567\",\n\t\"address\":\"Calle falsa, 123\",\n\t\"role\":\"EXPLORER\",\n\t\"validated\":\"true\"\n}"
+					"raw": "{\n\t\"name\":\"admin\",\n\t\"surname\":\"snow\",\n\t\"email\":\"new_admin@gmail.com\",\n\t\"password\":\"password\",\n\t\"phone\":\"986678567\",\n\t\"address\":\"Calle falsa, 123\",\n\t\"role\":\"ADMINISTRATOR\",\n\t\"validated\":\"true\"\n}"
 				},
-				"url": {
-					"raw": "localhost:3000/v1/actors",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"v1",
-						"actors"
-					]
-				}
+				"description": ""
 			},
 			"response": []
 		},
 		{
 			"name": "POST create an actor with finder correct params",
 			"request": {
+				"url": "localhost:3000/v1/actors",
 				"method": "POST",
 				"header": [
 					{
@@ -51,23 +49,14 @@
 					"mode": "raw",
 					"raw": "{\n\t\"name\":\"jonh\",\n\t\"surname\":\"snow\",\n\t\"email\":\"hola@gmail.com\",\n\t\"password\":\"password\",\n\t\"phone\":\"986678567\",\n\t\"address\":\"Calle falsa, 123\",\n\t\"role\":\"EXPLORER\",\n\t\"validated\":\"true\",\n\t\"finder\": {\n\t\t\"keyword\":\"Paris\",\n\t\t\"priceRangeMin\":0,\n\t\t\"priceRangeMax\":100,\n\t\t\"dateRangeStart\":\"2019-02-13\",\n\t\t\"dateRangeEnd\":\"2019-02-15\"\n\t}\n}"
 				},
-				"url": {
-					"raw": "localhost:3000/v1/actors",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"v1",
-						"actors"
-					]
-				}
+				"description": ""
 			},
 			"response": []
 		},
 		{
 			"name": "POST create an actor with finder wrong price params",
 			"request": {
+				"url": "localhost:3000/v1/actors",
 				"method": "POST",
 				"header": [
 					{
@@ -81,23 +70,14 @@
 					"mode": "raw",
 					"raw": "{\n\t\"name\":\"jonh\",\n\t\"surname\":\"snow\",\n\t\"email\":\"hola@gmail.com\",\n\t\"password\":\"password\",\n\t\"phone\":\"986678567\",\n\t\"address\":\"Calle falsa, 123\",\n\t\"role\":\"EXPLORER\",\n\t\"validated\":\"true\",\n\t\"finder\": {\n\t\t\"keyword\":\"Paris\",\n\t\t\"priceRangeMin\":0,\n\t\t\"priceRangeMax\":100,\n\t\t\"dateRangeStart\":\"2019-02-13\",\n\t\t\"dateRangeEnd\":\"2019-02-15\"\n\t}\n}"
 				},
-				"url": {
-					"raw": "localhost:3000/v1/actors",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"v1",
-						"actors"
-					]
-				}
+				"description": ""
 			},
 			"response": []
 		},
 		{
 			"name": "POST create an actor with finder wrong date params",
 			"request": {
+				"url": "localhost:3000/v1/actors",
 				"method": "POST",
 				"header": [
 					{
@@ -111,101 +91,68 @@
 					"mode": "raw",
 					"raw": "{\n\t\"name\":\"jonh\",\n\t\"surname\":\"snow\",\n\t\"email\":\"hola@gmail.com\",\n\t\"password\":\"password\",\n\t\"phone\":\"986678567\",\n\t\"address\":\"Calle falsa, 123\",\n\t\"role\":\"EXPLORER\",\n\t\"validated\":\"true\",\n\t\"finder\": {\n\t\t\"keyword\":\"Paris\",\n\t\t\"priceRangeMin\":0,\n\t\t\"priceRangeMax\":100,\n\t\t\"dateRangeStart\":\"2019-02-13\",\n\t\t\"dateRangeEnd\":\"2019-02-15\"\n\t}\n}"
 				},
-				"url": {
-					"raw": "localhost:3000/v1/actors",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"v1",
-						"actors"
-					]
-				}
+				"description": ""
 			},
 			"response": []
 		},
 		{
 			"name": "GET list all actors",
 			"request": {
+				"url": "localhost:3000/v1/actors",
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "5c7801c8efdace420008d0fb",
+						"description": ""
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": ""
 				},
-				"url": {
-					"raw": "localhost:3000/v1/actors",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"v1",
-						"actors"
-					]
-				}
+				"description": ""
 			},
 			"response": []
 		},
 		{
 			"name": "GET an actor by id",
 			"request": {
+				"url": "localhost:3000/v1/actors/5c671b7a0c8a0e07200479b9",
 				"method": "GET",
 				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
 				},
-				"url": {
-					"raw": "localhost:3000/v1/actors/5c671b7a0c8a0e07200479b9",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"v1",
-						"actors",
-						"5c671b7a0c8a0e07200479b9"
-					]
-				}
+				"description": ""
 			},
 			"response": []
 		},
 		{
 			"name": "PUT update an actor by id",
 			"request": {
+				"url": "localhost:3000/v1/actors/5c671b7a0c8a0e07200479b9",
 				"method": "PUT",
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
 						"value": "application/json",
-						"type": "text"
+						"description": ""
 					}
 				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n\t\"name\":\"actor\",\n\t\"surname\":\"editado\",\n\t\"email\":\"editado@gmail.com\",\n\t\"password\":\"editpass\",\n\t\"phone\":\"111222333\",\n\t\"address\":\"Calle editada\",\n\t\"role\":\"EXPLORER\",\n\t\"validated\":\"true\"\n}"
 				},
-				"url": {
-					"raw": "localhost:3000/v1/actors/5c671b7a0c8a0e07200479b9",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"v1",
-						"actors",
-						"5c671b7a0c8a0e07200479b9"
-					]
-				}
+				"description": ""
 			},
 			"response": []
 		},
 		{
 			"name": "PUT update an actor by id with wrong price finder params",
 			"request": {
+				"url": "localhost:3000/v1/actors/5c671b7a0c8a0e07200479b9",
 				"method": "PUT",
 				"header": [
 					{
@@ -219,24 +166,14 @@
 					"mode": "raw",
 					"raw": "{\n\t\"name\":\"jaime\",\n\t\"surname\":\"lannister\",\n\t\"email\":\"matarreyes@gmail.com\",\n\t\"password\":\"password\",\n\t\"phone\":\"986678567\",\n\t\"address\":\"Calle falsa, 123\",\n\t\"role\":\"EXPLORER\",\n\t\"validated\":\"true\",\n\t\"finder\": {\n\t\t\"keyword\":\"Paris\",\n\t\t\"priceRangeMin\":50,\n\t\t\"priceRangeMax\":20,\n\t\t\"dateRangeStart\":\"2019-06-13\",\n\t\t\"dateRangeEnd\":\"2019-06-15\"\n\t}\n}"
 				},
-				"url": {
-					"raw": "localhost:3000/v1/actors/5c671b7a0c8a0e07200479b9",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"v1",
-						"actors",
-						"5c671b7a0c8a0e07200479b9"
-					]
-				}
+				"description": ""
 			},
 			"response": []
 		},
 		{
 			"name": "PUT update an actor by id with wrong date finder params",
 			"request": {
+				"url": "localhost:3000/v1/actors/5c671b7a0c8a0e07200479b9",
 				"method": "PUT",
 				"header": [
 					{
@@ -250,32 +187,15 @@
 					"mode": "raw",
 					"raw": "{\n\t\"name\":\"Daenerys\",\n\t\"surname\":\"Targaryen\",\n\t\"email\":\"madrededragones@gmail.com\",\n\t\"password\":\"password\",\n\t\"phone\":\"986678567\",\n\t\"address\":\"Calle falsa, 123\",\n\t\"role\":\"EXPLORER\",\n\t\"validated\":\"true\",\n\t\"finder\": {\n\t\t\"keyword\":\"Paris\",\n\t\t\"priceRangeMin\":0,\n\t\t\"priceRangeMax\":100,\n\t\t\"dateRangeStart\":\"2019-02-25\",\n\t\t\"dateRangeEnd\":\"2019-02-15\"\n\t}\n}"
 				},
-				"url": {
-					"raw": "localhost:3000/v1/actors/5c671b7a0c8a0e07200479b9",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"v1",
-						"actors",
-						"5c671b7a0c8a0e07200479b9"
-					]
-				}
+				"description": ""
 			},
 			"response": []
 		},
 		{
 			"name": "PUT change banned status",
 			"request": {
-				"method": "PUT",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
 				"url": {
-					"raw": "localhost:3000/v1/actors/5c671b7a0c8a0e07200479b9/banned?value=true",
+					"raw": "localhost:3000/v1/actors/5c6a9f4429a28c49d4ba0138/banned?value=true",
 					"host": [
 						"localhost"
 					],
@@ -283,40 +203,46 @@
 					"path": [
 						"v1",
 						"actors",
-						"5c671b7a0c8a0e07200479b9",
+						"5c6a9f4429a28c49d4ba0138",
 						"banned"
 					],
 					"query": [
 						{
 							"key": "value",
-							"value": "true"
+							"value": "true",
+							"equals": true,
+							"description": ""
 						}
-					]
-				}
+					],
+					"variable": []
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "5c780254b39f5d4060c93f4d",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
 			},
 			"response": []
 		},
 		{
 			"name": "DELETE an actor by id",
 			"request": {
+				"url": "localhost:3000/v1/actors/5c671b7a0c8a0e07200479b9",
 				"method": "DELETE",
 				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
 				},
-				"url": {
-					"raw": "localhost:3000/v1/actors/5c671b7a0c8a0e07200479b9",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"v1",
-						"actors",
-						"5c671b7a0c8a0e07200479b9"
-					]
-				}
+				"description": ""
 			},
 			"response": []
 		}

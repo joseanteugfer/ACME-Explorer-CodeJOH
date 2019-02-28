@@ -4,6 +4,7 @@ const moment = require('moment');
 const express = require('express');
 const router = express.Router();
 const orderedTrip = require('../controllers/OrderedTripController')
+const middleware = require('../middlewares/middleware')
 
 // middleware that is specific to this router
 router.use(function timeLog(req, res, next) {
@@ -14,19 +15,18 @@ router.use(function timeLog(req, res, next) {
 
 /**
    * get results from a search engine
-   *    RequiredRoles: None; Administrator can view "deleted" items
+   *    RequiredRoles: None
    * 
-   * @section items
+   * @section orderedTrips
 	 * @type get
-	 * @url /v1/items/search
+	 * @url /v1/orderedTrips/search
    * @param {string} ticker 
    * @param {string} actor (actorId)
-   * @param {string} deleted (true|false)
    * @param {string} startFrom
    * @param {string} pageSize
    * @param {string} sortedBy (actor)
    * @param {string} reverse (true|false) 
-   * @param {string} keyword //in sku, name, or description
+   * @param {string} keyword //in ticker, status, or comments
    */
 router.route('/v1/orderedTrips/search')
       .get(orderedTrip.search_orderedTrip);
@@ -72,7 +72,7 @@ router.route('/v1/orderedTrips/:orderedTripId')
    * @type put
    */
   router.route('/v1/orderedTrips/:orderedTripId/pay')
-        .put(orderedTrip.pay);
+        .put(middleware.checkExplorer,orderedTrip.pay);
 
 
 
