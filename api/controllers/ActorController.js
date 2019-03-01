@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const Actor = mongoose.model('Actor');
 
 function list_all_actors(req, res) {
-
+    console.log(`GET /actors`);
     Actor.find({}, function (err, actors) {
         if (err) {
             if (err.name == 'ValidationError') {
@@ -20,7 +20,7 @@ function list_all_actors(req, res) {
 }
 
 function create_an_actor(req, res) {
-
+    console.log(`POST /actors`)
     var new_actor = new Actor(req.body);
     new_actor.save(function (err, actor) {
         if (err) {
@@ -33,23 +33,20 @@ function create_an_actor(req, res) {
         }
         else {
             res.status(201).json(actor);
+            console.log('Actor con id: ' + actor._id + 'creado.');
         }
     });
 }
 
 function read_an_actor(req, res) {
-    Actor.find({ _id: req.params.actorId }, function (err, actor) {
+    var actorId = req.params.actorId;
+    console.log(`GET /actors/${actorId}`);
+    Actor.findOne({ _id: actorId }, function (err, actor) {
+        if (!actor) return res.status(404).send({ message: `Actor with ID ${actorId} not found` });
         if (err) {
-            if (err.name == 'ValidationError') {
-                res.status(422).send(err);
-            }
-            else {
-                res.status(500).send(err);
-            }
+            res.status(500).send(err);
         }
         else {
-            if (!actor) return res.status(404).send({ message: `Actor with ID ${req.params.actorId} not found` });
-
             res.json(actor);
         }
     })
@@ -57,25 +54,22 @@ function read_an_actor(req, res) {
 }
 
 function delete_an_actor(req, res) {
-
-    Actor.findOneAndDelete({ _id: req.params.actorId }, function (err, actor) {
+    var actorId = req.params.actorId;
+    console.log(`DELETE /actors/${actorId}`);
+    Actor.findOneAndDelete({ _id: actorId }, function (err, actor) {
         if (err) {
-            if (err.name == 'ValidationError') {
-                res.status(422).send(err);
-            }
-            else {
-                res.status(500).send(err);
-            }
+            res.status(500).send(err);
         }
         else {
-            res.json({ message: "The actor: " + actor + " was successfully deleted" });
+            res.json({ message: "The actor with id: " + actorId + " was successfully deleted" });
         }
     });
 }
 
 function update_an_actor(req, res) {
-
-    Actor.findOneAndUpdate({ _id: req.params.actorId }, req.body, { runValidators: true, new: true, context: 'query' }, function (err, actor) {
+    var actorId = req.params.actorId;
+    console.log(`PUT /actors/${actorId}`);
+    Actor.findOneAndUpdate({ _id: actorId }, req.body, { runValidators: true, new: true, context: 'query' }, function (err, actor) {
         if (err) {
             if (err.name == 'ValidationError') {
                 return res.status(422).send(err);
@@ -84,7 +78,7 @@ function update_an_actor(req, res) {
                 return res.status(500).send(err);
             }
         }
-        if (!actor) return res.status(404).send({ message: `Actor with ID ${req.params.actorId} not found` });
+        if (!actor) return res.status(404).send({ message: `Actor with ID ${actorId} not found` });
 
         res.json(actor);
     });
@@ -93,42 +87,35 @@ function update_an_actor(req, res) {
 function change_banned_status(req, res) {
     var banned_value = req.query.value;
     //check auth user is ['ADMINISTRATOR'], otherwise return 403
-    Actor.findOneAndUpdate({ _id: req.params.actorId }, { $set: { banned: banned_value } }, { new: true, runValidators: true }, function (err, actor) {
+    var actorId = req.params.actorId;
+    console.log(`PUT /actors/${actorId}/banned`);
+    Actor.findOneAndUpdate({ _id: actorId }, { $set: { banned: banned_value } }, { new: true }, function (err, actor) {
         if (err) {
-            if (err.name == 'ValidationError') {
-                return res.status(422).send(err);
-            }
-            else {
-                return res.status(500).send(err);
-            }
+            return res.status(500).send(err);
         }
-        if (!actor) return res.status(404).send({ message: `Actor with ID ${req.params.actorId} not found` });
+        if (!actor) return res.status(404).send({ message: `Actor with ID ${actorId} not found` });
 
         res.json(actor);
     });
 }
 
 function show_actor_finder(req, res) {
-
-    Actor.findOne({ _id: req.params.actorId }, function (err, actor) {
+    var actorId = req.params.actorId;
+    console.log(`GET /actors/${actorId}/finder`);
+    Actor.findOne({ _id: actorId }, function (err, actor) {
         if (err) {
-            if (err.name == 'ValidationError') {
-                return res.status(422).send(err);
-            }
-            else {
-                return res.status(500).send(err);
-            }
+            return res.status(500).send(err);
         }
-        if (!actor) return res.status(404).send({ message: `Actor with ID ${req.params.actorId} not found` });
+        if (!actor) return res.status(404).send({ message: `Actor with ID ${actorId} not found` });
 
         res.json(actor.finder);
     });
 }
 
 function update_actor_finder(req, res) {
-
-    Actor.findOneAndUpdate({ _id: req.params.actorId }, { $set: { finder: req.body } }, { runValidators: true, new: true, context: 'query' }, function (err, actor) {
-        if (!actor) return res.status(404).send({ message: `Actor with ID ${req.params.actorId} not found` });
+    var actorId = req.params.actorId;
+    console.log(`PUT /actors/${actorId}/finder`);
+    Actor.findOneAndUpdate({ _id: actorId }, { $set: { finder: req.body } }, { runValidators: true, new: true, context: 'query' }, function (err, actor) {
         if (err) {
             if (err.name == 'ValidationError') {
                 return res.status(422).send(err);
@@ -137,9 +124,10 @@ function update_actor_finder(req, res) {
                 return res.status(500).send(err);
             }
         }
-        
+        if (!actor) return res.status(404).send({ message: `Actor with ID ${ractorId} not found` });
 
-        res.json(actor);
+
+        res.json(actor.finder);
     });
 }
 
@@ -151,16 +139,13 @@ function delete_actor_finder(req, res) {
         "dateRangeStart": null,
         "dateRangeEnd": null
     };
-    Actor.findOneAndUpdate({ _id: req.params.actorId }, { $set: { finder: new_finder } }, { runValidators: true, new: true, context: 'query' }, function (err, actor) {
+    var actorId = req.params.actorId;
+    console.log(`DELETE /actors/${actorId}/finder`);
+    Actor.findOneAndUpdate({ _id: actorId }, { $set: { finder: new_finder } }, { new: true }, function (err, actor) {
         if (err) {
-            if (err.name == 'ValidationError') {
-                return res.status(422).send(err);
-            }
-            else {
-                return res.status(500).send(err);
-            }
+            return res.status(500).send(err);
         }
-        if (!actor) return res.status(404).send({ message: `Actor with ID ${req.params.actorId} not found` });
+        if (!actor) return res.status(404).send({ message: `Actor with ID ${actorId} not found` });
 
         res.json(actor);
     });
