@@ -1,55 +1,67 @@
 {
+	"variables": [],
 	"info": {
-		"_postman_id": "ec65bc82-fe61-45db-97dc-80f5c096ce42",
 		"name": "ACME_Explorer_dashboards",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"_postman_id": "c85d350d-6bc8-cd36-b02e-d7b018b76c1e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "GET general information",
+			"name": "GET list all indicators",
 			"request": {
+				"url": "localhost:3000/v1/dashboards",
 				"method": "GET",
 				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
 				},
-				"url": {
-					"raw": "localhost:3000/v1/dashboards/general",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"v1",
-						"dashboards",
-						"general"
-					]
-				}
+				"description": ""
 			},
 			"response": []
 		},
 		{
-			"name": "GET compute cube",
+			"name": "GET list latest indicators",
 			"request": {
+				"url": "localhost:3000/v1/dashboards/latest",
 				"method": "GET",
 				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
 				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "POST rebuild period dashboard",
+			"request": {
 				"url": {
-					"raw": "localhost:3000/v1/dashboards/compute-cube",
+					"raw": "localhost:3000/v1/dashboards?rebuildPeriod=30",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
 						"v1",
-						"dashboards",
-						"compute-cube"
-					]
-				}
+						"dashboards"
+					],
+					"query": [
+						{
+							"key": "rebuildPeriod",
+							"value": "30",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"description": ""
 			},
 			"response": []
 		}
