@@ -91,14 +91,31 @@ function createDashboardJob() {
 module.exports.createDashboardJob = createDashboardJob;
 
 function computeTripsPerManager(callback) {
-    var r = {
-        minTripsManager: 0,
-        maxTripsManager: 0,
-        avgTripsManager: 0,
-        stdDevTripsManager: 0
-    };
-    var err = false
-    callback(err, r);
+    Trip.aggregate([
+        {
+            $group: {
+                _id: "$manager",
+                countTrips: { $sum: 1 }
+            }
+        }, {
+            $group: {
+                _id: null,
+                minTripsManager: { $min: "$countTrips" },
+                maxTripsManager: { $max: "$countTrips" },
+                avgTripsManager: { $avg: "$countTrips" },
+                stdDevTripsManager: { $stdDevPop: "$countTrips" }
+            }
+        },{
+        $project: {
+            _id: 0,
+            minTripsManager: "$minTripsManager" ,
+            maxTripsManager: "$maxTripsManager",
+            avgTripsManager: "$avgTripsManager",
+            stdDevTripsManager: "$stdDevTripsManager" 
+        }
+    }], function (err, res) {
+            callback(err, res[0]);
+        });
 };
 
 function computeOrderedtripsPerTrips(callback) {
@@ -139,14 +156,25 @@ function computeOrderedtripsPerTrips(callback) {
 };
 
 function computePricePerTrips(callback) {
-    var r = {
-        minPrice: 0,
-        maxPrice: 0,
-        avgPrice: 0,
-        stdDevPrice: 0
-    };
-    var err = false
-    callback(err, r);
+    Trip.aggregate([
+        { 
+            $group: {
+                _id: null,
+			       minPrice: { $min: "$price" },
+			       maxPrice: { $max: "$price" },
+			       avgPrice: { $avg: "$price" },
+			       stdDevPrice: { $stdDevPop: "$price" }
+    	 }
+    }, {$project: {
+        _id: 0,
+        minPrice: "$minPrice" ,
+        maxPrice: "$maxPrice",
+        avgPrice: "$avgPrice",
+        stdDevPrice: "$stdDevPrice" 
+    }}
+    ], function(err,res){
+        callback(err, res[0]);
+    });
 };
 
 function computeRatioOrderedtrips(callback) {
