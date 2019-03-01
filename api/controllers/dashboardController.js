@@ -38,7 +38,7 @@ var CronTime = require('cron').CronTime;
 //'*/30 * * * * *' cada 30 segundos
 //'*/10 * * * * *' cada 10 segundos
 //'* * * * * *' cada segundo
-var rebuildPeriod = '0 0 * * * * *';  //El que se usará por defecto
+var rebuildPeriod = '*/10 * * * * *';  //El que se usará por defecto
 var computeDashboardJob;
 
 exports.rebuildPeriod = function (req, res) {
@@ -102,14 +102,40 @@ function computeTripsPerManager(callback) {
 };
 
 function computeOrderedtripsPerTrips(callback) {
-    var r = {
-        minOrderedTrips: 0,
-        maxOrderedTrips: 0,
-        avgOrderedTrips: 0,
-        stdDevOrderedTrips: 0
-    };
-    var err = false
-    callback(err, r);
+    OrderedTrip.aggregate([
+        {
+            $facet: {
+                "nOrderedTripByTicker": [
+                    {$group: {
+                         _id: "$ticker",
+                         nOrderedTrip: {"$sum": 1} 
+                        }
+                    }
+                ],
+                "nOrderedTripTotal": [
+                    {$group: {
+                         _id: null,
+                         nOrderedTrip: {"$sum": 1} 
+                        }
+                    },
+                    {$project: {
+                         _id: 0,   
+                         nOrderedTrip: 1
+                    }
+                    }	
+                ]
+           }
+        },
+        {$project: {
+            totalOrderedTrips: { $arrayElemAt: [ "$nOrderedTripTotal.nOrderedTrip", 0 ] },
+            minOrderedTrips: {$min: "$nOrderedTripByTicker.nOrderedTrip"},
+            maxOrderedTrips: {$max: "$nOrderedTripByTicker.nOrderedTrip"},
+            avgOrderedTrips: {$avg: "$nOrderedTripByTicker.nOrderedTrip"},
+            stdDevOrderedTrips: {$stdDevPop: "$nOrderedTripByTicker.nOrderedTrip"}
+        }}
+    ], function(err,res){
+        callback(err, res);
+    });
 };
 
 function computePricePerTrips(callback) {
@@ -124,9 +150,76 @@ function computePricePerTrips(callback) {
 };
 
 function computeRatioOrderedtrips(callback) {
-    var r = 0;
-    var err = false
-    callback(err, r)
+    OrderedTrip.aggregate([
+        {$facet:{
+            totalOrderedTrips: [{$group: {_id: null, totalOrders: {"$sum":1}}}],
+            nOrderedTripsPending: [
+            {$match: { status: "PENDING"}},
+            {$group: {_id: null, totalOrders: {"$sum": 1}}}],
+            nOrderedTripsRejected: [
+            {$match: { status: "REJECTED"}},
+            {$group: {_id: null, totalOrders: {"$sum": 1}}}],
+            nOrderedTripsDue: [
+            {$match: { status: "DUE"}},
+            {$group: {_id: null, totalOrders: {"$sum": 1}}}],
+            nOrderedTripsAccepted: [
+            {$match: { status: "ACCEPTED"}},
+            {$group: {_id: null, totalOrders: {"$sum": 1}}}],
+            nOrderedTripsCancelled: [
+            {$match: { status: "CANCELLED"}},
+            {$group: {_id: null, totalOrders: {"$sum": 1}}}],
+            }
+        },
+        {$project: {
+            _id:0,
+            ratioOrderedTripPending: { $divide: [{$arrayElemAt: [ "$nOrderedTripsPending.totalOrders", 0 ]}, {$arrayElemAt: [ "$totalOrderedTrips.totalOrders", 0 ]} ]},
+            ratioOrderedTripRejected: { $divide: [{$arrayElemAt: [ "$nOrderedTripsRejected.totalOrders", 0 ]}, {$arrayElemAt: [ "$totalOrderedTrips.totalOrders", 0 ]} ]},
+            ratioOrderedTripDue: { $divide: [{$arrayElemAt: [ "$nOrderedTripsDue.totalOrders", 0 ]}, {$arrayElemAt: [ "$totalOrderedTrips.totalOrders", 0 ]} ]},
+            ratioOrderedTripAccepted: { $divide: [{$arrayElemAt: [ "$nOrderedTripsAccepted.totalOrders", 0 ]}, {$arrayElemAt: [ "$totalOrderedTrips.totalOrders", 0 ]} ]},
+            ratioOrderedTripCancelled: { $divide: [{$arrayElemAt: [ "$nOrderedTripsCancelled.totalOrders", 0 ]}, {$arrayElemAt: [ "$totalOrderedTrips.totalOrders", 0 ]} ]}
+            }
+        },
+        {$project: {
+            ratioOrderedTripPending: {
+                 $cond: {
+                     if: {$eq: [null, "$ratioOrderedTripPending"]},
+                     then: 0,
+                     else: "$ratioOrderedTripPending"
+                     }   
+                },
+            ratioOrderedTripRejected: {
+                 $cond: {
+                     if: {$eq: [null, "$ratioOrderedTripRejected"]},
+                     then: 0,
+                     else: "$ratioOrderedTripRejected"
+                     }   
+                },
+            ratioOrderedTripDue: {
+                 $cond: {
+                     if: {$eq: [null, "$ratioOrderedTripDue"]},
+                     then: 0,
+                     else: "$ratioOrderedTripDue"
+                     } 
+                },
+            ratioOrderedTripAccepted: {
+                 $cond: {
+                     if: {$eq: [null, "$ratioOrderedTripAccepted"]},
+                     then: 0,
+                     else: "$ratioOrderedTripAccepted"
+                     }   
+                },
+            ratioOrderedTripCancelled: {
+                 $cond: {
+                     if: {$eq: [null, "$ratioOrderedTripCancelled"]},
+                     then: 0,
+                     else: "$ratioOrderedTripCancelled"
+                     }   
+                }
+            }
+        } 
+    ],function(err,res){
+        callback(err, res);
+    });
 };
 
 function computeAvgPriceRangeFinders(callback) {
