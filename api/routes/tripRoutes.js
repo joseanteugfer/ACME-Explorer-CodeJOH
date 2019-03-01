@@ -25,14 +25,12 @@ router.post('/v1/trips', middleware.checkManager, trips.create_a_trip);
 
 
 /**
-   * Search trip using only keyword:
-   *    RequiredRoles: any
    * Search trip using a finder(keyword, priceRangeMin, priceRangeMax, dataRangeStart, dateRangeEnd):
    *    RequiredRoles: Explorer
    *
    * @section trips
    * @type get 
-   * @url /v1/trips/search
+   * @url /v1/trips/finder
    * @param {string} keyword //in tickers, titles description
    * @param {string} priceRangeMin
    * @param {string} priceRangeMax
@@ -40,7 +38,24 @@ router.post('/v1/trips', middleware.checkManager, trips.create_a_trip);
    * @param {string} dateRangeEnd
   */
 
-router.get('/v1/trips/search', trips.search_trips)
+router.get('/v1/trips/finder', trips.finder_trips)
+
+/**
+   * Search trip 
+   *    RequiredRoles: any
+   *
+   * @section trips
+   * @type get 
+   * @url /v1/trips/search
+   * @param {string} actor (manager)
+   * @param {string} startFrom
+   * @param {string} pageSize
+   * @param {string} sortedBy (date_start, price, title, status)
+   * @param {string} reverse (true|false) 
+   * @param {string} keyword // title, description, ticker
+  */
+
+ router.get('/v1/trips/search', trips.search_trips)
 
 /**
 * Get all sponsorships

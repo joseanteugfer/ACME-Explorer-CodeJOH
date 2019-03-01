@@ -42,7 +42,7 @@ function delete_a_trip(req, res) {
     //delete trip if it's not published
     Trip.findById({ _id: req.params.tripId }, function (err, trip) {
         if (!trip) {
-            res.status(404).send({ message: `Trip with ID ${req.params.tripId} not found`});
+            res.status(404).send({ message: `Trip with ID ${req.params.tripId} not found` });
             return;
         }
         if (trip.status != 'PUBLISHED') {
@@ -51,9 +51,9 @@ function delete_a_trip(req, res) {
                     res.send(err);
                 }
                 else {
-                    res.json({ 
+                    res.json({
                         message: 'Trip successfully deleted',
-                        trip: trip 
+                        trip: trip
                     });
                 }
             });
@@ -67,8 +67,8 @@ function update_a_trip(req, res) {
     //check auth user is ['MANAGER'], otherwise return 403
     //update trip if it's not published
     Trip.findById({ _id: req.params.tripId }, function (err, trip) {
-        if (!trip) return res.status(404).send({ message: `Trip with ID ${req.params.tripId} not found`});
-            
+        if (!trip) return res.status(404).send({ message: `Trip with ID ${req.params.tripId} not found` });
+
         if (trip.status != 'PUBLISHED') {
             var tripUpdated = req.body;
             //calculating the total price as sum of the stages prices
@@ -98,12 +98,90 @@ function update_a_trip(req, res) {
     });
 }
 
+function finder_trips(req, res) {
+    console.log('Searching trips depending on params using finder');
+
+    var query = {};
+    if (req.query.keyword)
+        query.$text = { $search: req.query.keyword }
+    if (req.query.dateRangeStart)
+        query.date_start = { $gte: req.query.dateRangeStart };
+    if (req.query.dateRangeEnd)
+        query.date_end = { $lte: req.query.dateRangeEnd };
+    if (req.query.priceRangeMin)
+        query.price = { $gte: req.query.priceRangeMin };
+    if (req.query.priceRangeMax) {
+        if (query.price)
+            query.price.$lte = req.query.priceRangeMax;
+        else
+            query.price = { $lte: req.query.priceRangeMax };
+    }
+    //get only trips with status PUBLISHED, allowed actors are EXPLORER
+    query.status = "PUBLISHED";
+    console.log(query);
+    
+    Trip.find(query)
+        .exec(function (err, trip) {
+            if (err) {
+                return res.status(500).send(err);
+            }
+            else {
+                res.json(trip);
+            }
+        });
+
+
+}
+
 function search_trips(req, res) {
-    //check if keyword,priceRangeMin, priceRangeMax, dateRangeStart, dateRangeEnd  param exists
-    //Search depending on params
-    //params can be null, in that case return all trips
     console.log('Searching trips depending on params');
-    res.status(200).json('Trips returned from the trips search');
+    var query = {};
+
+    //filter the result using status and the auth-actor
+    // ADMIN and MANAGER can see all
+    // SPONSOR can see all except CANCELLED
+    // EXPLORER can see only PUBLISHED trips
+
+    var query = {};
+    if (req.query.keyword)
+        query.$text = { $search: req.query.keyword }
+    if (req.query.actor) {
+        query.manager = req.query.actor;
+    }
+    
+
+    var skip = 0;
+    if (req.query.startFrom) {
+        skip = parseInt(req.query.startFrom);
+    }
+    var limit = 0;
+    if (req.query.pageSize) {
+        limit = parseInt(req.query.pageSize);
+    }
+
+    var sort = "";
+    if (req.query.reverse == "true") {
+        sort = "-";
+    }
+    if (req.query.sortedBy) {
+        sort += req.query.sortedBy;
+    }
+
+    console.log("Query: " + query + " Skip:" + skip + " Limit:" + limit + " Sort:" + sort);
+    console.log(query);
+    Trip.find(query)
+        .sort(sort)
+        .skip(skip)
+        .limit(limit)
+        .lean()
+        .exec(function (err, trip) {
+            if (err) {
+                res.send(err);
+            }
+            else {
+                res.json(trip);
+            }
+        });
 }
 
 function change_status(req, res) {
@@ -113,9 +191,9 @@ function change_status(req, res) {
     Trip.findOneAndUpdate({ _id: req.params.tripId }, { $set: { status: new_status } }, { new: true, runValidators: true }, function (err, trip) {
         if (err) return res.send(err);
         if (!trip) return res.status(404).send({ message: `Trip with ID ${req.params.tripId}` });
-        
+
         res.json(trip);
-        
+
     });
 }
 
@@ -123,21 +201,21 @@ function get_sponsorhips(req, res) {
     console.log('Getting all sponsorships for user');
     Trip.find({ 'sponsorships.actorId': req.params.actorId }, function (err, trips) {
         if (err) return res.status(500).send(err);
-        
+
         res.send(trips);
     });
-    
+
 }
 function get_a_sponsorhip(req, res) {
     console.log('Getting a sponsorship');
-    Trip.findOne({ "_id": req.params.tripId, "sponsorships._id": req.params.sponsorshipId }, function(err,trip) {
+    Trip.findOne({ "_id": req.params.tripId, "sponsorships._id": req.params.sponsorshipId }, function (err, trip) {
         if (err) return res.status(500).send(err);
-        if (!trip) return res.status(404).send( { message: `Trip with ID ${req.params.tripId} not found` });
-            
+        if (!trip) return res.status(404).send({ message: `Trip with ID ${req.params.tripId} not found` });
+
         res.send(trip);
-        
+
     });
-    
+
 }
 
 function add_sponsorhips(req, res) {
@@ -148,12 +226,12 @@ function add_sponsorhips(req, res) {
     let new_sponsor = req.body;
     new_sponsor.actorId = sponsorId;
 
-    Trip.find({_id: tripId }, function(err, trip){
+    Trip.find({ _id: tripId }, function (err, trip) {
         if (err) return res.status(500).send(err);
         if (!trip[0]) return res.status(404).send({ message: `Trip with ID ${tripId} not found` });
 
         trip[0].sponsorships.push(new_sponsor);
-        trip[0].save(function(err, trip) {
+        trip[0].save(function (err, trip) {
             if (err) {
                 if (err.name == 'ValidationError') {
                     return res.status(422).send(err);
@@ -164,32 +242,32 @@ function add_sponsorhips(req, res) {
             }
             return res.send(trip);
         });
-        
+
     });
 }
 function update_sponsorhips(req, res) {
     console.log('Updated sponsorship for user');
-    
+
     Trip.findOneAndUpdate({ "_id": req.params.tripId, "sponsorships._id": req.params.sponsorshipId },
-    { "$set": { "sponsorships.$": req.body} },
-    function(err,trip) {
-        if (err) return res.status(500).send(err);
-        if (!trip) return res.status(404).send({ message: `Trip with ID ${req.params.tripId}` });
-        
-        res.send(trip);
-    });
+        { "$set": { "sponsorships.$": req.body } },
+        function (err, trip) {
+            if (err) return res.status(500).send(err);
+            if (!trip) return res.status(404).send({ message: `Trip with ID ${req.params.tripId}` });
+
+            res.send(trip);
+        });
 }
 function delete_sponsorhips(req, res) {
     let tripId = req.params.tripId;
     let sponsorshipId = req.params.sponsorshipId;
     console.log(`DELETE /trips/${tripId}/sponsorships/${sponsorshipId}`);
 
-    Trip.find({_id: tripId }, function(err, trip){
+    Trip.find({ _id: tripId }, function (err, trip) {
         if (err) return res.status(500).send(err);
         if (!trip[0]) return res.status(404).send({ message: `Trip with ID ${tripId} not found` });
-    
+
         if (trip[0].sponsorships.length != 0) {
-            for(let i = 0; i < trip[0].sponsorships.length; i++) {
+            for (let i = 0; i < trip[0].sponsorships.length; i++) {
                 if (trip[0].sponsorships[i]._id == sponsorshipId) {
                     trip[0].sponsorships.splice(i, 1);
                 }
@@ -204,14 +282,14 @@ function pay_sponsorhips(req, res) {
     let tripId = req.params.tripId;
     let sponsorshipId = req.params.sponsorshipId;
     console.log(`PUT /trips/${tripId}/sponsorships/${sponsorshipId}/pay`);
-    
-    Trip.findOneAndUpdate({ "_id": tripId, "sponsors._id": sponsorshipId },
-    { "$set": { "sponsors.$.payed": true} }, function(err,trip) {
-        if (err) return res.status(500).send(err); 
-        if (!trip) return res.status(404).send({ message: 'Trip or Sponsorship not found' });
 
-        res.send(trip);
-    });
+    Trip.findOneAndUpdate({ "_id": tripId, "sponsors._id": sponsorshipId },
+        { "$set": { "sponsors.$.payed": true } }, function (err, trip) {
+            if (err) return res.status(500).send(err);
+            if (!trip) return res.status(404).send({ message: 'Trip or Sponsorship not found' });
+
+            res.send(trip);
+        });
 }
 
 module.exports = {
@@ -220,6 +298,7 @@ module.exports = {
     read_a_trip,
     update_a_trip,
     delete_a_trip,
+    finder_trips,
     search_trips,
     change_status,
     get_sponsorhips,
