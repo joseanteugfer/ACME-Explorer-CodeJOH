@@ -22,6 +22,10 @@ const TripsPerManagerSchema = new Schema({
 });
 
 const OrderedtripsPerTrips = new Schema({
+    totalOrderedTrips: {
+        type: Number,
+        min: 0
+    },
     minOrderedTrips: {
         type: Number,
         min: 0
@@ -62,13 +66,35 @@ const PricePerTrips = new Schema({
 const DashboardSchema = new Schema({
 
     tripsPerManager: TripsPerManagerSchema,
-    orderedtripsPerTrips: OrderedtripsPerTrips,
+    orderedtripsPerTrips: [OrderedtripsPerTrips],
     pricePerTrips: PricePerTrips,
-    ratioOrderedtrips: {
-        type: Number,
-        max: 1,
-        min: 0
-    },
+    ratioOrderedtrips: [{
+        ratioOrderedTripPending:{
+            type: Number,
+            max: 1,
+            min: 0
+        },
+        ratioOrderedTripRejected:{
+            type: Number,
+            max: 1,
+            min: 0
+        },
+        ratioOrderedTripDue:{
+            type: Number,
+            max: 1,
+            min: 0
+        },
+        ratioOrderedTripAccepted:{
+            type: Number,
+            max: 1,
+            min: 0
+        },
+        ratioOrderedTripCancelled:{
+            type: Number,
+            max: 1,
+            min: 0
+        }
+    }],
     avgPriceRangeFinders: {
         type: Number,
         min: 0
