@@ -5,32 +5,38 @@ var bcrypt = require('bcrypt');
 var moment = require('moment');
 
 const FinderSchema = new Schema({
+    _id: false,
     keyword: {
-        type: String
+        type: String,
+        default: null
     },
     priceRangeMin: {
         type: Number,
-        min: 0
+        min: 0,
+        default: null
     },
     priceRangeMax: {
         type: Number,
+        default: null,
         validate: [
             priceRangeValidator,
             'Max range price must be bigger than min range price']
     },
     dateRangeStart: {
         type: Date,
+        default: null,
         validate: [
             startDateValidator,
             'Start date must be after Today date']
     },
     dateRangeEnd: {
         type: Date,
+        default: null,
         validate: [
             endDateValidator,
             'End date must be after Start date']
     }
-})
+});
 
 const ActorSchema = new Schema({
     name: {
@@ -82,7 +88,16 @@ const ActorSchema = new Schema({
         type: Date,
         default: Date.now
     },
-    finder: FinderSchema
+    finder: {
+        type: FinderSchema,
+        default: { 
+            "keyword" : null, 
+            "priceRangeMin" : null, 
+            "priceRangeMax" : null, 
+            "dateRangeStart" : null, 
+            "dateRangeEnd" : null
+        }
+    }
 }, { strict: false });
 
 
@@ -115,19 +130,31 @@ ActorSchema.methods.verifyPassword = function (password, cb) {
 
 function priceRangeValidator(maxPrice){
     var minPrice = this.priceRangeMin;
-    return maxPrice > minPrice;
+    if (maxPrice == null || minPrice == null){
+        return true;
+    }else{
+        return maxPrice > minPrice;
+    }
 }
 
 function endDateValidator(endDate){
     var startDate = this.dateRangeStart;
+    if (startDate == null || endDate == null){
+        return true;
+    }else{
     if(!startDate) //making an update
         startDate = new Date(this.getUpdate().dateRangeStart);
     return startDate <= endDate;
+    }
 }
 
 function startDateValidator(startDate){
+    if (startDate == null){
+        return true;
+    }else{
     let now = moment();
     return now <= startDate;
+    }
 }
 
 module.exports = mongoose.model('Actor', ActorSchema);

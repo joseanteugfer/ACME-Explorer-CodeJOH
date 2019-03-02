@@ -94,6 +94,9 @@ const TripSchema = new Schema({
     sponsorships: [SponsorshipSchema]
 }, {strict: false});
 
+TripSchema.index({ price: 1 }); 
+TripSchema.index({ title: 'text', description: 'text'});
+
 TripSchema.pre('save', function(next){
     let trip = this;
     const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -108,7 +111,6 @@ TripSchema.pre('save', function(next){
     }).reduce((sum, price) => {
         return sum + price;
     });
-    
     next();
 });
 

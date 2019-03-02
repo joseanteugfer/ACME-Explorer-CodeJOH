@@ -22,7 +22,9 @@
     "express": "^4.16.4",
     "moment": "^2.24.0",
     "mongoose": "^5.4.9",
-    "nanoid": "^2.0.1"
+    "nanoid": "^2.0.1",
+    "swagger-jsdoc": "^3.2.7",
+    "swagger-ui-express": "^4.0.2"
   },
   "bugs": {
     "url": "https://github.com/hector23rp/ACME-Explorer-CodeJOH/issues"
