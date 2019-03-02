@@ -43,8 +43,6 @@ var mongoDBCredentials = (mongoDBUser && mongoDBPass) ? mongoDBUser + ":" + mong
 
 var mongoDBURI = "mongodb://" + mongoDBCredentials + mongoDBHostname + ":" + mongoDBPort + "/" + mongoDBName;
 
-console.log(mongoDBURI);
-
 mongoose.connect(mongoDBURI, {
     reconnectTries: 10,
     reconnectInterval: 500,
@@ -74,7 +72,11 @@ routers.forEach((router) => {
 
 mongoose.connection.on("open", function(err, conn) {
     app.listen(portAPI, function(){
-        console.log("ACME-Explorer Restful API listen in "+portAPI)
+        console.log('------------');
+        console.log(`API Restful ACME-Explorer listen in http://localhost:${portAPI}`);
+        console.log('------------');
+        console.log(`API docs listen in http://localhost:${portAPI}/api-docs`);
+        console.log('------------');
     })
 });
 

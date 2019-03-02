@@ -66,7 +66,7 @@ const PricePerTrips = new Schema({
 const DashboardSchema = new Schema({
 
     tripsPerManager: TripsPerManagerSchema,
-    orderedtripsPerTrips: [OrderedtripsPerTrips],
+    orderedtripsPerTrips: OrderedtripsPerTrips,
     pricePerTrips: PricePerTrips,
     ratioOrderedtrips: [{
         ratioOrderedTripPending:{
