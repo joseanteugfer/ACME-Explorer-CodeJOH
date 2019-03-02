@@ -95,6 +95,7 @@ const TripSchema = new Schema({
 }, {strict: false});
 
 TripSchema.index({ price: 1 }); 
+TripSchema.index({ date_start: 1, date_end : 1}); 
 TripSchema.index({ title: 'text', description: 'text'});
 
 TripSchema.pre('save', function(next){

@@ -127,9 +127,9 @@ function finder_trips(req, res) {
     if (req.query.keyword)
         query.$text = { $search: req.query.keyword }
     if (req.query.dateRangeStart)
-        query.date_start = { $gte: req.query.dateRangeStart };
+        query.date_start = { $gte: new Date(req.query.dateRangeStart) };
     if (req.query.dateRangeEnd)
-        query.date_end = { $lte: req.query.dateRangeEnd };
+        query.date_end = { $lte: new Date(req.query.dateRangeEnd) };
     if (req.query.priceRangeMin)
         query.price = { $gte: req.query.priceRangeMin };
     if (req.query.priceRangeMax) {
