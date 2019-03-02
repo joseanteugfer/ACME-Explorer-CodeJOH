@@ -14,26 +14,142 @@ router.use(function timeLog(req, res, next) {
 });
 
 /**
-   * get results from a search engine
-   *    RequiredRoles: None
-   * 
-   * @section orderedTrips
-	 * @type get
-	 * @url /v1/orderedTrips/search
-   * @param {string} ticker 
-   * @param {string} actor (actorId)
-   * @param {string} startFrom
-   * @param {string} pageSize
-   * @param {string} sortedBy (actor)
-   * @param {string} reverse (true|false) 
-   * @param {string} keyword //in ticker, status, or comments
-   */
+ * 
+ * @swagger
+ * 
+ * definitions:
+ *   ErrorValidationResponse:
+ *    required:
+ *       - message
+ *       - name
+ *    properties:
+ *       message:
+ *          type: string
+ *       name:
+ *          type: string
+ *       _message:
+ *         type: string
+ *       errors:
+ *         type: string
+ *   ErrorResponse:
+ *     required:
+ *       - message
+ *     properties:
+ *       message:
+ *         type: string
+ *   OrderedTrip:
+ *       type: object
+ *       properties:
+ *          ticker:
+ *             type: string
+ *             description: Identificador( ticker) del viaje
+ *          status:
+ *             type: string
+ *             description: Estado de la reserva
+ *             enum: ['PENDING', 'REJECTED','DUE','ACCEPTED','CANCELLED']
+ *          date_apply:
+ *             type: styring
+ *             format: date
+ *             description: Fecha de creacion de la reserva
+ *          comments:
+ *             type: string
+ *             description: Comentarios sobre la reserva
+ *          actor_id:
+ *             type: string
+ *             description: ID del explorer que hizo la reserva
+ *   OrderedTripsResponse:
+ *        type: array
+ *        items: 
+ *        $ref: "#/definitions/OrderedTrip"
+ *   OrderedTripCreated:
+ *       type: object
+ *       properties:
+ *          _id:
+ *             type: number
+ *             description: ID
+ *          _v:
+ *              type: number
+ *         ticker:
+ *             type: string
+ *             description: Identificador( ticker) del viaje
+ *          status:
+ *             type: string
+ *             description: Estado de la reserva
+ *             enum: ['PENDING', 'REJECTED','DUE','ACCEPTED','CANCELLED']
+ *          date_apply:
+ *             type: styring
+ *             format: date
+ *             description: Fecha de creacion de la reserva
+ *          comments:
+ *             type: string
+ *             description: Comentarios sobre la reserva
+ *          actor_id:
+ *             type: string
+ *             description: ID del explorer que hizo la reserva
+ * 
+ */
+
+/**
+ * @swagger
+ * 
+ * /orderedTrips/search:
+ *    get:
+ *       description: Search orderedTrip.RequiredRoles-any
+ *       operationId: search_orderedTrip
+ *       consumes:
+ *          - application/json
+ *       parameters:
+ *          - in: query
+ *            name: keyword
+ *            description: Keyword to find in ticker, title or description
+ *            schema:
+ *                type: string
+ *          - in: query
+ *            name: actor
+ *            description: Find trips for this Manager
+ *            schema:
+ *                type: string
+ *                format: uuid
+ *          - in: query
+ *            name: startFrom
+ *            description: Return results from this point
+ *            schema:
+ *                type: number
+ *          - in: query
+ *            name: pageSize
+ *            description: Return this amount of results
+ *            schema:
+ *                type: number
+ *          - in: query
+ *            name: sortedBy
+ *            description: Sort by this date_start, price, title, description, status
+ *            schema:
+ *                type: string
+ *          - in: query
+ *            name: reverse
+ *            description: (true|false)
+ *            schema:
+ *                type: string
+ *       responses:
+ *         '200':
+ *           description: Success
+ *           schema:
+ *             $ref: '#/definitions/OrderedTripsResponse'
+ *         '500':
+ *           description: Error interno del servidor
+ *           schema:
+ *             $ref: "#/definitions/ErrorResponse"
+ *         default:
+ *           description: Error
+ *           schema:
+ *             $ref: "#/definitions/ErrorResponse"
+ */
 router.route('/v1/orderedTrips/search')
       .get(orderedTrip.search_orderedTrip);
 
-router.route('/v1/orderedTrips')
-      .get(orderedTrip.list_all_orderedTrip)
-      .post(orderedTrip.create_an_orderedTrip);
+router.route('/v1/orderedTrips').get(orderedTrip.list_all_orderedTrip);
+
+router.route('/v1/orderedTrips').post(orderedTrip.create_an_orderedTrip);
 
 router.route('/v1/orderedTrips/:orderedTripId')
       .get(orderedTrip.read_an_orderedTrip)
