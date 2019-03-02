@@ -151,7 +151,7 @@ function computeOrderedtripsPerTrips(callback) {
             stdDevOrderedTrips: {$stdDevPop: "$nOrderedTripByTicker.nOrderedTrip"}
         }}
     ], function(err,res){
-        callback(err, res);
+        callback(err, res[0]);
     });
 };
 

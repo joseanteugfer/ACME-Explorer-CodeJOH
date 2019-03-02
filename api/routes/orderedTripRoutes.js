@@ -69,7 +69,7 @@ router.use(function timeLog(req, res, next) {
  *             description: ID
  *          _v:
  *              type: number
- *         ticker:
+ *          ticker:
  *             type: string
  *             description: Identificador( ticker) del viaje
  *          status:
@@ -101,12 +101,12 @@ router.use(function timeLog(req, res, next) {
  *       parameters:
  *          - in: query
  *            name: keyword
- *            description: Keyword to find in ticker, title or description
+ *            description: Keyword to find in orderedTrip ticker, status or description
  *            schema:
  *                type: string
  *          - in: query
  *            name: actor
- *            description: Find trips for this Manager
+ *            description: Find orderedTrips for this Explorer
  *            schema:
  *                type: string
  *                format: uuid
@@ -122,7 +122,7 @@ router.use(function timeLog(req, res, next) {
  *                type: number
  *          - in: query
  *            name: sortedBy
- *            description: Sort by this date_start, price, title, description, status
+ *            description: Sort by this ticker, status, actor_id or date_apply
  *            schema:
  *                type: string
  *          - in: query
@@ -147,48 +147,264 @@ router.use(function timeLog(req, res, next) {
 router.route('/v1/orderedTrips/search')
       .get(orderedTrip.search_orderedTrip);
 
+/**
+ * 
+ * @swagger
+ * 
+ * /orderedTrips:
+ *     get:
+ *       description: Returns all orderedTrips
+ *       operationId: list_all_orderedTrip
+ *       responses:
+ *         '200':
+ *           description: Success
+ *           schema:
+ *             $ref: '#/definitions/OrderedTripsResponse'
+ *         '500':
+ *           description: Error interno del servidor
+ *           schema:
+ *             $ref: "#/definitions/ErrorResponse"
+ *         default:
+ *           description: Error
+ *           schema:
+ *             $ref: "#/definitions/ErrorResponse"
+*/
 router.route('/v1/orderedTrips').get(orderedTrip.list_all_orderedTrip);
 
+/**
+ * @swagger
+ * 
+ * /orderedTrips:
+ *    post:
+ *       description: Create new orderedTrip
+ *       operationId: create_an_orderedTrip
+ *       consumes:
+ *          - application/json
+ *       parameters:
+ *          - in: body
+ *            name: trip
+ *            description: Viaje a crear
+ *            schema:
+ *                $ref: "#/definitions/OrderedTrip"
+ *       responses:
+ *          '201':
+ *             description: Created
+ *             schema:
+ *             $ref: '#/definitions/OrderedTripCreated'
+ *          '422':
+ *             description: Error de validacion
+ *             schema:
+ *             $ref: "#/definitions/ErrorValidationResponse"
+ *          default:
+ *             description: Error
+ *             schema:
+ *                $ref: "#/definitions/ErrorResponse"
+ */
 router.route('/v1/orderedTrips').post(orderedTrip.create_an_orderedTrip);
 
-router.route('/v1/orderedTrips/:orderedTripId')
-      .get(orderedTrip.read_an_orderedTrip)
-      .delete(orderedTrip.delete_an_orderedTrip)
-      .put(orderedTrip.update_an_orderedTrip);
+/**
+ * @swagger
+ * 
+ * /orderedTrips/{orderedTripId}:
+ *    get:
+ *       description: Get a orderedTrip 
+ *       operationId: read_an_orderedTrip
+ *       consumes:
+ *          - application/json
+ *       parameters:
+ *          - in: path
+ *            name: orderedTripId
+ *            description: Find orderedTrip with this id
+ *            type: string
+ *       responses:
+ *          '200':
+ *             description: Success
+ *             schema:
+ *                $ref: '#/definitions/OrderedTrip'
+ *          '500':
+ *             description: Error interno del servidor
+ *             schema:
+ *                $ref: "#/definitions/ErrorResponse"
+ *          default:
+ *             description: Error
+ *             schema:
+ *                $ref: "#/definitions/ErrorResponse"
+ */
+router.route('/v1/orderedTrips/:orderedTripId').get(orderedTrip.read_an_orderedTrip);
 
 /**
-   * Change trip order status:
-   *    RequiredRoles: Manager, Explorer
-   *
-   * @section orderedTrip
-   * @type put 
-   * @url /v1/orderedTrip
-   * @param {string} status //
-  */
- router.route('/v1/orderedTrips/:orderedTripId/status')
-       .put(orderedTrip.change_status);
+ * @swagger
+ * 
+ * /orderedTrips/{orderedTripId}:
+ *    delete:
+ *       description: Delete a orderedTrip 
+ *       operationId: delete_an_orderedTrip
+ *       consumes:
+ *          - application/json
+ *       parameters:
+ *          - in: path
+ *            name: orderedTripId
+ *            description: Delete orderedTrip with this id
+ *            type: string
+ *       responses:
+ *          '200':
+ *             description: Success
+ *             schema:
+ *                type: object
+ *                properties:
+ *                   message:
+ *                      type: string
+ *          '500':
+ *             description: Error interno del servidor
+ *             schema:
+ *                $ref: "#/definitions/ErrorResponse"
+ *          default:
+ *             description: Error
+ *             schema:
+ *                $ref: "#/definitions/ErrorResponse"
+ */
+router.route('/v1/orderedTrips/:orderedTripId').delete(orderedTrip.delete_an_orderedTrip);
 
- /**
-   * Get ordered trips groupBy status
-   *    RequiredRoles: Explorer
-   * 
-   * @section orderedTrips
-	 * @type get
-	 * @url /v1/orderedTrips/search
-   * @param {string} groupBy (status)
-   */
-  router.route('/v1/orderedTrips/:actorId/search')
-        .get(orderedTrip.search_by_status);
+/**
+ * @swagger
+ * 
+ * /orderedTrips/{orderedTripId}:
+ *    put:
+ *       description: Update a orderedTrip 
+ *       operationId: update_an_orderedTrip
+ *       consumes:
+ *          - application/json
+ *       parameters:
+ *          - in: path
+ *            name: orderedTripId
+ *            description: Update orderedTrip with this id
+ *            type: string
+ *          - in: body
+ *            name: trip
+ *            description: orderedTrip to update
+ *            schema:
+ *                $ref: "#/definitions/OrderedTrip"
+ *       responses:
+ *          '200':
+ *             description: Success
+ *             schema:
+ *                $ref: '#/definitions/OrderedTrip'
+ *          '500':
+ *             description: Error interno del servidor
+ *             schema:
+ *                $ref: "#/definitions/ErrorResponse"
+ *          default:
+ *             description: Error
+ *             schema:
+ *                $ref: "#/definitions/ErrorResponse"
+ */
+router.route('/v1/orderedTrips/:orderedTripId').put(orderedTrip.update_an_orderedTrip);
 
-    /**
-   * Pay the trip
-   *    RequiredRoles: Explorer
-   * 
-   * @section orderedTrips
-   * @type put
-   */
-  router.route('/v1/orderedTrips/:orderedTripId/pay')
-        .put(middleware.checkExplorer,orderedTrip.pay);
+/**
+ * @swagger
+ * 
+ * /orderedTrips/{orderedTripId}/status:
+ *    put:
+ *       description: Change orderedTrip status
+ *       operationId: change_status
+ *       consumes:
+ *          - application/json
+ *       parameters:
+ *          - in: path
+ *            name: orderedTripId
+ *            description: Update orderedTrip with this id
+ *            type: string
+ *          - in: query
+ *            name: status
+ *            description: status of orderedTrip to change
+ *            schema:
+ *                type: string
+ *       responses:
+ *          '200':
+ *             description: Success
+ *             schema:
+ *                $ref: '#/definitions/OrderedTrip'
+ *          '500':
+ *             description: Error interno del servidor
+ *             schema:
+ *                $ref: "#/definitions/ErrorResponse"
+ *          default:
+ *             description: Error
+ *             schema:
+ *                $ref: "#/definitions/ErrorResponse"
+ */
+router.route('/v1/orderedTrips/:orderedTripId/status').put(orderedTrip.change_status);
+
+/**
+ * @swagger
+ * 
+ * /orderedTrips/{actorId}/search:
+ *    get:
+ *       description: Get ordered trips groupBy status
+ *       operationId: search_by_status
+ *       consumes:
+ *          - application/json
+ *       parameters:
+ *          - in: path
+ *            name: actorId
+ *            description: Find orderedTrip of actorId
+ *            type: string
+ *          - in: query
+ *            name: groupBy
+ *            description: group result by status
+ *            schema:
+ *                type: string
+ *       responses:
+ *          '200':
+ *             description: Success
+ *             schema:
+ *                $ref: '#/definitions/OrderedTrip'
+ *          '500':
+ *             description: Error interno del servidor
+ *             schema:
+ *                $ref: "#/definitions/ErrorResponse"
+ *          default:
+ *             description: Error
+ *             schema:
+ *                $ref: "#/definitions/ErrorResponse"
+ */
+router.route('/v1/orderedTrips/:actorId/search').get(orderedTrip.search_by_status);
+
+/**
+ * @swagger
+ * 
+ * /orderedTrips/{orderedTripId}/pay:
+ *    put:
+ *       description: Update a orderedTrip 
+ *       operationId: pay
+ *       consumes:
+ *          - application/json
+ *       parameters:
+ *          - in: header
+ *            name: authorization
+ *            schema:
+ *                type: string
+ *                format: uuid
+ *                required: true
+ *          - in: path
+ *            name: orderedTripId
+ *            description: Pay orderedTrip with this id
+ *            type: string
+ *       responses:
+ *          '200':
+ *             description: Success
+ *             schema:
+ *                $ref: '#/definitions/OrderedTrip'
+ *          '500':
+ *             description: Error interno del servidor
+ *             schema:
+ *                $ref: "#/definitions/ErrorResponse"
+ *          default:
+ *             description: Error
+ *             schema:
+ *                $ref: "#/definitions/ErrorResponse"
+ */
+router.route('/v1/orderedTrips/:orderedTripId/pay').put(middleware.checkExplorer,orderedTrip.pay);
 
 
 
