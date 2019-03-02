@@ -2,7 +2,7 @@
 var async = require("async");
 var mongoose = require('mongoose'),
     Actor = mongoose.model('Actor'),
-OrderedTrip = mongoose.model('OrderedTrip'),
+    OrderedTrip = mongoose.model('OrderedTrip'),
     Trip = mongoose.model('Trip'),
     Dashboard = mongoose.model('Dashboard');
 
@@ -59,7 +59,7 @@ function createDashboardJob() {
             computeOrderedtripsPerTrips,
             computePricePerTrips,
             computeRatioOrderedtrips,
-            computeAvgPriceRangeFinders,
+            computeavgPriceRangeFinders,
             computeTopKeywordsFinders
         ], function (err, results) {
             if (err) {
@@ -250,14 +250,61 @@ function computeRatioOrderedtrips(callback) {
     });
 };
 
-function computeAvgPriceRangeFinders(callback) {
-    var r = 0;
-    var err = false
-    callback(err, r)
+function computeavgPriceRangeFinders(callback) {
+    Actor.aggregate([
+        {
+            $project:
+            {
+                priceRange: { $subtract: ["$finder.priceRangeMax", "$finder.priceRangeMin"] }
+            }
+        },
+        {
+            $group:
+            {
+                _id: null,
+                avgPriceRangeFinders: { $avg: "$priceRange" }
+            }
+        },
+        {
+            $project:
+                { _id: 0, avgPriceRangeFinders: 1 }
+        }]
+
+        , function (err, res) {
+            var avgPriceRange = res[0].avgPriceRangeFinders;
+            callback(err, avgPriceRange);
+        });
 };
 
 function computeTopKeywordsFinders(callback) {
-    var r = ["test1", "test2"];
-    var err = false
-    callback(err, r)
+    //Top 10 keywords y finder
+
+    Actor.aggregate([
+        {
+            $project:
+            {
+                "finder.keyword": 1
+            }
+        },
+        {
+            $facet: {
+                preComputation: [
+                    {
+                        $group: {
+                            _id: null,
+                            numKeywords: { $sum: 1 }
+                        }
+                    },
+                    { $project: { _id: 0, limitTopPercentage: { $ceil: { $multiply: ["$numKeywords", 0.1] } } } }
+                ],
+                keywords: [{ $group: { _id: "$finder.keyword", keywordSum: { $sum: 1 } } }, { $project: { _id: 0, keyword: "$_id", keywordSum: 1 } }, { $sort: { "keywordSum": -1 } }]
+            }
+        },
+        { $project: { topKeywords: { $slice: ["$keywords", { $arrayElemAt: ["$preComputation.limitTopPercentage", 0] }] } } }]
+
+        , function (err, res) {
+            callback(err, res);
+        });
+
 };
+

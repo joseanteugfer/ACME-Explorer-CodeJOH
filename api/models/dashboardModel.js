@@ -99,7 +99,10 @@ const DashboardSchema = new Schema({
         type: Number,
         min: 0
     },
-    topKeywordsFinders: [String],
+    topKeywordsFinders: [{
+        keyword: String,
+        keywordSum: Number
+    }],
     computationMoment: {
         type: Date,
         default: Date.now

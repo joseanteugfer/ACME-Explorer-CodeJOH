@@ -90,16 +90,20 @@ const ActorSchema = new Schema({
     },
     finder: {
         type: FinderSchema,
-        default: { 
-            "keyword" : null, 
-            "priceRangeMin" : null, 
-            "priceRangeMax" : null, 
-            "dateRangeStart" : null, 
-            "dateRangeEnd" : null
+        default: {
+            "keyword": null,
+            "priceRangeMin": null,
+            "priceRangeMax": null,
+            "dateRangeStart": null,
+            "dateRangeEnd": null
         }
     }
 }, { strict: false });
 
+ActorSchema.index({ name: "text", surname: "text", phone: "text", "finder.keyword": "text" });
+ActorSchema.index({ "finder.priceRangeMin": 1, "finder.priceRangeMax": 1 });
+ActorSchema.index({ created: 1 });
+ActorSchema.index({ banned: 1 });
 
 
 ActorSchema.pre('save', function (callback) {
@@ -128,32 +132,32 @@ ActorSchema.methods.verifyPassword = function (password, cb) {
     });
 };
 
-function priceRangeValidator(maxPrice){
+function priceRangeValidator(maxPrice) {
     var minPrice = this.priceRangeMin;
-    if (maxPrice == null || minPrice == null){
+    if (maxPrice == null || minPrice == null) {
         return true;
-    }else{
+    } else {
         return maxPrice > minPrice;
     }
 }
 
-function endDateValidator(endDate){
+function endDateValidator(endDate) {
     var startDate = this.dateRangeStart;
-    if (startDate == null || endDate == null){
+    if (startDate == null || endDate == null) {
         return true;
-    }else{
-    if(!startDate) //making an update
-        startDate = new Date(this.getUpdate().dateRangeStart);
-    return startDate <= endDate;
+    } else {
+        if (!startDate) //making an update
+            startDate = new Date(this.getUpdate().dateRangeStart);
+        return startDate <= endDate;
     }
 }
 
-function startDateValidator(startDate){
-    if (startDate == null){
+function startDateValidator(startDate) {
+    if (startDate == null) {
         return true;
-    }else{
-    let now = moment();
-    return now <= startDate;
+    } else {
+        let now = moment();
+        return now <= startDate;
     }
 }
 
