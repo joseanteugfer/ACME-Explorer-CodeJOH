@@ -151,6 +151,50 @@ function delete_actor_finder(req, res) {
     });
 }
 
+// /actors/search?q="searchString"&sortedBy="surname|banned|created"&reverse="false|true"&startFrom="valor"&pageSize="tam"
+function search_actors(req, res) {
+    var query = {};
+
+    if (req.query.q) {
+        query.$text = { $search: req.query.q };
+    }
+
+    var skip = 0;
+    if (req.query.startFrom) {
+        skip = parseInt(req.query.startFrom);
+    }
+    var limit = 0;
+    if (req.query.pageSize) {
+        limit = parseInt(req.query.pageSize);
+    }
+
+    var sort = "";
+    if (req.query.reverse == "true") {
+        sort = "-";
+    }
+    if (req.query.sortedBy) {
+        sort += req.query.sortedBy;
+    }
+
+    console.log("Query: " + query + " Skip:" + skip + " Limit:" + limit + " Sort:" + sort);
+
+    Actor.find(query)
+        .sort(sort)
+        .skip(skip)
+        .limit(limit)
+        .lean()
+        .exec(function (err, actor) {
+            console.log('Start searching actors');
+            if (err) {
+                return res.status(500).send(err);
+            }
+            else {
+                res.json(actor);
+            }
+            console.log('End searching actors');
+        });
+}
+
 module.exports = {
     list_all_actors,
     create_an_actor,
@@ -160,5 +204,6 @@ module.exports = {
     change_banned_status,
     show_actor_finder,
     update_actor_finder,
-    delete_actor_finder
+    delete_actor_finder,
+    search_actors
 }

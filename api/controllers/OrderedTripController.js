@@ -170,7 +170,8 @@ function change_status(req,res){
 }
 
 function search_by_status(req,res){
-    let actorId = req.headers.authorization;
+    //let actorId = req.headers.authorization;
+    let actorId = req.params.actorId;
     console.log(actorId);
     
     // Devolver la lista de los trips de un actor agrupados por el status
@@ -184,6 +185,8 @@ function search_by_status(req,res){
                         res.status(500).send(err);
                         return;
                     }
+                    if (orderedTrips.length == 0) return res.status(404).send({ message: `Actor with ID ${actorId} has not ordered trips` });
+                    
                     res.send(orderedTrips);
                 });
 }

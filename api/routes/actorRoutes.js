@@ -210,6 +210,13 @@ const middleware = require('../middlewares/middleware');
  *     get:
  *       description: Returns all actors
  *       operationId: list_all_actors
+ *       parameters:
+ *         - in: header
+ *           name: authorization
+ *           schema:
+ *             type: string
+ *             format: uuid
+ *             required: true
  *       responses:
  *         '200':
  *           description: Success
@@ -237,7 +244,13 @@ router.get('/v1/actors', middleware.checkAdmin, actors.list_all_actors);
  *       operationId: create_an_actor
  *       consumes:
  *         - application/json
- *       parameters:
+  *       parameters:
+ *         - in: header
+ *           name: authorization
+ *           schema:
+ *             type: string
+ *             format: uuid
+ *             required: true
  *         - in: body
  *           name: actor
  *           description: actor a crear
@@ -264,6 +277,62 @@ router.get('/v1/actors', middleware.checkAdmin, actors.list_all_actors);
 */
 router.post('/v1/actors', middleware.checkAdmin, actors.create_an_actor);
 
+/**
+ * @swagger
+ * 
+ * /actors/search:
+ *    get:
+ *       description: Search actors.RequiredRoles-Admin
+ *       operationId: search_actors
+ *       consumes:
+ *          - application/json
+ *       parameters:
+ *         - in: header
+ *           name: authorization
+ *           schema:
+ *             type: string
+ *             format: uuid
+ *             required: true
+ *         - in: query
+ *           name: q
+ *           description: Keyword to find in name, surname, phone or findeder keyword
+ *           schema:
+ *             type: string
+ *         - in: query
+ *           name: startFrom
+ *           description: Return results from this point
+ *           schema:
+ *             type: number
+ *         - in: query
+ *           name: pageSize
+ *           description: Return this amount of results
+ *           schema:
+ *             type: number
+ *         - in: query
+ *           name: sortedBy
+ *           description: Sort by this surname, banned or created
+ *           schema:
+ *             type: string
+ *         - in: query
+ *           name: reverse
+ *           description: (true|false)
+ *           schema:
+ *             type: string
+ *       responses:
+ *         '200':
+ *           description: Success
+ *           schema:
+ *             $ref: '#/definitions/TripsResponse'
+ *         '500':
+ *           description: Error interno del servidor
+ *           schema:
+ *             $ref: "#/definitions/ErrorResponse"
+ *         default:
+ *           description: Error
+ *           schema:
+ *             $ref: "#/definitions/ErrorResponse"
+ */
+router.get('/v1/actors/search', middleware.checkAdmin, actors.search_actors);
 
 /**
  * 
@@ -391,6 +460,12 @@ router.delete('/v1/actors/:actorId', actors.delete_an_actor);
  *     consumes:
  *       - application/octet-stream
  *     parameters:
+ *       - in: header
+ *         name: authorization
+ *         schema:
+ *           type: string
+ *           format: uuid
+ *           required: true
  *       - name: actorId
  *         type: string
  *         in: path
@@ -526,5 +601,6 @@ router.put('/v1/actors/:actorId/finder', actors.update_actor_finder);
  *           $ref: "#/definitions/ErrorResponse"
  */
 router.delete('/v1/actors/:actorId/finder', actors.delete_actor_finder);
+
 
 module.exports = router;
