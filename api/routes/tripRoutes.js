@@ -130,7 +130,7 @@ const middleware = require('../middlewares/middleware')
  *   TripsResponse:
  *        type: array
  *        items: 
- *        $ref: "#/definitions/Trip"
+ *          $ref: "#/definitions/Trip"
  *   TripCreated:
  *       type: object
  *       properties:

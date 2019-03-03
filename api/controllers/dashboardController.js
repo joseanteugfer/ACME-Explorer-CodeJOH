@@ -246,7 +246,7 @@ function computeRatioOrderedtrips(callback) {
             }
         } 
     ],function(err,res){
-        callback(err, res);
+        callback(err, res[0]);
     });
 };
 
