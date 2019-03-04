@@ -1,151 +1,780 @@
 const express = require('express');
 const router = express.Router();
-var trips = require('../controllers/tripController')
+const trips = require('../controllers/tripController')
+const middleware = require('../middlewares/middleware')
 
 /**
-   * Get all trips:
-   *    RequiredRoles: any
-   *
-   * @section trips
-   * @type get 
-   * @url /v1/trips
-  */
-router.get('/trips', trips.list_all_trips);
+ * 
+ * @swagger
+ * 
+ * definitions:
+ *   ErrorValidationResponse:
+ *    required:
+ *       - message
+ *       - name
+ *    properties:
+ *       message:
+ *          type: string
+ *       name:
+ *          type: string
+ *       _message:
+ *         type: string
+ *       errors:
+ *         type: string
+ *   ErrorResponse:
+ *     required:
+ *       - message
+ *     properties:
+ *       message:
+ *         type: string
+ *   Sponsorship:
+ *       type: object
+ *       properties:
+ *          link:
+ *             type: string
+ *             description: Link
+ *          banner:
+ *             type: string
+ *             description: Banner
+ *          actorId:
+ *             type: string
+ *             description: Sponsor Id
+ *          payed:
+ *             type: boolean
+ *             description: Indicates if the sponsor already payed the sponsorship
+ *   Trip:
+ *       type: object
+ *       properties:
+ *          ticker:
+ *             type: string
+ *             description: Identificador( ticker) del viaje
+ *          title:
+ *             type: string
+ *             description: Título del viaje
+ *          description:
+ *             type: string
+ *             description: Descripción del viaje
+ *          manager:
+ *             type: string
+ *             description: ID del actor que creo el viaje
+ *          price:
+ *             type: number
+ *             description: Precio del viaje
+ *             minimum: 0
+ *          requirements:
+ *             type: array
+ *             description: Requerimientos del viaje
+ *             items:
+ *                type: string
+ *          pictures: 
+ *             type: array
+ *             description: Fotos del viaje
+ *             items: 
+ *                type: string
+ *          date_start:
+ *             type: string
+ *             format: date
+ *             description: Fecha inicio del viaje
+ *          date_end:
+ *             type: string
+ *             format: date
+ *             description: Fecha final del viaje
+ *          created:
+ *             type: string
+ *             format: date
+ *             description: Fecha creación del viaje
+ *          status:
+ *             type: string
+ *             description: Estado del viaje
+ *             enum: ['CREATED', 'PUBLISHED', 'STARTED', 'ENDED', 'CANCELLED']
+ *          stages:
+ *             type: array
+ *             required:
+ *                - title
+ *                - price
+ *             description: Etapas del viaje
+ *             items:
+ *                type: object
+ *                properties:
+ *                   title:
+ *                      type: string
+ *                      description: Título de la Etapa
+ *                   description:
+ *                      type: string
+ *                      description: Descripción de la Etapa
+ *                   price:
+ *                      type: number
+ *                      description: Precio de la etapa
+ *                      minimum: 0
+ *          sponsors:
+ *             type: array
+ *             required:
+ *                - link
+ *                - actorId
+ *             description: Patrocinadores del viaje (los patrocinadores son actores)
+ *             items:
+ *                type: object
+ *                properties:
+ *                   link:
+ *                      type: string
+ *                      description: Enlace a la página del patrocinador
+ *                   banner:
+ *                      type: string
+ *                      description: Banner del patrocinador
+ *                   actorId:
+ *                      type: string
+ *                      description: ID del patrocinador
+ *                   payed:
+ *                      type: boolean
+ *                      description: Indica si el patrocinador ya pagó
+ *   TripsResponse:
+ *        type: array
+ *        items: 
+ *          $ref: "#/definitions/Trip"
+ *   TripCreated:
+ *       type: object
+ *       properties:
+ *          _id:
+ *             type: number
+ *             description: ID
+ *          _v:
+ *              type: number
+ *          ticker:
+ *             type: string
+ *             description: Identificador( ticker) del viaje
+ *          title:
+ *             type: string
+ *             description: Título del viaje
+ *          description:
+ *             type: string
+ *             description: Descripción del viaje
+ *          manager:
+ *             type: string
+ *             description: ID del actor que creo el viaje
+ *          price:
+ *             type: number
+ *             description: Precio del viaje
+ *             minimum: 0
+ *          requirements:
+ *             type: array
+ *             description: Requerimientos del viaje
+ *          items:
+ *             type: string
+ *          pictures: 
+ *             type: array
+ *             description: Fotos del viaje
+ *             items: 
+ *                type: string
+ *          date_start:
+ *             type: string
+ *             format: date
+ *             description: Fecha inicio del viaje
+ *          date_end:
+ *             type: string
+ *             format: date
+ *             description: Fecha final del viaje
+ *          created:
+ *             type: string
+ *             format: date
+ *             description: Fecha creación del viaje
+ *          status:
+ *             type: string
+ *             description: Estado del viaje
+ *             enum: ['CREATED', 'PUBLISHED', 'STARTED', 'ENDED', 'CANCELLED']
+ *          stages:
+ *             type: array
+ *             required:
+ *                - title
+ *                - price
+ *             description: Etapas del viaje
+ *             items:
+ *                type: object
+ *                properties:
+ *                   title:
+ *                      type: string
+ *                      description: Título de la Etapa
+ *                   description:
+ *                      type: string
+ *                      description: Descripción de la Etapa
+ *                   price:
+ *                      type: number
+ *                      description: Precio de la etapa
+ *                      minimum: 0
+ *          sponsors:
+ *             type: array
+ *             required:
+ *                - link
+ *                - actorId
+ *             description: Patrocinadores del viaje (los patrocinadores son actores)
+ *             items:
+ *                type: object
+ *                properties:
+ *                   link:
+ *                      type: string
+ *                      description: Enlace a la página del patrocinador
+ *                   banner:
+ *                      type: string
+ *                      description: Banner del patrocinador
+ *                   actorId:
+ *                      type: string
+ *                      description: ID del patrocinador
+ *                   payed:
+ *                      type: boolean
+ *                      description: Indica si el patrocinador ya pagó
+ * 
+ */
 
 /**
-   * Create trip:
-   *    RequiredRoles: Manager
-   *
-   * @section trips
-   * @type post 
-   * @url /v1/trips
-  */
-router.post('/trips', trips.create_a_trip);
+ * 
+ * @swagger
+ * 
+ * /trips:
+ *     get:
+ *       description: Returns all trips
+ *       operationId: list_all_trips
+ *       responses:
+ *         '200':
+ *           description: Success
+ *           schema:
+ *             $ref: '#/definitions/TripsResponse'
+ *         '500':
+ *           description: Error interno del servidor
+ *           schema:
+ *             $ref: "#/definitions/ErrorResponse"
+ *         default:
+ *           description: Error
+ *           schema:
+ *             $ref: "#/definitions/ErrorResponse"
 
-/**
-   * Search trip using only keyword:
-   *    RequiredRoles: any
-   * Search trip using a finder(keyword, priceRangeMin, priceRangeMax, dataRangeStart, dateRangeEnd):
-   *    RequiredRoles: Explorer
-   *
-   * @section trips
-   * @type get 
-   * @url /v1/trips/search
-   * @param {string} keyword //in tickers, titles description
-   * @param {string} priceRangeMin
-   * @param {string} priceRangeMax
-   * @param {string} dateRangeStart
-   * @param {string} dateRangeEnd
-  */
-
-router.get('/trips/search', trips.search_trips)
-
-/**
-* Get all sponsorships
-*  RequiredRoles: Sponsor
-* 
-* @section trips
-* @type get
-* @url /v1/trips/sponsorships/:actorId
 */
-router.get('/trips/sponsorships/:actorId', trips.get_sponsorhips)
-
-
-/**
-   * Get trip by id:
-   *    RequiredRoles: any
-   *
-   * @section trips
-   * @type get 
-   * @url /v1/trips/:tripId
-  */
-
-router.get('/trips/:tripId', trips.read_a_trip);
+router.get('/v1/trips', trips.list_all_trips);
 
 /**
-   * Delete trip if it's not published:
-   *    RequiredRoles: Manager
-   *
-   * @section trips
-   * @type delete 
-   * @url /v1/trips/:tripId
-  */
-
-router.delete('/trips/:tripId', trips.delete_a_trip);
-
-/**
-   * Update trip if it's not published:
-   *    RequiredRoles: Manager
-   *
-   * @section trips
-   * @type put 
-   * @url /v1/trips/:tripId
-  */
-
-router.put('/trips/:tripId', trips.update_a_trip);
-
-
-/**
-   * Change trip status:
-   *    RequiredRoles: Manager
-   *
-   * @section trips
-   * @type put 
-   * @url /v1/trips
-   * @param {string} val // one of this values ['PUBLISHED', 'STARTED', 'ENDED', 'CANCELLED']
-  */
-router.put('/trips/:tripId/status', trips.change_status)
-
-
-/**
- * Create a new sponsorship
- *  RequiredRoles: Sponsor
+ * @swagger
  * 
- * @section trips
- * @type post
- * @url /v1/trips/:tripId/:actorId/sponsorships
+ * /trips:
+ *    post:
+ *       description: Crea un nuevo viaje
+ *       operationId: create_a_trip
+ *       consumes:
+ *          - application/json
+ *       parameters:
+ *          - in: header
+ *            name: authorization
+ *            schema:
+ *                type: string
+ *                format: uuid
+ *                required: true
+ *          - in: body
+ *            name: trip
+ *            description: Viaje a crear
+ *            schema:
+ *                $ref: "#/definitions/Trip"
+ *       responses:
+ *          '201':
+ *             description: Created
+ *             schema:
+ *             $ref: '#/definitions/TripCreated'
+ *          '422':
+ *             description: Error de validacion
+ *             schema:
+ *             $ref: "#/definitions/ErrorValidationResponse"
+ *          default:
+ *             description: Error
+ *             schema:
+ *                $ref: "#/definitions/ErrorResponse"
  */
-router.post('/trips/:tripId/:actorId/sponsorships', trips.add_sponsorhips)
+router.post('/v1/trips', middleware.checkManager, trips.create_a_trip);
+
 
 /**
- * Update a sponsorship
- *  RequiredRoles: Sponsor
+ * @swagger
  * 
- * @section trips
- * @type put
- * @url /v1/trips/:tripId/sponsorships/:sponsorshipId
+ * /trips/finder:
+ *    get:
+ *       description: Search trip using a finder(keyword, priceRangeMin, priceRangeMax, dataRangeStart, dateRangeEnd). RequiredRoles-Explorer
+ *       operationId: finder_trips
+ *       consumes:
+ *          - application/json
+ *       parameters:
+ *          - in: query
+ *            name: keyword
+ *            description: Keyword to find in tickers, titles or description
+ *            schema:
+ *                type: string
+ *          - in: query
+ *            name: priceRangeMin
+ *            description: Min price to find trips
+ *            schema:
+ *                type: number
+ *          - in: query
+ *            name: priceRangeMax
+ *            description: Max price to find trips
+ *            schema:
+ *                type: number
+ *          - in: query
+ *            name: dateRangeStart
+ *            description: Find trips that start with this date 
+ *            schema:
+ *                type: string
+ *          - in: query
+ *            name: dateRangeEnd
+ *            description: Find trips that end before this date
+ *            schema:
+ *                type: string
+ *       responses:
+ *         '200':
+ *           description: Success
+ *           schema:
+ *             $ref: '#/definitions/TripsResponse'
+ *         '500':
+ *           description: Error interno del servidor
+ *           schema:
+ *             $ref: "#/definitions/ErrorResponse"
+ *         default:
+ *           description: Error
+ *           schema:
+ *             $ref: "#/definitions/ErrorResponse"
  */
-router.put('/trips/:tripId/sponsorships/:sponsorshipId', trips.update_sponsorhips)
+router.get('/v1/trips/finder', trips.finder_trips)
 
 /**
- * Get a sponsorship
- *  RequiredRoles: Sponsor
+ * @swagger
  * 
- * @section trips
- * @type get
- * @url /v1/trips/:tripId/sponsorships/:sponsorshipId
+ * /trips/search:
+ *    get:
+ *       description: Search trip.RequiredRoles-any
+ *       operationId: search_trips
+ *       consumes:
+ *          - application/json
+ *       parameters:
+ *          - in: query
+ *            name: keyword
+ *            description: Keyword to find in ticker, title or description
+ *            schema:
+ *                type: string
+ *          - in: query
+ *            name: actor
+ *            description: Find trips for this Manager
+ *            schema:
+ *                type: string
+ *                format: uuid
+ *          - in: query
+ *            name: startFrom
+ *            description: Return results from this point
+ *            schema:
+ *                type: number
+ *          - in: query
+ *            name: pageSize
+ *            description: Return this amount of results
+ *            schema:
+ *                type: number
+ *          - in: query
+ *            name: sortedBy
+ *            description: Sort by this date_start, price, title, description, status
+ *            schema:
+ *                type: string
+ *          - in: query
+ *            name: reverse
+ *            description: (true|false)
+ *            schema:
+ *                type: string
+ *       responses:
+ *         '200':
+ *           description: Success
+ *           schema:
+ *             $ref: '#/definitions/TripsResponse'
+ *         '500':
+ *           description: Error interno del servidor
+ *           schema:
+ *             $ref: "#/definitions/ErrorResponse"
+ *         default:
+ *           description: Error
+ *           schema:
+ *             $ref: "#/definitions/ErrorResponse"
  */
-router.get('/trips/:tripId/sponsorships/:sponsorshipId', trips.get_a_sponsorhip)
+ router.get('/v1/trips/search', trips.search_trips)
 
 /**
- * Delete a sponsorship
- *  RequiredRoles: Sponsor
+ * @swagger
  * 
- * @section trips
- * @type delete
- * @url /v1/trips/:tripId/sponsorships/:sponsorshipId
+ * /trips/sponsorships:
+ *    get:
+ *       description: Get all sponsorship
+ *       operationId: get_sponsorhips
+ *       consumes:
+ *          - application/json
+ *       parameters:
+ *          - in: header
+ *            name: authorization
+ *            schema:
+ *                type: string
+ *                format: uuid
+ *                required: true
+ *          - in: query
+ *            name: actorId
+ *            description: Find sponsorships for this actor
+ *            schema:
+ *                type: string
+ *                format: uuid
+ *                required: true
+ *       responses:
+ *          '200':
+ *             description: Success
+ *             schema:
+ *                $ref: '#/definitions/TripsResponse'
+ *          '500':
+ *             description: Error interno del servidor
+ *             schema:
+ *                $ref: "#/definitions/ErrorResponse"
+ *          default:
+ *             description: Error
+ *             schema:
+ *                $ref: "#/definitions/ErrorResponse"
  */
-router.delete('/trips/:tripId/sponsorships/:sponsorshipId', trips.delete_sponsorhips)
+router.get('/v1/trips/sponsorships', middleware.checkSponsor, trips.get_sponsorhips)
+
+
 
 /**
- * Pay a sponsorship
- *  RequiredRoles: Sponsor
+ * @swagger
  * 
- * @section trips
- * @type put
- * @url /v1/trips/:tripId/sponsorships/:sponsorshipId/pay
+ * /trips/{tripId}:
+ *    get:
+ *       description: Get a trip 
+ *       operationId: read_a_trip
+ *       consumes:
+ *          - application/json
+ *       parameters:
+ *          - in: path
+ *            name: tripId
+ *            description: Find trip with this id
+ *            type: string
+ *       responses:
+ *          '200':
+ *             description: Success
+ *             schema:
+ *                $ref: '#/definitions/Trip'
+ *          '500':
+ *             description: Error interno del servidor
+ *             schema:
+ *                $ref: "#/definitions/ErrorResponse"
+ *          default:
+ *             description: Error
+ *             schema:
+ *                $ref: "#/definitions/ErrorResponse"
  */
-router.put('/trips/:tripId/sponsorships/:sponsorshipId/pay', trips.pay_sponsorhips)
+router.get('/v1/trips/:tripId', trips.read_a_trip);
+
+/**
+ * @swagger
+ * 
+ * /trips/{tripId}:
+ *    delete:
+ *       description: Delete a trip 
+ *       operationId: delete_a_trip
+ *       consumes:
+ *          - application/json
+ *       parameters:
+ *          - in: path
+ *            name: tripId
+ *            description: Delete trip with this id
+ *            type: string
+ *          - in: header
+ *            name: authorization
+ *            schema:
+ *                type: string
+ *                format: uuid
+ *                required: true
+ *       responses:
+ *          '200':
+ *             description: Success
+ *             schema:
+ *                type: object
+ *                properties:
+ *                   message:
+ *                      type: string
+ *          '500':
+ *             description: Error interno del servidor
+ *             schema:
+ *                $ref: "#/definitions/ErrorResponse"
+ *          default:
+ *             description: Error
+ *             schema:
+ *                $ref: "#/definitions/ErrorResponse"
+ */
+router.delete('/v1/trips/:tripId', middleware.checkManager,trips.delete_a_trip);
+
+/**
+ * @swagger
+ * 
+ * /trips/{tripId}:
+ *    put:
+ *       description: Update a trip 
+ *       operationId: update_a_trip
+ *       consumes:
+ *          - application/json
+ *       parameters:
+ *          - in: header
+ *            name: authorization
+ *            schema:
+ *                type: string
+ *                format: uuid
+ *                required: true
+ *          - in: path
+ *            name: tripId
+ *            description: Update trip with this id
+ *            type: string
+ *          - in: body
+ *            name: trip
+ *            description: trip to update
+ *            schema:
+ *                $ref: "#/definitions/Trip"
+ *       responses:
+ *          '200':
+ *             description: Success
+ *             schema:
+ *                $ref: '#/definitions/Trip'
+ *          '500':
+ *             description: Error interno del servidor
+ *             schema:
+ *                $ref: "#/definitions/ErrorResponse"
+ *          default:
+ *             description: Error
+ *             schema:
+ *                $ref: "#/definitions/ErrorResponse"
+ */
+router.put('/v1/trips/:tripId', middleware.checkManager, trips.update_a_trip);
+
+
+ /**
+ * @swagger
+ * 
+ * /trips/{tripId}/status:
+ *    put:
+ *       description: Change trip status
+ *       operationId: change_status
+ *       parameters:
+ *          - in: header
+ *            name: authorization
+ *            schema:
+ *                type: string
+ *                format: uuid
+ *                required: true
+ *          - in: path
+ *            name: tripId
+ *            description: Update trip with this id
+ *            type: string
+ *          - in: query
+ *            name: val
+ *            description: new status value, one of this ['PUBLISHED', 'STARTED', 'ENDED', 'CANCELLED']
+ *            schema:
+ *                $ref: "#/definitions/Trip"
+ *       responses:
+ *          '200':
+ *             description: Success
+ *             schema:
+ *                $ref: '#/definitions/Trip'
+ *          '500':
+ *             description: Error interno del servidor
+ *             schema:
+ *                $ref: "#/definitions/ErrorResponse"
+ *          default:
+ *             description: Error
+ *             schema:
+ *                $ref: "#/definitions/ErrorResponse"
+ */
+router.put('/v1/trips/:tripId/status', middleware.checkManager, trips.change_status)
+
+/**
+ * @swagger
+ * 
+ * /trips/{tripId}/sponsorships:
+ *    post:
+ *       description: a new sponsorship
+ *       operationId: add_sponsorhips
+ *       consumes:
+ *          - application/json
+ *       parameters:
+ *          - in: header
+ *            name: authorization
+ *            schema:
+ *                type: string
+ *                format: uuid
+ *                required: true
+ *          - in: path
+ *            name: tripId
+ *            description: Add sponsohips to the trip with this id
+ *            type: string
+ *          - in: body
+ *            name: sponsorship
+ *            description: Sponsorship to add
+ *            schema:
+ *                $ref: "#/definitions/Sponsorship"
+ *       responses:
+ *          '201':
+ *             description: Created
+ *             schema:
+ *                $ref: '#/definitions/TripCreated'
+ *          '422':
+ *             description: Error de validacion
+ *             schema:
+ *                $ref: "#/definitions/ErrorValidationResponse"
+ *          default:
+ *             description: Error
+ *             schema:
+ *                $ref: "#/definitions/ErrorResponse"
+ */
+router.post('/v1/trips/:tripId/sponsorships', middleware.checkSponsor, trips.add_sponsorhips)
+
+/**
+ * @swagger
+ * 
+ * /trips/{tripId}/sponsorships/{sponsorshipId}:
+ *    put:
+ *       description: Update a sponsorship
+ *       operationId: update_sponsorhips
+ *       consumes:
+ *          - application/json
+ *       parameters:
+ *          - in: header
+ *            name: authorization
+ *            schema:
+ *                type: string
+ *                format: uuid
+ *                required: true
+ *          - in: path
+ *            name: tripId
+ *            description: Trip with the sponsorship to update
+ *            type: string
+ *          - in: path
+ *            name: sponsorshipId
+ *            description: Sponsorship to update
+ *            type: string
+ *          - in: body
+ *            name: sponsorship
+ *            description: Sponsorship to update
+ *            schema:
+ *                $ref: "#/definitions/Sponsorship"
+ *       responses:
+ *          '201':
+ *             description: Updated
+ *             schema:
+ *                $ref: '#/definitions/TripCreated'
+ *          '422':
+ *             description: Error de validacion
+ *             schema:
+ *                $ref: "#/definitions/ErrorValidationResponse"
+ *          default:
+ *             description: Error
+ *             schema:
+ *                $ref: "#/definitions/ErrorResponse"
+ */
+router.put('/v1/trips/:tripId/sponsorships/:sponsorshipId', middleware.checkSponsor, trips.update_sponsorhips)
+
+/**
+ * @swagger
+ * 
+ * /trips/{tripId}/sponsorships/{sponsorshipId}:
+ *    get:
+ *       description: Get a sponsorship
+ *       operationId: get_a_sponsorhip
+ *       parameters:
+ *          - in: header
+ *            name: authorization
+ *            schema:
+ *                type: string
+ *                format: uuid
+ *                required: true
+ *          - in: path
+ *            name: tripId
+ *            description: Trip with the sponsorship 
+ *            type: string
+ *          - in: path
+ *            name: sponsorshipId
+ *            description: Sponsorship Id
+ *            type: string
+ *       responses:
+ *          '200':
+ *             description: Success
+ *             schema:
+ *                $ref: '#/definitions/TripCreated'
+ *          default:
+ *             description: Error
+ *             schema:
+ *                $ref: "#/definitions/ErrorResponse"
+ */
+
+router.get('/v1/trips/:tripId/sponsorships/:sponsorshipId', middleware.checkSponsor, trips.get_a_sponsorhip)
+
+/**
+ * @swagger
+ * 
+ * /trips/{tripId}/sponsorships/{sponsorshipId}:
+ *    delete:
+ *       description: Delete a sponsorship
+ *       operationId: delete_sponsorhips
+ *       parameters:
+ *          - in: header
+ *            name: authorization
+ *            schema:
+ *                type: string
+ *                format: uuid
+ *                required: true
+ *          - in: path
+ *            name: tripId
+ *            description: Trip with the sponsorship 
+ *            type: string
+ *          - in: path
+ *            name: sponsorshipId
+ *            description: Sponsorship Id
+ *            type: string
+ *       responses:
+ *          '200':
+ *             description: Success
+ *             schema:
+ *                $ref: '#/definitions/TripCreated'
+ *          default:
+ *             description: Error
+ *             schema:
+ *                $ref: "#/definitions/ErrorResponse"
+ */
+
+router.delete('/v1/trips/:tripId/sponsorships/:sponsorshipId', middleware.checkSponsor, trips.delete_sponsorhips)
+
+/**
+ * @swagger
+ * 
+ * /trips/{tripId}/sponsorships/{sponsorshipId}/pay:
+ *    put:
+ *       description: Pay a sponsorship
+ *       operationId: pay_sponsorhips
+ *       parameters:
+ *          - in: header
+ *            name: authorization
+ *            schema:
+ *                type: string
+ *                format: uuid
+ *                required: true
+ *          - in: path
+ *            name: tripId
+ *            description: Trip with the sponsorship 
+ *            type: string
+ *          - in: path
+ *            name: sponsorshipId
+ *            description: Sponsorship Id
+ *            type: string
+ *       responses:
+ *          '200':
+ *             description: Success
+ *             schema:
+ *                $ref: '#/definitions/TripCreated'
+ *          default:
+ *             description: Error
+ *             schema:
+ *                $ref: "#/definitions/ErrorResponse"
+ */
+router.put('/v1/trips/:tripId/sponsorships/:sponsorshipId/pay', middleware.checkSponsor, trips.pay_sponsorhips)
 
 
 module.exports = router;

@@ -19,7 +19,7 @@ const StageSchema = new Schema({
     }
 });
 
-const SponsorSchema = new Schema( {
+const SponsorshipSchema = new Schema( {
     link: {
         type: String,
         required: 'Enter the sponsor page link'
@@ -41,7 +41,13 @@ const SponsorSchema = new Schema( {
 
 const TripSchema = new Schema({
     ticker: {
-        type: String
+        type: String,
+        unique: true
+    },
+    manager: {
+        type: Schema.Types.ObjectId,
+        ref: 'Actor',
+        required: true
     },
     title: {
         type: String,
@@ -85,8 +91,11 @@ const TripSchema = new Schema({
         default: 'CREATED'
     },
     stages: [StageSchema],
-    sponsors: [SponsorSchema]
+    sponsorships: [SponsorshipSchema]
 }, {strict: false});
+
+TripSchema.index({ price: 1 }); 
+TripSchema.index({ title: 'text', description: 'text'});
 
 TripSchema.pre('save', function(next){
     let trip = this;
@@ -95,6 +104,13 @@ TripSchema.pre('save', function(next){
     let randomletters = generate(alphabet,4);
     let now = moment().format("YYMMDD");
     trip.ticker = `${now}-${randomletters}`;
+
+    //calculating the total price as sum of the stages prices
+    trip.price = trip.stages.map((stage) => {
+        return stage.price
+    }).reduce((sum, price) => {
+        return sum + price;
+    });
     next();
 });
 
