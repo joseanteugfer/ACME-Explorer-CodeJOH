@@ -147,7 +147,93 @@
 					"variable": []
 				},
 				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET search ordered trip",
+			"request": {
+				"url": {
+					"raw": "http://localhost:3000/v1/orderedTrips/search?actorId=5c5ac431ea187e38a8089393&sortedBy=status&reverse=true&pageSize=5&startFrom=10&q=KZGL",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"orderedTrips",
+						"search"
+					],
+					"query": [
+						{
+							"key": "actorId",
+							"value": "5c5ac431ea187e38a8089393",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "sortedBy",
+							"value": "status",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "reverse",
+							"value": "true",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "pageSize",
+							"value": "5",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "startFrom",
+							"value": "10",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "q",
+							"value": "KZGL",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
 				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "PUT pay orderedTrip",
+			"request": {
+				"url": "localhost:3000/v1/orderedTrips/5c66f733b078fa04a8cf2c10/pay",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "5c67fa8792b573372478dd11",
+						"description": ""
+					}
+				],
 				"body": {},
 				"description": ""
 			},

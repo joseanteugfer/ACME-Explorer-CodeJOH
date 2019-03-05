@@ -28,8 +28,58 @@ function create_an_orderedTrip(req, res){
     })
 }
 
+// /orderedTrips/search?actorId="id"&q="searchString"&sortedBy="status|actorId|ticker|date_apply"&reverse="false|true"&startFrom="valor"&pageSize="tam"
+function search_orderedTrip(req, res) {
+ //In further version of the code we will:
+  //1.- control the authorization in order to include deleted items in the results if the requester is an Administrator.
+  var query = {};
+    
+  if(req.query.actorId){
+    query.actor_id=req.query.actorId;
+  }
+  if (req.query.q) {
+    query.$text = {$search: req.query.q};
+  }
+
+  var skip=0;
+  if(req.query.startFrom){
+    skip = parseInt(req.query.startFrom);
+  }
+  var limit=0;
+  if(req.query.pageSize){
+    limit=parseInt(req.query.pageSize);
+  }
+
+  var sort="";
+  if(req.query.reverse=="true"){
+    sort="-";
+  }
+  if(req.query.sortedBy){
+    sort+=req.query.sortedBy;
+  }
+
+  console.log("Query: "+query+" Skip:" + skip+" Limit:" + limit+" Sort:" + sort);
+
+  OrderedTrip.find(query)
+      .sort(sort)
+      .skip(skip)
+      .limit(limit)
+      .lean()
+      .exec(function(err, orderedTrip){
+    console.log('Start searching orderedTrip');
+    if (err){
+      res.send(err);
+    }
+    else{
+      res.json(orderedTrip);
+    }
+    console.log('End searching orderedTrips');
+  });
+}
+
 function read_an_orderedTrip(req, res){
     
+    console.log('GET /v1/orderedTrips/:orderedTripId');
     OrderedTrip.find({_id: req.params.orderedTripId}, function(err, orderedTrips){
         if (err) res.send(err);
         else res.json(orderedTrips)
@@ -120,18 +170,9 @@ function change_status(req,res){
 }
 
 function search_by_status(req,res){
+    //let actorId = req.headers.authorization;
     let actorId = req.params.actorId;
-    if (!req.query.groupBy) {
-        res.status(400).send({ message: `Se debe especificar el parámetro groupBy en la URL` });
-        return;
-    }
-    let groupBy = req.query.groupBy;
-    console.log(`GET /orderedTrips/${actorId}/search?groupBy=${groupBy}`);
-
-    if (groupBy != 'status') {
-            res.status(400).send({ message: 'Valor de groupBy incorrecto', groupBy_values: ['status'] });
-            return;
-    }
+    console.log(actorId);
     
     // Devolver la lista de los trips de un actor agrupados por el status
     OrderedTrip.find({ "actor_id": actorId }).sort({status: 1, "date_apply": -1})
@@ -144,6 +185,8 @@ function search_by_status(req,res){
                         res.status(500).send(err);
                         return;
                     }
+                    if (orderedTrips.length == 0) return res.status(404).send({ message: `Actor with ID ${actorId} has not ordered trips` });
+                    
                     res.send(orderedTrips);
                 });
 }
@@ -189,6 +232,7 @@ function pay(req,res){
 module.exports = {
     list_all_orderedTrip,
     create_an_orderedTrip,
+    search_orderedTrip,
     read_an_orderedTrip,
     update_an_orderedTrip,
     delete_an_orderedTrip,
