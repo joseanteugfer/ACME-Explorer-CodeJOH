@@ -4,6 +4,8 @@ const Actor = mongoose.model('Actor');
 var admin = require('firebase-admin');
 var authController = require('./authController');
 
+//list actors
+
 function list_all_actors(req, res) {
     console.log(`GET /actors`);
     Actor.find({}, function (err, actors) {
