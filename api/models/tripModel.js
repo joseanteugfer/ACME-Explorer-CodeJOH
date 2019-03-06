@@ -114,6 +114,16 @@ TripSchema.pre('save', function(next){
     });
     next();
 });
+TripSchema.pre('findOneAndUpdate', function(next) {
+    if (this.getUpdate().stages) {
+        this.getUpdate().price = this.getUpdate().stages.map((stage) => {
+            return stage.price
+        }).reduce((sum, price) => {
+            return sum + price;
+        });
+    }
+    next();
+  });
 
 function endDateValidator(endDate){
     var startDate = this.date_start;

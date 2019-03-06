@@ -94,13 +94,7 @@ function update_a_trip(req, res) {
         if (trip.status != 'PUBLISHED') {
             var tripUpdated = req.body;
             //calculating the total price as sum of the stages prices
-            if (tripUpdated.stages) {
-                tripUpdated.price = tripUpdated.stages.map((stage) => {
-                    return stage.price
-                }).reduce((sum, price) => {
-                    return sum + price;
-                });
-            }
+            
             Trip.findOneAndUpdate({ _id: req.params.tripId }, tripUpdated, { new: true, runValidators: true, context: 'query' }, function (err, trip) {
                 if (err) {
                     if (err.name == 'ValidationError') {
