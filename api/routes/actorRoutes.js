@@ -4,6 +4,8 @@ const express = require('express');
 const router = express.Router();
 const actors = require('../controllers/ActorController');
 const middleware = require('../middlewares/middleware');
+const authController = require('../controllers/authController');
+
 
 /**
  * 
@@ -64,11 +66,9 @@ const middleware = require('../middlewares/middleware');
  *         type: string
  *         description: dirección email del paypal del actor
  *       role:
- *         type: array
+ *         type: string
  *         description: rol del actor en el sistema
- *         items:
- *           type: string
- *           enum: ['MANAGER', 'EXPLORER', 'ADMINISTRATOR', 'SPONSOR']
+ *         enum: ['MANAGER', 'EXPLORER', 'ADMINISTRATOR', 'SPONSOR']
  *       validated:
  *         type: boolean
  *         description: estado de validación de un Manager
@@ -140,11 +140,9 @@ const middleware = require('../middlewares/middleware');
  *         type: string
  *         description: dirección email del paypal del actor
  *       role:
- *         type: array
+ *         type: string
  *         description: rol del actor en el sistema
- *         items:
- *           type: string
- *           enum: ['MANAGER', 'EXPLORER', 'ADMINISTRATOR', 'SPONSOR']
+ *         enum: ['MANAGER', 'EXPLORER', 'ADMINISTRATOR', 'SPONSOR']
  *       validated:
  *         type: boolean
  *         description: estado de validación de un Manager
@@ -233,6 +231,8 @@ const middleware = require('../middlewares/middleware');
 
 */
 router.get('/v1/actors', middleware.checkAdmin, actors.list_all_actors);
+
+router.get('/v1/login', actors.login_an_actor);
 
 /**
  * 
@@ -412,7 +412,10 @@ router.get('/v1/actors/:actorId', actors.read_an_actor);
  *         schema:
  *           $ref: "#/definitions/ErrorResponse"
  */
-router.put('/v1/actors/:actorId', actors.update_an_actor);
+router.put('/v1/actors/:actorId', actors.update_an_actor_v1);
+
+router.put('/v2/actors/:actorId', authController.verifyUser(["ADMINISTRATOR","MANAGER","EXPLORER"]), actors.update_an_actor_v2); //Manager y Explorer no puede modificar la info de otro consumer/clerk
+
 
 
 /**
