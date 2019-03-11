@@ -380,12 +380,6 @@ router.route('/v1/orderedTrips/:actorId/search').get(orderedTrip.search_by_statu
  *       consumes:
  *          - application/json
  *       parameters:
- *          - in: header
- *            name: authorization
- *            schema:
- *                type: string
- *                format: uuid
- *                required: true
  *          - in: path
  *            name: orderedTripId
  *            description: Pay orderedTrip with this id
@@ -404,7 +398,9 @@ router.route('/v1/orderedTrips/:actorId/search').get(orderedTrip.search_by_statu
  *             schema:
  *                $ref: "#/definitions/ErrorResponse"
  */
-router.route('/v1/orderedTrips/:orderedTripId/pay').put(middleware.checkExplorer,orderedTrip.pay);
+router.route('/v1/orderedTrips/:orderedTripId/pay').put(orderedTrip.pay);
+
+router.route('/v2/orderedTrips/:orderedTripId/pay').put(authController.verifyUser(["EXPLORER"]),orderedTrip.pay);
 
 
 
