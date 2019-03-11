@@ -68,7 +68,7 @@ const DashboardSchema = new Schema({
     tripsPerManager: TripsPerManagerSchema,
     orderedtripsPerTrips: OrderedtripsPerTrips,
     pricePerTrips: PricePerTrips,
-    ratioOrderedtrips: [{
+    ratioOrderedtrips: {
         ratioOrderedTripPending:{
             type: Number,
             max: 1,
@@ -94,7 +94,7 @@ const DashboardSchema = new Schema({
             max: 1,
             min: 0
         }
-    }],
+    },
     avgPriceRangeFinders: {
         type: Number,
         min: 0
