@@ -66,11 +66,9 @@ const authController = require('../controllers/authController');
  *         type: string
  *         description: dirección email del paypal del actor
  *       role:
- *         type: array
+ *         type: string
  *         description: rol del actor en el sistema
- *         items:
- *           type: string
- *           enum: ['MANAGER', 'EXPLORER', 'ADMINISTRATOR', 'SPONSOR']
+ *         enum: ['MANAGER', 'EXPLORER', 'ADMINISTRATOR', 'SPONSOR']
  *       validated:
  *         type: boolean
  *         description: estado de validación de un Manager
@@ -142,11 +140,9 @@ const authController = require('../controllers/authController');
  *         type: string
  *         description: dirección email del paypal del actor
  *       role:
- *         type: array
+ *         type: string
  *         description: rol del actor en el sistema
- *         items:
- *           type: string
- *           enum: ['MANAGER', 'EXPLORER', 'ADMINISTRATOR', 'SPONSOR']
+ *         enum: ['MANAGER', 'EXPLORER', 'ADMINISTRATOR', 'SPONSOR']
  *       validated:
  *         type: boolean
  *         description: estado de validación de un Manager

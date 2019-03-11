@@ -65,7 +65,7 @@ exports.verifyUser = function (requiredRoles) {
                             if (requiredRoles[i] == actor.role[j]) {
                                 if (requiredRoles[i] == "MANAGER" || requiredRoles[i] == "EXPLORER") {
                                     if (requiredRoles[i] == "MANAGER" && actor.validated == true) isAuth = true;
-                                } else if (equiredRoles[i] == "EXPLORER" && actor.banned == false) {
+                                } else if (requiredRoles[i] == "EXPLORER" && actor.banned == false) {
                                     isAuth = true;
                                 }
                                 else isAuth = true;
