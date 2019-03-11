@@ -5,6 +5,7 @@ const express = require('express');
 const router = express.Router();
 const orderedTrip = require('../controllers/OrderedTripController')
 const middleware = require('../middlewares/middleware')
+const authController = require('../controllers/authController');
 
 // middleware that is specific to this router
 router.use(function timeLog(req, res, next) {
