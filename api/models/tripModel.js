@@ -63,8 +63,7 @@ const TripSchema = new Schema({
     },
     requirements: [String],
     pictures: [{
-        data: Buffer, 
-        contentType: String
+        type: String
       }],
     date_start: {
         type: Date,
