@@ -38,7 +38,6 @@ function list_all_trips(req, res) {
 
 function create_a_trip(req, res) {
     //status to CREATED(by default in schema definition)
-    req.body.manager = req.headers.authorization;
     var new_trip = new Trip(req.body);
     new_trip.save(function (err, trip) {
         if (err) {

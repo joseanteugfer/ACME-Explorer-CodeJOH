@@ -107,23 +107,23 @@ TripSchema.pre('save', function(next){
     trip.ticker = `${now}-${randomletters}`;
 
     //calculating the total price as sum of the stages prices
+    calculatePrice(trip);
+    next();
+});
+TripSchema.pre('findOneAndUpdate', function(next) {
+    if (this.getUpdate().stages) {
+        calculatePrice(this.getUpdate());
+    }
+    next();
+  });
+
+  function calculatePrice(trip){
     trip.price = trip.stages.map((stage) => {
         return stage.price
     }).reduce((sum, price) => {
         return sum + price;
     });
-    next();
-});
-TripSchema.pre('findOneAndUpdate', function(next) {
-    if (this.getUpdate().stages) {
-        this.getUpdate().price = this.getUpdate().stages.map((stage) => {
-            return stage.price
-        }).reduce((sum, price) => {
-            return sum + price;
-        });
-    }
-    next();
-  });
+  }
 
 function endDateValidator(endDate){
     var startDate = this.date_start;
