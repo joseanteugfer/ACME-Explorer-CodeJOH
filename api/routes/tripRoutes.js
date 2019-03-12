@@ -634,7 +634,7 @@ router.post('/v2/trips/:tripId/sponsorships', auth.verifyUser(['SPONSOR']), trip
  *                $ref: "#/definitions/ErrorResponse"
  */
 router.put('/v1/trips/:tripId/sponsorships/:sponsorshipId', trips.update_sponsorhips)
-router.put('/v1/trips/:tripId/sponsorships/:sponsorshipId', auth.verifyUser(['SPONSOR']), trips.update_sponsorhips)
+router.put('/v2/trips/:tripId/sponsorships/:sponsorshipId', auth.verifyUser(['SPONSOR']), trips.update_sponsorhips)
 
 /**
  * @swagger
@@ -664,7 +664,7 @@ router.put('/v1/trips/:tripId/sponsorships/:sponsorshipId', auth.verifyUser(['SP
  */
 
 router.get('/v1/trips/:tripId/sponsorships/:sponsorshipId', trips.get_a_sponsorhip)
-router.get('/v1/trips/:tripId/sponsorships/:sponsorshipId', auth.verifyUser(['SPONSOR']), trips.get_a_sponsorhip)
+router.get('/v2/trips/:tripId/sponsorships/:sponsorshipId', auth.verifyUser(['SPONSOR']), trips.get_a_sponsorhip)
 
 /**
  * @swagger
@@ -694,7 +694,7 @@ router.get('/v1/trips/:tripId/sponsorships/:sponsorshipId', auth.verifyUser(['SP
  */
 
 router.delete('/v1/trips/:tripId/sponsorships/:sponsorshipId', trips.delete_sponsorhips)
-router.delete('/v1/trips/:tripId/sponsorships/:sponsorshipId', auth.verifyUser(['SPONSOR']), trips.delete_sponsorhips)
+router.delete('/v2/trips/:tripId/sponsorships/:sponsorshipId', auth.verifyUser(['SPONSOR']), trips.delete_sponsorhips)
 
 /**
  * @swagger
@@ -723,7 +723,7 @@ router.delete('/v1/trips/:tripId/sponsorships/:sponsorshipId', auth.verifyUser([
  *                $ref: "#/definitions/ErrorResponse"
  */
 router.put('/v1/trips/:tripId/sponsorships/:sponsorshipId/pay', trips.pay_sponsorhips)
-router.put('/v1/trips/:tripId/sponsorships/:sponsorshipId/pay', auth.verifyUser(['SPONSOR']), trips.pay_sponsorhips)
+router.put('/v2/trips/:tripId/sponsorships/:sponsorshipId/pay', auth.verifyUser(['SPONSOR']), trips.pay_sponsorhips)
 
 
 module.exports = router;
