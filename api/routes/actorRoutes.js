@@ -208,13 +208,6 @@ const authController = require('../controllers/authController');
  *     get:
  *       description: Returns all actors
  *       operationId: list_all_actors
- *       parameters:
- *         - in: header
- *           name: authorization
- *           schema:
- *             type: string
- *             format: uuid
- *             required: true
  *       responses:
  *         '200':
  *           description: Success
@@ -230,7 +223,8 @@ const authController = require('../controllers/authController');
  *             $ref: "#/definitions/ErrorResponse"
 
 */
-router.get('/v1/actors', middleware.checkAdmin, actors.list_all_actors);
+router.get('/v1/actors', actors.list_all_actors);
+router.get('/v2/actors', authController.verifyUser(["ADMINISTRATOR"]), actors.list_all_actors);
 
 router.get('/v1/login', actors.login_an_actor);
 
@@ -245,12 +239,6 @@ router.get('/v1/login', actors.login_an_actor);
  *       consumes:
  *         - application/json
   *       parameters:
- *         - in: header
- *           name: authorization
- *           schema:
- *             type: string
- *             format: uuid
- *             required: true
  *         - in: body
  *           name: actor
  *           description: actor a crear
@@ -275,7 +263,8 @@ router.get('/v1/login', actors.login_an_actor);
  *             $ref: "#/definitions/ErrorResponse"
 
 */
-router.post('/v1/actors', middleware.checkAdmin, actors.create_an_actor);
+router.post('/v1/actors', actors.create_an_actor);
+router.post('/v2/actors', authController.verifyUser(["ADMINISTRATOR"]), actors.create_an_actor);
 
 /**
  * @swagger
@@ -287,12 +276,6 @@ router.post('/v1/actors', middleware.checkAdmin, actors.create_an_actor);
  *       consumes:
  *          - application/json
  *       parameters:
- *         - in: header
- *           name: authorization
- *           schema:
- *             type: string
- *             format: uuid
- *             required: true
  *         - in: query
  *           name: q
  *           description: Keyword to find in name, surname, phone or findeder keyword
@@ -332,7 +315,8 @@ router.post('/v1/actors', middleware.checkAdmin, actors.create_an_actor);
  *           schema:
  *             $ref: "#/definitions/ErrorResponse"
  */
-router.get('/v1/actors/search', middleware.checkAdmin, actors.search_actors);
+router.get('/v1/actors/search', actors.search_actors);
+router.get('/v2/actors/search', authController.verifyUser(["ADMINISTRATOR"]), actors.search_actors);
 
 /**
  * 
@@ -463,12 +447,6 @@ router.delete('/v1/actors/:actorId', actors.delete_an_actor);
  *     consumes:
  *       - application/octet-stream
  *     parameters:
- *       - in: header
- *         name: authorization
- *         schema:
- *           type: string
- *           format: uuid
- *           required: true
  *       - name: actorId
  *         type: string
  *         in: path
@@ -495,7 +473,8 @@ router.delete('/v1/actors/:actorId', actors.delete_an_actor);
  *         schema:
  *           $ref: "#/definitions/ErrorResponse"   
  */
-router.put('/v1/actors/:actorId/banned', middleware.checkAdmin, actors.change_banned_status);
+router.put('/v1/actors/:actorId/banned', actors.change_banned_status);
+router.put('/v2/actors/:actorId/banned', authController.verifyUser(["ADMINISTRATOR"]), actors.change_banned_status);
 
 /**
  * 
