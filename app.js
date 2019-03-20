@@ -43,7 +43,9 @@ var mongoDBUser = process.env.mongoDBUser || "acmeExplorerUser";
 var mongoDBPass = process.env.mongoDBPass || "explorer";
 var mongoDBCredentials = (mongoDBUser && mongoDBPass) ? mongoDBUser + ":" + mongoDBPass + "@" : "";
 
-var mongoDBURI = "mongodb://" + mongoDBCredentials + mongoDBHostname + ":" + mongoDBPort + "/" + mongoDBName;
+var mongoDBURI = "mongodb://" + mongoDBHostname + ":" + mongoDBPort + "/" + mongoDBName;
+
+console.log(mongoDBURI);
 
 mongoose.connect(mongoDBURI, {
   reconnectTries: 10,

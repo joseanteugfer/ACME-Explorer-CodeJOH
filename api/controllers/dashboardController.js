@@ -271,6 +271,8 @@ function computeavgPriceRangeFinders(callback) {
         }]
 
         , function (err, res) {
+            if(res.length == 0) return callback(err,0);
+
             var avgPriceRange = res[0].avgPriceRangeFinders;
             callback(err, avgPriceRange);
         });
