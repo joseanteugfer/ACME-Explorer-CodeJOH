@@ -13,6 +13,7 @@ const swaggerJsdoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
 const admin = require('firebase-admin');
 const serviceAccount = require('./acme-explorer-code-joh-firebase-admin.json');
+const http = require('http');
 
 
 const options = {
@@ -67,7 +68,7 @@ app.use(bodyParser.json());
 //   });
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
 
-app.use(function (req, res, next) {
+/* app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header(
     "Access-Control-Allow-Headers",
@@ -76,13 +77,13 @@ app.use(function (req, res, next) {
   //res.header('Access-Control-Allow-Methods', 'PUT, POST, GET, DELETE, OPTIONS');
   res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,PATCH,OPTIONS');
   next();
-});
+}); */
 
 
-admin.initializeApp({
+/* admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
   databaseURL: "https://acme-explorer-code-joh.firebaseio.com"
-});
+}); */
 
 const routers = require('./api/routes');
 
@@ -91,7 +92,7 @@ routers.forEach((router) => {
 });
 
 mongoose.connection.on("open", function (err, conn) {
-  app.listen(portAPI, function () {
+  http.createServer(app).listen(portAPI, function () {
     console.log('------------');
     console.log(`API Restful ACME-Explorer listen in http://localhost:${portAPI}`);
     console.log('------------');
@@ -102,6 +103,9 @@ mongoose.connection.on("open", function (err, conn) {
 
 mongoose.connection.on("error", function (err) {
   console.log(err);
+  setTimeout(() => {
+    process.exit(1);
+  }, 1000);
 });
 
 DashboardTools.createDashboardJob();

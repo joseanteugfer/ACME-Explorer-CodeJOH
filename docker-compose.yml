@@ -2,27 +2,29 @@ version: "3"
 services:
   acme-explorer:
     build: .
+    environment: 
+      - NODE_ENV=${NODE_ENV} 
+      - PORT=${PORT}
+      - mongoDBPort=${DBPORT}     
+      - VIRTUAL_HOST=${VIRTUAL_HOST}   
+      - VIRTUAL_PORT=${VIRTUAL_PORT}  
     restart: on-failure
     ports:
      - "127.0.0.1:${PORT}:8080"
     depends_on:
       - mongo
-    environment: 
-      - NODE_ENV=${NODE_ENV} 
-      - PORT=${PORT}   
-      - mongoDBPort=${DBPORT}     
-      - VIRTUAL_HOST=${VIRTUAL_HOST}   
-      - VIRTUAL_PORT=${VIRTUAL_PORT}   
-      - mongoDBHostname=mongo
   mongo:
-    image: mongo
+    image: "mongo"
     environment: 
       - DBPORT=${DBPORT}
     expose:
       - "${DBPORT}"
+    command: --logpath /var/log/mongodb/mongodb.log --port ${DBPORT}
     volumes:
-      - mongodata:/data/db
+      - "mongodata:/data/db"
+      - "logsvol:/var/log/mongodb"
 volumes:
+  logsvol:
   mongodata:
 
 networks:

@@ -2,7 +2,7 @@
   "name": "acme-explorer-codejoh",
   "version": "1.0.0",
   "description": "Proyecto Acme Explorer de la asignatura Arquitecturas para Software como Servicio",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
