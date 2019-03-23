@@ -37,7 +37,7 @@ var mongoDBUser = process.env.mongoDBUser || 'acmeExplorerUser';
 var mongoDBPass = process.env.mongoDBPass || 'explorer';
 var mongoDBCredentials = (mongoDBUser && mongoDBPass) ? mongoDBUser + ":" + mongoDBPass + "@" : "";
 
-const mongoDBHostname = process.env.mongoDBHostname || 'localhost';
+const mongoDBHostname = process.env.mongoDBHostname || 'mongo';
 const mongoDBPort = process.env.mongoDBPort || 27017;
 const mongoDBName = process.env.mongoDBName || 'ACME-Explorer';
 var mongoDBUser = process.env.mongoDBUser || "acmeExplorerUser";
@@ -67,8 +67,12 @@ app.use(bodyParser.json());
 //     res.send(specs);
 //   });
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
+app.get('/', function(req,res) {
+  res.redirect('/api-docs');
+});
 
-/* app.use(function (req, res, next) {
+
+app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header(
     "Access-Control-Allow-Headers",
@@ -77,13 +81,13 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
   //res.header('Access-Control-Allow-Methods', 'PUT, POST, GET, DELETE, OPTIONS');
   res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,PATCH,OPTIONS');
   next();
-}); */
+});
 
 
-/* admin.initializeApp({
+admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
   databaseURL: "https://acme-explorer-code-joh.firebaseio.com"
-}); */
+});
 
 const routers = require('./api/routes');
 
