@@ -1,0 +1,14 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: task-pv-volume
+  labels:
+    app: mongo
+spec:
+  storageClassName: generic
+  resources:
+    requests: 
+      storage: 2Gi
+  accessModes:
+    - ReadWriteOnce
+  

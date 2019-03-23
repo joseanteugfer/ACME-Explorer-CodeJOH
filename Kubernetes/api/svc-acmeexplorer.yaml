@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: acme-explorer-svc
+spec:
+  selector:
+    app: acme-explorer
+  ports:
+  - port: 80
+    targetPort: http-port
+    protocol: TCP
+    nodePort: 30088
+  type: NodePort

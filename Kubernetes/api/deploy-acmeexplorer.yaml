@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: acme-explorer-deploy
+spec:
+  selector:
+    matchLabels:
+      app: acme-explorer
+  template:
+    metadata:
+      labels:
+        app: acme-explorer
+    spec:
+      containers:
+      - name: myapp
+        image: hector23rp/acme-explorer
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8080
+          name: http-port
+        env:
+          - name: PORT
+            value: "8080"
+          - name: NODE_ENV
+            value: "development"
+          - name: mongoDBPort
+            value: "27017"
