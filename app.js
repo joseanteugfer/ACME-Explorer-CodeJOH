@@ -37,7 +37,7 @@ var mongoDBUser = process.env.mongoDBUser || 'acmeExplorerUser';
 var mongoDBPass = process.env.mongoDBPass || 'explorer';
 var mongoDBCredentials = (mongoDBUser && mongoDBPass) ? mongoDBUser + ":" + mongoDBPass + "@" : "";
 
-const mongoDBHostname = process.env.mongoDBHostname || 'mongo';
+const mongoDBHostname = process.env.mongoDBHostname || 'localhost';
 const mongoDBPort = process.env.mongoDBPort || 27017;
 const mongoDBName = process.env.mongoDBName || 'ACME-Explorer';
 var mongoDBUser = process.env.mongoDBUser || "acmeExplorerUser";
