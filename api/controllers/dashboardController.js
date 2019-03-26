@@ -315,7 +315,9 @@ function computeTopKeywordsFinders(callback) {
         { $project: { topKeywords: { $slice: ["$keywords", { $arrayElemAt: ["$preComputation.limitTopPercentage", 0] }] } } }]
 
         , function (err, res) {
-            callback(err, res);
+            if (res[0].topKeywords != null)
+                var resultado = res[0];
+            callback(err, resultado);
         });
 
 };
