@@ -2,6 +2,7 @@
 const mongoose = require('mongoose');
 const Trip = mongoose.model('Trip');
 const Actor = mongoose.model('Actor');
+const OrderedTrip = mongoose.model('OrderedTrip');
 const Config = mongoose.model('Config');
 const FinderCache = mongoose.model('FinderCache');
 var async = require("async");
@@ -304,15 +305,51 @@ function search_trips(req, res) {
 }
 
 function change_status(req, res) {
-    //change status to CANCEL if (PUBLISHED and not STARTED) and don't have any accepted application, otherwise return 405
+    //change status to CANCEL if (PUBLISHED and not started) and don't have any accepted application, otherwise return 405
     var new_status = req.query.val;
-    Trip.findOneAndUpdate({ _id: req.params.tripId }, { $set: { status: new_status } }, { new: true, runValidators: true }, function (err, trip) {
-        if (err) return res.send(err);
-        if (!trip) return res.status(404).send({ message: `Trip with ID ${req.params.tripId}` });
-
-        res.json(trip);
-
-    });
+    if (new_status == 'CANCELLED'){
+        Trip.findById({ _id: req.params.tripId }, function (err, trip) {
+            if (!trip) {
+                res.status(404).send({ message: `Trip with ID ${req.params.tripId} not found` });
+                return;
+            }else if (trip.status == 'PUBLISHED') {
+                OrderedTrip.findOne({ticker: trip.ticker}, function (err, orderedTrip){
+                    if (orderedTrip){
+                        res.status(405).json({ message: 'Cancel trip with status PUBLISHED and a valid application is not allowed' });
+                        return;
+                    }
+                    if (trip.date_start < Date.now()){
+                        res.status(405).json({ message: 'Cancel trip with status PUBLISHED and started is not allowed' });
+                        return;
+                    }else{
+                        Trip.findOneAndUpdate({ _id: req.params.tripId }, { $set: { status: new_status } }, { new: true, runValidators: true }, function (err, tripUpdated) {
+                            if (err) return res.send(err);
+                            if (!tripUpdated) return res.status(404).send({ message: `Trip with ID ${req.params.tripId}` });
+                    
+                            return res.json(tripUpdated);
+                    
+                        });
+                    }
+                });
+            } else {
+                Trip.findOneAndUpdate({ _id: req.params.tripId }, { $set: { status: new_status } }, { new: true, runValidators: true }, function (err, tripUpdated) {
+                    if (err) return res.send(err);
+                    if (!tripUpdated) return res.status(404).send({ message: `Trip with ID ${req.params.tripId}` });
+            
+                    return res.json(tripUpdated);
+            
+                });
+            }
+        });
+    }else{
+        Trip.findOneAndUpdate({ _id: req.params.tripId }, { $set: { status: new_status } }, { new: true, runValidators: true }, function (err, trip) {
+            if (err) return res.send(err);
+            if (!trip) return res.status(404).send({ message: `Trip with ID ${req.params.tripId}` });
+    
+            res.json(trip);
+    
+        });
+    }   
 }
 
 function get_sponsorhips(req, res) {
