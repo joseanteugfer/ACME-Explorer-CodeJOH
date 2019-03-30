@@ -97,6 +97,20 @@ TripSchema.index({ price: 1 });
 TripSchema.index({ date_start: 1, date_end : 1}); 
 TripSchema.index({ title: 'text', description: 'text'});
 
+const FinderCacheSchema = new Schema({
+    trips: [TripSchema],
+    actor: {
+        type: Schema.Types.ObjectId,
+        ref: 'Actor',
+        required: true
+    },
+    expiresDate: {
+        type: Date
+    }
+})
+FinderCacheSchema.index({ actor: 1 }); 
+
+
 TripSchema.pre('save', function(next){
     let trip = this;
     const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -136,4 +150,7 @@ function startDateValidator(startDate){
     return now <= startDate;
 }
 
-module.exports = mongoose.model('Trip', TripSchema);
+module.exports = {
+    'Trip': mongoose.model('Trip', TripSchema),
+    'FinderCache': mongoose.model('FinderCache', FinderCacheSchema)
+};
