@@ -236,6 +236,36 @@ router.route('/v1/orderedTrips/:orderedTripId').get(orderedTrip.read_an_orderedT
 /**
  * @swagger
  * 
+ * /orderedTrips/fromManager/{managerId}:
+ *    get:
+ *       description: Get orderedTrips from Manager
+ *       operationId: read_orderedTrip_fromManager
+ *       consumes:
+ *          - application/json
+ *       parameters:
+ *          - in: path
+ *            name: managerId
+ *            description: Find orderedTrip from managerId
+ *            type: string
+ *       responses:
+ *          '200':
+ *             description: Success
+ *             schema:
+ *                $ref: '#/definitions/OrderedTrip'
+ *          '500':
+ *             description: Error interno del servidor
+ *             schema:
+ *                $ref: "#/definitions/ErrorResponse"
+ *          default:
+ *             description: Error
+ *             schema:
+ *                $ref: "#/definitions/ErrorResponse"
+ */
+router.route('/v1/orderedTrips/fromManager/:managerId').get(orderedTrip.read_orderedTrip_fromManager);
+
+/**
+ * @swagger
+ * 
  * /orderedTrips/{orderedTripId}:
  *    delete:
  *       description: Delete a orderedTrip 
