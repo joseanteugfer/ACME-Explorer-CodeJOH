@@ -2,7 +2,10 @@
 const mongoose = require('mongoose');
 const Trip = mongoose.model('Trip');
 const Actor = mongoose.model('Actor');
+const Config = mongoose.model('Config');
+const FinderCache = mongoose.model('FinderCache');
 var async = require("async");
+var moment = require('moment');
 
 function getTripStatusByActorRole(actorId) {
     return function (callback) {
@@ -113,39 +116,135 @@ function update_a_trip(req, res) {
     });
 }
 
-function finder_trips(req, res) {
-    console.log('Searching trips depending on params using finder');
+async function finder_trips(req, res) {
+    console.log('Searching trips depending on finder');
+    
+    //checking if actor have a search already in FinderCache
+    var promiseFinderCache = () => {
+        return new Promise((resolve, reject) => {
+            FinderCache.findOne({ 'actor': req.params.actorId }, function (err, finderCache) {
+                if (err) {
+                    reject(err);
+                }
+                else {
+                    resolve(finderCache);
+                }
+            });
+        })
+    }
+    var finderCache = await promiseFinderCache();
+    
+    //we can use the results already defined in finderCache
+    if(finderCache && moment(finderCache.expiresDate).isAfter(moment())) { 
+        console.log("Getting trips from cache");
+        return res.send(finderCache.trips);
+    }
 
+    // getting the actor 
+    var promiseActor = () => {
+        return new Promise((resolve, reject) => {
+            Actor.findById({ _id: req.params.actorId }, function (err, actor) {
+                if (err) {
+                    reject(err);
+                }
+                else {
+                    resolve(actor);
+                }
+            });
+        })
+    }
+    var actor = await promiseActor();
+    
+    //getting general configuration
+    var promiseConfig = () => {
+        return new Promise((resolve, reject) => {
+            Config.find()
+                .limit(1)
+                .exec(function (err, config) {
+                    if (err) {
+                        reject(err);
+                    }
+                    else {
+                        resolve(config[0]);
+                    }
+            });
+        })
+    }
+    var config = await promiseConfig();
+    
+    //finderCache is not available or it already expires, searching again
     var query = {};
-    if (req.query.keyword)
-        query.$text = { $search: req.query.keyword }
-    if (req.query.dateRangeStart)
-        query.date_start = { $gte: new Date(req.query.dateRangeStart) };
-    if (req.query.dateRangeEnd)
-        query.date_end = { $lte: new Date(req.query.dateRangeEnd) };
-    if (req.query.priceRangeMin)
-        query.price = { $gte: req.query.priceRangeMin };
-    if (req.query.priceRangeMax) {
+    if (actor.finder.keyword)
+        query.$text = { $search: actor.finder.keyword }
+    if (actor.finder.dateRangeStart)
+        query.date_start = { $gte: new Date(actor.finder.dateRangeStart) };
+    if (actor.finder.dateRangeEnd)
+        query.date_end = { $lte: new Date(actor.finder.dateRangeEnd) };
+    if (actor.finder.priceRangeMin)
+        query.price = { $gte: actor.finder.priceRangeMin };
+    if (actor.finder.priceRangeMax) {
         if (query.price)
-            query.price.$lte = req.query.priceRangeMax;
+            query.price.$lte = actor.finder.priceRangeMax;
         else
-            query.price = { $lte: req.query.priceRangeMax };
+            query.price = { $lte: actor.finder.priceRangeMax };
     }
     //get only trips with status PUBLISHED, allowed actors are EXPLORER
     query.status = "PUBLISHED";
-    console.log(query);
-
-    Trip.find(query)
-        .exec(function (err, trip) {
-            if (err) {
-                return res.status(500).send(err);
+    //getting the trips
+    console.log('Getting new trips');
+    var promiseTrips = () => {
+        return new Promise((resolve, reject) => {
+            Trip.find(query).limit(config.numberResults)
+                .exec(function (err, trips) {
+                    if (err) {
+                        reject(err);
+                    }
+                    else {
+                        resolve(trips);
+                    }
+                });
+        })
+    }
+    var trips = await promiseTrips();
+    
+    //we have a previous finderCache but the data already expires, deleting this to store the new one
+    if(finderCache){
+        var promiseFinderCacheDelete = () => {
+            return new Promise((resolve, reject) => {
+                FinderCache.deleteOne({_id: finderCache._id}, function(err, x) {
+                        if (err) {
+                            reject(err);
+                        }
+                        else {
+                            resolve();
+                        }
+                });
+            })
+        }
+        await promiseFinderCacheDelete();
+    }
+    
+    //saving trips in finder
+    
+    var newFinderCache = new FinderCache({
+        "trips": trips,
+        "actor": actor._id,
+        "expiresDate": moment().add(config.searchPeriod, 'hours')
+    });
+    newFinderCache.save(function(err, finderCacheNew) {
+        if (err) {
+            if(err.name=='ValidationError') {
+                res.status(422).send(err);
             }
-            else {
-                res.json(trip);
+            else{
+                res.status(500).send(err);
             }
-        });
-
-
+        }
+        else {
+            res.send(trips);
+        }
+    });
+        
 }
 
 function search_trips(req, res) {
