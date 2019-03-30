@@ -216,20 +216,33 @@ function show_actor_finder(req, res) {
 function update_actor_finder(req, res) {
     var actorId = req.params.actorId;
     console.log(`PUT /actors/${actorId}/finder`);
-    Actor.findOneAndUpdate({ _id: actorId }, { $set: { finder: req.body } }, { runValidators: true, new: true, context: 'query' }, function (err, actor) {
-        if (err) {
-            if (err.name == 'ValidationError') {
-                return res.status(422).send(err);
-            }
-            else {
-                return res.status(500).send(err);
-            }
-        }
-        if (!actor) return res.status(404).send({ message: `Actor with ID ${ractorId} not found` });
+    Actor.find({ _id: actorId },'finder', function(err, finders) {
+        if (err) return res.status(500).send(err);
+        if (finders.length == 0) return res.status(400).send({ message: 'Actor not found' });
 
+        const finder = finders[0].finder;
+        if (req.body.keyword) finder.keyword = req.body.keyword;
+        if (req.body.priceRangeMin) finder.priceRangeMin = req.body.priceRangeMin;
+        if (req.body.priceRangeMax) finder.priceRangeMax = req.body.priceRangeMax;
+        if (req.body.dateRangeStart) finder.dateRangeStart = req.body.dateRangeStart;
+        if (req.body.dateRangeEnd) finder.dateRangeEnd = req.body.dateRangeEnd;
 
-        res.json(actor.finder);
-    });
+        Actor.findOneAndUpdate({ _id: actorId }, { $set: { finder: finder } }, { runValidators: true, new: true, context: 'query' }, function (err, actor) {
+            if (err) {
+                if (err.name == 'ValidationError') {
+                    return res.status(422).send(err);
+                }
+                else {
+                    return res.status(500).send(err);
+                }
+            }
+            if (!actor) return res.status(404).send({ message: `Actor with ID ${actorId} not found` });
+    
+    
+            res.json(actor.finder);
+        });
+    })
+    
 }
 
 function delete_actor_finder(req, res) {

@@ -6,6 +6,7 @@ const Actor = require('./api/models/ActorModel');
 const Trip = require('./api/models/tripModel');
 const OrderedTrip = require('./api/models/OrderedTripModel');
 const Dashboard = require('./api/models/dashboardModel');
+const Config = require('./api/models/configModel');
 const DashboardTools = require('./api/controllers/dashboardController')
 const portAPI = process.env.PORT || 3000;
 const bodyParser = require('body-parser');
