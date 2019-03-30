@@ -1,0 +1,544 @@
+{
+	"id": "03b22277-6bbb-6a9d-da45-f0a00efd5f7b",
+	"name": "ACME_Explorer_requirements",
+	"description": "",
+	"order": [
+		"d72b401f-91d3-bf06-369d-cbed5ecc3ede",
+		"e0489c51-dcb9-9f6c-f00d-12dda4f2c9e3",
+		"68b69447-6ee4-7258-0611-05401a3bee65",
+		"1a04e342-7d96-e7fa-fc9b-18c7ec77e3db",
+		"bd75b327-d46b-0996-1c04-5cf25e1fac91",
+		"afc3aa3c-de2b-8f1b-d64a-805cc589b2b7",
+		"a43ce6e1-be10-4d5e-3b18-eaf5afa2cfa1",
+		"4a013211-be3b-dd0b-d702-ca2a5ac037c8",
+		"14006b4f-d4e3-260e-c4a5-db05d0b520d7",
+		"51ccaadc-b361-98e9-93ca-123f1bb21c2f",
+		"2dbcf7cd-085c-5287-cbbb-a151e70210b3",
+		"9334bc0c-e11d-3c5e-eaa4-c51cf6a5e3ba",
+		"3d391886-1bc2-d506-9191-1ebb9a355e31",
+		"211e5b17-dd57-7b91-26a6-9fa64dbff5e9",
+		"f81fafb5-9282-a2b8-2c74-1330ddecc36c",
+		"fd42834a-0d44-1198-bae4-3596dff9462f",
+		"9ecc6779-ef2f-e843-a68c-4d76f966793a"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1553953169232,
+	"owner": "1882065",
+	"public": false,
+	"requests": [
+		{
+			"id": "14006b4f-d4e3-260e-c4a5-db05d0b520d7",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:3000/v1/orderedTrips",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1553962135669,
+			"name": "8.1. Apply for a trip that has been published and is not started or cancelled.",
+			"description": "",
+			"collectionId": "03b22277-6bbb-6a9d-da45-f0a00efd5f7b",
+			"responses": [],
+			"rawModeData": "{\n\t\"ticker\": \"200815-LKYE\",\n\t\"status\": \"ACCEPTED\",\n    \"actor_id\": \"5c5ac431ea187e38a8089393\",\n    \"comments\": \"Viaje con senderismo\"\n}"
+		},
+		{
+			"id": "1a04e342-7d96-e7fa-fc9b-18c7ec77e3db",
+			"name": "7. Modify trip not published",
+			"description": "",
+			"collectionId": "03b22277-6bbb-6a9d-da45-f0a00efd5f7b",
+			"method": "PUT",
+			"headers": "Content-Type: application/json\nAuthorization: 5c77e1ff7803d20e441b1f8f",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n\t\"title\": \"Paris trip for couples\",\n    \"description\": \"Paris Valentine\",\n    \"requirements\": [\"Hi\", \"special price for couples!\"],\n    \"date_start\": \"2019-03-23\",\n    \"date_end\": \"2019-03-26\",\n    \"stages\": [{\n    \t\"title\": \"Day 1\",\n    \"description\": \"Eiffel tower\",\n    \"price\": 300\n    },\n    {\n    \t\"title\": \"Day 2\",\n    \"description\": \"Louvre museum\",\n    \"price\": 100\n    }]\n}",
+			"pathVariables": {},
+			"url": "localhost:3000/v1/trips/5c77e9a26119ce06bc86f07f",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": ""
+				},
+				{
+					"key": "Authorization",
+					"value": "5c77e1ff7803d20e441b1f8f",
+					"description": ""
+				}
+			],
+			"collection_id": "a09ba91b-ea2c-eb87-6fec-12e261a82491",
+			"isFromCollection": true,
+			"collectionRequestId": "e987a90d-0843-e592-bde2-581b6242b9b9"
+		},
+		{
+			"id": "211e5b17-dd57-7b91-26a6-9fa64dbff5e9",
+			"name": "8.4. Cancel an application wit status \"PENDING\" or \"ACCEPTED\"",
+			"description": "",
+			"collectionId": "03b22277-6bbb-6a9d-da45-f0a00efd5f7b",
+			"method": "PUT",
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "",
+			"pathVariables": {},
+			"url": "localhost:3000/v1/orderedTrips/5c653984896d6022dc25f342/status?status=Hola",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "status",
+					"value": "Hola",
+					"equals": true,
+					"description": ""
+				}
+			],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": ""
+				}
+			],
+			"collection_id": "297f8b3e-1df5-aa8f-9d83-ff1a10474ec3",
+			"isFromCollection": true,
+			"collectionRequestId": "a3b08fcc-d09b-fa96-fc91-49d8a3398f11"
+		},
+		{
+			"id": "2dbcf7cd-085c-5287-cbbb-a151e70210b3",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:3000/v1/orderedTrips",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1553962135669,
+			"name": "8.1. Apply for a trip that has been published and is cancelled",
+			"description": "",
+			"collectionId": "03b22277-6bbb-6a9d-da45-f0a00efd5f7b",
+			"responses": [],
+			"rawModeData": "{\n\t\"ticker\": \"200815-LKYE\",\n\t\"status\": \"ACCEPTED\",\n    \"actor_id\": \"5c5ac431ea187e38a8089393\",\n    \"comments\": \"Viaje con senderismo\"\n}"
+		},
+		{
+			"id": "3d391886-1bc2-d506-9191-1ebb9a355e31",
+			"headers": "Authorization: 5c67fa8792b573372478dd11\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "5c67fa8792b573372478dd11",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:3000/v1/orderedTrips/5c9f5307bb7a48933ee8635b/pay",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1553963505906,
+			"name": "8.3. Pay a trip wit status \"DUE\"",
+			"description": "",
+			"collectionId": "03b22277-6bbb-6a9d-da45-f0a00efd5f7b",
+			"responses": []
+		},
+		{
+			"id": "4a013211-be3b-dd0b-d702-ca2a5ac037c8",
+			"name": "7.3. Cancel a trip that has been pubished but has not yer started",
+			"description": "",
+			"collectionId": "03b22277-6bbb-6a9d-da45-f0a00efd5f7b",
+			"method": "PUT",
+			"headers": "Content-Type: application/json\nAuthorization: 5c77e1ff7803d20e441b1f8f",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n\t\"title\": \"Paris trip for couples\",\n    \"description\": \"Paris Valentine\",\n    \"requirements\": [\"Hi\", \"special price for couples!\"],\n    \"date_start\": \"2019-03-23\",\n    \"date_end\": \"2019-03-26\",\n    \"stages\": [{\n    \t\"title\": \"Day 1\",\n    \"description\": \"Eiffel tower\",\n    \"price\": 300\n    },\n    {\n    \t\"title\": \"Day 2\",\n    \"description\": \"Louvre museum\",\n    \"price\": 100\n    }]\n}",
+			"pathVariables": {},
+			"url": "localhost:3000/v1/trips/5c77e9a26119ce06bc86f07f",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": ""
+				},
+				{
+					"key": "Authorization",
+					"value": "5c77e1ff7803d20e441b1f8f",
+					"description": ""
+				}
+			],
+			"collection_id": "a09ba91b-ea2c-eb87-6fec-12e261a82491",
+			"isFromCollection": true,
+			"collectionRequestId": "530a9e58-7acb-e0ae-0ac8-1153c1434b3f"
+		},
+		{
+			"id": "51ccaadc-b361-98e9-93ca-123f1bb21c2f",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:3000/v1/orderedTrips",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1553962135669,
+			"name": "8.1. Apply for a trip that has been published and is started",
+			"description": "",
+			"collectionId": "03b22277-6bbb-6a9d-da45-f0a00efd5f7b",
+			"responses": [],
+			"rawModeData": "{\n\t\"ticker\": \"200815-LKYE\",\n\t\"status\": \"ACCEPTED\",\n    \"actor_id\": \"5c5ac431ea187e38a8089393\",\n    \"comments\": \"Viaje con senderismo\"\n}"
+		},
+		{
+			"id": "68b69447-6ee4-7258-0611-05401a3bee65",
+			"name": "5.3. Search for trips using a single key word that must be contained in either their tick- ers, titles, or descriptions.",
+			"description": "",
+			"collectionId": "03b22277-6bbb-6a9d-da45-f0a00efd5f7b",
+			"method": "GET",
+			"headers": "",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "",
+			"pathVariables": {},
+			"url": "localhost:3000/v1/trips/search?keyword=Paris",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "keyword",
+					"value": "Paris"
+				}
+			],
+			"headerData": [],
+			"collection_id": "a09ba91b-ea2c-eb87-6fec-12e261a82491",
+			"isFromCollection": true,
+			"collectionRequestId": "956c0865-4c40-4681-b8b2-145b53744e53"
+		},
+		{
+			"id": "9334bc0c-e11d-3c5e-eaa4-c51cf6a5e3ba",
+			"headers": "",
+			"headerData": [
+				{
+					"key": "",
+					"value": "",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "localhost:3000/v1/orderedTrips/5c9f5306bb7a48933ee85ebf/search?groupBy=status",
+			"queryParams": [
+				{
+					"key": "groupBy",
+					"value": "status",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1553963354316,
+			"name": "8.2. List and display the applications that actor made, grouped by status",
+			"description": "",
+			"collectionId": "03b22277-6bbb-6a9d-da45-f0a00efd5f7b",
+			"responses": []
+		},
+		{
+			"id": "9ecc6779-ef2f-e843-a68c-4d76f966793a",
+			"name": "15.3. Display Dashboard",
+			"description": "",
+			"collectionId": "03b22277-6bbb-6a9d-da45-f0a00efd5f7b",
+			"method": "GET",
+			"headers": "",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "",
+			"pathVariables": {},
+			"url": "localhost:3000/v1/dashboards/latest",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [],
+			"collection_id": "3be7b5bc-3709-98ee-07a7-fecb3f096cb4",
+			"isFromCollection": true,
+			"collectionRequestId": "5babb37d-57eb-90e9-ccd4-b74eda0f5a3e"
+		},
+		{
+			"id": "a43ce6e1-be10-4d5e-3b18-eaf5afa2cfa1",
+			"headers": "Content-Type: application/json\nAuthorization: 5c77e1ff7803d20e441b1f8f\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "5c77e1ff7803d20e441b1f8f",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:3000/v1/trips/5c9f5307bb7a48933ee8603a",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1553960928033,
+			"name": "7. Modify trip published",
+			"description": "",
+			"collectionId": "03b22277-6bbb-6a9d-da45-f0a00efd5f7b",
+			"responses": [],
+			"rawModeData": "{\n\t\"title\": \"Paris trip for couples\",\n    \"description\": \"Paris Valentine\",\n    \"requirements\": [\"Hi\", \"special price for couples!\"],\n    \"date_start\": \"2019-03-23\",\n    \"date_end\": \"2019-03-26\",\n    \"stages\": [{\n    \t\"title\": \"Day 1\",\n    \"description\": \"Eiffel tower\",\n    \"price\": 300\n    },\n    {\n    \t\"title\": \"Day 2\",\n    \"description\": \"Louvre museum\",\n    \"price\": 100\n    }]\n}"
+		},
+		{
+			"id": "afc3aa3c-de2b-8f1b-d64a-805cc589b2b7",
+			"headers": "Authorization: 5c77e1ff7803d20e441b1f8f\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "5c77e1ff7803d20e441b1f8f",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:3000/v1/trips/5c9f5307bb7a48933ee8603a",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1553961106441,
+			"name": "7. Delete trip by published",
+			"description": "",
+			"collectionId": "03b22277-6bbb-6a9d-da45-f0a00efd5f7b",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "bd75b327-d46b-0996-1c04-5cf25e1fac91",
+			"headers": "Authorization: 5c77e1ff7803d20e441b1f8f\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "5c77e1ff7803d20e441b1f8f",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:3000/v1/trips/5c9f907a8008ed20582cd796",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1553961094321,
+			"name": "7. Delete trip by not published",
+			"description": "",
+			"collectionId": "03b22277-6bbb-6a9d-da45-f0a00efd5f7b",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "d72b401f-91d3-bf06-369d-cbed5ecc3ede",
+			"headers": "Content-Type: application/json\nAuthorization: 5c7801c8efdace420008d0fb\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "5c7801c8efdace420008d0fb",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:3000/v1/actors",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1553953357728,
+			"name": "5.1. Register to the system as an explorer",
+			"description": "",
+			"collectionId": "03b22277-6bbb-6a9d-da45-f0a00efd5f7b",
+			"responses": [],
+			"rawModeData": "{\n\t\"name\":\"John\",\n\t\"surname\":\"Doe\",\n\t\"email\":\"john_does@gmail.com\",\n\t\"password\":\"john\",\n\t\"phone\":\"986678567\",\n\t\"address\":\"Calle falsa, 123\",\n\t\"role\":\"EXPLORER\",\n\t\"validated\":\"true\"\n}"
+		},
+		{
+			"id": "e0489c51-dcb9-9f6c-f00d-12dda4f2c9e3",
+			"name": "5.2. Browse the list of trips and display them",
+			"description": "",
+			"collectionId": "03b22277-6bbb-6a9d-da45-f0a00efd5f7b",
+			"method": "GET",
+			"headers": "",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "",
+			"pathVariables": {},
+			"url": "localhost:3000/v1/trips/",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [],
+			"collection_id": "a09ba91b-ea2c-eb87-6fec-12e261a82491",
+			"isFromCollection": true,
+			"collectionRequestId": "f5be3976-2cdf-f301-13fe-81a8169487f5"
+		},
+		{
+			"id": "f81fafb5-9282-a2b8-2c74-1330ddecc36c",
+			"headers": "Authorization: 5c780254b39f5d4060c93f4d\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "5c780254b39f5d4060c93f4d",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:3000/v1/actors/5c99059a989f5e45a35436b0/banned?value=true",
+			"queryParams": [
+				{
+					"key": "value",
+					"value": "true",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1553964979811,
+			"name": "15.1. Ban an actor",
+			"description": "",
+			"collectionId": "03b22277-6bbb-6a9d-da45-f0a00efd5f7b",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "fd42834a-0d44-1198-bae4-3596dff9462f",
+			"headers": "Authorization: 5c780254b39f5d4060c93f4d\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "5c780254b39f5d4060c93f4d",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:3000/v1/actors/5c99059a989f5e45a35436b0/banned?value=false",
+			"queryParams": [
+				{
+					"key": "value",
+					"value": "false",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1553965021300,
+			"name": "15.2. Unbanned an actor",
+			"description": "",
+			"collectionId": "03b22277-6bbb-6a9d-da45-f0a00efd5f7b",
+			"responses": [],
+			"rawModeData": ""
+		}
+	]
+}
