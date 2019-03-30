@@ -18,7 +18,7 @@ function create_an_orderedTrip(req, res){
     var new_orderedTrip = new OrderedTrip(req.body); 
     Trip.findOne({ticker: new_orderedTrip.ticker}, function(err, trip){
         if(!trip){
-            res.status(404).send({ message: `Trip with ID ${req.params.tripId} not found` });
+            res.status(404).send({ message: `Trip with ticker ${new_orderedTrip.ticker} not found` });
                 return;
         }else if(trip.status == 'STARTED' || trip.status == 'CANCELLED' || trip.status != 'PUBLISHED'){
             res.status(405).json({ message: 'You can`t apply to this trip' });
