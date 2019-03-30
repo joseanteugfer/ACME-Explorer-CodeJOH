@@ -1,6 +1,7 @@
 'use strict'
 const mongoose = require('mongoose');
 const OrderedTrip = mongoose.model('OrderedTrip');
+const Trip = mongoose.model('Trip');
 
 function list_all_orderedTrip(req, res){
     
@@ -84,6 +85,22 @@ function read_an_orderedTrip(req, res){
         if (err) res.send(err);
         else res.json(orderedTrips)
     });
+}
+
+function read_orderedTrip_fromManager(req, res) {
+    console.log('GET /v1/orderedTrips/fromManager/:managerId');
+    if (!req.params.managerId) return res.status(400).send({ message: 'Param ManagerId not found' });
+
+    Trip.find({ manager: req.params.managerId },'_id', function(err, trips) {
+        if (err) return res.status(500).send(err);
+        if (trips.length == 0) return res.send(trips);
+
+        return res.send(trips)
+    });
+    /* OrderedTrip.find({_id: req.params.orderedTripId}, function(err, orderedTrips){
+        if (err) res.send(err);
+        else res.json(orderedTrips)
+    }); */
 }
 
 function delete_an_orderedTrip(req, res){
@@ -234,6 +251,7 @@ module.exports = {
     create_an_orderedTrip,
     search_orderedTrip,
     read_an_orderedTrip,
+    read_orderedTrip_fromManager,
     update_an_orderedTrip,
     delete_an_orderedTrip,
     change_status,
