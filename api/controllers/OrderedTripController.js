@@ -146,7 +146,7 @@ function change_status(req,res){
             // Explorer action
             // new_status = CANCELLED and old_status= PENDING or ACCEPTED
             if(req.query.status == "CANCELLED"){
-                if(orderedTrip[0].status != "PENDING" || orderedTrip[0].status != "ACCEPTED") {
+                if(orderedTrip[0].status != "PENDING" && orderedTrip[0].status != "ACCEPTED") {
                     res.status(400).send({message: `La reserva ${orderedTrip[0].ticker} no se puede cambiar a ${status} ya que tiene el estado ${orderedTrip[0].status}`});
                     return;
                 }

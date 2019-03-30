@@ -1,0 +1,1944 @@
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85eaa"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "ADMINISTRATOR"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Pablo", 
+    "surname" : "Garcia", 
+    "email" : "pablogarcia1@gmail.com", 
+    "password" : "password3", 
+    "preferredLanguages" : "es", 
+    "phone" : "63634634636", 
+    "address" : "Paseo de las Delicias", 
+    "paypal" : "pablogarcia0@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2019-01-11T11:29:10.838+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85eab"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "ADMINISTRATOR"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Jose", 
+    "surname" : "Ramos", 
+    "email" : "joseramos2@gmail.com", 
+    "password" : "password", 
+    "preferredLanguages" : "en", 
+    "phone" : "34522345", 
+    "address" : "Paseo de las Delicias", 
+    "paypal" : "joseramos1@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2016-09-09T10:29:10.840+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85eac"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "MANAGER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Beatriz", 
+    "surname" : "Rivas", 
+    "email" : "beatrizrivas3@gmail.com", 
+    "password" : "password", 
+    "preferredLanguages" : "en", 
+    "phone" : "12362346", 
+    "address" : "Pabellon br2", 
+    "paypal" : "beatrizrivas0@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2017-12-11T11:29:10.841+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ead"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "MANAGER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Carlos", 
+    "surname" : "Gonzalez", 
+    "email" : "carlosgonzalez4@gmail.com", 
+    "password" : "password", 
+    "preferredLanguages" : "es", 
+    "phone" : "63634634636", 
+    "address" : "Reina Mercedes 2", 
+    "paypal" : "carlosgonzalez1@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2018-08-04T10:29:10.841+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85eae"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "MANAGER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Beatriz", 
+    "surname" : "Rivas", 
+    "email" : "beatrizrivas5@gmail.com", 
+    "password" : "password4", 
+    "preferredLanguages" : "es", 
+    "phone" : "12362346", 
+    "address" : "Pabellon br2", 
+    "paypal" : "beatrizrivas2@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2016-07-22T10:29:10.841+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85eaf"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "MANAGER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Carlos", 
+    "surname" : "Rivas", 
+    "email" : "carlosrivas6@gmail.com", 
+    "password" : "password3", 
+    "preferredLanguages" : "en", 
+    "phone" : "34522345", 
+    "address" : "Paseo de las Delicias", 
+    "paypal" : "carlosrivas3@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2017-03-23T11:29:10.841+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85eb0"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "MANAGER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Pablo", 
+    "surname" : "Garcia", 
+    "email" : "pablogarcia7@gmail.com", 
+    "password" : "password2", 
+    "preferredLanguages" : "es", 
+    "phone" : "625625465", 
+    "address" : "Paseo de las Delicias", 
+    "paypal" : "pablogarcia4@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2017-04-09T10:29:10.841+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85eb1"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "MANAGER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Jose", 
+    "surname" : "Romero", 
+    "email" : "joseromero8@gmail.com", 
+    "password" : "password4", 
+    "preferredLanguages" : "en", 
+    "phone" : "63634634636", 
+    "address" : "Reina Mercedes 1", 
+    "paypal" : "joseromero5@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2019-01-21T11:29:10.841+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85eb2"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "MANAGER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Isabel", 
+    "surname" : "Romero", 
+    "email" : "isabelromero9@gmail.com", 
+    "password" : "password2", 
+    "preferredLanguages" : "en", 
+    "phone" : "34522345", 
+    "address" : "Reina Mercedes 1", 
+    "paypal" : "isabelromero6@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2018-11-09T11:29:10.841+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85eb3"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "MANAGER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Carlos", 
+    "surname" : "Ramos", 
+    "email" : "carlosramos10@gmail.com", 
+    "password" : "password2", 
+    "preferredLanguages" : "en", 
+    "phone" : "12362346", 
+    "address" : "Pabellon Br1", 
+    "paypal" : "carlosramos7@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2018-07-21T10:29:10.841+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85eb4"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "MANAGER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Jose", 
+    "surname" : "Gonzalez", 
+    "email" : "josegonzalez11@gmail.com", 
+    "password" : "password3", 
+    "preferredLanguages" : "es", 
+    "phone" : "34522345", 
+    "address" : "Reina Mercedes 1", 
+    "paypal" : "josegonzalez8@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2017-05-10T10:29:10.841+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85eb5"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "MANAGER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Juan", 
+    "surname" : "Gonzalez", 
+    "email" : "juangonzalez12@gmail.com", 
+    "password" : "password", 
+    "preferredLanguages" : "es", 
+    "phone" : "12362346", 
+    "address" : "Paseo de las Delicias", 
+    "paypal" : "juangonzalez9@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2017-09-22T10:29:10.841+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85eb6"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Jose", 
+    "surname" : "Fdez", 
+    "email" : "josefdez13@gmail.com", 
+    "password" : "password3", 
+    "preferredLanguages" : "es", 
+    "phone" : "34522345", 
+    "address" : "Paseo de las Delicias", 
+    "paypal" : "josefdez0@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2017-03-20T11:29:10.841+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85eb7"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Ana", 
+    "surname" : "Rivas", 
+    "email" : "anarivas14@gmail.com", 
+    "password" : "password3", 
+    "preferredLanguages" : "es", 
+    "phone" : "63634634636", 
+    "address" : "Reina Mercedes 1", 
+    "paypal" : "anarivas1@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2016-12-19T11:29:10.842+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85eb8"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Ana", 
+    "surname" : "Garcia", 
+    "email" : "anagarcia15@gmail.com", 
+    "password" : "password2", 
+    "preferredLanguages" : "es", 
+    "phone" : "625625465", 
+    "address" : "Paseo de las Delicias", 
+    "paypal" : "anagarcia2@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2016-10-31T11:29:10.842+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85eb9"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Beatriz", 
+    "surname" : "Romero", 
+    "email" : "beatrizromero16@gmail.com", 
+    "password" : "password4", 
+    "preferredLanguages" : "es", 
+    "phone" : "12362346", 
+    "address" : "Paseo de las Delicias", 
+    "paypal" : "beatrizromero3@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2018-08-16T10:29:10.842+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85eba"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Juan", 
+    "surname" : "Garcia", 
+    "email" : "juangarcia17@gmail.com", 
+    "password" : "password", 
+    "preferredLanguages" : "es", 
+    "phone" : "34522345", 
+    "address" : "Paseo de las Delicias", 
+    "paypal" : "juangarcia4@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2017-09-10T10:29:10.842+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ebb"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Beatriz", 
+    "surname" : "Gonzalez", 
+    "email" : "beatrizgonzalez18@gmail.com", 
+    "password" : "password3", 
+    "preferredLanguages" : "en", 
+    "phone" : "625625465", 
+    "address" : "Paseo de las Delicias", 
+    "paypal" : "beatrizgonzalez5@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2017-01-30T11:29:10.842+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ebc"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Jose", 
+    "surname" : "Fdez", 
+    "email" : "josefdez19@gmail.com", 
+    "password" : "password2", 
+    "preferredLanguages" : "es", 
+    "phone" : "34522345", 
+    "address" : "Paseo de las Delicias", 
+    "paypal" : "josefdez6@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2017-07-31T10:29:10.842+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ebd"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Isabel", 
+    "surname" : "Gonzalez", 
+    "email" : "isabelgonzalez20@gmail.com", 
+    "password" : "password4", 
+    "preferredLanguages" : "en", 
+    "phone" : "12362346", 
+    "address" : "Reina Mercedes 1", 
+    "paypal" : "isabelgonzalez7@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2019-03-01T11:29:10.842+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ebe"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Pablo", 
+    "surname" : "Romero", 
+    "email" : "pabloromero21@gmail.com", 
+    "password" : "password", 
+    "preferredLanguages" : "es", 
+    "phone" : "34522345", 
+    "address" : "Reina Mercedes 2", 
+    "paypal" : "pabloromero8@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2016-04-22T10:29:10.842+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ebf"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Pablo", 
+    "surname" : "Rivas", 
+    "email" : "pablorivas22@gmail.com", 
+    "password" : "password", 
+    "preferredLanguages" : "en", 
+    "phone" : "625625465", 
+    "address" : "Reina Mercedes 1", 
+    "paypal" : "pablorivas9@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2018-05-29T10:29:10.842+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ec0"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Ana", 
+    "surname" : "Garcia", 
+    "email" : "anagarcia23@gmail.com", 
+    "password" : "password2", 
+    "preferredLanguages" : "en", 
+    "phone" : "625625465", 
+    "address" : "Reina Mercedes 2", 
+    "paypal" : "anagarcia10@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2016-03-31T10:29:10.842+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ec1"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Beatriz", 
+    "surname" : "Gonzalez", 
+    "email" : "beatrizgonzalez24@gmail.com", 
+    "password" : "password", 
+    "preferredLanguages" : "es", 
+    "phone" : "12362346", 
+    "address" : "Pabellon Br1", 
+    "paypal" : "beatrizgonzalez11@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2017-01-30T11:29:10.842+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ec2"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Beatriz", 
+    "surname" : "Ramos", 
+    "email" : "beatrizramos25@gmail.com", 
+    "password" : "password2", 
+    "preferredLanguages" : "es", 
+    "phone" : "12362346", 
+    "address" : "Pabellon br2", 
+    "paypal" : "beatrizramos12@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2018-10-03T10:29:10.842+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ec3"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Jose", 
+    "surname" : "Ramos", 
+    "email" : "joseramos26@gmail.com", 
+    "password" : "password4", 
+    "preferredLanguages" : "es", 
+    "phone" : "625625465", 
+    "address" : "Pabellon Br1", 
+    "paypal" : "joseramos13@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2018-08-25T10:29:10.842+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ec4"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Pablo", 
+    "surname" : "Fdez", 
+    "email" : "pablofdez27@gmail.com", 
+    "password" : "password3", 
+    "preferredLanguages" : "en", 
+    "phone" : "12362346", 
+    "address" : "Pabellon Br1", 
+    "paypal" : "pablofdez14@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2016-08-21T10:29:10.842+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ec5"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Beatriz", 
+    "surname" : "Ramos", 
+    "email" : "beatrizramos28@gmail.com", 
+    "password" : "password", 
+    "preferredLanguages" : "es", 
+    "phone" : "63634634636", 
+    "address" : "Reina Mercedes 1", 
+    "paypal" : "beatrizramos15@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2016-10-10T10:29:10.842+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ec6"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Pablo", 
+    "surname" : "Reyes", 
+    "email" : "pabloreyes29@gmail.com", 
+    "password" : "password", 
+    "preferredLanguages" : "en", 
+    "phone" : "63634634636", 
+    "address" : "Paseo de las Delicias", 
+    "paypal" : "pabloreyes16@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2018-12-04T11:29:10.842+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ec7"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Isabel", 
+    "surname" : "Reyes", 
+    "email" : "isabelreyes30@gmail.com", 
+    "password" : "password", 
+    "preferredLanguages" : "en", 
+    "phone" : "63634634636", 
+    "address" : "Paseo de las Delicias", 
+    "paypal" : "isabelreyes17@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2017-12-21T11:29:10.842+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ec8"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Pablo", 
+    "surname" : "Rivas", 
+    "email" : "pablorivas31@gmail.com", 
+    "password" : "password4", 
+    "preferredLanguages" : "en", 
+    "phone" : "625625465", 
+    "address" : "Pabellon Br1", 
+    "paypal" : "pablorivas18@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2017-04-25T10:29:10.843+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ec9"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Beatriz", 
+    "surname" : "Fdez", 
+    "email" : "beatrizfdez32@gmail.com", 
+    "password" : "password4", 
+    "preferredLanguages" : "es", 
+    "phone" : "63634634636", 
+    "address" : "Reina Mercedes 2", 
+    "paypal" : "beatrizfdez19@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2018-03-07T11:29:10.843+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85eca"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Ana", 
+    "surname" : "Reyes", 
+    "email" : "anareyes33@gmail.com", 
+    "password" : "password2", 
+    "preferredLanguages" : "es", 
+    "phone" : "63634634636", 
+    "address" : "Reina Mercedes 1", 
+    "paypal" : "anareyes20@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2016-08-27T10:29:10.843+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ecb"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Beatriz", 
+    "surname" : "Gonzalez", 
+    "email" : "beatrizgonzalez34@gmail.com", 
+    "password" : "password3", 
+    "preferredLanguages" : "en", 
+    "phone" : "625625465", 
+    "address" : "Paseo de las Delicias", 
+    "paypal" : "beatrizgonzalez21@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2019-03-07T11:29:10.843+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ecc"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Jose", 
+    "surname" : "Garcia", 
+    "email" : "josegarcia35@gmail.com", 
+    "password" : "password4", 
+    "preferredLanguages" : "es", 
+    "phone" : "34522345", 
+    "address" : "Paseo de las Delicias", 
+    "paypal" : "josegarcia22@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2016-09-10T10:29:10.843+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ecd"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Jose", 
+    "surname" : "Gonzalez", 
+    "email" : "josegonzalez36@gmail.com", 
+    "password" : "password", 
+    "preferredLanguages" : "en", 
+    "phone" : "12362346", 
+    "address" : "Pabellon Br1", 
+    "paypal" : "josegonzalez23@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2017-09-09T10:29:10.843+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ece"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Carlos", 
+    "surname" : "Rivas", 
+    "email" : "carlosrivas37@gmail.com", 
+    "password" : "password4", 
+    "preferredLanguages" : "en", 
+    "phone" : "34522345", 
+    "address" : "Reina Mercedes 1", 
+    "paypal" : "carlosrivas24@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2017-11-23T11:29:10.843+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ecf"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Beatriz", 
+    "surname" : "Fdez", 
+    "email" : "beatrizfdez38@gmail.com", 
+    "password" : "password3", 
+    "preferredLanguages" : "es", 
+    "phone" : "625625465", 
+    "address" : "Pabellon br2", 
+    "paypal" : "beatrizfdez25@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2016-06-22T10:29:10.843+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ed0"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Juan", 
+    "surname" : "Rivas", 
+    "email" : "juanrivas39@gmail.com", 
+    "password" : "password2", 
+    "preferredLanguages" : "es", 
+    "phone" : "34522345", 
+    "address" : "Reina Mercedes 2", 
+    "paypal" : "juanrivas26@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2018-02-20T11:29:10.843+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ed1"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Beatriz", 
+    "surname" : "Garcia", 
+    "email" : "beatrizgarcia40@gmail.com", 
+    "password" : "password4", 
+    "preferredLanguages" : "es", 
+    "phone" : "12362346", 
+    "address" : "Reina Mercedes 2", 
+    "paypal" : "beatrizgarcia27@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2018-08-28T10:29:10.843+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ed2"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Pablo", 
+    "surname" : "Fdez", 
+    "email" : "pablofdez41@gmail.com", 
+    "password" : "password3", 
+    "preferredLanguages" : "es", 
+    "phone" : "12362346", 
+    "address" : "Pabellon br2", 
+    "paypal" : "pablofdez28@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2018-07-25T10:29:10.843+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ed3"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Carlos", 
+    "surname" : "Reyes", 
+    "email" : "carlosreyes42@gmail.com", 
+    "password" : "password2", 
+    "preferredLanguages" : "en", 
+    "phone" : "34522345", 
+    "address" : "Reina Mercedes 2", 
+    "paypal" : "carlosreyes29@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2017-12-05T11:29:10.843+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ed4"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Juan", 
+    "surname" : "Fdez", 
+    "email" : "juanfdez43@gmail.com", 
+    "password" : "password2", 
+    "preferredLanguages" : "en", 
+    "phone" : "63634634636", 
+    "address" : "Pabellon br2", 
+    "paypal" : "juanfdez30@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2018-06-10T10:29:10.843+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ed5"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Beatriz", 
+    "surname" : "Romero", 
+    "email" : "beatrizromero44@gmail.com", 
+    "password" : "password3", 
+    "preferredLanguages" : "en", 
+    "phone" : "34522345", 
+    "address" : "Pabellon br2", 
+    "paypal" : "beatrizromero31@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2016-05-23T10:29:10.843+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ed6"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Jose", 
+    "surname" : "Fdez", 
+    "email" : "josefdez45@gmail.com", 
+    "password" : "password", 
+    "preferredLanguages" : "es", 
+    "phone" : "12362346", 
+    "address" : "Reina Mercedes 2", 
+    "paypal" : "josefdez32@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2017-09-14T10:29:10.843+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ed7"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Juan", 
+    "surname" : "Ramos", 
+    "email" : "juanramos46@gmail.com", 
+    "password" : "password2", 
+    "preferredLanguages" : "en", 
+    "phone" : "34522345", 
+    "address" : "Paseo de las Delicias", 
+    "paypal" : "juanramos33@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2017-01-18T11:29:10.843+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ed8"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Ana", 
+    "surname" : "Gonzalez", 
+    "email" : "anagonzalez47@gmail.com", 
+    "password" : "password", 
+    "preferredLanguages" : "es", 
+    "phone" : "12362346", 
+    "address" : "Pabellon br2", 
+    "paypal" : "anagonzalez34@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2016-09-05T10:29:10.843+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ed9"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Juan", 
+    "surname" : "Gonzalez", 
+    "email" : "juangonzalez48@gmail.com", 
+    "password" : "password3", 
+    "preferredLanguages" : "es", 
+    "phone" : "12362346", 
+    "address" : "Pabellon br2", 
+    "paypal" : "juangonzalez35@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2017-10-04T10:29:10.844+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85eda"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Pablo", 
+    "surname" : "Fdez", 
+    "email" : "pablofdez49@gmail.com", 
+    "password" : "password3", 
+    "preferredLanguages" : "en", 
+    "phone" : "34522345", 
+    "address" : "Reina Mercedes 1", 
+    "paypal" : "pablofdez36@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2019-02-10T11:29:10.844+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85edb"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Beatriz", 
+    "surname" : "Gonzalez", 
+    "email" : "beatrizgonzalez50@gmail.com", 
+    "password" : "password4", 
+    "preferredLanguages" : "es", 
+    "phone" : "12362346", 
+    "address" : "Paseo de las Delicias", 
+    "paypal" : "beatrizgonzalez37@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2016-11-18T11:29:10.844+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85edc"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Carlos", 
+    "surname" : "Gonzalez", 
+    "email" : "carlosgonzalez51@gmail.com", 
+    "password" : "password3", 
+    "preferredLanguages" : "es", 
+    "phone" : "625625465", 
+    "address" : "Pabellon Br1", 
+    "paypal" : "carlosgonzalez38@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2018-09-14T10:29:10.844+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85edd"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Pablo", 
+    "surname" : "Gonzalez", 
+    "email" : "pablogonzalez52@gmail.com", 
+    "password" : "password", 
+    "preferredLanguages" : "en", 
+    "phone" : "34522345", 
+    "address" : "Paseo de las Delicias", 
+    "paypal" : "pablogonzalez39@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2018-01-24T11:29:10.844+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ede"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Jose", 
+    "surname" : "Gonzalez", 
+    "email" : "josegonzalez53@gmail.com", 
+    "password" : "password4", 
+    "preferredLanguages" : "es", 
+    "phone" : "625625465", 
+    "address" : "Pabellon br2", 
+    "paypal" : "josegonzalez40@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2019-03-11T11:29:10.844+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85edf"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Beatriz", 
+    "surname" : "Romero", 
+    "email" : "beatrizromero54@gmail.com", 
+    "password" : "password4", 
+    "preferredLanguages" : "es", 
+    "phone" : "12362346", 
+    "address" : "Reina Mercedes 1", 
+    "paypal" : "beatrizromero41@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2018-06-06T10:29:10.844+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ee0"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Isabel", 
+    "surname" : "Fdez", 
+    "email" : "isabelfdez55@gmail.com", 
+    "password" : "password", 
+    "preferredLanguages" : "es", 
+    "phone" : "625625465", 
+    "address" : "Paseo de las Delicias", 
+    "paypal" : "isabelfdez42@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2017-09-16T10:29:10.844+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ee1"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Ana", 
+    "surname" : "Ramos", 
+    "email" : "anaramos56@gmail.com", 
+    "password" : "password", 
+    "preferredLanguages" : "en", 
+    "phone" : "12362346", 
+    "address" : "Reina Mercedes 2", 
+    "paypal" : "anaramos43@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2018-01-19T11:29:10.844+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ee2"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Jose", 
+    "surname" : "Gonzalez", 
+    "email" : "josegonzalez57@gmail.com", 
+    "password" : "password2", 
+    "preferredLanguages" : "es", 
+    "phone" : "34522345", 
+    "address" : "Paseo de las Delicias", 
+    "paypal" : "josegonzalez44@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2017-06-26T10:29:10.844+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ee3"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Pablo", 
+    "surname" : "Gonzalez", 
+    "email" : "pablogonzalez58@gmail.com", 
+    "password" : "password4", 
+    "preferredLanguages" : "es", 
+    "phone" : "12362346", 
+    "address" : "Reina Mercedes 2", 
+    "paypal" : "pablogonzalez45@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2018-08-08T10:29:10.844+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ee4"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Pablo", 
+    "surname" : "Ramos", 
+    "email" : "pabloramos59@gmail.com", 
+    "password" : "password4", 
+    "preferredLanguages" : "en", 
+    "phone" : "63634634636", 
+    "address" : "Reina Mercedes 2", 
+    "paypal" : "pabloramos46@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2016-09-05T10:29:10.844+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ee5"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Beatriz", 
+    "surname" : "Rivas", 
+    "email" : "beatrizrivas60@gmail.com", 
+    "password" : "password2", 
+    "preferredLanguages" : "es", 
+    "phone" : "12362346", 
+    "address" : "Reina Mercedes 2", 
+    "paypal" : "beatrizrivas47@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2016-05-17T10:29:10.844+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ee6"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Pablo", 
+    "surname" : "Fdez", 
+    "email" : "pablofdez61@gmail.com", 
+    "password" : "password2", 
+    "preferredLanguages" : "es", 
+    "phone" : "12362346", 
+    "address" : "Pabellon Br1", 
+    "paypal" : "pablofdez48@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2016-05-17T10:29:10.844+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ee7"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "EXPLORER"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Pablo", 
+    "surname" : "Gonzalez", 
+    "email" : "pablogonzalez62@gmail.com", 
+    "password" : "password", 
+    "preferredLanguages" : "en", 
+    "phone" : "34522345", 
+    "address" : "Pabellon br2", 
+    "paypal" : "pablogonzalez49@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2019-01-21T11:29:10.844+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ee8"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "SPONSOR"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Pablo", 
+    "surname" : "Gonzalez", 
+    "email" : "pablogonzalez63@gmail.com", 
+    "password" : "password3", 
+    "preferredLanguages" : "es", 
+    "phone" : "625625465", 
+    "address" : "Paseo de las Delicias", 
+    "paypal" : "pablogonzalez0@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2017-12-16T11:29:10.844+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ee9"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "SPONSOR"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Isabel", 
+    "surname" : "Ramos", 
+    "email" : "isabelramos64@gmail.com", 
+    "password" : "password3", 
+    "preferredLanguages" : "en", 
+    "phone" : "625625465", 
+    "address" : "Reina Mercedes 2", 
+    "paypal" : "isabelramos1@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2017-09-23T10:29:10.844+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85eea"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "SPONSOR"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Pablo", 
+    "surname" : "Gonzalez", 
+    "email" : "pablogonzalez65@gmail.com", 
+    "password" : "password3", 
+    "preferredLanguages" : "es", 
+    "phone" : "63634634636", 
+    "address" : "Pabellon br2", 
+    "paypal" : "pablogonzalez2@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2017-04-09T10:29:10.844+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85eeb"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "SPONSOR"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Juan", 
+    "surname" : "Fdez", 
+    "email" : "juanfdez66@gmail.com", 
+    "password" : "password3", 
+    "preferredLanguages" : "es", 
+    "phone" : "625625465", 
+    "address" : "Pabellon br2", 
+    "paypal" : "juanfdez3@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2016-09-30T10:29:10.844+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85eec"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "SPONSOR"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Ana", 
+    "surname" : "Garcia", 
+    "email" : "anagarcia67@gmail.com", 
+    "password" : "password4", 
+    "preferredLanguages" : "es", 
+    "phone" : "12362346", 
+    "address" : "Paseo de las Delicias", 
+    "paypal" : "anagarcia4@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2017-04-27T10:29:10.844+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85eed"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "SPONSOR"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Beatriz", 
+    "surname" : "Reyes", 
+    "email" : "beatrizreyes68@gmail.com", 
+    "password" : "password2", 
+    "preferredLanguages" : "es", 
+    "phone" : "63634634636", 
+    "address" : "Reina Mercedes 1", 
+    "paypal" : "beatrizreyes5@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2017-07-31T10:29:10.844+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85eee"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "SPONSOR"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Isabel", 
+    "surname" : "Gonzalez", 
+    "email" : "isabelgonzalez69@gmail.com", 
+    "password" : "password2", 
+    "preferredLanguages" : "en", 
+    "phone" : "34522345", 
+    "address" : "Paseo de las Delicias", 
+    "paypal" : "isabelgonzalez6@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2018-08-17T10:29:10.845+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85eef"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "SPONSOR"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Carlos", 
+    "surname" : "Rivas", 
+    "email" : "carlosrivas70@gmail.com", 
+    "password" : "password", 
+    "preferredLanguages" : "en", 
+    "phone" : "12362346", 
+    "address" : "Reina Mercedes 2", 
+    "paypal" : "carlosrivas7@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2017-11-22T11:29:10.845+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ef0"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "SPONSOR"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Jose", 
+    "surname" : "Reyes", 
+    "email" : "josereyes71@gmail.com", 
+    "password" : "password4", 
+    "preferredLanguages" : "en", 
+    "phone" : "12362346", 
+    "address" : "Pabellon Br1", 
+    "paypal" : "josereyes8@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2017-05-16T10:29:10.845+0000"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5306bb7a48933ee85ef1"), 
+    "preferredLanguage" : "es", 
+    "role" : [
+        "SPONSOR"
+    ], 
+    "banned" : false, 
+    "finder" : {
+        "keyword" : null, 
+        "priceRangeMin" : null, 
+        "priceRangeMax" : null, 
+        "dateRangeStart" : null, 
+        "dateRangeEnd" : null
+    }, 
+    "name" : "Juan", 
+    "surname" : "Romero", 
+    "email" : "juanromero72@gmail.com", 
+    "password" : "password3", 
+    "preferredLanguages" : "en", 
+    "phone" : "12362346", 
+    "address" : "Pabellon br2", 
+    "paypal" : "juanromero9@gmail.com", 
+    "validated" : true, 
+    "customToken" : "nostrud", 
+    "created" : ISODate("2018-11-14T11:29:10.845+0000"), 
+    "__v" : NumberInt(0)
+}

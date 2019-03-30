@@ -1,0 +1,4500 @@
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8618e"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2019-03-18T00:00:00.000+0000"), 
+    "ticker" : "190309-PDEN", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ebf"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8618f"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2020-12-03T00:00:00.000+0000"), 
+    "ticker" : "201120-DAQD", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec8"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86190"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2019-09-29T00:00:00.000+0000"), 
+    "ticker" : "190924-DUGW", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ecb"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86191"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2019-12-14T00:00:00.000+0000"), 
+    "ticker" : "191208-STXW", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee6"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86192"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2019-06-21T00:00:00.000+0000"), 
+    "ticker" : "190616-MHYI", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed9"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86193"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2018-02-01T00:00:00.000+0000"), 
+    "ticker" : "180124-DIPQ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec9"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86194"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2018-06-10T00:00:00.000+0000"), 
+    "ticker" : "180602-WUZV", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec8"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86195"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2019-12-14T00:00:00.000+0000"), 
+    "ticker" : "191208-STXW", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee0"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86196"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2019-04-10T00:00:00.000+0000"), 
+    "ticker" : "190405-IQGD", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eca"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86197"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2018-06-23T00:00:00.000+0000"), 
+    "ticker" : "180616-LLWF", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec7"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86198"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2019-04-20T00:00:00.000+0000"), 
+    "ticker" : "190415-IGQT", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec8"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86199"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2018-06-10T00:00:00.000+0000"), 
+    "ticker" : "180602-WUZV", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ecd"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8619a"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2018-02-07T00:00:00.000+0000"), 
+    "ticker" : "180126-VLQC", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed8"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8619b"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2018-10-16T00:00:00.000+0000"), 
+    "ticker" : "181009-PCUE", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee4"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8619c"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2021-01-16T00:00:00.000+0000"), 
+    "ticker" : "210111-BUOJ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec6"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8619d"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2017-11-01T01:00:00.000+0000"), 
+    "ticker" : "171018-QWCO", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ebb"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8619e"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2018-12-15T00:00:00.000+0000"), 
+    "ticker" : "181208-JANH", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee0"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8619f"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2020-11-20T00:00:00.000+0000"), 
+    "ticker" : "201109-NGDY", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eb7"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861a0"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2019-05-17T00:00:00.000+0000"), 
+    "ticker" : "190511-BGVB", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eb7"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861a1"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2017-12-15T00:00:00.000+0000"), 
+    "ticker" : "171202-DUWR", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ecb"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861a2"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2020-08-25T00:00:00.000+0000"), 
+    "ticker" : "200815-LKYE", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ebc"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861a3"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2020-08-22T00:00:00.000+0000"), 
+    "ticker" : "200815-LKYE", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec8"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861a4"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2019-05-06T00:00:00.000+0000"), 
+    "ticker" : "190501-PBYC", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec1"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861a5"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2017-09-02T00:00:00.000+0000"), 
+    "ticker" : "170819-QXIR", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ebd"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861a6"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2017-10-24T00:00:00.000+0000"), 
+    "ticker" : "171018-QWCO", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eb7"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861a7"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2018-07-05T00:00:00.000+0000"), 
+    "ticker" : "180622-SWGA", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec5"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861a8"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2020-01-11T00:00:00.000+0000"), 
+    "ticker" : "200105-XJOK", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edb"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861a9"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2017-05-20T00:00:00.000+0000"), 
+    "ticker" : "170510-OPBA", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec0"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861aa"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2018-04-25T00:00:00.000+0000"), 
+    "ticker" : "180419-COPV", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eca"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861ab"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2019-07-22T00:00:00.000+0000"), 
+    "ticker" : "190712-QTTX", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed3"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861ac"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2019-03-13T00:00:00.000+0000"), 
+    "ticker" : "190308-HVOY", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edc"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861ad"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2018-11-20T00:00:00.000+0000"), 
+    "ticker" : "181106-WPPM", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edc"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861ae"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2020-07-23T00:00:00.000+0000"), 
+    "ticker" : "200713-ODGV", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed2"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861af"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2018-02-01T00:00:00.000+0000"), 
+    "ticker" : "180126-VLQC", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed2"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861b0"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2018-08-25T00:00:00.000+0000"), 
+    "ticker" : "180816-ZYGS", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ebb"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861b1"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2018-01-20T00:00:00.000+0000"), 
+    "ticker" : "180112-TTIJ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eb7"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861b2"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2019-03-16T00:00:00.000+0000"), 
+    "ticker" : "190309-PDEN", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed3"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861b3"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2017-12-12T00:00:00.000+0000"), 
+    "ticker" : "171202-DUWR", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec7"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861b4"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2019-12-03T00:00:00.000+0000"), 
+    "ticker" : "191122-ZZBR", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed8"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861b5"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2019-03-13T00:00:00.000+0000"), 
+    "ticker" : "190303-DWXY", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed2"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861b6"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2019-02-07T00:00:00.000+0000"), 
+    "ticker" : "190201-VAYZ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee4"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861b7"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2019-11-20T00:00:00.000+0000"), 
+    "ticker" : "191111-UTFZ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ede"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861b8"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2017-05-25T00:00:00.000+0000"), 
+    "ticker" : "170516-RIKH", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ebf"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861b9"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2020-03-24T00:00:00.000+0000"), 
+    "ticker" : "200318-LYRI", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eb7"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861ba"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2018-06-20T00:00:00.000+0000"), 
+    "ticker" : "180606-BMGV", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ede"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861bb"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2019-12-03T00:00:00.000+0000"), 
+    "ticker" : "191122-ZZBR", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec9"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861bc"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2019-03-22T00:00:00.000+0000"), 
+    "ticker" : "190308-HVOY", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edb"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861bd"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2018-03-27T23:00:00.000+0000"), 
+    "ticker" : "180323-MNPQ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed3"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861be"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2018-04-01T23:00:00.000+0000"), 
+    "ticker" : "180323-MNPQ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee0"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861bf"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2019-04-14T00:00:00.000+0000"), 
+    "ticker" : "190401-LRUH", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed9"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861c0"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2018-08-25T00:00:00.000+0000"), 
+    "ticker" : "180817-FWPS", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed8"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861c1"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2019-01-26T00:00:00.000+0000"), 
+    "ticker" : "190121-BQWO", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec0"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861c2"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2017-06-01T00:00:00.000+0000"), 
+    "ticker" : "170527-FLJE", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edf"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861c3"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2019-09-23T00:00:00.000+0000"), 
+    "ticker" : "190909-SRUV", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed8"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861c4"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2017-08-31T00:00:00.000+0000"), 
+    "ticker" : "170819-QXIR", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed6"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861c5"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2018-01-08T00:00:00.000+0000"), 
+    "ticker" : "171231-DAJJ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed0"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861c6"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2018-04-28T00:00:00.000+0000"), 
+    "ticker" : "180419-OOBG", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ede"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861c7"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2019-10-05T00:00:00.000+0000"), 
+    "ticker" : "190924-DUGW", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed5"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861c8"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2019-08-26T00:00:00.000+0000"), 
+    "ticker" : "190812-AEIP", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee6"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861c9"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2019-05-18T00:00:00.000+0000"), 
+    "ticker" : "190511-BGVB", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed8"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861ca"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2017-10-25T00:00:00.000+0000"), 
+    "ticker" : "171018-QWCO", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec6"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861cb"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2019-08-18T00:00:00.000+0000"), 
+    "ticker" : "190812-AEIP", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec2"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861cc"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2017-10-26T00:00:00.000+0000"), 
+    "ticker" : "171018-QWCO", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eca"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861cd"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2019-07-27T00:00:00.000+0000"), 
+    "ticker" : "190717-EILP", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee7"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861ce"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2019-10-25T00:00:00.000+0000"), 
+    "ticker" : "191018-ACFI", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed5"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861cf"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2017-12-19T00:00:00.000+0000"), 
+    "ticker" : "171213-WONQ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed4"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861d0"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2019-08-03T00:00:00.000+0000"), 
+    "ticker" : "190728-TEEI", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed3"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861d1"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2018-10-15T00:00:00.000+0000"), 
+    "ticker" : "181004-NJDG", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ecd"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861d2"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2018-04-21T00:00:00.000+0000"), 
+    "ticker" : "180416-YIYM", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed0"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861d3"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2018-12-17T00:00:00.000+0000"), 
+    "ticker" : "181205-GTET", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ecd"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861d4"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2020-09-12T00:00:00.000+0000"), 
+    "ticker" : "200906-QZBK", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee4"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861d5"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2017-08-05T00:00:00.000+0000"), 
+    "ticker" : "170724-NGKP", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee7"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861d6"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2019-09-03T00:00:00.000+0000"), 
+    "ticker" : "190821-UQZL", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec5"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861d7"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2019-03-16T00:00:00.000+0000"), 
+    "ticker" : "190307-TWPK", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edb"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861d8"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2018-03-11T00:00:00.000+0000"), 
+    "ticker" : "180305-YDVN", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee6"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861d9"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2016-08-28T00:00:00.000+0000"), 
+    "ticker" : "160819-ZUCR", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edb"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861da"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2017-01-29T00:00:00.000+0000"), 
+    "ticker" : "170116-JKBD", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edd"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861db"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2018-04-30T00:00:00.000+0000"), 
+    "ticker" : "180416-YIYM", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee5"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861dc"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2020-08-28T00:00:00.000+0000"), 
+    "ticker" : "200815-LKYE", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec4"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861dd"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2020-08-21T00:00:00.000+0000"), 
+    "ticker" : "200815-LKYE", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ecb"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861de"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2019-03-11T00:00:00.000+0000"), 
+    "ticker" : "190304-GHGH", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ece"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861df"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2018-01-23T00:00:00.000+0000"), 
+    "ticker" : "180112-TTIJ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee5"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861e0"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2019-03-21T00:00:00.000+0000"), 
+    "ticker" : "190307-DBKR", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ebf"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861e1"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2020-01-23T00:00:00.000+0000"), 
+    "ticker" : "200118-LJFS", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edd"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861e2"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2017-08-26T00:00:00.000+0000"), 
+    "ticker" : "170819-QXIR", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ecb"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861e3"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2018-12-21T00:00:00.000+0000"), 
+    "ticker" : "181212-KUNK", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec8"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861e4"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2019-10-31T01:00:00.000+0000"), 
+    "ticker" : "191019-HQDE", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed1"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861e5"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2020-08-26T00:00:00.000+0000"), 
+    "ticker" : "200814-LTIY", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed8"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861e6"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2019-07-20T00:00:00.000+0000"), 
+    "ticker" : "190706-IAIW", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee6"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861e7"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2019-05-22T00:00:00.000+0000"), 
+    "ticker" : "190511-BGVB", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ebf"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861e8"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2019-07-15T00:00:00.000+0000"), 
+    "ticker" : "190702-ETQW", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ecf"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861e9"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2018-01-19T00:00:00.000+0000"), 
+    "ticker" : "180112-TTIJ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec6"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861ea"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2019-11-20T00:00:00.000+0000"), 
+    "ticker" : "191111-UTFZ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec6"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861eb"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2021-01-04T00:00:00.000+0000"), 
+    "ticker" : "201221-KDEN", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eb9"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861ec"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2017-03-16T00:00:00.000+0000"), 
+    "ticker" : "170309-MRPR", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec1"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861ed"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2018-12-22T00:00:00.000+0000"), 
+    "ticker" : "181208-JANH", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edb"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861ee"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2020-09-18T00:00:00.000+0000"), 
+    "ticker" : "200906-QZBK", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edb"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861ef"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2019-04-12T00:00:00.000+0000"), 
+    "ticker" : "190401-LRUH", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec2"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861f0"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2020-09-30T00:00:00.000+0000"), 
+    "ticker" : "200925-GOXG", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed5"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861f1"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2018-06-10T00:00:00.000+0000"), 
+    "ticker" : "180602-WUZV", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec0"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861f2"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2019-10-29T01:00:00.000+0000"), 
+    "ticker" : "191019-HQDE", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec5"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861f3"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2018-06-19T00:00:00.000+0000"), 
+    "ticker" : "180608-PDKN", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ebe"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861f4"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2018-12-22T00:00:00.000+0000"), 
+    "ticker" : "181212-KUNK", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ecb"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861f5"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2018-04-26T00:00:00.000+0000"), 
+    "ticker" : "180419-COPV", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edd"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861f6"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2017-08-23T00:00:00.000+0000"), 
+    "ticker" : "170812-BDLI", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edd"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861f7"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2017-03-16T00:00:00.000+0000"), 
+    "ticker" : "170309-MRPR", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed4"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861f8"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2019-07-25T00:00:00.000+0000"), 
+    "ticker" : "190712-QTTX", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee5"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861f9"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2020-08-24T00:00:00.000+0000"), 
+    "ticker" : "200814-LTIY", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edf"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861fa"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2019-06-03T00:00:00.000+0000"), 
+    "ticker" : "190523-ISOK", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed4"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861fb"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2019-06-01T00:00:00.000+0000"), 
+    "ticker" : "190523-ISOK", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eb8"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861fc"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2018-10-15T00:00:00.000+0000"), 
+    "ticker" : "181007-NZAT", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed5"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861fd"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2017-04-14T00:00:00.000+0000"), 
+    "ticker" : "170404-EEZL", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed3"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861fe"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2018-01-25T00:00:00.000+0000"), 
+    "ticker" : "180112-TTIJ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edb"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee861ff"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2019-02-06T00:00:00.000+0000"), 
+    "ticker" : "190127-MQSQ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec3"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86200"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2017-05-29T00:00:00.000+0000"), 
+    "ticker" : "170516-RIKH", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed3"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86201"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2018-01-18T00:00:00.000+0000"), 
+    "ticker" : "180106-AMJB", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ebe"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86202"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2017-08-29T00:00:00.000+0000"), 
+    "ticker" : "170819-QXIR", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ecb"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86203"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2018-11-17T00:00:00.000+0000"), 
+    "ticker" : "181106-WPPM", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed0"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86204"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2018-01-26T00:00:00.000+0000"), 
+    "ticker" : "180112-TTIJ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eb8"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86205"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2018-12-20T00:00:00.000+0000"), 
+    "ticker" : "181212-KUNK", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ecc"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86206"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2019-06-21T00:00:00.000+0000"), 
+    "ticker" : "190616-MHYI", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ede"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86207"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2019-08-03T00:00:00.000+0000"), 
+    "ticker" : "190723-DGFA", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ecc"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86208"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2020-11-20T00:00:00.000+0000"), 
+    "ticker" : "201109-NGDY", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ecc"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86209"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2019-05-09T00:00:00.000+0000"), 
+    "ticker" : "190428-VIXO", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edb"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8620a"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2019-11-22T00:00:00.000+0000"), 
+    "ticker" : "191111-UTFZ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee6"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8620b"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2018-05-14T00:00:00.000+0000"), 
+    "ticker" : "180509-WKQQ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eda"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8620c"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2018-05-19T00:00:00.000+0000"), 
+    "ticker" : "180509-WKQQ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec4"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8620d"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2020-04-03T23:00:00.000+0000"), 
+    "ticker" : "200327-KYSP", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee4"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8620e"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2018-07-05T00:00:00.000+0000"), 
+    "ticker" : "180622-SWGA", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ede"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8620f"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2016-08-30T00:00:00.000+0000"), 
+    "ticker" : "160819-ZUCR", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ecf"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86210"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2020-05-09T00:00:00.000+0000"), 
+    "ticker" : "200428-DOVZ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec0"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86211"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2020-11-21T00:00:00.000+0000"), 
+    "ticker" : "201112-ZJEW", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edf"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86212"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2017-03-18T00:00:00.000+0000"), 
+    "ticker" : "170309-MRPR", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee4"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86213"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2019-11-27T00:00:00.000+0000"), 
+    "ticker" : "191120-EJRQ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee1"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86214"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2019-10-25T00:00:00.000+0000"), 
+    "ticker" : "191019-HQDE", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec9"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86215"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2018-10-07T00:00:00.000+0000"), 
+    "ticker" : "180928-PRPC", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec8"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86216"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2018-06-18T00:00:00.000+0000"), 
+    "ticker" : "180608-PDKN", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eb8"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86217"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2018-10-16T00:00:00.000+0000"), 
+    "ticker" : "181006-SOGQ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ebb"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86218"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2017-10-06T00:00:00.000+0000"), 
+    "ticker" : "170927-OQFE", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ecb"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86219"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2018-12-04T00:00:00.000+0000"), 
+    "ticker" : "181126-PWIN", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec2"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8621a"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2017-12-22T00:00:00.000+0000"), 
+    "ticker" : "171213-WONQ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edd"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8621b"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2020-11-24T00:00:00.000+0000"), 
+    "ticker" : "201112-ZJEW", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee3"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8621c"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2020-10-07T00:00:00.000+0000"), 
+    "ticker" : "200925-GOXG", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ece"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8621d"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2019-12-17T00:00:00.000+0000"), 
+    "ticker" : "191208-STXW", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec8"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8621e"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2020-11-22T00:00:00.000+0000"), 
+    "ticker" : "201112-ZJEW", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec2"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8621f"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2018-02-06T00:00:00.000+0000"), 
+    "ticker" : "180126-VLQC", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed4"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86220"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2019-07-08T00:00:00.000+0000"), 
+    "ticker" : "190625-LQZN", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed0"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86221"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2020-05-09T00:00:00.000+0000"), 
+    "ticker" : "200427-LKTX", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed2"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86222"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2020-08-26T00:00:00.000+0000"), 
+    "ticker" : "200814-LTIY", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edb"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86223"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2017-10-30T01:00:00.000+0000"), 
+    "ticker" : "171018-QWCO", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec7"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86224"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2018-12-26T00:00:00.000+0000"), 
+    "ticker" : "181216-GPNO", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee1"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86225"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2018-12-26T00:00:00.000+0000"), 
+    "ticker" : "181214-SQDT", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee7"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86226"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2019-10-24T00:00:00.000+0000"), 
+    "ticker" : "191019-HQDE", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eb9"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86227"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2019-06-27T00:00:00.000+0000"), 
+    "ticker" : "190616-MHYI", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edb"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86228"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2017-06-25T00:00:00.000+0000"), 
+    "ticker" : "170613-CRFX", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eb9"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86229"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2019-05-17T00:00:00.000+0000"), 
+    "ticker" : "190511-BGVB", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ebf"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8622a"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2019-09-02T00:00:00.000+0000"), 
+    "ticker" : "190821-UQZL", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eb8"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8622b"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2019-02-28T00:00:00.000+0000"), 
+    "ticker" : "190214-WIDK", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec5"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8622c"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2017-12-19T00:00:00.000+0000"), 
+    "ticker" : "171213-WONQ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee5"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8622d"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2021-01-17T00:00:00.000+0000"), 
+    "ticker" : "210111-BUOJ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ebf"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8622e"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2020-07-31T00:00:00.000+0000"), 
+    "ticker" : "200717-MURL", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec3"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8622f"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2019-09-10T00:00:00.000+0000"), 
+    "ticker" : "190829-CJRI", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee5"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86230"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2018-08-13T00:00:00.000+0000"), 
+    "ticker" : "180802-MFBX", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec0"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86231"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2018-10-20T00:00:00.000+0000"), 
+    "ticker" : "181009-PCUE", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ecf"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86232"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2018-10-07T00:00:00.000+0000"), 
+    "ticker" : "180928-PRPC", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee1"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86233"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2018-06-09T00:00:00.000+0000"), 
+    "ticker" : "180602-WUZV", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee2"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86234"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2020-04-10T00:00:00.000+0000"), 
+    "ticker" : "200403-YKEH", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed1"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86235"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2018-04-30T00:00:00.000+0000"), 
+    "ticker" : "180419-OOBG", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec9"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86236"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2018-12-24T00:00:00.000+0000"), 
+    "ticker" : "181212-KUNK", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec9"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86237"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2019-12-18T00:00:00.000+0000"), 
+    "ticker" : "191212-RQFO", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ecb"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86238"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2016-11-29T00:00:00.000+0000"), 
+    "ticker" : "161124-LFHW", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec1"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86239"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2019-11-17T00:00:00.000+0000"), 
+    "ticker" : "191111-UTFZ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed2"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8623a"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2019-12-25T00:00:00.000+0000"), 
+    "ticker" : "191212-RQFO", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edf"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8623b"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2018-02-04T00:00:00.000+0000"), 
+    "ticker" : "180124-DIPQ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed0"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8623c"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2019-08-05T00:00:00.000+0000"), 
+    "ticker" : "190723-DGFA", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed7"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8623d"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2018-08-30T00:00:00.000+0000"), 
+    "ticker" : "180817-FWPS", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed0"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8623e"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2018-07-31T00:00:00.000+0000"), 
+    "ticker" : "180720-GGMR", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eda"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8623f"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2020-05-11T00:00:00.000+0000"), 
+    "ticker" : "200428-DOVZ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eb7"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86240"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2020-03-29T23:00:00.000+0000"), 
+    "ticker" : "200318-LYRI", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec3"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86241"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2017-05-23T00:00:00.000+0000"), 
+    "ticker" : "170510-OPBA", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee3"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86242"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2019-10-08T00:00:00.000+0000"), 
+    "ticker" : "190924-DUGW", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ece"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86243"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2021-01-19T00:00:00.000+0000"), 
+    "ticker" : "210111-BUOJ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec4"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86244"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2017-10-23T00:00:00.000+0000"), 
+    "ticker" : "171018-QWCO", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed5"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86245"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2019-08-21T00:00:00.000+0000"), 
+    "ticker" : "190812-AEIP", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee0"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86246"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2019-01-31T00:00:00.000+0000"), 
+    "ticker" : "190121-BQWO", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec5"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86247"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2019-04-09T00:00:00.000+0000"), 
+    "ticker" : "190404-MBPM", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee6"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86248"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2019-06-29T00:00:00.000+0000"), 
+    "ticker" : "190616-MHYI", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed1"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86249"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2017-08-26T00:00:00.000+0000"), 
+    "ticker" : "170819-QXIR", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ecc"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8624a"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2017-10-28T00:00:00.000+0000"), 
+    "ticker" : "171018-QWCO", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ece"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8624b"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2017-12-07T00:00:00.000+0000"), 
+    "ticker" : "171202-DUWR", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee4"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8624c"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2018-12-04T00:00:00.000+0000"), 
+    "ticker" : "181123-VEYT", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edd"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8624d"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2018-04-21T00:00:00.000+0000"), 
+    "ticker" : "180414-OALX", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee1"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8624e"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2020-04-14T00:00:00.000+0000"), 
+    "ticker" : "200403-YKEH", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ecd"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8624f"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2018-12-27T00:00:00.000+0000"), 
+    "ticker" : "181213-OLDW", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec4"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86250"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2018-11-27T00:00:00.000+0000"), 
+    "ticker" : "181115-LKFC", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec1"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86251"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2019-03-10T00:00:00.000+0000"), 
+    "ticker" : "190304-GHGH", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee5"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86252"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2019-07-07T00:00:00.000+0000"), 
+    "ticker" : "190702-ETQW", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec8"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86253"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2019-04-22T00:00:00.000+0000"), 
+    "ticker" : "190415-IGQT", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eb7"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86254"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2018-10-20T00:00:00.000+0000"), 
+    "ticker" : "181013-YUAI", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed1"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86255"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2018-08-15T00:00:00.000+0000"), 
+    "ticker" : "180802-MFBX", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec1"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86256"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2019-05-12T00:00:00.000+0000"), 
+    "ticker" : "190428-VIXO", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec9"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86257"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2020-03-24T00:00:00.000+0000"), 
+    "ticker" : "200318-LYRI", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ebf"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86258"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2019-12-25T00:00:00.000+0000"), 
+    "ticker" : "191212-RQFO", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edd"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86259"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2016-10-04T00:00:00.000+0000"), 
+    "ticker" : "160929-BYIJ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eb8"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8625a"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2019-01-08T00:00:00.000+0000"), 
+    "ticker" : "181230-WGUE", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee3"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8625b"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2019-02-02T00:00:00.000+0000"), 
+    "ticker" : "190127-MQSQ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed7"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8625c"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2020-10-21T00:00:00.000+0000"), 
+    "ticker" : "201009-DEUA", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee6"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8625d"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2018-08-29T00:00:00.000+0000"), 
+    "ticker" : "180816-ZYGS", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eb8"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8625e"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2018-12-26T00:00:00.000+0000"), 
+    "ticker" : "181214-SQDT", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec2"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8625f"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2020-05-05T00:00:00.000+0000"), 
+    "ticker" : "200428-DOVZ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec9"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86260"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2021-01-16T00:00:00.000+0000"), 
+    "ticker" : "210106-VNRD", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee5"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86261"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2019-07-20T00:00:00.000+0000"), 
+    "ticker" : "190712-QTTX", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec1"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86262"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2019-12-03T00:00:00.000+0000"), 
+    "ticker" : "191122-ZZBR", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ebb"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86263"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2018-10-11T00:00:00.000+0000"), 
+    "ticker" : "180928-PRPC", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee5"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86264"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2020-01-10T00:00:00.000+0000"), 
+    "ticker" : "200105-XJOK", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed7"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86265"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2019-07-31T00:00:00.000+0000"), 
+    "ticker" : "190717-EILP", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec0"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86266"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2016-12-06T00:00:00.000+0000"), 
+    "ticker" : "161124-LFHW", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec9"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86267"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2019-12-02T00:00:00.000+0000"), 
+    "ticker" : "191120-EJRQ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee7"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86268"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2019-04-06T23:00:00.000+0000"), 
+    "ticker" : "190324-JUOU", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ebe"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86269"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2019-09-03T00:00:00.000+0000"), 
+    "ticker" : "190821-UQZL", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee5"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8626a"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2018-02-03T00:00:00.000+0000"), 
+    "ticker" : "180126-VLQC", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ebb"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8626b"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2018-02-19T00:00:00.000+0000"), 
+    "ticker" : "180208-ZCCM", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ecd"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8626c"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2018-12-23T00:00:00.000+0000"), 
+    "ticker" : "181214-SQDT", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec7"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8626d"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2017-09-22T00:00:00.000+0000"), 
+    "ticker" : "170917-KJCH", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee0"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8626e"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2019-02-22T00:00:00.000+0000"), 
+    "ticker" : "190214-WIDK", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee0"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8626f"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2019-08-30T00:00:00.000+0000"), 
+    "ticker" : "190821-UQZL", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eba"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86270"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2016-12-18T00:00:00.000+0000"), 
+    "ticker" : "161205-JXYN", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eda"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86271"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2019-07-11T00:00:00.000+0000"), 
+    "ticker" : "190706-IAIW", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ebd"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86272"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2017-06-02T00:00:00.000+0000"), 
+    "ticker" : "170527-FLJE", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec9"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86273"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2018-01-06T00:00:00.000+0000"), 
+    "ticker" : "171231-DAJJ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ede"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86274"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2019-10-24T00:00:00.000+0000"), 
+    "ticker" : "191018-ACFI", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec8"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86275"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2018-10-24T00:00:00.000+0000"), 
+    "ticker" : "181013-YUAI", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eb9"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86276"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2019-04-05T23:00:00.000+0000"), 
+    "ticker" : "190324-JUOU", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eb7"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86277"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2019-04-25T00:00:00.000+0000"), 
+    "ticker" : "190415-IGQT", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec4"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86278"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2018-01-31T00:00:00.000+0000"), 
+    "ticker" : "180124-DIPQ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eb7"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86279"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2019-07-24T00:00:00.000+0000"), 
+    "ticker" : "190717-EILP", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec4"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8627a"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2019-11-28T00:00:00.000+0000"), 
+    "ticker" : "191118-CZIK", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ecd"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8627b"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2017-12-26T00:00:00.000+0000"), 
+    "ticker" : "171213-WONQ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed2"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8627c"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2018-06-13T00:00:00.000+0000"), 
+    "ticker" : "180608-PDKN", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed0"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8627d"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2018-04-28T00:00:00.000+0000"), 
+    "ticker" : "180419-OOBG", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ecc"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8627e"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2017-04-10T00:00:00.000+0000"), 
+    "ticker" : "170404-EEZL", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec1"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8627f"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2019-03-19T00:00:00.000+0000"), 
+    "ticker" : "190309-PDEN", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eba"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86280"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2019-05-09T00:00:00.000+0000"), 
+    "ticker" : "190428-VIXO", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed4"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86281"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2020-04-05T23:00:00.000+0000"), 
+    "ticker" : "200327-KYSP", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed5"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86282"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2019-08-07T00:00:00.000+0000"), 
+    "ticker" : "190728-TEEI", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed0"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86283"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2019-03-17T00:00:00.000+0000"), 
+    "ticker" : "190304-GHGH", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec7"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86284"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2019-01-04T00:00:00.000+0000"), 
+    "ticker" : "181230-WGUE", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eb8"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86285"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2019-03-20T00:00:00.000+0000"), 
+    "ticker" : "190307-DBKR", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee6"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86286"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2018-02-08T00:00:00.000+0000"), 
+    "ticker" : "180128-DLAD", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec0"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86287"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2017-05-22T00:00:00.000+0000"), 
+    "ticker" : "170510-OPBA", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed8"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86288"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2018-10-17T00:00:00.000+0000"), 
+    "ticker" : "181006-SOGQ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ecc"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86289"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2017-07-10T00:00:00.000+0000"), 
+    "ticker" : "170702-XUKK", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee2"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8628a"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2018-10-03T00:00:00.000+0000"), 
+    "ticker" : "180928-PRPC", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ebf"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8628b"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2020-07-19T00:00:00.000+0000"), 
+    "ticker" : "200713-ODGV", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ebb"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8628c"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2019-08-30T00:00:00.000+0000"), 
+    "ticker" : "190821-UQZL", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ecb"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8628d"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2019-05-15T00:00:00.000+0000"), 
+    "ticker" : "190501-PBYC", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee0"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8628e"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2017-10-30T01:00:00.000+0000"), 
+    "ticker" : "171018-QWCO", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec2"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8628f"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2016-12-15T00:00:00.000+0000"), 
+    "ticker" : "161205-JXYN", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec3"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86290"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2018-12-01T00:00:00.000+0000"), 
+    "ticker" : "181126-PWIN", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee0"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86291"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2018-10-11T00:00:00.000+0000"), 
+    "ticker" : "181004-NJDG", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ecd"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86292"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2019-11-23T00:00:00.000+0000"), 
+    "ticker" : "191111-UTFZ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed5"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86293"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2017-07-21T00:00:00.000+0000"), 
+    "ticker" : "170708-PNGK", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed3"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86294"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2017-04-17T00:00:00.000+0000"), 
+    "ticker" : "170404-EEZL", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ecb"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86295"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2018-06-24T00:00:00.000+0000"), 
+    "ticker" : "180616-LLWF", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee5"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86296"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2020-04-29T00:00:00.000+0000"), 
+    "ticker" : "200421-TOVP", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee2"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86297"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2017-12-21T00:00:00.000+0000"), 
+    "ticker" : "171213-WONQ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed0"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86298"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2020-06-16T00:00:00.000+0000"), 
+    "ticker" : "200605-VAGT", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edf"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86299"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2018-04-22T00:00:00.000+0000"), 
+    "ticker" : "180414-OALX", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eb7"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8629a"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2019-10-24T00:00:00.000+0000"), 
+    "ticker" : "191018-ACFI", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee4"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8629b"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2018-12-04T00:00:00.000+0000"), 
+    "ticker" : "181126-PWIN", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec0"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8629c"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2017-06-21T00:00:00.000+0000"), 
+    "ticker" : "170611-HTUD", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eca"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8629d"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2018-09-20T00:00:00.000+0000"), 
+    "ticker" : "180915-ZQJC", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edf"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8629e"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2020-10-04T00:00:00.000+0000"), 
+    "ticker" : "200925-GOXG", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee7"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8629f"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2019-05-22T00:00:00.000+0000"), 
+    "ticker" : "190511-BGVB", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ebb"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862a0"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2017-12-27T00:00:00.000+0000"), 
+    "ticker" : "171213-WONQ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed3"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862a1"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2019-08-23T00:00:00.000+0000"), 
+    "ticker" : "190812-AEIP", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec8"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862a2"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2019-10-30T01:00:00.000+0000"), 
+    "ticker" : "191018-ACFI", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee0"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862a3"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2018-08-23T00:00:00.000+0000"), 
+    "ticker" : "180816-ZYGS", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee1"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862a4"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2016-12-08T00:00:00.000+0000"), 
+    "ticker" : "161124-LFHW", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee0"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862a5"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2019-03-18T00:00:00.000+0000"), 
+    "ticker" : "190307-DBKR", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed3"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862a6"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2018-05-02T00:00:00.000+0000"), 
+    "ticker" : "180419-COPV", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edd"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862a7"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2017-12-09T00:00:00.000+0000"), 
+    "ticker" : "171202-DUWR", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed8"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862a8"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2019-06-13T00:00:00.000+0000"), 
+    "ticker" : "190603-ZCYL", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eb7"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862a9"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2019-07-02T00:00:00.000+0000"), 
+    "ticker" : "190625-LQZN", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee2"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862aa"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2017-08-28T00:00:00.000+0000"), 
+    "ticker" : "170819-QXIR", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec9"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862ab"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2019-12-26T00:00:00.000+0000"), 
+    "ticker" : "191212-RQFO", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eca"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862ac"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2018-11-29T00:00:00.000+0000"), 
+    "ticker" : "181115-LKFC", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed7"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862ad"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2019-03-19T00:00:00.000+0000"), 
+    "ticker" : "190308-HVOY", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee5"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862ae"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2017-05-29T00:00:00.000+0000"), 
+    "ticker" : "170516-RIKH", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eb7"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862af"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2019-03-02T00:00:00.000+0000"), 
+    "ticker" : "190224-LNQC", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed2"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862b0"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2019-07-04T00:00:00.000+0000"), 
+    "ticker" : "190625-LQZN", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec0"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862b1"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2019-09-01T00:00:00.000+0000"), 
+    "ticker" : "190821-UQZL", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed0"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862b2"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2017-07-29T00:00:00.000+0000"), 
+    "ticker" : "170724-NGKP", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed6"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862b3"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2019-06-08T00:00:00.000+0000"), 
+    "ticker" : "190603-ZCYL", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eb7"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862b4"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2018-06-14T00:00:00.000+0000"), 
+    "ticker" : "180602-WUZV", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edd"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862b5"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2018-10-07T00:00:00.000+0000"), 
+    "ticker" : "180928-PRPC", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edc"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862b6"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2018-12-11T00:00:00.000+0000"), 
+    "ticker" : "181205-GTET", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eb6"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862b7"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2016-12-12T00:00:00.000+0000"), 
+    "ticker" : "161205-JXYN", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ecf"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862b8"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2019-03-14T00:00:00.000+0000"), 
+    "ticker" : "190307-TWPK", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed2"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862b9"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2019-01-09T00:00:00.000+0000"), 
+    "ticker" : "181230-WGUE", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed9"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862ba"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2020-03-31T23:00:00.000+0000"), 
+    "ticker" : "200327-KYSP", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edf"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862bb"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2019-06-08T00:00:00.000+0000"), 
+    "ticker" : "190603-ZCYL", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee6"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862bc"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2019-03-14T00:00:00.000+0000"), 
+    "ticker" : "190303-DWXY", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee2"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862bd"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2018-12-25T00:00:00.000+0000"), 
+    "ticker" : "181214-SQDT", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec0"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862be"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2017-12-20T00:00:00.000+0000"), 
+    "ticker" : "171213-WONQ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edc"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862bf"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2020-08-20T00:00:00.000+0000"), 
+    "ticker" : "200815-LKYE", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee2"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862c0"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2020-06-10T00:00:00.000+0000"), 
+    "ticker" : "200605-VAGT", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eb8"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862c1"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2018-01-12T00:00:00.000+0000"), 
+    "ticker" : "180106-AMJB", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eb7"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862c2"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2020-04-03T23:00:00.000+0000"), 
+    "ticker" : "200327-KYSP", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee7"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862c3"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2018-01-16T00:00:00.000+0000"), 
+    "ticker" : "180106-AMJB", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eb9"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862c4"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2019-04-15T00:00:00.000+0000"), 
+    "ticker" : "190401-LRUH", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee5"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862c5"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2019-07-19T00:00:00.000+0000"), 
+    "ticker" : "190712-QTTX", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed0"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862c6"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2017-06-24T00:00:00.000+0000"), 
+    "ticker" : "170611-HTUD", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ece"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862c7"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2017-10-10T00:00:00.000+0000"), 
+    "ticker" : "170927-OQFE", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee4"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862c8"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2017-05-21T00:00:00.000+0000"), 
+    "ticker" : "170510-OPBA", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed5"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862c9"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2018-04-25T00:00:00.000+0000"), 
+    "ticker" : "180414-OALX", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee3"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862ca"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2019-03-18T00:00:00.000+0000"), 
+    "ticker" : "190308-HVOY", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eb9"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862cb"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2020-08-24T00:00:00.000+0000"), 
+    "ticker" : "200814-LTIY", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ecd"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862cc"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2020-12-01T00:00:00.000+0000"), 
+    "ticker" : "201120-DAQD", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edf"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862cd"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2019-10-18T00:00:00.000+0000"), 
+    "ticker" : "191011-VHDP", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed4"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862ce"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2019-07-02T00:00:00.000+0000"), 
+    "ticker" : "190625-LQZN", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee7"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862cf"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2018-08-09T00:00:00.000+0000"), 
+    "ticker" : "180802-MFBX", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed5"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862d0"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2017-11-10T00:00:00.000+0000"), 
+    "ticker" : "171105-LUQG", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ebd"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862d1"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2019-09-22T00:00:00.000+0000"), 
+    "ticker" : "190909-SRUV", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee3"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862d2"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2018-10-18T00:00:00.000+0000"), 
+    "ticker" : "181004-NJDG", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee2"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862d3"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2019-03-17T00:00:00.000+0000"), 
+    "ticker" : "190307-TWPK", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eb6"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862d4"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2018-04-26T00:00:00.000+0000"), 
+    "ticker" : "180416-YIYM", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee3"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862d5"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2017-10-17T00:00:00.000+0000"), 
+    "ticker" : "171003-QULE", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec8"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862d6"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2019-10-04T00:00:00.000+0000"), 
+    "ticker" : "190924-DUGW", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eb7"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862d7"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2019-09-07T00:00:00.000+0000"), 
+    "ticker" : "190829-CJRI", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee2"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862d8"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2018-10-23T00:00:00.000+0000"), 
+    "ticker" : "181013-YUAI", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ede"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862d9"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2019-03-01T00:00:00.000+0000"), 
+    "ticker" : "190224-LNQC", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edc"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862da"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2017-06-08T00:00:00.000+0000"), 
+    "ticker" : "170527-FLJE", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee0"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862db"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2021-01-20T00:00:00.000+0000"), 
+    "ticker" : "210111-BUOJ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee5"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862dc"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2020-10-05T00:00:00.000+0000"), 
+    "ticker" : "200925-GOXG", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec7"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862dd"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2018-09-22T00:00:00.000+0000"), 
+    "ticker" : "180915-ZQJC", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ebc"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862de"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2019-03-15T00:00:00.000+0000"), 
+    "ticker" : "190307-TWPK", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edb"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862df"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2018-01-18T00:00:00.000+0000"), 
+    "ticker" : "180112-TTIJ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee2"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862e0"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2017-09-23T00:00:00.000+0000"), 
+    "ticker" : "170917-KJCH", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed3"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862e1"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2019-01-21T00:00:00.000+0000"), 
+    "ticker" : "190115-WKWD", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec4"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862e2"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2018-12-27T00:00:00.000+0000"), 
+    "ticker" : "181216-GPNO", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ecc"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862e3"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2018-03-03T00:00:00.000+0000"), 
+    "ticker" : "180218-ZFDZ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eb9"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862e4"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2019-02-12T00:00:00.000+0000"), 
+    "ticker" : "190201-VAYZ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edc"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862e5"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2018-10-18T00:00:00.000+0000"), 
+    "ticker" : "181007-NZAT", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec1"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862e6"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2018-08-27T00:00:00.000+0000"), 
+    "ticker" : "180817-FWPS", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec3"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862e7"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2019-09-03T00:00:00.000+0000"), 
+    "ticker" : "190821-UQZL", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eba"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862e8"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2019-06-21T00:00:00.000+0000"), 
+    "ticker" : "190616-MHYI", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed6"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862e9"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2018-12-17T00:00:00.000+0000"), 
+    "ticker" : "181212-KUNK", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed0"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862ea"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2017-12-31T00:00:00.000+0000"), 
+    "ticker" : "171217-XOYO", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec6"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862eb"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2019-06-30T00:00:00.000+0000"), 
+    "ticker" : "190625-LQZN", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed8"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862ec"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2017-08-25T00:00:00.000+0000"), 
+    "ticker" : "170819-QXIR", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ebc"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862ed"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2019-11-25T00:00:00.000+0000"), 
+    "ticker" : "191120-EJRQ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee5"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862ee"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2017-10-16T00:00:00.000+0000"), 
+    "ticker" : "171003-QULE", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eca"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862ef"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2018-04-27T00:00:00.000+0000"), 
+    "ticker" : "180419-COPV", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee7"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862f0"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2019-10-23T00:00:00.000+0000"), 
+    "ticker" : "191018-ACFI", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed0"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862f1"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2017-06-20T00:00:00.000+0000"), 
+    "ticker" : "170611-HTUD", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ede"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862f2"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2018-08-02T00:00:00.000+0000"), 
+    "ticker" : "180720-GGMR", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee4"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862f3"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2020-07-26T00:00:00.000+0000"), 
+    "ticker" : "200720-WJAV", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed7"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862f4"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2020-06-18T00:00:00.000+0000"), 
+    "ticker" : "200605-VAGT", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee7"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862f5"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2019-06-04T00:00:00.000+0000"), 
+    "ticker" : "190529-DNKW", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eb7"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862f6"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2020-04-02T23:00:00.000+0000"), 
+    "ticker" : "200327-KYSP", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed9"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862f7"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2018-10-19T00:00:00.000+0000"), 
+    "ticker" : "181009-PCUE", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed8"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862f8"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2018-01-31T00:00:00.000+0000"), 
+    "ticker" : "180126-VLQC", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee4"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862f9"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2020-12-02T00:00:00.000+0000"), 
+    "ticker" : "201120-DAQD", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed8"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862fa"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2016-10-13T00:00:00.000+0000"), 
+    "ticker" : "160929-BYIJ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed9"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862fb"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2019-10-01T00:00:00.000+0000"), 
+    "ticker" : "190924-DUGW", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edd"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862fc"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2019-05-04T00:00:00.000+0000"), 
+    "ticker" : "190428-VIXO", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec1"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862fd"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2019-01-08T00:00:00.000+0000"), 
+    "ticker" : "181230-WGUE", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ecb"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862fe"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2018-08-29T00:00:00.000+0000"), 
+    "ticker" : "180816-ZYGS", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee4"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee862ff"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2019-01-02T00:00:00.000+0000"), 
+    "ticker" : "181227-NSHV", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee3"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86300"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2019-11-25T00:00:00.000+0000"), 
+    "ticker" : "191118-CZIK", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee5"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86301"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2019-01-08T00:00:00.000+0000"), 
+    "ticker" : "181230-WGUE", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edf"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86302"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2019-04-05T23:00:00.000+0000"), 
+    "ticker" : "190324-JUOU", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ecd"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86303"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2019-05-29T00:00:00.000+0000"), 
+    "ticker" : "190523-ISOK", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee3"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86304"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2017-10-08T00:00:00.000+0000"), 
+    "ticker" : "170927-OQFE", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eda"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86305"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2019-07-28T00:00:00.000+0000"), 
+    "ticker" : "190717-EILP", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee2"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86306"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2018-12-10T00:00:00.000+0000"), 
+    "ticker" : "181205-GTET", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ecc"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86307"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2019-01-27T00:00:00.000+0000"), 
+    "ticker" : "190114-ZDKY", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed8"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86308"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2017-03-22T00:00:00.000+0000"), 
+    "ticker" : "170309-MRPR", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ebb"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86309"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2017-10-30T01:00:00.000+0000"), 
+    "ticker" : "171018-QWCO", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee2"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8630a"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2019-03-02T00:00:00.000+0000"), 
+    "ticker" : "190218-PGVS", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec8"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8630b"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2018-03-17T00:00:00.000+0000"), 
+    "ticker" : "180305-YDVN", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec8"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8630c"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2019-11-18T00:00:00.000+0000"), 
+    "ticker" : "191111-UTFZ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee5"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8630d"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2018-12-04T00:00:00.000+0000"), 
+    "ticker" : "181126-PWIN", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec4"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8630e"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2021-01-22T00:00:00.000+0000"), 
+    "ticker" : "210111-BUOJ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec4"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8630f"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2017-12-22T00:00:00.000+0000"), 
+    "ticker" : "171217-XOYO", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee4"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86310"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2017-07-15T00:00:00.000+0000"), 
+    "ticker" : "170702-XUKK", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eb8"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86311"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2018-12-08T00:00:00.000+0000"), 
+    "ticker" : "181126-PWIN", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec6"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86312"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2017-07-18T00:00:00.000+0000"), 
+    "ticker" : "170708-PNGK", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed2"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86313"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2018-08-28T00:00:00.000+0000"), 
+    "ticker" : "180817-FWPS", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed2"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86314"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2018-04-28T00:00:00.000+0000"), 
+    "ticker" : "180414-OALX", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ede"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86315"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2017-11-27T00:00:00.000+0000"), 
+    "ticker" : "171114-VKLB", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec1"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86316"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2020-10-16T00:00:00.000+0000"), 
+    "ticker" : "201009-DEUA", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee7"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86317"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2020-05-05T00:00:00.000+0000"), 
+    "ticker" : "200421-TOVP", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eba"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86318"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2018-09-19T00:00:00.000+0000"), 
+    "ticker" : "180907-SDHU", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ebc"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86319"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2019-07-07T00:00:00.000+0000"), 
+    "ticker" : "190702-ETQW", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed5"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8631a"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2017-12-07T00:00:00.000+0000"), 
+    "ticker" : "171202-DUWR", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed1"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8631b"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2018-06-09T00:00:00.000+0000"), 
+    "ticker" : "180602-WUZV", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec9"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8631c"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2018-12-19T00:00:00.000+0000"), 
+    "ticker" : "181208-JANH", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee7"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8631d"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2018-06-21T00:00:00.000+0000"), 
+    "ticker" : "180608-PDKN", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec5"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8631e"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2017-12-23T00:00:00.000+0000"), 
+    "ticker" : "171213-WONQ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee2"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8631f"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2017-12-09T00:00:00.000+0000"), 
+    "ticker" : "171202-DUWR", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee0"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86320"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2020-09-20T00:00:00.000+0000"), 
+    "ticker" : "200906-QZBK", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eca"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86321"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2017-06-24T00:00:00.000+0000"), 
+    "ticker" : "170613-CRFX", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed3"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86322"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2019-10-30T01:00:00.000+0000"), 
+    "ticker" : "191019-HQDE", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ecb"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86323"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2019-01-12T00:00:00.000+0000"), 
+    "ticker" : "181230-WGUE", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edb"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86324"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2016-11-29T00:00:00.000+0000"), 
+    "ticker" : "161124-LFHW", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ebf"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86325"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2018-12-26T00:00:00.000+0000"), 
+    "ticker" : "181216-GPNO", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ecf"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86326"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2018-06-14T00:00:00.000+0000"), 
+    "ticker" : "180606-BMGV", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed0"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86327"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2019-01-13T00:00:00.000+0000"), 
+    "ticker" : "181230-WGUE", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed6"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86328"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2017-12-27T00:00:00.000+0000"), 
+    "ticker" : "171213-WONQ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee1"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86329"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2018-10-19T00:00:00.000+0000"), 
+    "ticker" : "181009-PCUE", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee7"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8632a"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2019-06-03T00:00:00.000+0000"), 
+    "ticker" : "190523-ISOK", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ebd"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8632b"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2019-07-20T00:00:00.000+0000"), 
+    "ticker" : "190712-QTTX", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed8"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8632c"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2019-07-31T00:00:00.000+0000"), 
+    "ticker" : "190717-EILP", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec6"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8632d"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2019-02-22T00:00:00.000+0000"), 
+    "ticker" : "190214-WIDK", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ebe"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8632e"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2018-11-24T00:00:00.000+0000"), 
+    "ticker" : "181115-LKFC", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec1"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8632f"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2018-09-23T00:00:00.000+0000"), 
+    "ticker" : "180915-ZQJC", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eb7"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86330"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2019-04-19T00:00:00.000+0000"), 
+    "ticker" : "190405-IQGD", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eda"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86331"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2019-10-24T00:00:00.000+0000"), 
+    "ticker" : "191018-ACFI", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec3"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86332"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2019-11-30T00:00:00.000+0000"), 
+    "ticker" : "191122-ZZBR", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed3"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86333"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2017-06-04T00:00:00.000+0000"), 
+    "ticker" : "170527-FLJE", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee4"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86334"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2019-07-28T00:00:00.000+0000"), 
+    "ticker" : "190723-DGFA", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eba"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86335"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2018-10-12T00:00:00.000+0000"), 
+    "ticker" : "181004-NJDG", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee1"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86336"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2017-06-22T00:00:00.000+0000"), 
+    "ticker" : "170611-HTUD", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed2"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86337"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2017-11-14T00:00:00.000+0000"), 
+    "ticker" : "171105-LUQG", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edd"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86338"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2019-08-02T00:00:00.000+0000"), 
+    "ticker" : "190723-DGFA", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec6"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86339"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2019-03-29T00:00:00.000+0000"), 
+    "ticker" : "190324-JUOU", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee6"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8633a"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2019-05-03T00:00:00.000+0000"), 
+    "ticker" : "190428-VIXO", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed0"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8633b"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2020-12-07T00:00:00.000+0000"), 
+    "ticker" : "201126-PUNB", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ebb"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8633c"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2020-02-09T00:00:00.000+0000"), 
+    "ticker" : "200204-RHRO", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec9"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8633d"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2016-09-02T00:00:00.000+0000"), 
+    "ticker" : "160819-ZUCR", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eca"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8633e"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2018-12-27T00:00:00.000+0000"), 
+    "ticker" : "181216-GPNO", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec8"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8633f"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2020-10-06T00:00:00.000+0000"), 
+    "ticker" : "200925-GOXG", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec7"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86340"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2019-10-25T00:00:00.000+0000"), 
+    "ticker" : "191011-VHDP", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee1"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86341"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2020-03-27T00:00:00.000+0000"), 
+    "ticker" : "200318-LYRI", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edd"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86342"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2018-01-18T00:00:00.000+0000"), 
+    "ticker" : "180106-AMJB", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eca"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86343"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2017-11-15T00:00:00.000+0000"), 
+    "ticker" : "171105-LUQG", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ecd"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86344"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2018-12-01T00:00:00.000+0000"), 
+    "ticker" : "181123-VEYT", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed4"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86345"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2016-12-18T00:00:00.000+0000"), 
+    "ticker" : "161205-JXYN", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eb6"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86346"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2019-11-28T00:00:00.000+0000"), 
+    "ticker" : "191118-CZIK", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed9"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86347"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2018-06-10T00:00:00.000+0000"), 
+    "ticker" : "180602-WUZV", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ecf"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86348"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2019-06-29T00:00:00.000+0000"), 
+    "ticker" : "190616-MHYI", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ecd"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86349"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2020-04-08T00:00:00.000+0000"), 
+    "ticker" : "200403-YKEH", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee4"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8634a"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2020-11-22T00:00:00.000+0000"), 
+    "ticker" : "201112-ZJEW", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed3"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8634b"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2020-06-12T00:00:00.000+0000"), 
+    "ticker" : "200605-VAGT", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed5"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8634c"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2019-01-06T00:00:00.000+0000"), 
+    "ticker" : "181227-NSHV", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed1"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8634d"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2018-12-10T00:00:00.000+0000"), 
+    "ticker" : "181205-GTET", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee5"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8634e"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2017-10-04T00:00:00.000+0000"), 
+    "ticker" : "170927-OQFE", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec4"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8634f"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2019-05-22T00:00:00.000+0000"), 
+    "ticker" : "190511-BGVB", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee7"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86350"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2020-05-10T00:00:00.000+0000"), 
+    "ticker" : "200428-DOVZ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee0"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86351"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2020-11-29T00:00:00.000+0000"), 
+    "ticker" : "201120-DAQD", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec6"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86352"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2018-07-30T00:00:00.000+0000"), 
+    "ticker" : "180720-GGMR", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed0"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86353"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2017-08-17T00:00:00.000+0000"), 
+    "ticker" : "170812-BDLI", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eca"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86354"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2020-01-31T00:00:00.000+0000"), 
+    "ticker" : "200118-LJFS", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec6"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86355"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2019-05-19T00:00:00.000+0000"), 
+    "ticker" : "190511-BGVB", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee5"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86356"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2020-11-16T00:00:00.000+0000"), 
+    "ticker" : "201109-NGDY", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec4"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86357"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2018-07-05T00:00:00.000+0000"), 
+    "ticker" : "180622-SWGA", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee3"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86358"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2020-08-20T00:00:00.000+0000"), 
+    "ticker" : "200814-LTIY", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed9"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86359"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2018-07-04T00:00:00.000+0000"), 
+    "ticker" : "180622-SWGA", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec7"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8635a"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2018-02-03T00:00:00.000+0000"), 
+    "ticker" : "180128-DLAD", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ece"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8635b"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2019-02-27T00:00:00.000+0000"), 
+    "ticker" : "190218-PGVS", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ebf"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8635c"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2019-04-17T00:00:00.000+0000"), 
+    "ticker" : "190404-MBPM", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edf"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8635d"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2019-04-02T23:00:00.000+0000"), 
+    "ticker" : "190324-JUOU", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee3"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8635e"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2018-03-15T00:00:00.000+0000"), 
+    "ticker" : "180305-YDVN", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ebe"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8635f"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2019-06-11T00:00:00.000+0000"), 
+    "ticker" : "190529-DNKW", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee4"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86360"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2018-04-20T00:00:00.000+0000"), 
+    "ticker" : "180414-OALX", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eb6"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86361"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2018-12-19T00:00:00.000+0000"), 
+    "ticker" : "181212-KUNK", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed4"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86362"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2019-09-22T00:00:00.000+0000"), 
+    "ticker" : "190909-SRUV", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed7"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86363"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2019-11-28T00:00:00.000+0000"), 
+    "ticker" : "191118-CZIK", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eda"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86364"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2020-04-22T00:00:00.000+0000"), 
+    "ticker" : "200408-VUJH", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eba"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86365"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2017-08-21T00:00:00.000+0000"), 
+    "ticker" : "170812-BDLI", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee7"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86366"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2018-08-18T00:00:00.000+0000"), 
+    "ticker" : "180808-VJMH", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edd"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86367"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2020-10-23T00:00:00.000+0000"), 
+    "ticker" : "201009-DEUA", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed2"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86368"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2020-12-02T00:00:00.000+0000"), 
+    "ticker" : "201120-DAQD", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eb8"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86369"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2019-04-17T00:00:00.000+0000"), 
+    "ticker" : "190405-IQGD", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edc"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8636a"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2016-09-02T00:00:00.000+0000"), 
+    "ticker" : "160819-ZUCR", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edf"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8636b"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2019-12-20T00:00:00.000+0000"), 
+    "ticker" : "191208-STXW", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ebe"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8636c"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2019-04-06T00:00:00.000+0000"), 
+    "ticker" : "190401-LRUH", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ecc"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8636d"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2019-03-10T00:00:00.000+0000"), 
+    "ticker" : "190304-GHGH", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee5"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8636e"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2018-12-08T00:00:00.000+0000"), 
+    "ticker" : "181126-PWIN", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ebb"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8636f"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2021-01-23T00:00:00.000+0000"), 
+    "ticker" : "210111-BUOJ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ece"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86370"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2019-03-01T00:00:00.000+0000"), 
+    "ticker" : "190218-PGVS", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec3"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86371"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2020-12-30T00:00:00.000+0000"), 
+    "ticker" : "201221-KDEN", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eca"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86372"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2016-10-04T00:00:00.000+0000"), 
+    "ticker" : "160929-BYIJ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edf"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86373"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2018-01-18T00:00:00.000+0000"), 
+    "ticker" : "180106-AMJB", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec3"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86374"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2019-02-02T00:00:00.000+0000"), 
+    "ticker" : "190121-BQWO", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee2"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86375"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2018-08-27T00:00:00.000+0000"), 
+    "ticker" : "180817-FWPS", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed5"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86376"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2018-01-22T00:00:00.000+0000"), 
+    "ticker" : "180112-TTIJ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edc"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86377"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2019-01-28T00:00:00.000+0000"), 
+    "ticker" : "190114-ZDKY", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee2"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86378"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2020-11-17T00:00:00.000+0000"), 
+    "ticker" : "201109-NGDY", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee7"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86379"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2019-01-28T00:00:00.000+0000"), 
+    "ticker" : "190114-ZDKY", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eca"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8637a"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2018-01-07T00:00:00.000+0000"), 
+    "ticker" : "171231-DAJJ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85eb7"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8637b"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2018-07-05T00:00:00.000+0000"), 
+    "ticker" : "180622-SWGA", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ee2"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8637c"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2019-10-29T01:00:00.000+0000"), 
+    "ticker" : "191019-HQDE", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85edf"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8637d"), 
+    "status" : "CANCELLED", 
+    "date_apply" : ISODate("2018-11-23T00:00:00.000+0000"), 
+    "ticker" : "181115-LKFC", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed2"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8637e"), 
+    "status" : "ACCEPTED", 
+    "date_apply" : ISODate("2018-12-27T00:00:00.000+0000"), 
+    "ticker" : "181216-GPNO", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ecd"), 
+    "comments" : "Comment2", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee8637f"), 
+    "status" : "REJECTED", 
+    "date_apply" : ISODate("2017-01-26T00:00:00.000+0000"), 
+    "ticker" : "170116-JKBD", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ec5"), 
+    "comments" : "Comment1", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86380"), 
+    "status" : "DUE", 
+    "date_apply" : ISODate("2018-05-02T00:00:00.000+0000"), 
+    "ticker" : "180419-OOBG", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ecf"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5c9f5307bb7a48933ee86381"), 
+    "status" : "PENDING", 
+    "date_apply" : ISODate("2018-01-18T00:00:00.000+0000"), 
+    "ticker" : "180112-TTIJ", 
+    "actor_id" : ObjectId("5c9f5306bb7a48933ee85ed1"), 
+    "comments" : "Comment3", 
+    "__v" : NumberInt(0)
+}
