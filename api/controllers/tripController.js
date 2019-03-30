@@ -1,20 +1,43 @@
 'use strict'
 const mongoose = require('mongoose');
 const Trip = mongoose.model('Trip');
+const Actor = mongoose.model('Actor');
+var async = require("async");
+
+function getTripStatusByActorRole(actorId) {
+    return function (callback) {
+        Actor.findOne({ _id: actorId }, function (err, actor) {
+            var status = null;
+            if (!actor || actor.role == "EXPLORER" || actor.role == "SPONSOR")
+                status = "PUBLISHED"
+            callback(err, status);
+        });
+    };
+}
 
 function list_all_trips(req, res) {
-    //if auth user is ['MANAGER', 'ADMINISTRATOR'], list all trips
-    //if auth user is ['EXPLORER','SPONSOR'], list ['PUBLISHED']
-    Trip.find({}, function (err, trips) {
-        if (err) res.send(err);
-        else res.json(trips)
+    let actorId = req.headers.authorization;
+
+    async.waterfall([
+        getTripStatusByActorRole(actorId),
+        function (tripStatus) {
+            var query = {}
+            if (tripStatus)
+                query.status = tripStatus;
+            Trip.find(query, function (err, trips) {
+                if (err) res.send(err);
+                else res.json(trips)
+            });
+        }
+    ], function (error, success) {
+        if (error) {
+            res.status(500).send(error);
+        }
     });
 }
 
 function create_a_trip(req, res) {
     //status to CREATED(by default in schema definition)
-    //check auth user is ['MANAGER'], otherwise return 403
-    req.body.manager = req.headers.authorization;
     var new_trip = new Trip(req.body);
     new_trip.save(function (err, trip) {
         if (err) {
@@ -38,8 +61,7 @@ function read_a_trip(req, res) {
 }
 
 function delete_a_trip(req, res) {
-    //check auth user is ['MANAGER'], otherwise return 403
-    //delete trip if it's not published
+
     Trip.findById({ _id: req.params.tripId }, function (err, trip) {
         if (!trip) {
             res.status(404).send({ message: `Trip with ID ${req.params.tripId} not found` });
@@ -64,21 +86,14 @@ function delete_a_trip(req, res) {
 }
 
 function update_a_trip(req, res) {
-    //check auth user is ['MANAGER'], otherwise return 403
-    //update trip if it's not published
+
     Trip.findById({ _id: req.params.tripId }, function (err, trip) {
         if (!trip) return res.status(404).send({ message: `Trip with ID ${req.params.tripId} not found` });
 
         if (trip.status != 'PUBLISHED') {
             var tripUpdated = req.body;
             //calculating the total price as sum of the stages prices
-            if (tripUpdated.stages) {
-                tripUpdated.price = tripUpdated.stages.map((stage) => {
-                    return stage.price
-                }).reduce((sum, price) => {
-                    return sum + price;
-                });
-            }
+            
             Trip.findOneAndUpdate({ _id: req.params.tripId }, tripUpdated, { new: true, runValidators: true, context: 'query' }, function (err, trip) {
                 if (err) {
                     if (err.name == 'ValidationError') {
@@ -105,9 +120,9 @@ function finder_trips(req, res) {
     if (req.query.keyword)
         query.$text = { $search: req.query.keyword }
     if (req.query.dateRangeStart)
-        query.date_start = { $gte: req.query.dateRangeStart };
+        query.date_start = { $gte: new Date(req.query.dateRangeStart) };
     if (req.query.dateRangeEnd)
-        query.date_end = { $lte: req.query.dateRangeEnd };
+        query.date_end = { $lte: new Date(req.query.dateRangeEnd) };
     if (req.query.priceRangeMin)
         query.price = { $gte: req.query.priceRangeMin };
     if (req.query.priceRangeMax) {
@@ -119,7 +134,7 @@ function finder_trips(req, res) {
     //get only trips with status PUBLISHED, allowed actors are EXPLORER
     query.status = "PUBLISHED";
     console.log(query);
-    
+
     Trip.find(query)
         .exec(function (err, trip) {
             if (err) {
@@ -135,57 +150,61 @@ function finder_trips(req, res) {
 
 function search_trips(req, res) {
     console.log('Searching trips depending on params');
-    var query = {};
 
-    //filter the result using status and the auth-actor
-    // ADMIN and MANAGER can see all
-    // SPONSOR can see all except CANCELLED
-    // EXPLORER can see only PUBLISHED trips
+    let actorId = req.headers.authorization;
 
-    var query = {};
-    if (req.query.keyword)
-        query.$text = { $search: req.query.keyword }
-    if (req.query.actor) {
-        query.manager = req.query.actor;
-    }
-    
-
-    var skip = 0;
-    if (req.query.startFrom) {
-        skip = parseInt(req.query.startFrom);
-    }
-    var limit = 0;
-    if (req.query.pageSize) {
-        limit = parseInt(req.query.pageSize);
-    }
-
-    var sort = "";
-    if (req.query.reverse == "true") {
-        sort = "-";
-    }
-    if (req.query.sortedBy) {
-        sort += req.query.sortedBy;
-    }
-
-    console.log("Query: " + query + " Skip:" + skip + " Limit:" + limit + " Sort:" + sort);
-    console.log(query);
-    Trip.find(query)
-        .sort(sort)
-        .skip(skip)
-        .limit(limit)
-        .lean()
-        .exec(function (err, trip) {
-            if (err) {
-                res.send(err);
+    async.waterfall([
+        getTripStatusByActorRole(actorId),
+        function (tripStatus) {
+            var query = {}
+            if (tripStatus)
+                query.status = tripStatus;
+            if (req.query.keyword)
+                query.$text = { $search: req.query.keyword }
+            if (req.query.actor) {
+                query.manager = req.query.actor;
             }
-            else {
-                res.json(trip);
+            var skip = 0;
+            if (req.query.startFrom) {
+                skip = parseInt(req.query.startFrom);
             }
-        });
+            var limit = 0;
+            if (req.query.pageSize) {
+                limit = parseInt(req.query.pageSize);
+            }
+            var sort = "";
+            if (req.query.reverse == "true") {
+                sort = "-";
+            }
+            if (req.query.sortedBy) {
+                sort += req.query.sortedBy;
+            }
+
+            console.log("Query: " + query + " Skip:" + skip + " Limit:" + limit + " Sort:" + sort);
+            console.log(query);
+            Trip.find(query)
+                .sort(sort)
+                .skip(skip)
+                .limit(limit)
+                .lean()
+                .exec(function (err, trip) {
+                    if (err) {
+                        res.send(err);
+                    }
+                    else {
+                        res.json(trip);
+                    }
+                });
+        }
+    ], function (error, success) {
+        if (error) {
+            res.status(500).send(error);
+        }
+    });
+
 }
 
 function change_status(req, res) {
-    //check auth user is ['MANAGER'], otherwise return 403
     //change status to CANCEL if (PUBLISHED and not STARTED) and don't have any accepted application, otherwise return 405
     var new_status = req.query.val;
     Trip.findOneAndUpdate({ _id: req.params.tripId }, { $set: { status: new_status } }, { new: true, runValidators: true }, function (err, trip) {

@@ -63,8 +63,7 @@ const TripSchema = new Schema({
     },
     requirements: [String],
     pictures: [{
-        data: Buffer, 
-        contentType: String
+        type: String
       }],
     date_start: {
         type: Date,
@@ -95,6 +94,7 @@ const TripSchema = new Schema({
 }, {strict: false});
 
 TripSchema.index({ price: 1 }); 
+TripSchema.index({ date_start: 1, date_end : 1}); 
 TripSchema.index({ title: 'text', description: 'text'});
 
 TripSchema.pre('save', function(next){
@@ -106,13 +106,23 @@ TripSchema.pre('save', function(next){
     trip.ticker = `${now}-${randomletters}`;
 
     //calculating the total price as sum of the stages prices
+    calculatePrice(trip);
+    next();
+});
+TripSchema.pre('findOneAndUpdate', function(next) {
+    if (this.getUpdate().stages) {
+        calculatePrice(this.getUpdate());
+    }
+    next();
+  });
+
+  function calculatePrice(trip){
     trip.price = trip.stages.map((stage) => {
         return stage.price
     }).reduce((sum, price) => {
         return sum + price;
     });
-    next();
-});
+  }
 
 function endDateValidator(endDate){
     var startDate = this.date_start;

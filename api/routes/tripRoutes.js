@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const trips = require('../controllers/tripController')
-const middleware = require('../middlewares/middleware')
+const trips = require('../controllers/tripController');
+const auth = require('../controllers/authController');
 
 /**
  * 
@@ -259,12 +259,6 @@ router.get('/v1/trips', trips.list_all_trips);
  *       consumes:
  *          - application/json
  *       parameters:
- *          - in: header
- *            name: authorization
- *            schema:
- *                type: string
- *                format: uuid
- *                required: true
  *          - in: body
  *            name: trip
  *            description: Viaje a crear
@@ -284,7 +278,8 @@ router.get('/v1/trips', trips.list_all_trips);
  *             schema:
  *                $ref: "#/definitions/ErrorResponse"
  */
-router.post('/v1/trips', middleware.checkManager, trips.create_a_trip);
+router.post('/v1/trips', trips.create_a_trip);
+router.post('/v2/trips', auth.verifyUser(['MANAGER']),trips.create_a_trip);
 
 
 /**
@@ -405,12 +400,6 @@ router.get('/v1/trips/finder', trips.finder_trips)
  *       consumes:
  *          - application/json
  *       parameters:
- *          - in: header
- *            name: authorization
- *            schema:
- *                type: string
- *                format: uuid
- *                required: true
  *          - in: query
  *            name: actorId
  *            description: Find sponsorships for this actor
@@ -432,7 +421,8 @@ router.get('/v1/trips/finder', trips.finder_trips)
  *             schema:
  *                $ref: "#/definitions/ErrorResponse"
  */
-router.get('/v1/trips/sponsorships', middleware.checkSponsor, trips.get_sponsorhips)
+router.get('/v1/trips/sponsorships', trips.get_sponsorhips)
+router.get('/v2/trips/sponsorships', auth.verifyUser(['SPONSOR']), trips.get_sponsorhips);
 
 
 
@@ -480,12 +470,6 @@ router.get('/v1/trips/:tripId', trips.read_a_trip);
  *            name: tripId
  *            description: Delete trip with this id
  *            type: string
- *          - in: header
- *            name: authorization
- *            schema:
- *                type: string
- *                format: uuid
- *                required: true
  *       responses:
  *          '200':
  *             description: Success
@@ -503,7 +487,8 @@ router.get('/v1/trips/:tripId', trips.read_a_trip);
  *             schema:
  *                $ref: "#/definitions/ErrorResponse"
  */
-router.delete('/v1/trips/:tripId', middleware.checkManager,trips.delete_a_trip);
+router.delete('/v1/trips/:tripId', trips.delete_a_trip);
+router.delete('/v2/trips/:tripId', auth.verifyUser(['MANAGER']),trips.delete_a_trip);
 
 /**
  * @swagger
@@ -515,12 +500,6 @@ router.delete('/v1/trips/:tripId', middleware.checkManager,trips.delete_a_trip);
  *       consumes:
  *          - application/json
  *       parameters:
- *          - in: header
- *            name: authorization
- *            schema:
- *                type: string
- *                format: uuid
- *                required: true
  *          - in: path
  *            name: tripId
  *            description: Update trip with this id
@@ -544,8 +523,8 @@ router.delete('/v1/trips/:tripId', middleware.checkManager,trips.delete_a_trip);
  *             schema:
  *                $ref: "#/definitions/ErrorResponse"
  */
-router.put('/v1/trips/:tripId', middleware.checkManager, trips.update_a_trip);
-
+router.put('/v1/trips/:tripId', trips.update_a_trip);
+router.put('/v2/trips/:tripId', auth.verifyUser(['MANAGER']), trips.update_a_trip);
 
  /**
  * @swagger
@@ -555,12 +534,6 @@ router.put('/v1/trips/:tripId', middleware.checkManager, trips.update_a_trip);
  *       description: Change trip status
  *       operationId: change_status
  *       parameters:
- *          - in: header
- *            name: authorization
- *            schema:
- *                type: string
- *                format: uuid
- *                required: true
  *          - in: path
  *            name: tripId
  *            description: Update trip with this id
@@ -584,7 +557,8 @@ router.put('/v1/trips/:tripId', middleware.checkManager, trips.update_a_trip);
  *             schema:
  *                $ref: "#/definitions/ErrorResponse"
  */
-router.put('/v1/trips/:tripId/status', middleware.checkManager, trips.change_status)
+router.put('/v1/trips/:tripId/status', trips.change_status)
+router.put('/v2/trips/:tripId/status', auth.verifyUser(['MANAGER']), trips.change_status)
 
 /**
  * @swagger
@@ -596,12 +570,6 @@ router.put('/v1/trips/:tripId/status', middleware.checkManager, trips.change_sta
  *       consumes:
  *          - application/json
  *       parameters:
- *          - in: header
- *            name: authorization
- *            schema:
- *                type: string
- *                format: uuid
- *                required: true
  *          - in: path
  *            name: tripId
  *            description: Add sponsohips to the trip with this id
@@ -625,7 +593,8 @@ router.put('/v1/trips/:tripId/status', middleware.checkManager, trips.change_sta
  *             schema:
  *                $ref: "#/definitions/ErrorResponse"
  */
-router.post('/v1/trips/:tripId/sponsorships', middleware.checkSponsor, trips.add_sponsorhips)
+router.post('/v1/trips/:tripId/sponsorships', trips.add_sponsorhips)
+router.post('/v2/trips/:tripId/sponsorships', auth.verifyUser(['SPONSOR']), trips.add_sponsorhips)
 
 /**
  * @swagger
@@ -637,12 +606,6 @@ router.post('/v1/trips/:tripId/sponsorships', middleware.checkSponsor, trips.add
  *       consumes:
  *          - application/json
  *       parameters:
- *          - in: header
- *            name: authorization
- *            schema:
- *                type: string
- *                format: uuid
- *                required: true
  *          - in: path
  *            name: tripId
  *            description: Trip with the sponsorship to update
@@ -670,7 +633,8 @@ router.post('/v1/trips/:tripId/sponsorships', middleware.checkSponsor, trips.add
  *             schema:
  *                $ref: "#/definitions/ErrorResponse"
  */
-router.put('/v1/trips/:tripId/sponsorships/:sponsorshipId', middleware.checkSponsor, trips.update_sponsorhips)
+router.put('/v1/trips/:tripId/sponsorships/:sponsorshipId', trips.update_sponsorhips)
+router.put('/v2/trips/:tripId/sponsorships/:sponsorshipId', auth.verifyUser(['SPONSOR']), trips.update_sponsorhips)
 
 /**
  * @swagger
@@ -680,12 +644,6 @@ router.put('/v1/trips/:tripId/sponsorships/:sponsorshipId', middleware.checkSpon
  *       description: Get a sponsorship
  *       operationId: get_a_sponsorhip
  *       parameters:
- *          - in: header
- *            name: authorization
- *            schema:
- *                type: string
- *                format: uuid
- *                required: true
  *          - in: path
  *            name: tripId
  *            description: Trip with the sponsorship 
@@ -705,7 +663,8 @@ router.put('/v1/trips/:tripId/sponsorships/:sponsorshipId', middleware.checkSpon
  *                $ref: "#/definitions/ErrorResponse"
  */
 
-router.get('/v1/trips/:tripId/sponsorships/:sponsorshipId', middleware.checkSponsor, trips.get_a_sponsorhip)
+router.get('/v1/trips/:tripId/sponsorships/:sponsorshipId', trips.get_a_sponsorhip)
+router.get('/v2/trips/:tripId/sponsorships/:sponsorshipId', auth.verifyUser(['SPONSOR']), trips.get_a_sponsorhip)
 
 /**
  * @swagger
@@ -715,12 +674,6 @@ router.get('/v1/trips/:tripId/sponsorships/:sponsorshipId', middleware.checkSpon
  *       description: Delete a sponsorship
  *       operationId: delete_sponsorhips
  *       parameters:
- *          - in: header
- *            name: authorization
- *            schema:
- *                type: string
- *                format: uuid
- *                required: true
  *          - in: path
  *            name: tripId
  *            description: Trip with the sponsorship 
@@ -740,7 +693,8 @@ router.get('/v1/trips/:tripId/sponsorships/:sponsorshipId', middleware.checkSpon
  *                $ref: "#/definitions/ErrorResponse"
  */
 
-router.delete('/v1/trips/:tripId/sponsorships/:sponsorshipId', middleware.checkSponsor, trips.delete_sponsorhips)
+router.delete('/v1/trips/:tripId/sponsorships/:sponsorshipId', trips.delete_sponsorhips)
+router.delete('/v2/trips/:tripId/sponsorships/:sponsorshipId', auth.verifyUser(['SPONSOR']), trips.delete_sponsorhips)
 
 /**
  * @swagger
@@ -750,12 +704,6 @@ router.delete('/v1/trips/:tripId/sponsorships/:sponsorshipId', middleware.checkS
  *       description: Pay a sponsorship
  *       operationId: pay_sponsorhips
  *       parameters:
- *          - in: header
- *            name: authorization
- *            schema:
- *                type: string
- *                format: uuid
- *                required: true
  *          - in: path
  *            name: tripId
  *            description: Trip with the sponsorship 
@@ -774,7 +722,8 @@ router.delete('/v1/trips/:tripId/sponsorships/:sponsorshipId', middleware.checkS
  *             schema:
  *                $ref: "#/definitions/ErrorResponse"
  */
-router.put('/v1/trips/:tripId/sponsorships/:sponsorshipId/pay', middleware.checkSponsor, trips.pay_sponsorhips)
+router.put('/v1/trips/:tripId/sponsorships/:sponsorshipId/pay', trips.pay_sponsorhips)
+router.put('/v2/trips/:tripId/sponsorships/:sponsorshipId/pay', auth.verifyUser(['SPONSOR']), trips.pay_sponsorhips)
 
 
 module.exports = router;
