@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "bf5f7025-6099-458b-aee3-639d17dba81a",
+		"name": "ACME_Explorer_store",
+		"description": "Ejemplo de llamadas a los endpoints que permiten almancenar en la base de datos archivos JSON de gran tamaño.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST store json fs",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/store/fs?dbURL=mongodb://acmeExplorerUser:explorer@localhost:27017/ACME-Explorer&collection=actors&batchSize=100&parseString=*&sourceFile=/Users/Jefemaestro86/Downloads/actors.json",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"store",
+						"fs"
+					],
+					"query": [
+						{
+							"key": "dbURL",
+							"value": "mongodb://acmeExplorerUser:explorer@localhost:27017/ACME-Explorer"
+						},
+						{
+							"key": "collection",
+							"value": "actors"
+						},
+						{
+							"key": "batchSize",
+							"value": "100"
+						},
+						{
+							"key": "parseString",
+							"value": "*"
+						},
+						{
+							"key": "sourceFile",
+							"value": "/Users/Jefemaestro86/Downloads/actors.json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST store json insertMany",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/store/fs?dbURL=mongodb://acmeExplorerUser:explorer@localhost:27017/ACME-Explorer&collection=actors&batchSize=100&parseString=*&sourceFile=/Users/Jefemaestro86/Downloads/actors.json",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"store",
+						"fs"
+					],
+					"query": [
+						{
+							"key": "dbURL",
+							"value": "mongodb://acmeExplorerUser:explorer@localhost:27017/ACME-Explorer"
+						},
+						{
+							"key": "collection",
+							"value": "actors"
+						},
+						{
+							"key": "batchSize",
+							"value": "100"
+						},
+						{
+							"key": "parseString",
+							"value": "*"
+						},
+						{
+							"key": "sourceFile",
+							"value": "/Users/Jefemaestro86/Downloads/actors.json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST store json url",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/store/url?dbURL=mongodb://acmeExplorerUser:explorer@localhost:27017/ACME-Explorer&collection=actors&batchSize=100&parseString=*&sourceURL=http://drive.google.com/uc?export=download&id=1eclWEkgPwuvWO6l55Ukzhv5lgR8bnsAw",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"store",
+						"url"
+					],
+					"query": [
+						{
+							"key": "dbURL",
+							"value": "mongodb://acmeExplorerUser:explorer@localhost:27017/ACME-Explorer"
+						},
+						{
+							"key": "collection",
+							"value": "actors"
+						},
+						{
+							"key": "batchSize",
+							"value": "100"
+						},
+						{
+							"key": "parseString",
+							"value": "*"
+						},
+						{
+							"key": "sourceURL",
+							"value": "http://drive.google.com/uc?export=download&id=1eclWEkgPwuvWO6l55Ukzhv5lgR8bnsAw"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
