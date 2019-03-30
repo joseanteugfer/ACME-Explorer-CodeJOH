@@ -1,6 +1,7 @@
 'use strict'
 const mongoose = require('mongoose');
 const OrderedTrip = mongoose.model('OrderedTrip');
+const Trip = mongoose.model('Trip');
 
 function list_all_orderedTrip(req, res){
     
@@ -14,18 +15,29 @@ function list_all_orderedTrip(req, res){
 function create_an_orderedTrip(req, res){
     
     console.log('POST /orderedTrips')
-    var new_orderedTrip = new OrderedTrip(req.body);    
-    new_orderedTrip.save(function(err, orderedTrip){
-        if (err){
-            if(err.name=='ValidationError') {
-                res.status(422).send(err);
-            }
-            else{
-              res.status(500).send(err);
-            }
+    var new_orderedTrip = new OrderedTrip(req.body); 
+    Trip.findOne({ticker: new_orderedTrip.ticker}, function(err, trip){
+        if(!trip){
+            res.status(404).send({ message: `Trip with ticker ${new_orderedTrip.ticker} not found` });
+                return;
+        }else if(trip.status == 'STARTED' || trip.status == 'CANCELLED' || trip.status != 'PUBLISHED'){
+            res.status(405).json({ message: 'You can`t apply to this trip' });
+            return;
+        }else{
+            new_orderedTrip.save(function(err, orderedTrip){
+                if (err){
+                    if(err.name=='ValidationError') {
+                        res.status(422).send(err);
+                    }
+                    else{
+                      res.status(500).send(err);
+                    }
+                }
+                else res.json(orderedTrip);
+            });
         }
-        else res.json(orderedTrip);
-    })
+    });
+    
 }
 
 // /orderedTrips/search?actorId="id"&q="searchString"&sortedBy="status|actorId|ticker|date_apply"&reverse="false|true"&startFrom="valor"&pageSize="tam"
