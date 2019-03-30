@@ -287,34 +287,14 @@ router.post('/v2/trips', auth.verifyUser(['MANAGER']),trips.create_a_trip);
  * 
  * /trips/finder:
  *    get:
- *       description: Search trip using a finder(keyword, priceRangeMin, priceRangeMax, dataRangeStart, dateRangeEnd). RequiredRoles-Explorer
+ *       description: Search trip using a finder. RequiredRoles-Explorer
  *       operationId: finder_trips
  *       consumes:
  *          - application/json
  *       parameters:
  *          - in: query
- *            name: keyword
- *            description: Keyword to find in tickers, titles or description
- *            schema:
- *                type: string
- *          - in: query
- *            name: priceRangeMin
- *            description: Min price to find trips
- *            schema:
- *                type: number
- *          - in: query
- *            name: priceRangeMax
- *            description: Max price to find trips
- *            schema:
- *                type: number
- *          - in: query
- *            name: dateRangeStart
- *            description: Find trips that start with this date 
- *            schema:
- *                type: string
- *          - in: query
- *            name: dateRangeEnd
- *            description: Find trips that end before this date
+ *            name: actorId
+ *            description: ActorId to use in search
  *            schema:
  *                type: string
  *       responses:
@@ -331,7 +311,7 @@ router.post('/v2/trips', auth.verifyUser(['MANAGER']),trips.create_a_trip);
  *           schema:
  *             $ref: "#/definitions/ErrorResponse"
  */
-router.get('/v1/trips/finder', trips.finder_trips)
+router.get('/v1/trips/finder/:actorId', trips.finder_trips)
 
 /**
  * @swagger
