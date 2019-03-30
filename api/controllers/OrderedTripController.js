@@ -87,20 +87,43 @@ function read_an_orderedTrip(req, res){
     });
 }
 
-function read_orderedTrip_fromManager(req, res) {
+async function read_orderedTrip_fromManager(req, res) {
     console.log('GET /v1/orderedTrips/fromManager/:managerId');
     if (!req.params.managerId) return res.status(400).send({ message: 'Param ManagerId not found' });
 
-    Trip.find({ manager: req.params.managerId },'_id', function(err, trips) {
+    Trip.find({ manager: req.params.managerId },'ticker', function(err, trips) {
         if (err) return res.status(500).send(err);
         if (trips.length == 0) return res.send(trips);
 
-        return res.send(trips)
+        const arrayIds = trips.map(trip => trip.ticker);
+        OrderedTrip.find({ 'ticker': {
+           $in: arrayIds 
+        }}, function(err, orderedTrip) {
+            return res.send(orderedTrip);
+        })
+        /* const result = get_orderedTripsArray(arrayIds);
+        return res.send(result); */
     });
     /* OrderedTrip.find({_id: req.params.orderedTripId}, function(err, orderedTrips){
         if (err) res.send(err);
         else res.json(orderedTrips)
     }); */
+}
+
+async function get_orderedTripsArray(ids) {
+    const result = [];
+    for(let i = 0; i < ids.length; i++) {
+        let orderedTrip = await get_orderedTripObject(ids[i]);
+        if (orderedTrip && orderedTrip.length != 0) result.push(orderedTrip[0]);
+    }
+    return result;
+}
+
+function get_orderedTripObject(id) {
+    OrderedTrip.find({ '_id': id}, function(err, orderedTrips) {
+        console.log(orderedTrips)
+        return orderedTrips;
+    })
 }
 
 function delete_an_orderedTrip(req, res){
