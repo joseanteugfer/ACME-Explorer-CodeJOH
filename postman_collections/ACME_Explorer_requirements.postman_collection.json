@@ -90,36 +90,40 @@
 		},
 		{
 			"id": "211e5b17-dd57-7b91-26a6-9fa64dbff5e9",
-			"name": "8.4. Cancel an application wit status \"PENDING\" or \"ACCEPTED\"",
-			"description": "",
-			"collectionId": "03b22277-6bbb-6a9d-da45-f0a00efd5f7b",
-			"method": "PUT",
-			"headers": "Content-Type: application/json",
-			"dataMode": "raw",
-			"data": [],
-			"rawModeData": "",
-			"pathVariables": {},
-			"url": "localhost:3000/v1/orderedTrips/5c653984896d6022dc25f342/status?status=Hola",
-			"responses": [],
-			"pathVariableData": [],
-			"queryParams": [
-				{
-					"key": "status",
-					"value": "Hola",
-					"equals": true,
-					"description": ""
-				}
-			],
+			"headers": "Content-Type: application/json\n",
 			"headerData": [
 				{
 					"key": "Content-Type",
 					"value": "application/json",
-					"description": ""
+					"description": "",
+					"enabled": true
 				}
 			],
-			"collection_id": "297f8b3e-1df5-aa8f-9d83-ff1a10474ec3",
-			"isFromCollection": true,
-			"collectionRequestId": "a3b08fcc-d09b-fa96-fc91-49d8a3398f11"
+			"url": "localhost:3000/v1/orderedTrips/5ca0a13ef6b2197c786430a3/status?status=CANCELLED",
+			"queryParams": [
+				{
+					"key": "status",
+					"value": "CANCELLED",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1554042137672,
+			"name": "8.4. Cancel an application wit status \"PENDING\" or \"ACCEPTED\"",
+			"description": "",
+			"collectionId": "03b22277-6bbb-6a9d-da45-f0a00efd5f7b",
+			"responses": [],
+			"rawModeData": "{\n\t\"comments\": \"No me gusta\"\n}"
 		},
 		{
 			"id": "2dbcf7cd-085c-5287-cbbb-a151e70210b3",
