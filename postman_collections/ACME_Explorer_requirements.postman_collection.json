@@ -20,6 +20,8 @@
 		"f81fafb5-9282-a2b8-2c74-1330ddecc36c",
 		"fd42834a-0d44-1198-bae4-3596dff9462f",
 		"9ecc6779-ef2f-e843-a68c-4d76f966793a",
+		"9967a506-53d2-e412-ba41-41a824fec567",
+		"9fa8821f-6f22-57db-0d06-7f82a5853647",
 		"945d73e1-5094-2623-8a48-5d0dc5dba494"
 	],
 	"folders": [],
@@ -329,6 +331,31 @@
 			"collectionRequestId": "d18b476f-3bb6-bc69-2ed3-873ce0d9500d"
 		},
 		{
+			"id": "9967a506-53d2-e412-ba41-41a824fec567",
+			"headers": "",
+			"headerData": [],
+			"url": "localhost:3000/v1/trips/finder/5c9a64347e836b3ff249dd25",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "03b22277-6bbb-6a9d-da45-f0a00efd5f7b",
+			"data": null,
+			"dataMode": "params",
+			"name": "GET Result from finder from actorId",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1553972934937,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"isFromCollection": true,
+			"collectionRequestId": "5a6a6956-47fb-6f2a-59dc-107b3f7f1ae1"
+		},
+		{
 			"id": "9ecc6779-ef2f-e843-a68c-4d76f966793a",
 			"name": "15.3. Display Dashboard",
 			"description": "",
@@ -347,6 +374,66 @@
 			"collection_id": "3be7b5bc-3709-98ee-07a7-fecb3f096cb4",
 			"isFromCollection": true,
 			"collectionRequestId": "5babb37d-57eb-90e9-ccd4-b74eda0f5a3e"
+		},
+		{
+			"id": "9fa8821f-6f22-57db-0d06-7f82a5853647",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:3000/v1/store/fs?dbURL=mongodb://acmeExplorerUser:explorer@localhost:27017/ACME-Explorer&collection=trips&batchSize=100&parseString=*&sourceFile=/home/hector/Descargas/trips_bigfile.json",
+			"queryParams": [
+				{
+					"key": "dbURL",
+					"value": "mongodb://acmeExplorerUser:explorer@localhost:27017/ACME-Explorer",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "collection",
+					"value": "trips",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "batchSize",
+					"value": "100",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "parseString",
+					"value": "*",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "sourceFile",
+					"value": "/home/hector/Descargas/trips_bigfile.json",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1554036668455,
+			"name": "POST store json fs",
+			"description": "",
+			"collectionId": "03b22277-6bbb-6a9d-da45-f0a00efd5f7b",
+			"responses": [],
+			"isFromCollection": true,
+			"collectionRequestId": "024f4390-b515-8084-9512-6def94c8e18c",
+			"rawModeData": ""
 		},
 		{
 			"id": "a43ce6e1-be10-4d5e-3b18-eaf5afa2cfa1",
