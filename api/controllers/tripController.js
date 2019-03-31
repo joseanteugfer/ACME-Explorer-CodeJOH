@@ -59,8 +59,17 @@ function create_a_trip(req, res) {
 function read_a_trip(req, res) {
 
     Trip.find({ _id: req.params.tripId }, function (err, trips) {
-        if (err) res.send(err);
+        if (err) res.status(500).send(err);
         else res.json(trips)
+    });
+}
+
+function read_trips_fromManager(req, res) {
+
+    Trip.find({ manager: req.params.managerId }, function(err, trips) {
+        if (err) return res.status(500).send(err);
+
+        return res.send(trips);
     });
 }
 
@@ -451,6 +460,7 @@ module.exports = {
     list_all_trips,
     create_a_trip,
     read_a_trip,
+    read_trips_fromManager,
     update_a_trip,
     delete_a_trip,
     finder_trips,
