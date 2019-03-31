@@ -19,7 +19,8 @@
 		"211e5b17-dd57-7b91-26a6-9fa64dbff5e9",
 		"f81fafb5-9282-a2b8-2c74-1330ddecc36c",
 		"fd42834a-0d44-1198-bae4-3596dff9462f",
-		"9ecc6779-ef2f-e843-a68c-4d76f966793a"
+		"9ecc6779-ef2f-e843-a68c-4d76f966793a",
+		"945d73e1-5094-2623-8a48-5d0dc5dba494"
 	],
 	"folders": [],
 	"folders_order": [],
@@ -297,6 +298,31 @@
 			"description": "",
 			"collectionId": "03b22277-6bbb-6a9d-da45-f0a00efd5f7b",
 			"responses": []
+		},
+		{
+			"id": "945d73e1-5094-2623-8a48-5d0dc5dba494",
+			"headers": "",
+			"headerData": [],
+			"url": "localhost:3000/v1/trips/fromManager/5ca0a13ef6b2197c78642d01",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "03b22277-6bbb-6a9d-da45-f0a00efd5f7b",
+			"data": null,
+			"dataMode": "params",
+			"name": "GET trips from manager",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1554037072890,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"isFromCollection": true,
+			"collectionRequestId": "d18b476f-3bb6-bc69-2ed3-873ce0d9500d"
 		},
 		{
 			"id": "9ecc6779-ef2f-e843-a68c-4d76f966793a",

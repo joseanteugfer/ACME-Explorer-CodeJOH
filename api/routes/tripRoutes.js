@@ -281,6 +281,35 @@ router.get('/v1/trips', trips.list_all_trips);
 router.post('/v1/trips', trips.create_a_trip);
 router.post('/v2/trips', auth.verifyUser(['MANAGER']),trips.create_a_trip);
 
+/**
+ * @swagger
+ * 
+ * /trips/fromManager/{managerId}:
+ *    get:
+ *       description: Get trips from Manager
+ *       operationId: read_trips_fromManager
+ *       consumes:
+ *          - application/json
+ *       parameters:
+ *          - in: path
+ *            name: managerId
+ *            description: Find trips from managerId
+ *            type: string
+ *       responses:
+ *          '200':
+ *             description: Success
+ *             schema:
+ *                $ref: '#/definitions/Trip'
+ *          '500':
+ *             description: Error interno del servidor
+ *             schema:
+ *                $ref: "#/definitions/ErrorResponse"
+ *          default:
+ *             description: Error
+ *             schema:
+ *                $ref: "#/definitions/ErrorResponse"
+ */
+router.route('/v1/trips/fromManager/:managerId').get(trips.read_trips_fromManager);
 
 /**
  * @swagger
