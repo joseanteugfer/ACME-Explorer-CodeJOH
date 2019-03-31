@@ -1,243 +1,285 @@
 {
-	"variables": [],
-	"info": {
-		"name": "ACME_Explorer_orderedTrips",
-		"_postman_id": "551ed8b6-6197-d18d-ec11-8ffa79c0224b",
-		"description": "",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
-	},
-	"item": [
+	"id": "297f8b3e-1df5-aa8f-9d83-ff1a10474ec3",
+	"name": "ACME_Explorer_orderedTrips",
+	"description": "",
+	"order": [
+		"84843c9b-4988-ccef-04be-ad47aa6c98b1",
+		"7ad8259d-1151-712b-990d-7e090d81cfb3",
+		"683f8e2f-9f1d-3de2-c020-7449fb982899",
+		"c0d9e947-3e01-68c2-4ed9-5e14b4e191e3",
+		"1b793de3-17d3-1a25-bbc0-6345f9221d39",
+		"c54a88f6-edb4-7aa7-3b8d-5cd0beafcece",
+		"ed485642-c375-4891-2684-3fc2cfb14b6a",
+		"2c6b6271-cf1e-397e-b18f-2da4ad8b0c35",
+		"d9f5724f-759a-f220-f83c-39435fbcc4f8",
+		"372b702d-0e47-342c-a743-e5a0284dea58"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 0,
+	"owner": "1882065",
+	"public": false,
+	"requests": [
 		{
-			"name": "GET all orderedTrips",
-			"request": {
-				"url": "localhost:3000/v1/orderedTrips",
-				"method": "GET",
-				"header": [],
-				"body": {},
-				"description": ""
-			},
-			"response": []
-		},
-		{
-			"name": "POST create orderedTrip",
-			"request": {
-				"url": "localhost:3000/v1/orderedTrips",
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"description": ""
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n\t\"ticker\": \"190212-KZGL\",\n\t\"status\": \"ACCEPTED\",\n    \"actor_id\": \"5c5ac431ea187e38a8089393\",\n    \"comments\": \"Viaje con senderismo\"\n}"
-				},
-				"description": ""
-			},
-			"response": []
-		},
-		{
-			"name": "GET orderedTrip by id",
-			"request": {
-				"url": "localhost:3000/v1/orderedTrips/5c62edbba80cf34974e1c123",
-				"method": "GET",
-				"header": [],
-				"body": {},
-				"description": ""
-			},
-			"response": []
-		},
-		{
-			"name": "PUT update orderedTrip",
-			"request": {
-				"url": "localhost:3000/v1/orderedTrips/5c62edbba80cf34974e1c123",
-				"method": "PUT",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"description": ""
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n\t\"ticker\": \"abc\",\n\t\"status\": \"DUE\",\n\t\"comments\": \"Viaje con playas\"\n}"
-				},
-				"description": ""
-			},
-			"response": []
-		},
-		{
+			"id": "1b793de3-17d3-1a25-bbc0-6345f9221d39",
 			"name": "DELETE orderedTrip by id",
-			"request": {
-				"url": "localhost:3000/v1/orderedTrips/5c653984896d6022dc25f342",
-				"method": "DELETE",
-				"header": [],
-				"body": {},
-				"description": ""
-			},
-			"response": []
+			"description": "",
+			"collectionId": "297f8b3e-1df5-aa8f-9d83-ff1a10474ec3",
+			"method": "DELETE",
+			"headers": "",
+			"data": [],
+			"rawModeData": "",
+			"url": "localhost:3000/v1/orderedTrips/5c653984896d6022dc25f342",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [],
+			"collection_id": "297f8b3e-1df5-aa8f-9d83-ff1a10474ec3"
 		},
 		{
-			"name": "PUT Change orderedTrip status",
-			"request": {
-				"url": {
-					"raw": "localhost:3000/v1/orderedTrips/5c653984896d6022dc25f342/status?status=Hola",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"v1",
-						"orderedTrips",
-						"5c653984896d6022dc25f342",
-						"status"
-					],
-					"query": [
-						{
-							"key": "status",
-							"value": "Hola",
-							"equals": true,
-							"description": ""
-						}
-					],
-					"variable": []
-				},
-				"method": "PUT",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"description": ""
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"description": ""
-			},
-			"response": []
-		},
-		{
-			"name": "GET ordered trips groupBy status",
-			"request": {
-				"url": {
-					"raw": "localhost:3000/v1/orderedTrips/5c5ac431ea187e38a8089393/search?groupBy=status",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"v1",
-						"orderedTrips",
-						"5c5ac431ea187e38a8089393",
-						"search"
-					],
-					"query": [
-						{
-							"key": "groupBy",
-							"value": "status",
-							"equals": true,
-							"description": ""
-						}
-					],
-					"variable": []
-				},
-				"method": "GET",
-				"header": [
-					{
-						"key": "",
-						"value": "",
-						"description": "",
-						"disabled": true
-					}
-				],
-				"body": {},
-				"description": ""
-			},
-			"response": []
-		},
-		{
+			"id": "2c6b6271-cf1e-397e-b18f-2da4ad8b0c35",
 			"name": "GET search ordered trip",
-			"request": {
-				"url": {
-					"raw": "http://localhost:3000/v1/orderedTrips/search?actorId=5c5ac431ea187e38a8089393&sortedBy=status&reverse=true&pageSize=5&startFrom=10&q=KZGL",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"v1",
-						"orderedTrips",
-						"search"
-					],
-					"query": [
-						{
-							"key": "actorId",
-							"value": "5c5ac431ea187e38a8089393",
-							"equals": true,
-							"description": ""
-						},
-						{
-							"key": "sortedBy",
-							"value": "status",
-							"equals": true,
-							"description": ""
-						},
-						{
-							"key": "reverse",
-							"value": "true",
-							"equals": true,
-							"description": ""
-						},
-						{
-							"key": "pageSize",
-							"value": "5",
-							"equals": true,
-							"description": ""
-						},
-						{
-							"key": "startFrom",
-							"value": "10",
-							"equals": true,
-							"description": ""
-						},
-						{
-							"key": "q",
-							"value": "KZGL",
-							"equals": true,
-							"description": ""
-						}
-					],
-					"variable": []
+			"description": "",
+			"collectionId": "297f8b3e-1df5-aa8f-9d83-ff1a10474ec3",
+			"method": "GET",
+			"headers": "",
+			"data": [],
+			"rawModeData": "",
+			"pathVariables": {},
+			"url": "http://localhost:3000/v1/orderedTrips/search?actorId=5c5ac431ea187e38a8089393&sortedBy=status&reverse=true&pageSize=5&startFrom=10&q=KZGL",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "actorId",
+					"value": "5c5ac431ea187e38a8089393",
+					"equals": true,
+					"description": ""
 				},
-				"method": "GET",
-				"header": [],
-				"body": {},
-				"description": ""
-			},
-			"response": []
+				{
+					"key": "sortedBy",
+					"value": "status",
+					"equals": true,
+					"description": ""
+				},
+				{
+					"key": "reverse",
+					"value": "true",
+					"equals": true,
+					"description": ""
+				},
+				{
+					"key": "pageSize",
+					"value": "5",
+					"equals": true,
+					"description": ""
+				},
+				{
+					"key": "startFrom",
+					"value": "10",
+					"equals": true,
+					"description": ""
+				},
+				{
+					"key": "q",
+					"value": "KZGL",
+					"equals": true,
+					"description": ""
+				}
+			],
+			"headerData": [],
+			"collection_id": "297f8b3e-1df5-aa8f-9d83-ff1a10474ec3"
 		},
 		{
+			"id": "372b702d-0e47-342c-a743-e5a0284dea58",
+			"headers": "",
+			"headerData": [],
+			"url": "localhost:3000/v1/orderedTrips/fromManager/5c9f5306bb7a48933ee85eb3",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1553975665481,
+			"name": "GET orderedTrips from Manager ",
+			"description": "",
+			"collectionId": "297f8b3e-1df5-aa8f-9d83-ff1a10474ec3",
+			"responses": []
+		},
+		{
+			"id": "683f8e2f-9f1d-3de2-c020-7449fb982899",
+			"name": "GET orderedTrip by id",
+			"description": "",
+			"collectionId": "297f8b3e-1df5-aa8f-9d83-ff1a10474ec3",
+			"method": "GET",
+			"headers": "",
+			"data": [],
+			"rawModeData": "",
+			"url": "localhost:3000/v1/orderedTrips/5c62edbba80cf34974e1c123",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [],
+			"collection_id": "297f8b3e-1df5-aa8f-9d83-ff1a10474ec3"
+		},
+		{
+			"id": "7ad8259d-1151-712b-990d-7e090d81cfb3",
+			"name": "POST create orderedTrip",
+			"description": "",
+			"collectionId": "297f8b3e-1df5-aa8f-9d83-ff1a10474ec3",
+			"method": "POST",
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n\t\"ticker\": \"190212-KZGL\",\n\t\"status\": \"ACCEPTED\",\n    \"actor_id\": \"5c5ac431ea187e38a8089393\",\n    \"comments\": \"Viaje con senderismo\"\n}",
+			"url": "localhost:3000/v1/orderedTrips",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": ""
+				}
+			],
+			"collection_id": "297f8b3e-1df5-aa8f-9d83-ff1a10474ec3"
+		},
+		{
+			"id": "84843c9b-4988-ccef-04be-ad47aa6c98b1",
+			"headers": "",
+			"headerData": [],
+			"url": "localhost:3000/v1/orderedTrips",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "297f8b3e-1df5-aa8f-9d83-ff1a10474ec3",
+			"data": null,
+			"dataMode": "params",
+			"name": "GET all orderedTrips",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1553967732716,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "c0d9e947-3e01-68c2-4ed9-5e14b4e191e3",
+			"name": "PUT update orderedTrip",
+			"description": "",
+			"collectionId": "297f8b3e-1df5-aa8f-9d83-ff1a10474ec3",
+			"method": "PUT",
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n\t\"ticker\": \"abc\",\n\t\"status\": \"DUE\",\n\t\"comments\": \"Viaje con playas\"\n}",
+			"url": "localhost:3000/v1/orderedTrips/5c62edbba80cf34974e1c123",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": ""
+				}
+			],
+			"collection_id": "297f8b3e-1df5-aa8f-9d83-ff1a10474ec3"
+		},
+		{
+			"id": "c54a88f6-edb4-7aa7-3b8d-5cd0beafcece",
+			"name": "PUT Change orderedTrip status",
+			"description": "",
+			"collectionId": "297f8b3e-1df5-aa8f-9d83-ff1a10474ec3",
+			"method": "PUT",
+			"headers": "Content-Type: application/json",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "",
+			"pathVariables": {},
+			"url": "localhost:3000/v1/orderedTrips/5c653984896d6022dc25f342/status?status=Hola",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "status",
+					"value": "Hola",
+					"equals": true,
+					"description": ""
+				}
+			],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": ""
+				}
+			],
+			"collection_id": "297f8b3e-1df5-aa8f-9d83-ff1a10474ec3"
+		},
+		{
+			"id": "d9f5724f-759a-f220-f83c-39435fbcc4f8",
 			"name": "PUT pay orderedTrip",
-			"request": {
-				"url": "localhost:3000/v1/orderedTrips/5c66f733b078fa04a8cf2c10/pay",
-				"method": "PUT",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "5c67fa8792b573372478dd11",
-						"description": ""
-					}
-				],
-				"body": {},
-				"description": ""
-			},
-			"response": []
+			"description": "",
+			"collectionId": "297f8b3e-1df5-aa8f-9d83-ff1a10474ec3",
+			"method": "PUT",
+			"headers": "Authorization: 5c67fa8792b573372478dd11",
+			"data": [],
+			"rawModeData": "",
+			"url": "localhost:3000/v1/orderedTrips/5c66f733b078fa04a8cf2c10/pay",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "5c67fa8792b573372478dd11",
+					"description": ""
+				}
+			],
+			"collection_id": "297f8b3e-1df5-aa8f-9d83-ff1a10474ec3"
+		},
+		{
+			"id": "ed485642-c375-4891-2684-3fc2cfb14b6a",
+			"name": "GET ordered trips groupBy status",
+			"description": "",
+			"collectionId": "297f8b3e-1df5-aa8f-9d83-ff1a10474ec3",
+			"method": "GET",
+			"headers": "// : ",
+			"data": [],
+			"rawModeData": "",
+			"pathVariables": {},
+			"url": "localhost:3000/v1/orderedTrips/5c5ac431ea187e38a8089393/search?groupBy=status",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "groupBy",
+					"value": "status",
+					"equals": true,
+					"description": ""
+				}
+			],
+			"headerData": [
+				{
+					"key": "",
+					"value": "",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"collection_id": "297f8b3e-1df5-aa8f-9d83-ff1a10474ec3"
 		}
 	]
 }

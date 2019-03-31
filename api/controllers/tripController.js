@@ -2,7 +2,11 @@
 const mongoose = require('mongoose');
 const Trip = mongoose.model('Trip');
 const Actor = mongoose.model('Actor');
+const OrderedTrip = mongoose.model('OrderedTrip');
+const Config = mongoose.model('Config');
+const FinderCache = mongoose.model('FinderCache');
 var async = require("async");
+var moment = require('moment');
 
 function getTripStatusByActorRole(actorId) {
     return function (callback) {
@@ -55,8 +59,17 @@ function create_a_trip(req, res) {
 function read_a_trip(req, res) {
 
     Trip.find({ _id: req.params.tripId }, function (err, trips) {
-        if (err) res.send(err);
+        if (err) res.status(500).send(err);
         else res.json(trips)
+    });
+}
+
+function read_trips_fromManager(req, res) {
+
+    Trip.find({ manager: req.params.managerId }, function (err, trips) {
+        if (err) return res.status(500).send(err);
+
+        return res.send(trips);
     });
 }
 
@@ -87,64 +100,178 @@ function delete_a_trip(req, res) {
 
 function update_a_trip(req, res) {
 
+    //change status to CANCEL if (PUBLISHED and not started) and don't have any accepted application, otherwise return 405
+    var new_status = req.body.status;
+
     Trip.findById({ _id: req.params.tripId }, function (err, trip) {
-        if (!trip) return res.status(404).send({ message: `Trip with ID ${req.params.tripId} not found` });
-
         if (trip.status != 'PUBLISHED') {
-            var tripUpdated = req.body;
-            //calculating the total price as sum of the stages prices
-            
-            Trip.findOneAndUpdate({ _id: req.params.tripId }, tripUpdated, { new: true, runValidators: true, context: 'query' }, function (err, trip) {
-                if (err) {
-                    if (err.name == 'ValidationError') {
-                        return res.status(422).send(err);
-                    }
-                    else {
-                        return res.status(500).send(err);
-                    }
-                }
-                if (!trip) return res.status(404).send({ message: `Trip with ID ${req.params.tripId}` });
+            if (new_status == 'CANCELLED') {
+                if (!trip) {
+                    res.status(404).send({ message: `Trip with ID ${req.params.tripId} not found` });
+                    return;
+                } else {
+                    if (!req.body.comments) return res.status(400).send({ message: 'You want to cancel trip. Field comments in request not found' });
 
-                res.json(trip);
-            });
+                    Trip.findOneAndUpdate({ _id: req.params.tripId }, req.body, { new: true, runValidators: true, context: 'query' }, function (err, tripUpdated) {
+                        if (err) return res.send(err);
+                        if (!tripUpdated) return res.status(404).send({ message: `Trip with ID ${req.params.tripId}` });
+
+                        return res.json(tripUpdated);
+
+                    });
+                }
+            } else {
+                var tripUpdated = req.body;
+                //calculating the total price as sum of the stages prices
+
+                Trip.findOneAndUpdate({ _id: req.params.tripId }, tripUpdated, { new: true, runValidators: true, context: 'query' }, function (err, trip) {
+                    if (err) {
+                        if (err.name == 'ValidationError') {
+                            return res.status(422).send(err);
+                        }
+                        else {
+                            return res.status(500).send(err);
+                        }
+                    }
+                    if (!trip) return res.status(404).send({ message: `Trip with ID ${req.params.tripId}` });
+
+                    res.json(trip);
+                });
+            }
         } else {
             res.status(405).json({ message: 'Update trip with status PUBLISHED is not allowed' });
         }
     });
 }
 
-function finder_trips(req, res) {
-    console.log('Searching trips depending on params using finder');
+async function finder_trips(req, res) {
+    console.log('Searching trips depending on finder');
 
+    //checking if actor have a search already in FinderCache
+    var promiseFinderCache = () => {
+        return new Promise((resolve, reject) => {
+            FinderCache.findOne({ 'actor': req.params.actorId }, function (err, finderCache) {
+                if (err) {
+                    reject(err);
+                }
+                else {
+                    resolve(finderCache);
+                }
+            });
+        })
+    }
+    var finderCache = await promiseFinderCache();
+
+    //we can use the results already defined in finderCache
+    if (finderCache && moment(finderCache.expiresDate).isAfter(moment())) {
+        console.log("Getting trips from cache");
+        return res.send(finderCache.trips);
+    }
+
+    // getting the actor 
+    var promiseActor = () => {
+        return new Promise((resolve, reject) => {
+            Actor.findById({ _id: req.params.actorId }, function (err, actor) {
+                if (err) {
+                    reject(err);
+                }
+                else {
+                    resolve(actor);
+                }
+            });
+        })
+    }
+    var actor = await promiseActor();
+
+    //getting general configuration
+    var promiseConfig = () => {
+        return new Promise((resolve, reject) => {
+            Config.find()
+                .limit(1)
+                .exec(function (err, config) {
+                    if (err) {
+                        reject(err);
+                    }
+                    else {
+                        resolve(config[0]);
+                    }
+                });
+        })
+    }
+    var config = await promiseConfig();
+
+    //finderCache is not available or it already expires, searching again
     var query = {};
-    if (req.query.keyword)
-        query.$text = { $search: req.query.keyword }
-    if (req.query.dateRangeStart)
-        query.date_start = { $gte: new Date(req.query.dateRangeStart) };
-    if (req.query.dateRangeEnd)
-        query.date_end = { $lte: new Date(req.query.dateRangeEnd) };
-    if (req.query.priceRangeMin)
-        query.price = { $gte: req.query.priceRangeMin };
-    if (req.query.priceRangeMax) {
+    if (actor.finder.keyword)
+        query.$text = { $search: actor.finder.keyword }
+    if (actor.finder.dateRangeStart)
+        query.date_start = { $gte: new Date(actor.finder.dateRangeStart) };
+    if (actor.finder.dateRangeEnd)
+        query.date_end = { $lte: new Date(actor.finder.dateRangeEnd) };
+    if (actor.finder.priceRangeMin)
+        query.price = { $gte: actor.finder.priceRangeMin };
+    if (actor.finder.priceRangeMax) {
         if (query.price)
-            query.price.$lte = req.query.priceRangeMax;
+            query.price.$lte = actor.finder.priceRangeMax;
         else
-            query.price = { $lte: req.query.priceRangeMax };
+            query.price = { $lte: actor.finder.priceRangeMax };
     }
     //get only trips with status PUBLISHED, allowed actors are EXPLORER
     query.status = "PUBLISHED";
-    console.log(query);
+    //getting the trips
+    console.log('Getting new trips');
+    var promiseTrips = () => {
+        return new Promise((resolve, reject) => {
+            Trip.find(query).limit(config.numberResults)
+                .exec(function (err, trips) {
+                    if (err) {
+                        reject(err);
+                    }
+                    else {
+                        resolve(trips);
+                    }
+                });
+        })
+    }
+    var trips = await promiseTrips();
 
-    Trip.find(query)
-        .exec(function (err, trip) {
-            if (err) {
-                return res.status(500).send(err);
+    //we have a previous finderCache but the data already expires, deleting this to store the new one
+    if (finderCache) {
+        var promiseFinderCacheDelete = () => {
+            return new Promise((resolve, reject) => {
+                FinderCache.deleteOne({ _id: finderCache._id }, function (err, x) {
+                    if (err) {
+                        reject(err);
+                    }
+                    else {
+                        resolve();
+                    }
+                });
+            })
+        }
+        await promiseFinderCacheDelete();
+    }
+
+    //saving trips in finder
+
+    var newFinderCache = new FinderCache({
+        "trips": trips,
+        "actor": actor._id,
+        "expiresDate": moment().add(config.searchPeriod, 'hours')
+    });
+    newFinderCache.save(function (err, finderCacheNew) {
+        if (err) {
+            if (err.name == 'ValidationError') {
+                res.status(422).send(err);
             }
             else {
-                res.json(trip);
+                res.status(500).send(err);
             }
-        });
-
+        }
+        else {
+            res.send(trips);
+        }
+    });
 
 }
 
@@ -205,15 +332,59 @@ function search_trips(req, res) {
 }
 
 function change_status(req, res) {
-    //change status to CANCEL if (PUBLISHED and not STARTED) and don't have any accepted application, otherwise return 405
+    //change status to CANCEL if (PUBLISHED and not started) and don't have any accepted application, otherwise return 405
     var new_status = req.query.val;
-    Trip.findOneAndUpdate({ _id: req.params.tripId }, { $set: { status: new_status } }, { new: true, runValidators: true }, function (err, trip) {
-        if (err) return res.send(err);
-        if (!trip) return res.status(404).send({ message: `Trip with ID ${req.params.tripId}` });
+    if (new_status == 'CANCELLED') {
+        Trip.findById({ _id: req.params.tripId }, function (err, trip) {
+            if (!trip) {
+                res.status(404).send({ message: `Trip with ID ${req.params.tripId} not found` });
+                return;
+            } else if (trip.status == 'PUBLISHED') {
+                OrderedTrip.findOne({ ticker: trip.ticker }, function (err, orderedTrip) {
+                    if (orderedTrip) {
+                        res.status(405).json({ message: 'Cancel trip with status PUBLISHED and a valid application is not allowed' });
+                        return;
+                    }
+                    if (trip.date_start < Date.now()) {
+                        res.status(405).json({ message: 'Cancel trip with status PUBLISHED and started is not allowed' });
+                        return;
+                    } else {
+                        if (req.query.comment) {
+                            Trip.findOneAndUpdate({ _id: req.params.tripId }, { $set: { status: new_status, comment: req.query.comment } }, { new: true, runValidators: true }, function (err, tripUpdated) {
+                                if (err) return res.send(err);
+                                if (!tripUpdated) return res.status(404).send({ message: `Trip with ID ${req.params.tripId}` });
 
-        res.json(trip);
+                                return res.json(tripUpdated);
 
-    });
+                            });
+                        } else {
+                            return res.status(400).send({ message: 'You want to cancel trip. Query param comment not found' });
+                        }
+                    }
+                });
+            } else {
+                if (req.query.comment) {
+                    Trip.findOneAndUpdate({ _id: req.params.tripId }, { $set: { status: new_status, comment: req.query.comment } }, { new: true, runValidators: true }, function (err, tripUpdated) {
+                        if (err) return res.send(err);
+                        if (!tripUpdated) return res.status(404).send({ message: `Trip with ID ${req.params.tripId}` });
+
+                        return res.json(tripUpdated);
+
+                    });
+                } else {
+                    return res.status(400).send({ message: 'You want to cancel trip. Query param comment not found' });
+                }
+            }
+        });
+    } else {
+        Trip.findOneAndUpdate({ _id: req.params.tripId }, { $set: { status: new_status } }, { new: true, runValidators: true }, function (err, trip) {
+            if (err) return res.send(err);
+            if (!trip) return res.status(404).send({ message: `Trip with ID ${req.params.tripId}` });
+
+            res.json(trip);
+
+        });
+    }
 }
 
 function get_sponsorhips(req, res) {
@@ -315,6 +486,7 @@ module.exports = {
     list_all_trips,
     create_a_trip,
     read_a_trip,
+    read_trips_fromManager,
     update_a_trip,
     delete_a_trip,
     finder_trips,

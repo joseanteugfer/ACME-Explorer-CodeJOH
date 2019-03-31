@@ -1,3 +1,4 @@
 node_modules
 .vscode/launch.json
 acme-explorer-code-joh-firebase-admin.json
+npm-debug.log
