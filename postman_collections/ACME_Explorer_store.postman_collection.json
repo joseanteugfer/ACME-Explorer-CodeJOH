@@ -49,7 +49,8 @@
 							"value": "/Users/Jefemaestro86/Downloads/actors.json"
 						}
 					]
-				}
+				},
+				"description": "Añade un fichero de gran tamaño a la base de datos partiendo de la ruta local de dicho fichero"
 			},
 			"response": []
 		},
@@ -96,7 +97,8 @@
 							"value": "/Users/Jefemaestro86/Downloads/actors.json"
 						}
 					]
-				}
+				},
+				"description": "Añade un fichero de mediano tamaño a la base de datos partiendo de la ruta local de dicho fichero."
 			},
 			"response": []
 		},
@@ -110,7 +112,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:3000/v1/store/url?dbURL=mongodb://acmeExplorerUser:explorer@localhost:27017/ACME-Explorer&collection=actors&batchSize=100&parseString=*&sourceURL=http://drive.google.com/uc?export=download&id=1eclWEkgPwuvWO6l55Ukzhv5lgR8bnsAw",
+					"raw": "http://localhost:3000/v1/store/url?dbURL=mongodb://acmeExplorerUser:explorer@localhost:27017/ACME-Explorer&collection=trips2&batchSize=100&parseString=*&sourceURL=https://drive.google.com/uc?export=download%26id=1l8v4pP1t0-jUQPjj3k2Y8HLT0Li3fM7H",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -128,7 +130,7 @@
 						},
 						{
 							"key": "collection",
-							"value": "actors"
+							"value": "trips2"
 						},
 						{
 							"key": "batchSize",
@@ -140,10 +142,11 @@
 						},
 						{
 							"key": "sourceURL",
-							"value": "http://drive.google.com/uc?export=download&id=1eclWEkgPwuvWO6l55Ukzhv5lgR8bnsAw"
+							"value": "https://drive.google.com/uc?export=download%26id=1l8v4pP1t0-jUQPjj3k2Y8HLT0Li3fM7H"
 						}
 					]
-				}
+				},
+				"description": "Añade un fichero de gran tamaño a la base de datos partiendo de una URL"
 			},
 			"response": []
 		}
