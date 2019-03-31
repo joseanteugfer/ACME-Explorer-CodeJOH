@@ -281,8 +281,9 @@ function computeavgPriceRangeFinders(callback) {
         }]
 
         , function (err, res) {
-            if(res[0] != null){
-                var avgPriceRange = res[0].avgPriceRangeFinders;
+            if (res[0] != null) {
+                if (res[0].avgPriceRangeFinders != null)
+                    var avgPriceRange = res[0].avgPriceRangeFinders;
             }
             callback(err, avgPriceRange);
         });
@@ -315,8 +316,20 @@ function computeTopKeywordsFinders(callback) {
         { $project: { topKeywords: { $slice: ["$keywords", { $arrayElemAt: ["$preComputation.limitTopPercentage", 0] }] } } }]
 
         , function (err, res) {
-            if (res[0].topKeywords != null)
-                var resultado = res[0];
+            var resultado;
+            if (res[0].topKeywords != null) {
+                var keywords = res[0].topKeywords;
+                var arrayResultado = [];
+                for (var i = 0; i < res[0].topKeywords.length; i++) {
+                    if (keywords[i].keyword != null)
+                        arrayResultado.push(keywords[i]);
+                }
+                if (arrayResultado.length > 0) {
+                    res[0].topKeywords = arrayResultado;
+                    resultado = res[0];
+                }
+            }
+            
             callback(err, resultado);
         });
 
