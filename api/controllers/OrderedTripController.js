@@ -128,21 +128,55 @@ function delete_an_orderedTrip(req, res){
 }
 
 function update_an_orderedTrip(req, res){
-    
+    let status = req.body.status;
     console.log('PUT /orderedTrips/:orderedTrip');
-    OrderedTrip.findOneAndUpdate({_id: req.params.orderedTripId}, req.body, {new: true, runValidators: true}, function(err, orderedTrip) {
-        if (err){
-            if(err.name=='ValidationError') {
+
+    OrderedTrip.find({_id: req.params.orderedTripId}, function(err, orderedTrip){
+        if (err) {
+            if(err.name = "CastError") {
                 res.status(422).send(err);
+                return;
             }
-            else{
-              res.status(500).send(err);
+            res.status(500).send(err);
+            return;
+        } else {
+            if(orderedTrip.length == 0) {
+                res.status(400).send({ message: `No se encuentra ninguna reserva con ID: ${orderedTripId}` });
+                return;
             }
-        }
-        else{
-            res.json(orderedTrip);
+            // Manager action
+            // new-status = REJECTED and old_status= PENDING
+            // new_status = DUE and old_status=PENDING
+            if(req.body.status == "REJECTED" || req.body.status == "DUE") {
+                if(orderedTrip[0].status != "PENDING") {
+                    res.status(400).send({message: `La reserva ${orderedTrip[0].ticker} no se puede cambiar a ${status} ya que tiene el estado ${orderedTrip[0].status}`});
+                    return;
+                }
+            }
+            // Explorer action
+            // new_status = CANCELLED and old_status= PENDING or ACCEPTED
+            if(req.body.status == "CANCELLED"){
+                if(orderedTrip[0].status != "PENDING" && orderedTrip[0].status != "ACCEPTED") {
+                    res.status(400).send({message: `La reserva ${orderedTrip[0].ticker} no se puede cambiar a ${status} ya que tiene el estado ${orderedTrip[0].status}`});
+                    return;
+                }
+            }
+            OrderedTrip.findOneAndUpdate({_id: req.params.orderedTripId}, req.body, {new: true, runValidators: true}, function(err, orderedTrip) {
+                if (err){
+                    if(err.name=='ValidationError') {
+                        res.status(422).send(err);
+                    }
+                    else{
+                      res.status(500).send(err);
+                    }
+                }
+                else{
+                    res.json(orderedTrip);
+                }
+            });
         }
     });
+   
 }
 
 function change_status(req,res){
