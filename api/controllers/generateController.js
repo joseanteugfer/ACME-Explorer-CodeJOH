@@ -3,12 +3,67 @@
 const mongoose = require('mongoose');
 const moment = require('moment');
 const generate = require('nanoid/generate');
+const fs = require('fs');
 
 const Actor = mongoose.model('Actor'),
     Config = mongoose.model('Config'),
     Trip = mongoose.model('Trip'),
     OrderedTrip = mongoose.model('OrderedTrip');
 
+
+async function generateBigData(req, res){
+
+    console.log("Getting managers")
+    var promiseActor = () => {
+        return new Promise((resolve, reject) => {
+            Actor.find({role: ['MANAGER']}, function (err, actors) {
+                if (err) {
+                    console.log("Error getting actors: " + err);
+                    reject(err);
+                }
+                else {
+                    resolve(actors);
+                }
+            });
+        })
+    }
+    var managersList = await promiseActor();
+    
+    const file = fs.createWriteStream('./trips_bigfile.json');
+    file.write('[')
+
+    console.log("Generate trips");
+    const titleList = ['Madrid', 'Sevilla', 'Barcelona', 'Vigo', 'Huelva', 'Oporto', 'Berlin', 'Viena', 'Paris', 'Roma'];
+    const statusList = ['CREATED', 'PUBLISHED', 'STARTED', 'ENDED', 'CANCELLED'];
+    for(let i=0; i<= 2e5; i++)  {
+        if(i != 0)
+            file.write(',');
+        const title = getRandomData(titleList);
+        const manager = getRandomData(managersList);
+        const tripInfo = generateTripsInfo(manager);
+        const stages = generateStages(title);
+        var trip = {
+            "requirements": [],
+            "ticker": getTicker(tripInfo.startDate),
+            "status": getRandomData(statusList),
+            "title": title,
+            "manager": manager._id,
+            "description": title + ' trip',
+            "date_start": tripInfo.startDate,
+            "date_end": tripInfo.endDate,
+            "price": calculatePrice(stages),
+            "stages": stages
+        }
+        //tripsList.push(trip);
+        file.write(JSON.stringify(trip));
+        
+    }
+    file.write(']');
+    file.end();
+
+    res.send("Data saved");
+
+}
 
 async function generateData(req, res) {
 
@@ -279,5 +334,5 @@ function getRandomDate() {
 
 
 module.exports = {
-    generateData
+    generateData, generateBigData
 }
