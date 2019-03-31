@@ -6,6 +6,7 @@ const orderedTripRouter = require('./orderedTripRoutes');
 const dashboardRouter = require('./dashboardRoutes');
 const storeRouter = require('./storeRoutes');
 const configRouter = require('./configRoutes')
+const generateRouter = require('./generateRoutes');
 
 module.exports = [
     actorRouter,
@@ -13,5 +14,6 @@ module.exports = [
     orderedTripRouter,
     dashboardRouter,
     storeRouter,
-    configRouter
+    configRouter,
+    generateRouter
 ]
