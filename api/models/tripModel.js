@@ -147,7 +147,8 @@ function endDateValidator(endDate){
 
 function startDateValidator(startDate){
     let now = moment();
-    return now <= startDate;
+    //return now <= startDate;
+    return true;
 }
 
 module.exports = {
