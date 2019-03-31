@@ -95,7 +95,8 @@ const TripSchema = new Schema({
 
 TripSchema.index({ price: 1 }); 
 TripSchema.index({ date_start: 1, date_end : 1}); 
-TripSchema.index({ title: 'text', description: 'text'});
+TripSchema.index({ ticker: 'text', title: 'text', description: 'text' }, { weights: { ticker: 10, title: 5, description: 1 } });
+
 
 const FinderCacheSchema = new Schema({
     trips: [TripSchema],
