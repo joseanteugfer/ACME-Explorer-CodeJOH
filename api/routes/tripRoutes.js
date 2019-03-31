@@ -87,6 +87,9 @@ const auth = require('../controllers/authController');
  *             type: string
  *             description: Estado del viaje
  *             enum: ['CREATED', 'PUBLISHED', 'STARTED', 'ENDED', 'CANCELLED']
+ *          comments:
+ *             type: string
+ *             description: Comentario sobre el motivo de la cancelación de un viaje
  *          stages:
  *             type: array
  *             required:
@@ -181,6 +184,9 @@ const auth = require('../controllers/authController');
  *             type: string
  *             description: Estado del viaje
  *             enum: ['CREATED', 'PUBLISHED', 'STARTED', 'ENDED', 'CANCELLED']
+ *          comments:
+ *             type: string
+ *             description: Comentario sobre el motivo de la cancelación de un viaje
  *          stages:
  *             type: array
  *             required:
@@ -552,6 +558,11 @@ router.put('/v2/trips/:tripId', auth.verifyUser(['MANAGER']), trips.update_a_tri
  *            description: new status value, one of this ['PUBLISHED', 'STARTED', 'ENDED', 'CANCELLED']
  *            schema:
  *                $ref: "#/definitions/Trip"
+ *          - in: query
+ *            name: comment
+ *            description: comentario con motivo de cancelation
+ *            schema:
+ *                type: string
  *       responses:
  *          '200':
  *             description: Success
