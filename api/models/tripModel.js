@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 const moment = require('moment');
 const generate = require('nanoid/generate');
 
+
 const StageSchema = new Schema({
     title: {
         type: String,
@@ -19,13 +20,13 @@ const StageSchema = new Schema({
     }
 });
 
-const SponsorshipSchema = new Schema( {
+const SponsorshipSchema = new Schema({
     link: {
         type: String,
         required: 'Enter the sponsor page link'
     },
     banner: {
-        data: Buffer, 
+        data: Buffer,
         contentType: String
     },
     actorId: {
@@ -64,7 +65,7 @@ const TripSchema = new Schema({
     requirements: [String],
     pictures: [{
         type: String
-      }],
+    }],
     date_start: {
         type: Date,
         required: true,
@@ -89,12 +90,15 @@ const TripSchema = new Schema({
         enum: ['CREATED', 'PUBLISHED', 'STARTED', 'ENDED', 'CANCELLED'],
         default: 'CREATED'
     },
+    comments: {
+        type: String
+    },
     stages: [StageSchema],
     sponsorships: [SponsorshipSchema]
-}, {strict: false});
+}, { strict: false });
 
-TripSchema.index({ price: 1 }); 
-TripSchema.index({ date_start: 1, date_end : 1}); 
+TripSchema.index({ price: 1 });
+TripSchema.index({ date_start: 1, date_end: 1 });
 TripSchema.index({ ticker: 'text', title: 'text', description: 'text' }, { weights: { ticker: 10, title: 5, description: 1 } });
 
 
@@ -109,44 +113,53 @@ const FinderCacheSchema = new Schema({
         type: Date
     }
 })
-FinderCacheSchema.index({ actor: 1 }); 
+FinderCacheSchema.index({ actor: 1 });
 
 
-TripSchema.pre('save', function(next){
+TripSchema.pre('save', function (next) {
     let trip = this;
     const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
-    let randomletters = generate(alphabet,4);
+    let randomletters = generate(alphabet, 4);
     let now = moment().format("YYMMDD");
     trip.ticker = `${now}-${randomletters}`;
+
+    this.constructor.findOne({ ticker: trip.ticker }, function (err, newTrip) {
+        if (newTrip) {
+            while (newTrip.ticker == trip.ticker) {
+                randomletters = generate(alphabet, 4);
+            }
+            trip.ticker = `${now}-${randomletters}`;
+        }
+    });
 
     //calculating the total price as sum of the stages prices
     calculatePrice(trip);
     next();
 });
-TripSchema.pre('findOneAndUpdate', function(next) {
+TripSchema.pre('findOneAndUpdate', function (next) {
     if (this.getUpdate().stages) {
         calculatePrice(this.getUpdate());
     }
     next();
-  });
+});
 
-  function calculatePrice(trip){
+function calculatePrice(trip) {
     trip.price = trip.stages.map((stage) => {
         return stage.price
     }).reduce((sum, price) => {
         return sum + price;
     });
-  }
+}
 
-function endDateValidator(endDate){
+function endDateValidator(endDate) {
     var startDate = this.date_start;
-    if(!startDate) //making an update
+    if (!startDate) //making an update
         startDate = new Date(this.getUpdate().date_start);
     return startDate <= endDate;
 }
 
-function startDateValidator(startDate){
+function startDateValidator(startDate) {
     let now = moment();
     //return now <= startDate;
     return true;
