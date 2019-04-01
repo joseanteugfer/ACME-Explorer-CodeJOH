@@ -1,0 +1,829 @@
+{
+	"info": {
+		"_postman_id": "76939998-fde3-4ef7-bb6a-6a3567a71022",
+		"name": "ACME_Explorer_requirements",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "5.1. Register to the system as an explorer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "5c7801c8efdace420008d0fb"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"John\",\n\t\"surname\":\"Doe\",\n\t\"email\":\"john_does@gmail.com\",\n\t\"password\":\"john\",\n\t\"phone\":\"986678567\",\n\t\"address\":\"Calle falsa, 123\",\n\t\"role\":\"EXPLORER\",\n\t\"validated\":\"true\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/v1/actors",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"actors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5.2. Browse the list of trips and display them",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/v1/trips/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"trips",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5.3. Search for trips using a single key word that must be contained in either their tick- ers, titles, or descriptions.",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/v1/trips/search?keyword=Paris",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"trips",
+						"search"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "Paris"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7. Create a trip",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Sevilla trip for couples\",\n\t\"manager\": \"5c9f5306bb7a48933ee85eac\",\n    \"description\": \"Sevilla Valentine\",\n    \"requirements\": [\"Hi\", \"special price for couples!\"],\n    \"date_start\": \"2020-03-23\",\n    \"date_end\": \"2020-03-26\",\n    \"stages\": [{\n    \t\"title\": \"Day 1\",\n    \"description\": \"Gold tower\",\n    \"price\": 300\n    },\n    {\n    \t\"title\": \"Day 2\",\n    \"description\": \"Cathedral\",\n    \"price\": 100\n    }]\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/v1/trips/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"trips",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7. Modify trip not published",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Paris trip for couples\",\n    \"description\": \"Paris Valentine\",\n    \"requirements\": [\"Hi\", \"special price for couples!\"],\n    \"date_start\": \"2019-03-23\",\n    \"date_end\": \"2019-03-26\",\n    \"stages\": [{\n    \t\"title\": \"Day 1\",\n    \"description\": \"Eiffel tower\",\n    \"price\": 300\n    },\n    {\n    \t\"title\": \"Day 2\",\n    \"description\": \"Louvre museum\",\n    \"price\": 100\n    }]\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/v1/trips/5c9f5307bb7a48933ee85f21",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"trips",
+						"5c9f5307bb7a48933ee85f21"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7. Delete trip by not published",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "5c77e1ff7803d20e441b1f8f"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/v1/trips/5c9f5307bb7a48933ee85f48",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"trips",
+						"5c9f5307bb7a48933ee85f48"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7. Delete trip by published",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "5c77e1ff7803d20e441b1f8f"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/v1/trips/5c9f5307bb7a48933ee8603a",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"trips",
+						"5c9f5307bb7a48933ee8603a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7. Modify trip published",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "5c77e1ff7803d20e441b1f8f"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Paris trip for couples\",\n    \"description\": \"Paris Valentine\",\n    \"requirements\": [\"Hi\", \"special price for couples!\"],\n    \"date_start\": \"2019-03-23\",\n    \"date_end\": \"2019-03-26\",\n    \"stages\": [{\n    \t\"title\": \"Day 1\",\n    \"description\": \"Eiffel tower\",\n    \"price\": 300\n    },\n    {\n    \t\"title\": \"Day 2\",\n    \"description\": \"Louvre museum\",\n    \"price\": 100\n    }]\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/v1/trips/5c9f5307bb7a48933ee8603a",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"trips",
+						"5c9f5307bb7a48933ee8603a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7.3. Cancel a trip that has been pubished but has not yer started",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "5c77e1ff7803d20e441b1f8f"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Paris trip for couples\",\n    \"description\": \"Paris Valentine\",\n    \"requirements\": [\"Hi\", \"special price for couples!\"],\n    \"date_start\": \"2019-03-23\",\n    \"date_end\": \"2019-03-26\",\n    \"stages\": [{\n    \t\"title\": \"Day 1\",\n    \"description\": \"Eiffel tower\",\n    \"price\": 300\n    },\n    {\n    \t\"title\": \"Day 2\",\n    \"description\": \"Louvre museum\",\n    \"price\": 100\n    }]\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/v1/trips/5c9f5307bb7a48933ee86033",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"trips",
+						"5c9f5307bb7a48933ee86033"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "8.1. Apply for a trip that has been published and is not started or cancelled.",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ticker\": \"200815-LKYE\",\n\t\"status\": \"ACCEPTED\",\n    \"actor_id\": \"5c5ac431ea187e38a8089393\",\n    \"comments\": \"Viaje con senderismo\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/v1/orderedTrips",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"orderedTrips"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "8.1. Apply for a trip that has been published and is started",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ticker\": \"170527-FLJE\",\n\t\"status\": \"ACCEPTED\",\n    \"actor_id\": \"5c5ac431ea187e38a8089393\",\n    \"comments\": \"Viaje con senderismo\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/v1/orderedTrips",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"orderedTrips"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "8.1. Apply for a trip that has been published and is cancelled",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ticker\": \"180212-FZRB\",\n\t\"status\": \"ACCEPTED\",\n    \"actor_id\": \"5c5ac431ea187e38a8089393\",\n    \"comments\": \"Viaje con senderismo\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/v1/orderedTrips",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"orderedTrips"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "8.2. List and display the applications that actor made, grouped by status",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/v1/orderedTrips/5c9f5306bb7a48933ee85ebf/search?groupBy=status",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"orderedTrips",
+						"5c9f5306bb7a48933ee85ebf",
+						"search"
+					],
+					"query": [
+						{
+							"key": "groupBy",
+							"value": "status"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "8.3. Pay a trip wit status \"DUE\"",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "5c67fa8792b573372478dd11"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "localhost:3000/v1/orderedTrips/5c9f5307bb7a48933ee8635b/pay",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"orderedTrips",
+						"5c9f5307bb7a48933ee8635b",
+						"pay"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "8.4. Cancel an application wit status \"PENDING\" or \"ACCEPTED\"",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"comments\": \"No me gusta\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/v1/orderedTrips/5c9f5307bb7a48933ee86191/status?status=CANCELLED",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"orderedTrips",
+						"5c9f5307bb7a48933ee86191",
+						"status"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "CANCELLED"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "14. Modify the finder for an actor",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"keyword\": \"hola\",\n    \"priceRangeMin\": 21,\n    \"priceRangeMax\": 92\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/v1/actors/5c9f5306bb7a48933ee85ead/finder",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"actors",
+						"5c9f5306bb7a48933ee85ead",
+						"finder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "14. GET finder for an actor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/v1/actors/5c9f5306bb7a48933ee85ead/finder",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"actors",
+						"5c9f5306bb7a48933ee85ead",
+						"finder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "15.1. Ban an actor",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "5c780254b39f5d4060c93f4d"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/v1/actors/5c9f5306bb7a48933ee85eb6/banned?value=true",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"actors",
+						"5c9f5306bb7a48933ee85eb6",
+						"banned"
+					],
+					"query": [
+						{
+							"key": "value",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "15.2. Unbanned an actor",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "5c780254b39f5d4060c93f4d"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/v1/actors/5c9f5306bb7a48933ee85eb6/banned?value=false",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"actors",
+						"5c9f5306bb7a48933ee85eb6",
+						"banned"
+					],
+					"query": [
+						{
+							"key": "value",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "15.3. Display Dashboard",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/v1/dashboards/latest",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"dashboards",
+						"latest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "20. Create a Sponsorship",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"link\": \"viajes.com\",\n\t\"actorId\": \"5c9f5306bb7a48933ee85ee8\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/v1/trips/5c9f5307bb7a48933ee85f00/sponsorships",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"trips",
+						"5c9f5307bb7a48933ee85f00",
+						"sponsorships"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "20. List Sponsorships for a Sponsor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/v1/trips/sponsorships?actorId=5c9f5306bb7a48933ee85ee8",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"trips",
+						"sponsorships"
+					],
+					"query": [
+						{
+							"key": "actorId",
+							"value": "5c9f5306bb7a48933ee85ee8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "20. Pay for a sponsorship",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/v1/trips/5c9f5307bb7a48933ee85f52/sponsorships/5ca1e52af90c6414c3e2da43/pay",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"trips",
+						"5c9f5307bb7a48933ee85f52",
+						"sponsorships",
+						"5ca1e52af90c6414c3e2da43",
+						"pay"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "20. Pay for a sponsorship already payed",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/v1/trips/5c9f5307bb7a48933ee85ffe/sponsorships/5ca1e52af90c6714c3e2da42/pay",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"trips",
+						"5c9f5307bb7a48933ee85ffe",
+						"sponsorships",
+						"5ca1e52af90c6714c3e2da42",
+						"pay"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST store json fs",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/store/fs?dbURL=mongodb://acmeExplorerUser:explorer@localhost:27017/ACME-Explorer&collection=trips2&batchSize=100&parseString=*&sourceFile=/Users/Jefemaestro86/Downloads/trips_bigfile.json",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"store",
+						"fs"
+					],
+					"query": [
+						{
+							"key": "dbURL",
+							"value": "mongodb://acmeExplorerUser:explorer@localhost:27017/ACME-Explorer"
+						},
+						{
+							"key": "collection",
+							"value": "trips2"
+						},
+						{
+							"key": "batchSize",
+							"value": "100"
+						},
+						{
+							"key": "parseString",
+							"value": "*"
+						},
+						{
+							"key": "sourceFile",
+							"value": "/Users/Jefemaestro86/Downloads/trips_bigfile.json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET trips from manager",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/v1/trips/fromManager/5c9f5306bb7a48933ee85eaf",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"trips",
+						"fromManager",
+						"5c9f5306bb7a48933ee85eaf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Result from finder from actorId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/v1/trips/finder/5ca068eeac8889b5885fc8b0",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"trips",
+						"finder",
+						"5ca068eeac8889b5885fc8b0"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

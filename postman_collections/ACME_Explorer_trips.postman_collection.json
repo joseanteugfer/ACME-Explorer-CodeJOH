@@ -1,306 +1,395 @@
 {
-	"variables": [],
-	"info": {
-		"name": "ACME_Explorer_trips",
-		"_postman_id": "dac4be7e-e953-e3dc-fc4f-2b29fafe3b5d",
-		"description": "",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
-	},
-	"item": [
+	"id": "a09ba91b-ea2c-eb87-6fec-12e261a82491",
+	"name": "ACME_Explorer_trips",
+	"description": "",
+	"order": [
+		"655cbf51-cc50-2aca-0b72-826512058501",
+		"5f6ed12c-9602-2ce9-16c4-5480ffa85d32",
+		"75c1872f-88c6-023b-4a38-ea5b98cbbf8f",
+		"06b78d85-5a68-eff4-7075-ea1fdeb56cc2",
+		"e256fd71-1a2d-5796-33f6-fd2f2ab0f571",
+		"94573677-7b83-cd82-9f2c-b18015ebf5e1",
+		"fc5f1204-cc87-8806-6619-6acc84021586",
+		"bae999cd-66e9-c68e-ef4d-ca271feee019",
+		"bab17c27-3fec-34dc-9a05-34acc015b7df",
+		"ad40d125-b08d-c2bf-dd9e-8d001cf73e5f",
+		"597d9eae-b388-4c7b-a383-c577a0f32f31",
+		"47046e73-ecbd-ca8f-1fa6-1d02f3a217f4",
+		"185fc631-65e5-d771-c8e1-473c47ed4100",
+		"09310654-d287-63d3-cb51-73f8fc4b90ad",
+		"856a52f1-9315-6ab3-3b59-84a91a81197c"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 0,
+	"owner": "1882065",
+	"public": false,
+	"requests": [
 		{
-			"name": "GET all trips",
-			"request": {
-				"url": "localhost:3000/v1/trips/",
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"description": ""
-			},
-			"response": []
-		},
-		{
-			"name": "POST create trip",
-			"request": {
-				"url": "localhost:3000/v1/trips/",
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"description": ""
-					},
-					{
-						"key": "Authorization",
-						"value": "5c77e1ff7803d20e441b1f8f",
-						"description": ""
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n\t\"title\": \"Sponsor2 trip\",\n    \"description\": \"Sponsor2 Valentine\",\n    \"requirements\": [\"Hi\", \"special price for couples!\"],\n    \"date_start\": \"2019-03-04\",\n    \"date_end\": \"2019-03-10\",\n    \"stages\": [{\n    \t\"title\": \"Day 1\",\n    \"description\": \"Eiffel tower\",\n    \"price\": 44\n    },\n    {\n    \t\"title\": \"Day 2\",\n    \"description\": \"Louvre museum\",\n    \"price\": 110\n    }],\n    \"sponsorships\": [{\n    \t\"link\": \"123\",\n    \t\"actorId\": \"5c66af9272dde9e92c62b5d1\"\n    }]\n}"
-				},
-				"description": ""
-			},
-			"response": []
-		},
-		{
-			"name": "GET trip by id",
-			"request": {
-				"url": "localhost:3000/v1/trips/5c77e34f6cb0102a24877e91",
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"description": ""
-			},
-			"response": []
-		},
-		{
+			"id": "06b78d85-5a68-eff4-7075-ea1fdeb56cc2",
 			"name": "PUT update trip",
-			"request": {
-				"url": "localhost:3000/v1/trips/5c77e9a26119ce06bc86f07f",
-				"method": "PUT",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"description": ""
-					},
-					{
-						"key": "Authorization",
-						"value": "5c77e1ff7803d20e441b1f8f",
-						"description": ""
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n\t\"title\": \"Paris trip for couples\",\n    \"description\": \"Paris Valentine\",\n    \"requirements\": [\"Hi\", \"special price for couples!\"],\n    \"date_start\": \"2019-03-23\",\n    \"date_end\": \"2019-03-26\",\n    \"stages\": [{\n    \t\"title\": \"Day 1\",\n    \"description\": \"Eiffel tower\",\n    \"price\": 300\n    },\n    {\n    \t\"title\": \"Day 2\",\n    \"description\": \"Louvre museum\",\n    \"price\": 100\n    }]\n}"
+			"description": "",
+			"collectionId": "a09ba91b-ea2c-eb87-6fec-12e261a82491",
+			"method": "PUT",
+			"headers": "Content-Type: application/json\nAuthorization: 5c77e1ff7803d20e441b1f8f",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n\t\"title\": \"Paris trip for couples\",\n    \"description\": \"Paris Valentine\",\n    \"requirements\": [\"Hi\", \"special price for couples!\"],\n    \"date_start\": \"2019-03-23\",\n    \"date_end\": \"2019-03-26\",\n    \"stages\": [{\n    \t\"title\": \"Day 1\",\n    \"description\": \"Eiffel tower\",\n    \"price\": 300\n    },\n    {\n    \t\"title\": \"Day 2\",\n    \"description\": \"Louvre museum\",\n    \"price\": 100\n    }]\n}",
+			"url": "localhost:3000/v1/trips/5c77e9a26119ce06bc86f07f",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": ""
 				},
-				"description": ""
-			},
-			"response": []
+				{
+					"key": "Authorization",
+					"value": "5c77e1ff7803d20e441b1f8f",
+					"description": ""
+				}
+			],
+			"collection_id": "a09ba91b-ea2c-eb87-6fec-12e261a82491"
 		},
 		{
-			"name": "DELETE trip by id",
-			"request": {
-				"url": "localhost:3000/v1/trips/5c77e9886119ce06bc86f077",
-				"method": "DELETE",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "5c77e1ff7803d20e441b1f8f",
-						"description": ""
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"description": ""
-			},
-			"response": []
+			"id": "09310654-d287-63d3-cb51-73f8fc4b90ad",
+			"headers": "",
+			"headerData": [],
+			"url": "localhost:3000/v1/trips/finder/5c9a64347e836b3ff249dd25",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "a09ba91b-ea2c-eb87-6fec-12e261a82491",
+			"data": null,
+			"dataMode": "params",
+			"name": "GET Result from finder from actorId",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1553972934937,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
 		},
 		{
-			"name": "PUT change trip status to Published",
-			"request": {
-				"url": {
-					"raw": "localhost:3000/v1/trips/5c77e9a26119ce06bc86f07f/status?val=PUBLISHED",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"v1",
-						"trips",
-						"5c77e9a26119ce06bc86f07f",
-						"status"
-					],
-					"query": [
-						{
-							"key": "val",
-							"value": "PUBLISHED",
-							"equals": true,
-							"description": ""
-						}
-					],
-					"variable": []
-				},
-				"method": "PUT",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "5c77e1ff7803d20e441b1f8f",
-						"description": ""
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"description": ""
-			},
-			"response": []
-		},
-		{
-			"name": "GET search trips keyword",
-			"request": {
-				"url": {
-					"raw": "localhost:3000/v1/trips/search?keyword=Paris",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"v1",
-						"trips",
-						"search"
-					],
-					"query": [
-						{
-							"key": "keyword",
-							"value": "Paris"
-						}
-					],
-					"variable": []
-				},
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"description": ""
-			},
-			"response": []
-		},
-		{
-			"name": "GET sponsorships",
-			"request": {
-				"url": "localhost:3000/v1/trips/sponsorships",
-				"method": "GET",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "5c6a9f4429a28c49d4ba0138",
-						"description": ""
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"description": ""
-			},
-			"response": []
-		},
-		{
-			"name": "GET sponsorship by id",
-			"request": {
-				"url": "localhost:3000/v1/trips/5c77e34f6cb0102a24877e91/sponsorships/5c77fd02335c2d2eacd8ebca",
-				"method": "GET",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "5c6a9f4429a28c49d4ba0138",
-						"description": ""
-					}
-				],
-				"body": {},
-				"description": ""
-			},
-			"response": []
-		},
-		{
-			"name": "Added sponsorship",
-			"request": {
-				"url": "localhost:3000/v1/trips/5c69d08a25894c1648fe0f0a/sponsorships",
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"description": ""
-					},
-					{
-						"key": "Authorization",
-						"value": "5c6a9f4429a28c49d4ba0138",
-						"description": ""
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \t\"link\": \"12dadada3\"\n}"
-				},
-				"description": ""
-			},
-			"response": []
-		},
-		{
-			"name": "Update sponsorship",
-			"request": {
-				"url": "localhost:3000/v1/trips/5c77e34f6cb0102a24877e91/sponsorships/5c77fcbd335c2d2eacd8ebc3",
-				"method": "PUT",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"description": ""
-					},
-					{
-						"key": "Authorization",
-						"value": "5c6a9f4429a28c49d4ba0138",
-						"description": ""
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n\t \"payed\": true,\n      \"link\": \"http://example4.com\",\n      \"actorId\": \"5c6a9f4429a28c49d4ba0138\"\n}"
-				},
-				"description": ""
-			},
-			"response": []
-		},
-		{
-			"name": "DELETE sponsorships",
-			"request": {
-				"url": "localhost:3000/v1/trips/5c77e34f6cb0102a24877e91/sponsorships/5c77fd02335c2d2eacd8ebca",
-				"method": "DELETE",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "5c6a9f4429a28c49d4ba0138",
-						"description": ""
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"description": ""
-			},
-			"response": []
-		},
-		{
+			"id": "185fc631-65e5-d771-c8e1-473c47ed4100",
 			"name": "Pay sponsorship",
-			"request": {
-				"url": "localhost:3000/v1/trips/5c77e34f6cb0102a24877e91/sponsorships/5c77fd02335c2d2eacd8ebca/pay",
-				"method": "PUT",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "5c6a9f4429a28c49d4ba0138",
-						"description": ""
-					}
-				],
-				"body": {},
-				"description": ""
-			},
-			"response": []
+			"description": "",
+			"collectionId": "a09ba91b-ea2c-eb87-6fec-12e261a82491",
+			"method": "PUT",
+			"headers": "Authorization: 5c6a9f4429a28c49d4ba0138",
+			"data": [],
+			"rawModeData": "",
+			"url": "localhost:3000/v1/trips/5c77e34f6cb0102a24877e91/sponsorships/5c77fd02335c2d2eacd8ebca/pay",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "5c6a9f4429a28c49d4ba0138",
+					"description": ""
+				}
+			],
+			"collection_id": "a09ba91b-ea2c-eb87-6fec-12e261a82491"
+		},
+		{
+			"id": "47046e73-ecbd-ca8f-1fa6-1d02f3a217f4",
+			"name": "DELETE sponsorships",
+			"description": "",
+			"collectionId": "a09ba91b-ea2c-eb87-6fec-12e261a82491",
+			"method": "DELETE",
+			"headers": "Authorization: 5c6a9f4429a28c49d4ba0138",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "",
+			"url": "localhost:3000/v1/trips/5c77e34f6cb0102a24877e91/sponsorships/5c77fd02335c2d2eacd8ebca",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "5c6a9f4429a28c49d4ba0138",
+					"description": ""
+				}
+			],
+			"collection_id": "a09ba91b-ea2c-eb87-6fec-12e261a82491"
+		},
+		{
+			"id": "597d9eae-b388-4c7b-a383-c577a0f32f31",
+			"name": "Update sponsorship",
+			"description": "",
+			"collectionId": "a09ba91b-ea2c-eb87-6fec-12e261a82491",
+			"method": "PUT",
+			"headers": "Content-Type: application/json\nAuthorization: 5c6a9f4429a28c49d4ba0138",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n\t \"payed\": true,\n      \"link\": \"http://example4.com\",\n      \"actorId\": \"5c6a9f4429a28c49d4ba0138\"\n}",
+			"url": "localhost:3000/v1/trips/5c77e34f6cb0102a24877e91/sponsorships/5c77fcbd335c2d2eacd8ebc3",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": ""
+				},
+				{
+					"key": "Authorization",
+					"value": "5c6a9f4429a28c49d4ba0138",
+					"description": ""
+				}
+			],
+			"collection_id": "a09ba91b-ea2c-eb87-6fec-12e261a82491"
+		},
+		{
+			"id": "5f6ed12c-9602-2ce9-16c4-5480ffa85d32",
+			"headers": "Content-Type: application/json\nAuthorization: 5c77e1ff7803d20e441b1f8f\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "5c77e1ff7803d20e441b1f8f",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:3000/v1/trips/",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1553972845113,
+			"name": "POST create trip",
+			"description": "",
+			"collectionId": "a09ba91b-ea2c-eb87-6fec-12e261a82491",
+			"responses": [],
+			"rawModeData": "{\n\t\"title\": \"Barcelona trip\",\n    \"description\": \"Barcelona Valentine\",\n    \"requirements\": [\"Hi\", \"special price for couples!\"],\n    \"manager\": \"5c9a62687e836b3ff249dc96\",\n    \"date_start\": \"2019-06-04\",\n    \"date_end\": \"2020-03-10\",\n    \"stages\": [{\n    \t\"title\": \"Day 1\",\n    \"description\": \"Camp Nou\",\n    \"price\": 44\n    },\n    {\n    \t\"title\": \"Day 2\",\n    \"description\": \"El Prat\",\n    \"price\": 110\n    }],\n    \"sponsorships\": [{\n    \t\"link\": \"123\",\n    \t\"actorId\": \"5c66af9272dde9e92c62b5d1\"\n    }]\n}"
+		},
+		{
+			"id": "655cbf51-cc50-2aca-0b72-826512058501",
+			"name": "GET all trips",
+			"description": "",
+			"collectionId": "a09ba91b-ea2c-eb87-6fec-12e261a82491",
+			"method": "GET",
+			"headers": "",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "",
+			"url": "localhost:3000/v1/trips/",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [],
+			"collection_id": "a09ba91b-ea2c-eb87-6fec-12e261a82491"
+		},
+		{
+			"id": "75c1872f-88c6-023b-4a38-ea5b98cbbf8f",
+			"name": "GET trip by id",
+			"description": "",
+			"collectionId": "a09ba91b-ea2c-eb87-6fec-12e261a82491",
+			"method": "GET",
+			"headers": "",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "",
+			"url": "localhost:3000/v1/trips/5c77e34f6cb0102a24877e91",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [],
+			"collection_id": "a09ba91b-ea2c-eb87-6fec-12e261a82491"
+		},
+		{
+			"id": "856a52f1-9315-6ab3-3b59-84a91a81197c",
+			"headers": "",
+			"headerData": [],
+			"url": "localhost:3000/v1/trips/fromManager/5ca0a13ef6b2197c78642d01",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "a09ba91b-ea2c-eb87-6fec-12e261a82491",
+			"data": null,
+			"dataMode": "params",
+			"name": "GET trips from manager",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1554037072890,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "94573677-7b83-cd82-9f2c-b18015ebf5e1",
+			"name": "PUT change trip status to Published",
+			"description": "",
+			"collectionId": "a09ba91b-ea2c-eb87-6fec-12e261a82491",
+			"method": "PUT",
+			"headers": "Authorization: 5c77e1ff7803d20e441b1f8f",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "",
+			"pathVariables": {},
+			"url": "localhost:3000/v1/trips/5c77e9a26119ce06bc86f07f/status?val=PUBLISHED",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "val",
+					"value": "PUBLISHED",
+					"equals": true,
+					"description": ""
+				}
+			],
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "5c77e1ff7803d20e441b1f8f",
+					"description": ""
+				}
+			],
+			"collection_id": "a09ba91b-ea2c-eb87-6fec-12e261a82491"
+		},
+		{
+			"id": "ad40d125-b08d-c2bf-dd9e-8d001cf73e5f",
+			"name": "Added sponsorship",
+			"description": "",
+			"collectionId": "a09ba91b-ea2c-eb87-6fec-12e261a82491",
+			"method": "POST",
+			"headers": "Content-Type: application/json\nAuthorization: 5c6a9f4429a28c49d4ba0138",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n    \t\"link\": \"12dadada3\"\n}",
+			"url": "localhost:3000/v1/trips/5c69d08a25894c1648fe0f0a/sponsorships",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": ""
+				},
+				{
+					"key": "Authorization",
+					"value": "5c6a9f4429a28c49d4ba0138",
+					"description": ""
+				}
+			],
+			"collection_id": "a09ba91b-ea2c-eb87-6fec-12e261a82491"
+		},
+		{
+			"id": "bab17c27-3fec-34dc-9a05-34acc015b7df",
+			"name": "GET sponsorship by id",
+			"description": "",
+			"collectionId": "a09ba91b-ea2c-eb87-6fec-12e261a82491",
+			"method": "GET",
+			"headers": "Authorization: 5c6a9f4429a28c49d4ba0138",
+			"data": [],
+			"rawModeData": "",
+			"url": "localhost:3000/v1/trips/5c77e34f6cb0102a24877e91/sponsorships/5c77fd02335c2d2eacd8ebca",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "5c6a9f4429a28c49d4ba0138",
+					"description": ""
+				}
+			],
+			"collection_id": "a09ba91b-ea2c-eb87-6fec-12e261a82491"
+		},
+		{
+			"id": "bae999cd-66e9-c68e-ef4d-ca271feee019",
+			"name": "GET sponsorships",
+			"description": "",
+			"collectionId": "a09ba91b-ea2c-eb87-6fec-12e261a82491",
+			"method": "GET",
+			"headers": "Authorization: 5c6a9f4429a28c49d4ba0138",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "",
+			"url": "localhost:3000/v1/trips/sponsorships",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "5c6a9f4429a28c49d4ba0138",
+					"description": ""
+				}
+			],
+			"collection_id": "a09ba91b-ea2c-eb87-6fec-12e261a82491"
+		},
+		{
+			"id": "e256fd71-1a2d-5796-33f6-fd2f2ab0f571",
+			"name": "DELETE trip by id",
+			"description": "",
+			"collectionId": "a09ba91b-ea2c-eb87-6fec-12e261a82491",
+			"method": "DELETE",
+			"headers": "Authorization: 5c77e1ff7803d20e441b1f8f",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "",
+			"url": "localhost:3000/v1/trips/5c77e9886119ce06bc86f077",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [],
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "5c77e1ff7803d20e441b1f8f",
+					"description": ""
+				}
+			],
+			"collection_id": "a09ba91b-ea2c-eb87-6fec-12e261a82491"
+		},
+		{
+			"id": "fc5f1204-cc87-8806-6619-6acc84021586",
+			"name": "GET search trips keyword",
+			"description": "",
+			"collectionId": "a09ba91b-ea2c-eb87-6fec-12e261a82491",
+			"method": "GET",
+			"headers": "",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "",
+			"pathVariables": {},
+			"url": "localhost:3000/v1/trips/search?keyword=Paris",
+			"responses": [],
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "keyword",
+					"value": "Paris"
+				}
+			],
+			"headerData": [],
+			"collection_id": "a09ba91b-ea2c-eb87-6fec-12e261a82491"
 		}
 	]
 }

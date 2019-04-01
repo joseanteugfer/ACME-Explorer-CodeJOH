@@ -1,0 +1,46 @@
+{
+	"id": "8bc1a7c8-ae91-9a0d-a63e-8c84deb7f99e",
+	"name": "ACME_Explorer_config",
+	"description": "",
+	"order": [
+		"dc2ca9be-1118-84fe-6209-4ed8fd5cedd6"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1553971039916,
+	"owner": "1882065",
+	"public": false,
+	"requests": [
+		{
+			"id": "dc2ca9be-1118-84fe-6209-4ed8fd5cedd6",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "localhost:3000/v1/config",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "8bc1a7c8-ae91-9a0d-a63e-8c84deb7f99e",
+			"data": [],
+			"dataMode": "raw",
+			"name": "POST config",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1553971118531,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n\t\"numberResults\" : 10, \n    \"searchPeriod\" : 1\n}"
+		}
+	]
+}

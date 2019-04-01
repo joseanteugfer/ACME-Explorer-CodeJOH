@@ -51,7 +51,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"name\":\"jonh\",\n\t\"surname\":\"snow\",\n\t\"email\":\"hola@gmail.com\",\n\t\"password\":\"password\",\n\t\"phone\":\"986678567\",\n\t\"address\":\"Calle falsa, 123\",\n\t\"role\":\"EXPLORER\",\n\t\"validated\":\"true\",\n\t\"finder\": {\n\t\t\"keyword\":\"Paris\",\n\t\t\"priceRangeMin\":0,\n\t\t\"priceRangeMax\":100,\n\t\t\"dateRangeStart\":\"2019-02-13\",\n\t\t\"dateRangeEnd\":\"2019-02-15\"\n\t}\n}"
+					"raw": "{\n\t\"name\":\"jonh\",\n\t\"surname\":\"snow\",\n\t\"email\":\"hola@gmail.com\",\n\t\"password\":\"password\",\n\t\"phone\":\"986678567\",\n\t\"address\":\"Calle falsa, 123\",\n\t\"role\":\"EXPLORER\",\n\t\"validated\":\"true\",\n\t\"finder\": {\n\t\t\"keyword\":\"Paris\",\n\t\t\"priceRangeMin\":0,\n\t\t\"priceRangeMax\":100,\n\t\t\"dateRangeStart\":\"2020-02-13\",\n\t\t\"dateRangeEnd\":\"2020-02-15\"\n\t}\n}"
 				},
 				"url": {
 					"raw": "localhost:3000/v1/actors",
@@ -81,7 +81,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"name\":\"jonh\",\n\t\"surname\":\"snow\",\n\t\"email\":\"hola@gmail.com\",\n\t\"password\":\"password\",\n\t\"phone\":\"986678567\",\n\t\"address\":\"Calle falsa, 123\",\n\t\"role\":\"EXPLORER\",\n\t\"validated\":\"true\",\n\t\"finder\": {\n\t\t\"keyword\":\"Paris\",\n\t\t\"priceRangeMin\":0,\n\t\t\"priceRangeMax\":100,\n\t\t\"dateRangeStart\":\"2019-02-13\",\n\t\t\"dateRangeEnd\":\"2019-02-15\"\n\t}\n}"
+					"raw": "{\n\t\"name\":\"jonh\",\n\t\"surname\":\"snow\",\n\t\"email\":\"oowejrasodf@gmail.com\",\n\t\"password\":\"password\",\n\t\"phone\":\"986678567\",\n\t\"address\":\"Calle falsa, 123\",\n\t\"role\":\"EXPLORER\",\n\t\"validated\":\"true\",\n\t\"finder\": {\n\t\t\"keyword\":\"Paris\",\n\t\t\"priceRangeMin\":120,\n\t\t\"priceRangeMax\":100,\n\t\t\"dateRangeStart\":\"2020-02-13\",\n\t\t\"dateRangeEnd\":\"2020-02-15\"\n\t}\n}"
 				},
 				"url": {
 					"raw": "localhost:3000/v1/actors",
@@ -111,7 +111,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"name\":\"jonh\",\n\t\"surname\":\"snow\",\n\t\"email\":\"hola@gmail.com\",\n\t\"password\":\"password\",\n\t\"phone\":\"986678567\",\n\t\"address\":\"Calle falsa, 123\",\n\t\"role\":\"EXPLORER\",\n\t\"validated\":\"true\",\n\t\"finder\": {\n\t\t\"keyword\":\"Paris\",\n\t\t\"priceRangeMin\":0,\n\t\t\"priceRangeMax\":100,\n\t\t\"dateRangeStart\":\"2019-02-13\",\n\t\t\"dateRangeEnd\":\"2019-02-15\"\n\t}\n}"
+					"raw": "{\n\t\"name\":\"jonh\",\n\t\"surname\":\"snow\",\n\t\"email\":\"asdfjasdlfja@gmail.com\",\n\t\"password\":\"password\",\n\t\"phone\":\"986678567\",\n\t\"address\":\"Calle falsa, 123\",\n\t\"role\":\"EXPLORER\",\n\t\"validated\":\"true\",\n\t\"finder\": {\n\t\t\"keyword\":\"Paris\",\n\t\t\"priceRangeMin\":0,\n\t\t\"priceRangeMax\":100,\n\t\t\"dateRangeStart\":\"2020-02-20\",\n\t\t\"dateRangeEnd\":\"2020-02-15\"\n\t}\n}"
 				},
 				"url": {
 					"raw": "localhost:3000/v1/actors",
@@ -131,12 +131,7 @@
 			"name": "GET list all actors",
 			"request": {
 				"method": "GET",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "5c7821120a8ec40680cb9133"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
@@ -165,7 +160,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "localhost:3000/v1/actors/5c671b7a0c8a0e07200479b9",
+					"raw": "localhost:3000/v1/actors/5c9f5306bb7a48933ee85eab",
 					"host": [
 						"localhost"
 					],
@@ -173,7 +168,7 @@
 					"path": [
 						"v1",
 						"actors",
-						"5c671b7a0c8a0e07200479b9"
+						"5c9f5306bb7a48933ee85eab"
 					]
 				}
 			},
@@ -191,10 +186,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"name\":\"actor\",\n\t\"surname\":\"editado\",\n\t\"email\":\"editado@gmail.com\",\n\t\"password\":\"editpass\",\n\t\"phone\":\"111222333\",\n\t\"address\":\"Calle editada\",\n\t\"role\":\"EXPLORER\",\n\t\"validated\":\"true\"\n}"
+					"raw": "{\n    \"preferredLanguage\": \"es\",\n    \"role\": [\n        \"EXPLORER\"\n    ],\n    \"banned\": false,\n    \"finder\": {\n        \"keyword\": \"hola\",\n        \"priceRangeMin\": 2,\n        \"priceRangeMax\": 20\n    },\n    \"name\": \"actor334\",\n    \"surname\": \"editado\",\n    \"email\": \"editado3378@gmail.com\",\n    \"password\": \"editpass\",\n    \"phone\": \"111222333\",\n    \"address\": \"Calle editada\",\n    \"validated\": true,\n    \"created\": \"2019-02-28T18:41:55.320Z\",\n    \"__v\": 0\n}"
 				},
 				"url": {
-					"raw": "localhost:3000/v1/actors/5c671b7a0c8a0e07200479b9",
+					"raw": "localhost:3000/v1/actors/5c9f5306bb7a48933ee85eb6",
 					"host": [
 						"localhost"
 					],
@@ -202,7 +197,7 @@
 					"path": [
 						"v1",
 						"actors",
-						"5c671b7a0c8a0e07200479b9"
+						"5c9f5306bb7a48933ee85eb6"
 					]
 				}
 			},
@@ -222,10 +217,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"name\":\"jaime\",\n\t\"surname\":\"lannister\",\n\t\"email\":\"matarreyes@gmail.com\",\n\t\"password\":\"password\",\n\t\"phone\":\"986678567\",\n\t\"address\":\"Calle falsa, 123\",\n\t\"role\":\"EXPLORER\",\n\t\"validated\":\"true\",\n\t\"finder\": {\n\t\t\"keyword\":\"Paris\",\n\t\t\"priceRangeMin\":50,\n\t\t\"priceRangeMax\":20,\n\t\t\"dateRangeStart\":\"2019-06-13\",\n\t\t\"dateRangeEnd\":\"2019-06-15\"\n\t}\n}"
+					"raw": "{\n\t\"name\":\"jaime\",\n\t\"surname\":\"lannister\",\n\t\"email\":\"matarreyes@gmail.com\",\n\t\"password\":\"password\",\n\t\"phone\":\"986678567\",\n\t\"address\":\"Calle falsa, 123\",\n\t\"role\":\"EXPLORER\",\n\t\"validated\":\"true\",\n\t\"finder\": {\n\t\t\"keyword\":\"Paris\",\n\t\t\"priceRangeMin\":50,\n\t\t\"priceRangeMax\":20,\n\t\t\"dateRangeStart\":\"2020-06-13\",\n\t\t\"dateRangeEnd\":\"2020-06-15\"\n\t}\n}"
 				},
 				"url": {
-					"raw": "localhost:3000/v1/actors/5c671b7a0c8a0e07200479b9",
+					"raw": "localhost:3000/v1/actors/5c9f5306bb7a48933ee85eb7",
 					"host": [
 						"localhost"
 					],
@@ -233,7 +228,7 @@
 					"path": [
 						"v1",
 						"actors",
-						"5c671b7a0c8a0e07200479b9"
+						"5c9f5306bb7a48933ee85eb7"
 					]
 				}
 			},
@@ -253,10 +248,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"name\":\"Daenerys\",\n\t\"surname\":\"Targaryen\",\n\t\"email\":\"madrededragones@gmail.com\",\n\t\"password\":\"password\",\n\t\"phone\":\"986678567\",\n\t\"address\":\"Calle falsa, 123\",\n\t\"role\":\"EXPLORER\",\n\t\"validated\":\"true\",\n\t\"finder\": {\n\t\t\"keyword\":\"Paris\",\n\t\t\"priceRangeMin\":0,\n\t\t\"priceRangeMax\":100,\n\t\t\"dateRangeStart\":\"2019-02-25\",\n\t\t\"dateRangeEnd\":\"2019-02-15\"\n\t}\n}"
+					"raw": "{\n\t\"name\":\"Daenerys\",\n\t\"surname\":\"Targaryen\",\n\t\"email\":\"madrededragones@gmail.com\",\n\t\"password\":\"password\",\n\t\"phone\":\"986678567\",\n\t\"address\":\"Calle falsa, 123\",\n\t\"role\":\"EXPLORER\",\n\t\"validated\":\"true\",\n\t\"finder\": {\n\t\t\"keyword\":\"Paris\",\n\t\t\"priceRangeMin\":0,\n\t\t\"priceRangeMax\":100,\n\t\t\"dateRangeStart\":\"2020-02-25\",\n\t\t\"dateRangeEnd\":\"2020-02-15\"\n\t}\n}"
 				},
 				"url": {
-					"raw": "localhost:3000/v1/actors/5c671b7a0c8a0e07200479b9",
+					"raw": "localhost:3000/v1/actors/5c9f5306bb7a48933ee85eb9",
 					"host": [
 						"localhost"
 					],
@@ -264,7 +259,7 @@
 					"path": [
 						"v1",
 						"actors",
-						"5c671b7a0c8a0e07200479b9"
+						"5c9f5306bb7a48933ee85eb9"
 					]
 				}
 			},
@@ -274,18 +269,13 @@
 			"name": "PUT change banned status",
 			"request": {
 				"method": "PUT",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "5c780254b39f5d4060c93f4d"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
 				},
 				"url": {
-					"raw": "localhost:3000/v1/actors/5c6a9f4429a28c49d4ba0138/banned?value=true",
+					"raw": "localhost:3000/v1/actors/5c9f5306bb7a48933ee85eb8/banned?value=true",
 					"host": [
 						"localhost"
 					],
@@ -293,7 +283,7 @@
 					"path": [
 						"v1",
 						"actors",
-						"5c6a9f4429a28c49d4ba0138",
+						"5c9f5306bb7a48933ee85eb8",
 						"banned"
 					],
 					"query": [
@@ -316,7 +306,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "localhost:3000/v1/actors/5c671b7a0c8a0e07200479b9",
+					"raw": "localhost:3000/v1/actors/5c9f5306bb7a48933ee85ee5",
 					"host": [
 						"localhost"
 					],
@@ -324,7 +314,7 @@
 					"path": [
 						"v1",
 						"actors",
-						"5c671b7a0c8a0e07200479b9"
+						"5c9f5306bb7a48933ee85ee5"
 					]
 				}
 			},
@@ -340,7 +330,17 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": ""
+					"raw": "localhost:3000/v1/actors/5c9f5306bb7a48933ee85eb6/finder",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"actors",
+						"5c9f5306bb7a48933ee85eb6",
+						"finder"
+					]
 				}
 			},
 			"response": []
@@ -348,14 +348,31 @@
 		{
 			"name": "PUT update actor finder",
 			"request": {
-				"method": "GET",
-				"header": [],
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": ""
+					"raw": "{\n    \"keyword\": \"hola\",\n    \"priceRangeMin\": 21,\n    \"priceRangeMax\": 92\n}"
 				},
 				"url": {
-					"raw": ""
+					"raw": "localhost:3000/v1/actors/5c9f5306bb7a48933ee85eb6/finder",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"actors",
+						"5c9f5306bb7a48933ee85eb6",
+						"finder"
+					]
 				}
 			},
 			"response": []
@@ -363,14 +380,24 @@
 		{
 			"name": "DELETE actor finder",
 			"request": {
-				"method": "GET",
+				"method": "DELETE",
 				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
 				},
 				"url": {
-					"raw": ""
+					"raw": "localhost:3000/v1/actors/5c9f5306bb7a48933ee85eb6/finder",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"actors",
+						"5c9f5306bb7a48933ee85eb6",
+						"finder"
+					]
 				}
 			},
 			"response": []

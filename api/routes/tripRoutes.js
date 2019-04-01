@@ -87,6 +87,9 @@ const auth = require('../controllers/authController');
  *             type: string
  *             description: Estado del viaje
  *             enum: ['CREATED', 'PUBLISHED', 'STARTED', 'ENDED', 'CANCELLED']
+ *          comments:
+ *             type: string
+ *             description: Comentario sobre el motivo de la cancelación de un viaje
  *          stages:
  *             type: array
  *             required:
@@ -181,6 +184,9 @@ const auth = require('../controllers/authController');
  *             type: string
  *             description: Estado del viaje
  *             enum: ['CREATED', 'PUBLISHED', 'STARTED', 'ENDED', 'CANCELLED']
+ *          comments:
+ *             type: string
+ *             description: Comentario sobre el motivo de la cancelación de un viaje
  *          stages:
  *             type: array
  *             required:
@@ -281,40 +287,49 @@ router.get('/v1/trips', trips.list_all_trips);
 router.post('/v1/trips', trips.create_a_trip);
 router.post('/v2/trips', auth.verifyUser(['MANAGER']),trips.create_a_trip);
 
+/**
+ * @swagger
+ * 
+ * /trips/fromManager/{managerId}:
+ *    get:
+ *       description: Get trips from Manager
+ *       operationId: read_trips_fromManager
+ *       consumes:
+ *          - application/json
+ *       parameters:
+ *          - in: path
+ *            name: managerId
+ *            description: Find trips from managerId
+ *            type: string
+ *       responses:
+ *          '200':
+ *             description: Success
+ *             schema:
+ *                $ref: '#/definitions/Trip'
+ *          '500':
+ *             description: Error interno del servidor
+ *             schema:
+ *                $ref: "#/definitions/ErrorResponse"
+ *          default:
+ *             description: Error
+ *             schema:
+ *                $ref: "#/definitions/ErrorResponse"
+ */
+router.route('/v1/trips/fromManager/:managerId').get(trips.read_trips_fromManager);
 
 /**
  * @swagger
  * 
  * /trips/finder:
  *    get:
- *       description: Search trip using a finder(keyword, priceRangeMin, priceRangeMax, dataRangeStart, dateRangeEnd). RequiredRoles-Explorer
+ *       description: Search trip using a finder. RequiredRoles-Explorer
  *       operationId: finder_trips
  *       consumes:
  *          - application/json
  *       parameters:
  *          - in: query
- *            name: keyword
- *            description: Keyword to find in tickers, titles or description
- *            schema:
- *                type: string
- *          - in: query
- *            name: priceRangeMin
- *            description: Min price to find trips
- *            schema:
- *                type: number
- *          - in: query
- *            name: priceRangeMax
- *            description: Max price to find trips
- *            schema:
- *                type: number
- *          - in: query
- *            name: dateRangeStart
- *            description: Find trips that start with this date 
- *            schema:
- *                type: string
- *          - in: query
- *            name: dateRangeEnd
- *            description: Find trips that end before this date
+ *            name: actorId
+ *            description: ActorId to use in search
  *            schema:
  *                type: string
  *       responses:
@@ -331,7 +346,7 @@ router.post('/v2/trips', auth.verifyUser(['MANAGER']),trips.create_a_trip);
  *           schema:
  *             $ref: "#/definitions/ErrorResponse"
  */
-router.get('/v1/trips/finder', trips.finder_trips)
+router.get('/v1/trips/finder/:actorId', trips.finder_trips)
 
 /**
  * @swagger
@@ -543,6 +558,11 @@ router.put('/v2/trips/:tripId', auth.verifyUser(['MANAGER']), trips.update_a_tri
  *            description: new status value, one of this ['PUBLISHED', 'STARTED', 'ENDED', 'CANCELLED']
  *            schema:
  *                $ref: "#/definitions/Trip"
+ *          - in: query
+ *            name: comment
+ *            description: comentario con motivo de cancelation
+ *            schema:
+ *                type: string
  *       responses:
  *          '200':
  *             description: Success
