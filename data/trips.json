@@ -42,7 +42,7 @@
     ], 
     "created" : ISODate("2019-03-30T11:29:11.109+0000"), 
     "sponsorships" : [
-
+        
     ], 
     "__v" : NumberInt(0)
 }
@@ -984,7 +984,12 @@
     ], 
     "created" : ISODate("2019-03-30T11:29:11.133+0000"), 
     "sponsorships" : [
-
+        {
+            "payed": false,
+            "_id": ObjectId("5ca1e52af90c6414c3e2da43"),
+            "link": "viajes.com",
+            "actorId": ObjectId("5c9f5306bb7a48933ee85ee8")
+        }
     ], 
     "__v" : NumberInt(0)
 }
@@ -2718,7 +2723,12 @@
     ], 
     "created" : ISODate("2019-03-30T11:29:11.187+0000"), 
     "sponsorships" : [
-
+        {
+            "payed": true,
+            "_id": ObjectId("5ca1e52af90c6714c3e2da42"),
+            "link": "viajes.com",
+            "actorId": ObjectId("5c9f5306bb7a48933ee85ee8")
+        }
     ], 
     "__v" : NumberInt(0)
 }
