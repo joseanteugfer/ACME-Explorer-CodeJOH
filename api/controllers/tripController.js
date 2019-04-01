@@ -103,11 +103,6 @@ function update_a_trip(req, res) {
     //change status to CANCEL if (PUBLISHED and not started) and don't have any accepted application, otherwise return 405
     var new_status = req.body.status;
 
-
-    Trip.findById({ _id: req.params.tripId }, function (err, trip) {
-        if (!trip) return res.status(404).send({ message: `Trip with ID ${req.params.tripId} not found` });
-
-
     Trip.findById({ _id: req.params.tripId }, function (err, trip) {
         if (trip.status != 'PUBLISHED') {
             if (new_status == 'CANCELLED') {
