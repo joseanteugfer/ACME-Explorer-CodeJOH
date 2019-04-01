@@ -104,22 +104,19 @@ function update_a_trip(req, res) {
     var new_status = req.body.status;
 
     Trip.findById({ _id: req.params.tripId }, function (err, trip) {
+        if (!trip) return res.status(404).send({ message: `Trip with ID ${req.params.tripId} not found` });
+
         if (trip.status != 'PUBLISHED') {
             if (new_status == 'CANCELLED') {
-                if (!trip) {
-                    res.status(404).send({ message: `Trip with ID ${req.params.tripId} not found` });
-                    return;
-                } else {
-                    if (!req.body.comments) return res.status(400).send({ message: 'You want to cancel trip. Field comments in request not found' });
+                if (!req.body.comments) return res.status(400).send({ message: 'You want to cancel trip. Field comments in request not found' });
 
-                    Trip.findOneAndUpdate({ _id: req.params.tripId }, req.body, { new: true, runValidators: true, context: 'query' }, function (err, tripUpdated) {
-                        if (err) return res.send(err);
-                        if (!tripUpdated) return res.status(404).send({ message: `Trip with ID ${req.params.tripId}` });
+                Trip.findOneAndUpdate({ _id: req.params.tripId }, req.body, { new: true, runValidators: true, context: 'query' }, function (err, tripUpdated) {
+                    if (err) return res.send(err);
+                    if (!tripUpdated) return res.status(404).send({ message: `Trip with ID ${req.params.tripId}` });
 
-                        return res.json(tripUpdated);
+                    return res.json(tripUpdated);
 
-                    });
-                }
+                });
             } else {
                 var tripUpdated = req.body;
                 //calculating the total price as sum of the stages prices
@@ -389,7 +386,7 @@ function change_status(req, res) {
 
 function get_sponsorhips(req, res) {
     console.log('Getting all sponsorships for user');
-    Trip.find({ 'sponsorships.actorId': req.params.actorId }, function (err, trips) {
+    Trip.find({ 'sponsorships.actorId': req.query.actorId }, function (err, trips) {
         if (err) return res.status(500).send(err);
 
         res.send(trips);
@@ -410,7 +407,7 @@ function get_a_sponsorhip(req, res) {
 
 function add_sponsorhips(req, res) {
     let tripId = req.params.tripId;
-    let sponsorId = req.headers.authorization;
+    let sponsorId = req.body.actorId;
     console.log(`POST /trips/${tripId}/${sponsorId}/sponsorships`);
 
     let new_sponsor = req.body;
@@ -471,15 +468,44 @@ function delete_sponsorhips(req, res) {
 function pay_sponsorhips(req, res) {
     let tripId = req.params.tripId;
     let sponsorshipId = req.params.sponsorshipId;
+    let encontrado = false;
+    let pagado = false;
     console.log(`PUT /trips/${tripId}/sponsorships/${sponsorshipId}/pay`);
 
-    Trip.findOneAndUpdate({ "_id": tripId, "sponsors._id": sponsorshipId },
-        { "$set": { "sponsors.$.payed": true } }, function (err, trip) {
-            if (err) return res.status(500).send(err);
-            if (!trip) return res.status(404).send({ message: 'Trip or Sponsorship not found' });
+    Trip.findById({ _id: tripId }, function (err, trip) {
+        if (!trip) return res.status(404).send({ message: 'Trip or Sponsorship not found' });
 
-            res.send(trip);
-        });
+        var sponsors = trip.sponsorships;
+        for (var i = 0; i < sponsors.length; i++) {
+            if (sponsors[i]._id == sponsorshipId) {
+                encontrado = true;
+                if (sponsors[i].payed == true) {
+                    pagado = true;
+                    
+                } else {
+                    sponsors[i].payed = true;
+                    trip.sponsorships = sponsors;
+                    Trip.findOneAndUpdate({ "_id": tripId },
+                        trip, function (err, tripUpdated) {
+                            if (err) return res.status(500).send(err);
+                            if (!tripUpdated) return res.status(404).send({ message: 'Trip or Sponsorship not found' });
+
+                            return;
+                        });
+                }
+            }
+        }
+        if (encontrado == true ) {
+            
+            if (pagado == false){
+                return res.send(trip);
+            }else{
+                return res.send({ message: 'The Sponsorship is already payed' });
+            }
+        } else {
+            return res.status(404).send({ message: 'Sponsorship not found' });
+        }
+    });
 }
 
 module.exports = {

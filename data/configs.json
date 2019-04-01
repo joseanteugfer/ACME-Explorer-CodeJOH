@@ -1,0 +1,6 @@
+{ 
+    "_id" : ObjectId("5ca068eeac8889b5885fc8ad"), 
+    "numberResults" : NumberInt(10), 
+    "searchPeriod" : NumberInt(1), 
+    "__v" : NumberInt(0)
+}
