@@ -4,14 +4,16 @@
   "description": "Proyecto Acme Explorer de la asignatura Arquitecturas para Software como Servicio",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js",
-    "nodemon": "nodemon app.js"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hector23rp/ACME-Explorer-CodeJOH.git"
   },
+  "engines": {
+    "node": "10.13.0",
+    "npm": "6.0.0"
+  }, 
   "author": "",
   "license": "ISC",
   "dependencies": {
