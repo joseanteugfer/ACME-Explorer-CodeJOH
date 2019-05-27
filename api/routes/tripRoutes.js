@@ -745,5 +745,7 @@ router.delete('/v2/trips/:tripId/sponsorships/:sponsorshipId', auth.verifyUser([
 router.put('/v1/trips/:tripId/sponsorships/:sponsorshipId/pay', trips.pay_sponsorhips)
 router.put('/v2/trips/:tripId/sponsorships/:sponsorshipId/pay', auth.verifyUser(['SPONSOR']), trips.pay_sponsorhips)
 
+router.get('/v1/trips/fromTicker/:ticker', trips.read_trips_fromTicker);
+
 
 module.exports = router;
