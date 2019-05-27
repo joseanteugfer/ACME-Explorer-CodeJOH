@@ -73,6 +73,16 @@ function read_trips_fromManager(req, res) {
     });
 }
 
+function read_trips_fromTicker(req, res) {
+
+    Trip.find({ ticker: req.params.ticker }, function (err, trips) {
+        if (err) return res.status(500).send(err);
+
+        console.log('trip from ticker: '+ trips.toString());
+        return res.send(trips);
+    });
+}
+
 function delete_a_trip(req, res) {
 
     Trip.findById({ _id: req.params.tripId }, function (err, trip) {
@@ -258,17 +268,17 @@ async function finder_trips(req, res) {
         "expiresDate": moment().add(config.searchPeriod, 'hours')
     });
     newFinderCache.save(function (err, finderCacheNew) {
-        if (err) {
-            if (err.name == 'ValidationError') {
-                res.status(422).send(err);
-            }
-            else {
-                res.status(500).send(err);
-            }
-        }
-        else {
+        // if (err) {
+        //     if (err.name == 'ValidationError') {
+        //         res.status(422).send(err);
+        //     }
+        //     else {
+        //         res.status(500).send(err);
+        //     }
+        // }
+        // else {
             res.send(trips);
-        }
+        //}
     });
 
 }
@@ -276,7 +286,7 @@ async function finder_trips(req, res) {
 function search_trips(req, res) {
     console.log('Searching trips depending on params');
 
-    let actorId = req.headers.authorization;
+    let actorId = req.params.authorization;
 
     async.waterfall([
         getTripStatusByActorRole(actorId),
@@ -524,5 +534,6 @@ module.exports = {
     add_sponsorhips,
     update_sponsorhips,
     delete_sponsorhips,
-    pay_sponsorhips
+    pay_sponsorhips,
+    read_trips_fromTicker
 }
